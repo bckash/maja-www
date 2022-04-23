@@ -1,0 +1,130 @@
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&display=swap');
+
+$ksh-color: rgb(121, 118, 115);
+
+*, *::before, *::after {box-sizing: border-box}
+
+body {
+    max-width: 400px;
+    margin: auto;
+}
+
+h1 {
+    background-color: $ksh-color;
+}
+
+.br {border: 1px grey solid;}
+
+.showcase {
+    position: relative;
+}
+
+.maja {
+    display: inline-block;
+    margin-top: 5rem;
+    width: 200px;
+    // margin: auto;
+}
+
+.txt-holder {
+    font-size: 1.5rem;
+    color: #490808;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    top: -3rem;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 10;
+}
+
+.grad {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+
+.polka {
+    opacity: 0.1;
+    background-image: 
+      radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%),
+      radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%);
+    background-position: 0px 0px, 4px 4px;
+    background-size: 8px 8px;
+    background-color: rgb(199, 15, 15);
+  }
+
+.back-grad {
+    position: absolute;
+    bottom: 15px;
+    height: 300px;
+    width: 100%;
+    z-index: 5;
+}
+
+.showcase video {
+    opacity: 0.15;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    // background: #641406;
+    // mix-blend-mode: overlay;
+}
+
+.red {
+    position: relative;
+    top: -20px;
+    background-color: #CE4C4C;
+    height: 200px;
+    width: 100%;
+
+}
+
+.pink {
+    text-align: center;
+    position: relative;
+    top: -20px;
+    height: 400px;
+    width: 100%;
+    background-color: rgb(218, 132, 144);
+}
+
+.about {
+    font-family: 'Caramel', cursive;
+    position: absolute;
+    top: 7rem;
+
+    font-size: 5rem;
+    color: rgb(255, 250, 250);
+    z-index: 10;
+    margin-left: 2rem;
+}
+
+.pink-1 {
+    display: block;
+    width: 100%;
+}
+
+.pink-2 {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 100%;
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 15rem;
+    position: absolute;
+    left: 50px;
+}
