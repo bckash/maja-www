@@ -1,130 +1,263 @@
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@use "./variables" as v;
 
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&display=swap');
 
-$ksh-color: rgb(121, 118, 115);
 
-*, *::before, *::after {box-sizing: border-box}
-
-body {
-    max-width: 400px;
-    margin: auto;
+*, *::before, *::after {
+    box-sizing: border-box
 }
 
-h1 {
-    background-color: $ksh-color;
+*:hover, * a {
+    text-decoration: none;
 }
 
-.br {border: 1px grey solid;}
+.br {
+    border: 1px grey solid;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+//  HEADER
+// -----------------
+
 
 .showcase {
     position: relative;
+    margin: auto;
+    height: 40rem;
+    width: 22.5rem;
+
+    &__logo {
+        display: inline-block;
+        margin-top: 15rem;
+        position: absolute;
+        left: 30px;
+        z-index: 20;
+    }
+
+    & video, & .polka {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    & video {
+        opacity: 0.8;
+        // object-fit: cover;
+    }
+
+    & .polka {
+        opacity: 0.2;
+        background-image: 
+          radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%),
+          radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%);
+        background-position: 0px 0px, 4px 4px;
+        background-size: 8px 8px;
+        background-color: rgb(199, 15, 15);
+    }
+
+    &__grad {
+        position: absolute;
+        bottom: 0;
+        height: 300px;
+        width: 100%;
+        z-index: 5;
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    }
 }
 
-.maja {
-    display: inline-block;
-    margin-top: 5rem;
-    width: 200px;
-    // margin: auto;
-}
 
-.txt-holder {
+
+// MAIN NAV
+//------------------
+
+
+.main-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     font-size: 1.5rem;
-    color: #490808;
+    color: #420d0d;
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
-    position: relative;
-    top: -3rem;
-    display: flex;
-    justify-content: space-evenly;
     z-index: 10;
+
+    & ul {
+        display: flex;
+    }
+
+    & li, & li:hover {
+        border-bottom: 8px solid;
+    }
+
+    & li {
+        padding: 1.5rem 0;
+        width: 25%;
+        text-align: center;
+        border-bottom-color: rgba(255, 0, 0, 0);
+    }
+
+    & li:hover {
+        background-color: rgba(238, 175, 175, 0.116);
+        border-bottom-color:  rgb(180, 214, 56);
+    }
 }
 
-.grad {
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+
+// SECTIONS
+//------------------
+
+
+.bridge-1 {
+    background-color: v.$nl-back-red;
+    height: 20rem;
 }
 
-.polka {
-    opacity: 0.1;
-    background-image: 
-      radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%),
-      radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%);
-    background-position: 0px 0px, 4px 4px;
-    background-size: 8px 8px;
-    background-color: rgb(199, 15, 15);
-  }
-
-.back-grad {
-    position: absolute;
-    bottom: 15px;
-    height: 300px;
-    width: 100%;
-    z-index: 5;
-}
-
-.showcase video {
-    opacity: 0.15;
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-    margin: auto;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    // background: #641406;
-    // mix-blend-mode: overlay;
-}
-
-.red {
+.bridge-1-1 {
     position: relative;
-    top: -20px;
-    background-color: #CE4C4C;
-    height: 200px;
-    width: 100%;
+    background-color: v.$nl-back-pink;
+
+    & div {
+        height: max-content;
+        width: 100%;
+    }
+
+    &__svg--right {
+        position: absolute;
+        top: 1rem;
+    }
+}
+
+.about-me {
+    background-color: v.$nl-back-pink;
+    padding: 10rem 0;
+}
+
+.about-me__content {
+    @include v.article;
+
+    &--head {
+        @include v.title;
+        text-align: center;
+        color: pink;
+        padding-left: 22rem;
+    }
+
+    &--main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        & img {
+            width: 15rem;
+            height: auto;
+            margin-right: 5rem;
+            box-shadow: 1px 1px 20px rgb(170, 70, 70);
+        }
+
+        & span {
+            display: inline-block;
+            border-left: 20px solid v.$nl-back-pink-dark;
+            padding: 1rem;
+            padding-left: 3.5rem;
+        }
+}
+
+.bridge-2 {
+    background-color: v.$nl-back-pink;
+    height: max-content;
+}
+
+.paralax-1 {
+    background-color: v.$nl-back-red;
+    padding: 8rem 0;
+
+    & div {
+        outline: 30px solid v.$nl-back-pink-dark;
+        height: 20rem;
+        width: 75%;
+        margin: auto;
+        background-image: url("/src/img/paralax-1.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
 
 }
 
-.pink {
+.bridge-3 {
+    background-color: v.$nl-back-pink-light;
+}
+
+.offer {
+    background-color: v.$nl-back-pink-light;
+}
+
+.offer__content {
+    background-color: v.$nl-back-pink-light;
     text-align: center;
-    position: relative;
-    top: -20px;
-    height: 400px;
-    width: 100%;
-    background-color: rgb(218, 132, 144);
+    @include v.article;
+
+    &--head {
+        @include v.title;
+        padding: 1rem 0;
+    }
+
+    &--nav-big, &--nav-small {
+        padding: .5rem 0;
+    }
+
+    &--nav-big, &--nav-small {
+        display: flex;
+        justify-content: center;
+
+        & li {
+            margin: .5rem 1rem;
+        }
+    }
+
+    &--nav-big li:hover {
+        cursor: pointer;
+    }
+
+    &--main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 4.5rem;
+
+        &-body, &-icons {
+            padding: 1rem;
+        }
+
+        &-icons span {
+            font-size: 3rem;
+        }
+
+        &-body {
+            height: 40rem;
+        }
+
+    }
+
 }
 
-.about {
-    font-family: 'Caramel', cursive;
-    position: absolute;
-    top: 7rem;
+// for overlay : position absolute + mix-blend-mode: overlay;
 
-    font-size: 5rem;
-    color: rgb(255, 250, 250);
-    z-index: 10;
-    margin-left: 2rem;
-}
 
-.pink-1 {
-    display: block;
-    width: 100%;
-}
 
-.pink-2 {
-    position: absolute;
-    right: 0;
-    top: 20px;
-    width: 100%;
-}
 
-.logo {
-    display: inline-block;
-    margin-top: 15rem;
-    position: absolute;
-    left: 50px;
-}
+
+
+

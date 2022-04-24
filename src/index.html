@@ -5,45 +5,144 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/main.css">
 
 </head>
 <body>
-    <section class="showcase">
-        <img class="logo" src="img/logo.png" alt="">
-        <video class="" src="video/vid1.mp4" muted loop autoplay></video>
+    <!-- HEADER ( + nav )-->
+    <header class="showcase">
+
+        <!-- showcase  -->
+        <img class="showcase__logo" src="img/logo.png" alt="">
+        <video src="video/vid1.mp4" muted loop autoplay></video>
         <div class="overlay polka"></div>
-        <div class="back-grad grad"></div>
-        <div class="txt-holder">
-            <div>
-                About
+        <div class="showcase__grad"></div>
+
+        <!-- main nav -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#offer">Offer</a></li>
+                <li><a href="#price">Price</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bridge-1">
+    </section>
+
+    <section class="bridge-1-1">
+        <div>
+            <svg 
+                viewBox="0 0 1200 98" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 98L1200 0H230.975H0V98Z" fill="#CE4C4C"/>
+            </svg>
+        </div>
+        <div class="bridge-1-1__svg--right">
+            <svg 
+                viewBox="0 0 646 98" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50.7167 91.9054L652.857 1.5382L734.926 30.0033L50.7167 91.9054Z" fill="#CE4C4C" stroke="#CE4C4C" stroke-width="3"/>
+            </svg>
+        </div>
+
+    </section>
+
+    <!-- ABOUT ME -->
+    <article id="about" class="about-me">
+        <div class="about-me__content">
+            <div class="about-me__content--head">
+                About me
             </div>
-            <div>
+            <div class="about-me__content--main">
+                <img class="rounded-circle" src="img/maja500.jpg" alt="">
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quibusdam, recusandae ad harum quae delectus, doloribus provident explicabo maiores perferendis cupiditate illum nemo totam dolorum aspernatur nostrum! Hic iure sunt deserunt modi? Voluptatibus temporibus minima est veniam expedita dolorum incidunt totam unde rem praesentium maxime et dolor impedit consequuntur voluptate, minus veritatis ipsum in quis quisquam numquam esse accusantium. Inventore perferendis eum ipsa soluta facere doloribus voluptatum sed molestias assumenda, harum qui animi quod rem necessitatibus repudiandae iste, accusamus fugit.
+                </span>
+            </div>
+        </div>
+    </article>
+
+    <section class="bridge-2">
+        <div>
+            <svg viewBox="0 0 934 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M934 -5.60284e-06L-1.52588e-05 163H703.025H934V-5.60284e-06Z" fill="#CE4C4C"/>
+                </svg>
+        </div>
+    </section>
+
+    <!-- PARALAX -->
+    <section class="paralax-1">
+        <div></div>
+    </section>
+
+    <section class="bridge-3">
+        <div>
+            <svg viewBox="0 0 934 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 98L944 -1.88965e-05H233.448H0V98Z" fill="#CE4C4C"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- OFFER -->
+    <article class="offer" id="offer">
+        <div class="offer__content">
+            <!-- head -->
+            <div class="offer__content--head">
                 Offer
             </div>
-            <div>
-                Price
-            </div>
-            <div>
-                Contact
+            <!-- nav big -->
+            <nav>
+                <ul class="offer__content--nav-big">
+                    <li id="nav-big-ext">extension</li>
+                    <li id="nav-big-treat">treatment</li>
+                    <li id="nav-big-style">styling</li>
+                </ul>
+            </nav>
+            <!-- nav small -->
+            <nav>
+                <ul id="nav-small-ext" class="offer__content--nav-small">
+                    <li>fusion bonds</li>
+                    <li>micro rings</li>
+                    <li>easy shrinks</li>
+                    <li>tape on</li>
+                    <li>combline</li>
+                </ul>
+                <ul id="nav-small-treat" class="offer__content--nav-small">
+                    <li>botox</li>
+                    <li>keratyna</li>
+                </ul>
+            </nav>
+
+            <!-- MAIN -->
+            <div class="offer__content--main">
+                <!-- body -->
+                <div class="offer__content--main-body br">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quam voluptas sed laborum explicabo, voluptates molestias quasi repudiandae fuga magni accusantium nam quibusdam modi dolorem tempora, sequi eveniet qui? Officiis officia consequuntur sed sunt atque deserunt ad nobis labore, veritatis voluptatibus maxime. Atque consequatur magnam excepturi rem molestiae delectus eum.
+                </div>
+                <!-- icons -->
+                <div class="offer__content--main-icons br">
+                    <span class="material-icons">
+                        info
+                    </span>
+                    <span class="material-icons">
+                        image
+                    </span>
+                    <span class="material-icons">
+                        smart_display
+                    </span>
+                </div>
             </div>
         </div>
-    </section>
+    </article>
 
-    <section class="red">
-        <div class="about"> 
-            About me
-        </div>
-    </section>
-
-    <section class="pink">
-        <img class="pink-1" src="img/Pol1.svg" alt="">
-        <img class="pink-2" src="img/Polygon 4.png" alt="">
-        <img class="rounded-circle maja" src="img/maja.jpg" alt="">
-        <div>tetx</div>
-    </section>
-
-
+    <script src="main.js"></script>
 
 </body>
 </html>

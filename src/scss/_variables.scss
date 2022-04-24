@@ -1,0 +1,21 @@
+
+// colors
+
+$nl-back-red: #CE4C4C;
+$nl-back-pink: #E097A0;
+$nl-back-pink-dark: #D97F8A;
+$nl-back-pink-light: #F0D5D5;
+
+
+// mixins
+
+@mixin article {
+    width: 50rem;
+    height: max-content;
+    margin: auto;
+}
+
+@mixin title {
+    font-size: 3rem;
+    padding: 1rem;
+}
