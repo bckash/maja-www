@@ -214,20 +214,29 @@ ul {
         padding: 1rem 0;
     }
 
-    &--nav-big, &--nav-small {
-        padding: .5rem 0;
+    &--nav-small {
+        height: 3.5rem;
     }
 
-    &--nav-big, &--nav-small {
+    &--nav-big-ul, &--nav-small-ul {
         display: flex;
         justify-content: center;
+        padding: .5rem 0;
 
         & li {
             margin: .5rem 1rem;
         }
     }
 
-    &--nav-big li:hover {
+    &--nav-small-ul {
+        display: none;
+
+        & li {
+            height: 2rem;
+        }
+    }
+
+    &--nav-big-ul li:hover {
         cursor: pointer;
     }
 
@@ -247,10 +256,21 @@ ul {
 
         &-body {
             height: 40rem;
+            width: 90%;
+        }
+
+        &-icons {
+            width: 10%;
         }
 
     }
 
+}
+
+// nav-small active state
+
+.ns-active {
+    font-weight: bold;
 }
 
 // for overlay : position absolute + mix-blend-mode: overlay;
