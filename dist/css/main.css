@@ -11313,6 +11313,9 @@ ul {
 .offer__content--nav-small-ul li {
   height: 2rem;
 }
+.offer__content--nav-small-ul li:hover {
+  cursor: pointer;
+}
 .offer__content--nav-big-ul li:hover {
   cursor: pointer;
 }
@@ -11335,9 +11338,16 @@ ul {
 .offer__content--main-icons {
   width: 10%;
 }
+.offer__content--main-icons:hover {
+  cursor: pointer;
+}
 
 .ns-active {
   font-weight: bold;
+}
+
+#extension article, #treatment article, #style article {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

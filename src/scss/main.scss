@@ -234,6 +234,10 @@ ul {
         & li {
             height: 2rem;
         }
+
+        & li:hover {
+            cursor: pointer;
+        }
     }
 
     &--nav-big-ul li:hover {
@@ -263,14 +267,21 @@ ul {
             width: 10%;
         }
 
+        &-icons:hover {
+            cursor: pointer;
+        }
+
     }
 
 }
 
 // nav-small active state
-
 .ns-active {
     font-weight: bold;
+}
+
+#extension article, #treatment article, #style article {
+    display: none;
 }
 
 // for overlay : position absolute + mix-blend-mode: overlay;
