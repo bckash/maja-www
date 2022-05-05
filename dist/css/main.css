@@ -11350,4 +11350,40 @@ ul {
   display: none;
 }
 
+.bridge-4 {
+  background-color: #F0D5D5;
+  height: max-content;
+}
+
+.customer-opinion {
+  background-color: #CE4C4C;
+}
+.customer-opinion__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customer-opinion__header > * {
+  margin: 1rem;
+}
+.customer-opinion__header--name {
+  font-size: 2rem;
+}
+.customer-opinion__header--photo img {
+  width: 200px;
+}
+.customer-opinion__header--icon span {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.customer-opinion__opinion {
+  width: 30rem;
+  margin: auto;
+  background-color: #418bad;
+  color: white;
+  padding: 1rem;
+  border: white 4px solid;
+  border-radius: 15px;
+}
+
 /*# sourceMappingURL=main.css.map */

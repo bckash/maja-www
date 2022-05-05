@@ -284,6 +284,49 @@ ul {
     display: none;
 }
 
+.bridge-4 {
+    background-color: v.$nl-back-pink-light;
+    height: max-content;
+}
+
+.customer-opinion {
+    background-color: v.$nl-back-red;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            margin: 1rem;
+        }
+
+        &--name {
+            font-size: 2rem;
+        }
+
+        &--photo img {
+            width: 200px;
+        }
+
+        &--icon span {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }   
+    
+    &__opinion {
+        width: 30rem;
+        margin: auto;
+        background-color: v.$nl-back-pastel;
+        color: white;
+        padding: 1rem;
+        border: white 4px solid;
+        border-radius: 15px;
+
+    }
+}
+
 // for overlay : position absolute + mix-blend-mode: overlay;
 
 
