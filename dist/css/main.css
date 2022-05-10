@@ -11200,7 +11200,7 @@ ul {
 }
 .main-nav li:hover {
   background-color: rgba(238, 175, 175, 0.116);
-  border-bottom-color: #b4d638;
+  border-bottom-color: black;
 }
 
 .bridge-1 {
@@ -11398,7 +11398,7 @@ ul {
 }
 
 #corner-float {
-  width: 70px;
+  width: 60px;
   height: 20px;
   float: left;
 }
@@ -11427,6 +11427,70 @@ ul {
 }
 .prices__content--nav-ul li {
   margin: 0.5rem 1rem;
+}
+.prices__content--body {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact__content {
+  width: 50rem;
+  height: max-content;
+  margin: auto;
+}
+.contact__content--header {
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+.contact__content--body-tel, .contact__content--body-email {
+  text-align: center;
+  margin: 2rem;
+}
+
+.contact-icon, .contact-txt {
+  margin: 0.5rem;
+}
+
+.contact-icon span {
+  font-size: 3rem;
+}
+
+.contact-txt {
+  font-size: 1.6rem;
+}
+
+.media__content {
+  width: 50rem;
+  height: max-content;
+  margin: auto;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+.media__content--header {
+  font-size: 3rem;
+  padding: 1rem;
+}
+.media__content--icons > * {
+  display: inline-block;
+  margin: 2rem;
+}
+.media__content--icons > * img {
+  width: 40px;
+}
+
+footer {
+  width: 200px;
+  text-align: center;
+  margin: 2rem;
+  margin-bottom: 0rem;
+  margin: auto;
+  padding: 1rem;
+  border-top: 1px #d1d1d1 solid;
+}
+footer p {
+  color: #c98c8c;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -109,7 +109,7 @@ ul {
 
     & li:hover {
         background-color: rgba(238, 175, 175, 0.116);
-        border-bottom-color:  rgb(180, 214, 56);
+        border-bottom-color:  black;
     }
 }
 
@@ -333,7 +333,7 @@ ul {
 }
 
 #corner-float {
-    width: 70px;
+    width: 60px;
     height: 20px;
     float: left;
 }
@@ -356,10 +356,83 @@ ul {
         &--nav-ul {
             @include v.nav-big;
         }
+
+        &--body {
+            margin-top: 2rem;
+            text-align: center;
+        }
     }
-
-
 }
+
+.contact {
+
+    &__content {
+        @include v.article;
+
+        &--header {
+            @include v.title;
+            text-align: center
+        }
+
+        &--body-tel, &--body-email {
+            text-align: center;
+            margin: 2rem;
+        }
+    }
+}
+
+.contact-icon, .contact-txt {
+    margin: .5rem;
+}
+
+.contact-icon span {
+    font-size: 3rem;
+}
+
+.contact-txt {
+    font-size: 1.6rem;
+}
+
+.media {
+    &__content {
+        @include v.article;
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+
+        &--header {
+            @include v.title;
+        }
+
+        &--icons {
+
+            & > * {
+                display: inline-block;
+                margin: 2rem;
+
+                & img {
+                    width: 40px;
+                }
+            }
+
+        }
+    }
+}
+
+footer {
+    width: 200px;
+    text-align: center;
+    margin: 2rem;
+    margin-bottom: 0rem;
+    margin: auto;
+    padding: 1rem;
+    border-top: 1px rgb(209, 209, 209) solid;
+
+    & p {
+        color: rgb(201, 140, 140);
+    }
+}
+
 
 // for overlay : position absolute + mix-blend-mode: overlay;
 
