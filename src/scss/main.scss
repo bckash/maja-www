@@ -38,6 +38,7 @@ ul {
     &__logo {
         display: inline-block;
         margin-top: 15rem;
+        width: 18rem;
         position: absolute;
         left: 30px;
         z-index: 20;
@@ -219,13 +220,7 @@ ul {
     }
 
     &--nav-big-ul, &--nav-small-ul {
-        display: flex;
-        justify-content: center;
-        padding: .5rem 0;
-
-        & li {
-            margin: .5rem 1rem;
-        }
+        @include v.nav-big;
     }
 
     &--nav-small-ul {
@@ -291,11 +286,14 @@ ul {
 
 .customer-opinion {
     background-color: v.$nl-back-red;
+    position: relative;
+    padding-bottom: 10rem;
 
     &__header {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 6rem;
 
         & > * {
             margin: 1rem;
@@ -303,10 +301,14 @@ ul {
 
         &--name {
             font-size: 2rem;
+            color: white;
         }
 
         &--photo img {
-            width: 200px;
+            position: relative;
+            z-index: 5;
+            width: 170px;
+            border: 2px white solid;
         }
 
         &--icon span {
@@ -316,7 +318,10 @@ ul {
     }   
     
     &__opinion {
-        width: 30rem;
+        position: absolute;
+        top: 9rem;
+        left: 40%;
+        width: 22rem;
         margin: auto;
         background-color: v.$nl-back-pastel;
         color: white;
@@ -325,6 +330,35 @@ ul {
         border-radius: 15px;
 
     }
+}
+
+#corner-float {
+    width: 70px;
+    height: 20px;
+    float: left;
+}
+
+.bridge-5 {
+    background-color: v.$nl-back-pink-ultra-light;
+}
+
+.prices {
+    background-color: v.$nl-back-pink-ultra-light;
+
+    &__content {
+        @include v.article;
+
+        &--header {
+            @include v.title;
+            text-align: center
+        }
+
+        &--nav-ul {
+            @include v.nav-big;
+        }
+    }
+
+
 }
 
 // for overlay : position absolute + mix-blend-mode: overlay;

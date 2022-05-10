@@ -11146,6 +11146,7 @@ ul {
 .showcase__logo {
   display: inline-block;
   margin-top: 15rem;
+  width: 18rem;
   position: absolute;
   left: 30px;
   z-index: 20;
@@ -11357,33 +11358,75 @@ ul {
 
 .customer-opinion {
   background-color: #CE4C4C;
+  position: relative;
+  padding-bottom: 10rem;
 }
 .customer-opinion__header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 6rem;
 }
 .customer-opinion__header > * {
   margin: 1rem;
 }
 .customer-opinion__header--name {
   font-size: 2rem;
+  color: white;
 }
 .customer-opinion__header--photo img {
-  width: 200px;
+  position: relative;
+  z-index: 5;
+  width: 170px;
+  border: 2px white solid;
 }
 .customer-opinion__header--icon span {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 .customer-opinion__opinion {
-  width: 30rem;
+  position: absolute;
+  top: 9rem;
+  left: 40%;
+  width: 22rem;
   margin: auto;
   background-color: #418bad;
   color: white;
   padding: 1rem;
   border: white 4px solid;
   border-radius: 15px;
+}
+
+#corner-float {
+  width: 70px;
+  height: 20px;
+  float: left;
+}
+
+.bridge-5 {
+  background-color: #F8EEEE;
+}
+
+.prices {
+  background-color: #F8EEEE;
+}
+.prices__content {
+  width: 50rem;
+  height: max-content;
+  margin: auto;
+}
+.prices__content--header {
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+.prices__content--nav-ul {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+.prices__content--nav-ul li {
+  margin: 0.5rem 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

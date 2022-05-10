@@ -5,6 +5,7 @@ $nl-back-red: #CE4C4C;
 $nl-back-pink: #E097A0;
 $nl-back-pink-dark: #D97F8A;
 $nl-back-pink-light: #F0D5D5;
+$nl-back-pink-ultra-light: #F8EEEE;
 $nl-back-pastel: #418bad;
 
 
@@ -19,4 +20,14 @@ $nl-back-pastel: #418bad;
 @mixin title {
     font-size: 3rem;
     padding: 1rem;
+}
+
+@mixin nav-big {
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+
+    & li {
+        margin: .5rem 1rem;
+    }
 }
