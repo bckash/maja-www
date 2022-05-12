@@ -11329,6 +11329,9 @@ ul {
 .offer__content--main-body, .offer__content--main-icons {
   padding: 1rem;
 }
+.offer__content--main-icons #side-nav {
+  display: none;
+}
 .offer__content--main-icons span {
   font-size: 3rem;
 }
@@ -11356,10 +11359,15 @@ ul {
   height: max-content;
 }
 
-.customer-opinion {
+.co-container {
   background-color: #CE4C4C;
+}
+
+.customer-opinion {
   position: relative;
   padding-bottom: 10rem;
+  width: 40rem;
+  margin: auto;
 }
 .customer-opinion__header {
   display: flex;
@@ -11387,7 +11395,7 @@ ul {
 .customer-opinion__opinion {
   position: absolute;
   top: 9rem;
-  left: 40%;
+  left: 180px;
   width: 22rem;
   margin: auto;
   background-color: #418bad;
@@ -11488,6 +11496,9 @@ footer {
   margin: auto;
   padding: 1rem;
   border-top: 1px #d1d1d1 solid;
+}
+footer img {
+  opacity: 0.5;
 }
 footer p {
   color: #c98c8c;

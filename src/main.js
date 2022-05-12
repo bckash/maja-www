@@ -1,6 +1,8 @@
 
+
 // 1. CONST
 //------------
+
 
 // "offer" "nav big" tabs
 const navBigExt = document.getElementById("nav-big-ext");
@@ -22,7 +24,7 @@ const introMain = document.getElementById("o-intro")
 const bodyFusion = document.getElementById("ext-b-fusion")
 const bodyMicro = document.getElementById("ext-b-micro")
 const bodyShrink = document.getElementById("ext-b-shrinks")
-const bodyTape = document.getElementById("extb--tape")
+const bodyTape = document.getElementById("ext-b-tape")
 const bodyComb = document.getElementById("ext-b-comb")
 const extBodyAll = document.querySelectorAll(".ext-b-all")
 const bodyBotox = document.getElementById("tr-b-botox");
@@ -40,10 +42,86 @@ const trBotox = document.getElementById("tr-botox");
 const trKreatyna = document.getElementById("tr-kreatyna")
 const trAll = document.querySelectorAll(".tr-all")
 
+// summ of extAll and trAll
+extAllArr = Array.from(extAll)
+trAllArr = Array.from(trAll)
+let summAllArray = [];
+
+function addArraysToArray (arr) {
+    for (let i=0; i<arr.length; i++) {
+        summAllArray.push(arr[i])
+    }
+}
+
+addArraysToArray(extAllArr);
+addArraysToArray(trAllArr);
+
+
+// multimedia for small nav "offer"
+const mediaExt = [
+    {   
+        info: "11",
+        photo: "img/extension/p1.jpg",
+        vid: "img/extension/v1.jpg"
+    },
+    {   
+        info: "12",
+        photo: "img/extension/p2.jpg",
+        vid: "img/extension/v2.jpg"
+    },
+    {   
+        info: "13",
+        photo: "img/extension/p3.jpg",
+        vid: "img/extension/v3.jpg"
+    },
+    {   
+        info: "14",
+        photo: "img/extension/p4.jpg",
+        vid: "img/extension/v4.jpg"
+    },
+    {   
+        info: "15",
+        photo: "img/extension/p5.jpg",
+        vid: "img/extension/v5.jpg"
+    }
+]
+
+const mediaTreat = [
+    {   
+        info: "21",
+        photo: "img/treatment/p1.jpg",
+        vid: "img/treatment/v1.jpg"
+    },
+    {   
+        info: "22",
+        photo: "img/treatment/p2.jpg",
+        vid: "img/treatment/v2.jpg"
+    }
+]
+
+// side nav "offer"
+const sideNav = document.getElementById("side-nav")
+const snInfo = document.getElementById("sn-info")
+const snImg = document.getElementById("sn-img")
+const snVid = document.getElementById("sn-vid")
+const snAll = document.querySelectorAll(".sn-all")
+
+// create content components for "buildContent" in "showContent".
+function createComponent (el, cl) {
+    let comp = document.createElement(el);
+    // comp.classList.add(cl);
+    return comp;
+}
+
+const componentInfo = createComponent ("div", "")
+const componentPhoto = createComponent ("div", "")
+const componentVid = createComponent ("div", "")
+
 
 
 // 2. EL
 //-------------
+
 
 navBigExt.addEventListener("click", showContent)
 navBigTreat.addEventListener("click", showContent)
@@ -57,13 +135,71 @@ extTape.addEventListener("click", showContent2)
 trBotox.addEventListener("click", showContent3)
 trKreatyna.addEventListener("click", showContent3)
 
-// 3. F ->
+if (sideNav) {
+    snInfo.addEventListener("click", showContent4)
+    snImg.addEventListener("click", showContent4)
+    snVid.addEventListener("click", showContent4)
+}
+
+
+// 3. FUNCTIONS ->
 //---------------
 
-// "offer" : "nav big" tabs 
+
+// (for A+B)
+
+// -- for active tabs. "all" - all tabs collection
+function activeTabs (all, tgt) {
+    for (let i=0; i<all.length; i++) {
+        if (tgt.id === all[i].id) {
+            all[i].classList.add("ns-active")
+        } else {
+            all[i].classList.remove("ns-active")
+        }
+    }
+}
+
+// -- for "main body container" display toggle. "cl" - class; "all" - all body containers collection
+function bodyToggle(cl, all) {
+    for (let i=0; i<all.length; i++) {
+        if (all[i].id === cl) {
+            all[i].style.display = "block"
+        } else {
+            all[i].style.display = "none"
+        }
+    }
+}    
+
+// -- for building content inside "main body container". "arr" - array; "nr" - array element
+function buildContentAll (arr, nr) {
+
+    function buildContent (comp, inner) {
+        comp.innerHTML = inner;
+        return comp;
+    }
+
+    buildContent(componentInfo, `<span>${arr[nr].info}</span>`)
+    buildContent(componentPhoto, `<img src="${arr[nr].photo}">`)
+    buildContent(componentVid, `<img src="${arr[nr].vid}">`)
+}    
+
+// -- remove previous element and append present one
+function showBody(el, ch) {
+    if (el.firstElementChild) {
+        el.removeChild(el.firstElementChild);
+      }
+
+    el.appendChild(ch)
+}    
+
+
+// A) "NAV BIG" TABS (OFFER)
 function showContent (e) {
 
-    //reset styles
+    // hide side nav bar
+    sideNav.style.display = "none"
+
+    // reset styles
     introMain.style.display = "none";
     for (let i=0; i<trBodyAll.length; i++) {
             trBodyAll[i].style.display = "none";
@@ -78,7 +214,7 @@ function showContent (e) {
         extAll[i].classList.remove("ns-active");
 }
 
-    //set "active" and "non-active" tabs (display, style and intro).
+    // set "active" and "non-active" tabs (display, style and intro).
     function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intro, nonAct2SM, nonAct2BG, nonAct2Intro) {
         activSM.style.display = "flex";
         activBG.classList.add("ns-active");
@@ -109,91 +245,125 @@ function showContent (e) {
     }
 }
 
-// "offer" : "nav small" "extension"
+// B) "EXTENSION" "NAV SMALL" (OFFER)
 function showContent2 (e) {
 
     introExt.style.display = "none";
+    sideNav.style.display = "block"
 
-    // active class
-    for (let i=0; i<extAll.length; i++) {
-        if (e.target.id === extAll[i].id) {
-            extAll[i].classList.add("ns-active")
-        } else {
-            extAll[i].classList.remove("ns-active")
-        }
-    }
+    activeTabs(extAll, e.target);
 
-    // function for body toggle
-    function bodyToggle(cl) {
-        for (let i=0; i<extBodyAll.length; i++) {
-            if (extBodyAll[i].id === cl) {
-                extBodyAll[i].style.display = "block"
-            } else {
-                extBodyAll[i].style.display = "none"
-            }
-        }
-    }
-
-    // body toggle
+    // prepare indyvidual cases - for main body toggle (in "showContent4")
     switch(e.target.id) {
 
         case "ext-fusion":
-            bodyToggle("ext-b-fusion")
+            bodyToggle("ext-b-fusion", extBodyAll)
+            buildContentAll(mediaExt, 0);
+            showBody(bodyFusion, componentInfo);
             break;
 
         case "ext-micro":
-            bodyToggle("ext-b-micro")
+            bodyToggle("ext-b-micro", extBodyAll)
+            buildContentAll(mediaExt, 1);
+            showBody(bodyMicro, componentInfo);
             break;
 
         case "ext-shrinks":
-            bodyToggle("ext-b-shrinks")
+            bodyToggle("ext-b-shrinks", extBodyAll)
+            buildContentAll(mediaExt, 2);
+            showBody(bodyShrink, componentInfo);
             break;
 
         case "ext-tape":
-            bodyToggle("ext-b-tape")
+            bodyToggle("ext-b-tape", extBodyAll)
+            buildContentAll(mediaExt, 3);
+            showBody(bodyTape, componentInfo);
             break;
             
         case "ext-comb":
-            bodyToggle("ext-b-comb")
+            bodyToggle("ext-b-comb", extBodyAll)
+            buildContentAll(mediaExt, 4);
+            showBody(bodyComb, componentInfo);
             break;
     }
 }
 
-// "offer" : "nav small" "treatment"
+// C) "TREATMENT" "NAV SMALL" (OFFER)
 function showContent3(e) {
 
     introTreat.style.display = "none";
+    sideNav.style.display = "block"
 
-        // active class
-        for (let i=0; i<trAll.length; i++) {
-            if (e.target.id === trAll[i].id) {
-                trAll[i].classList.add("ns-active")
-            } else {
-                trAll[i].classList.remove("ns-active")
-            }
+    activeTabs(trAll, e.target);
+
+    // prepare indyvidual cases - for main body toggle (in "showContent4")
+    switch(e.target.id) {
+
+        case "tr-botox":
+            bodyToggle("tr-b-botox", trBodyAll)
+            buildContentAll(mediaTreat, 0);
+            showBody(bodyBotox, componentInfo);
+            break;
+
+        case "tr-kreatyna":
+            bodyToggle("tr-b-kreatyna", trBodyAll)
+            buildContentAll(mediaTreat, 1);
+            showBody(bodyKreatyna, componentInfo);
+            break;
+    }    
+}
+
+// D) SIDE NAV 
+function showContent4 (e) {
+
+    // function for changing content after clicking on icon
+    function iconBodyToggle(smNavEl) {
+        if (e.target.id === "sn-info") {
+            showBody(smNavEl, componentInfo)
+        } else if (e.target.id === "sn-img") {
+            showBody(smNavEl, componentPhoto)
+        } else if (e.target.id === "sn-vid") {
+            showBody(smNavEl, componentVid)
         }
+    } 
 
-        // function for body toggle
-        function bodyToggle(cl) {
-            for (let i=0; i<trBodyAll.length; i++) {
-                if (trBodyAll[i].id === cl) {
-                    trBodyAll[i].style.display = "block"
-                } else {
-                    trBodyAll[i].style.display = "none"
+    // in active tab (in small nav), change content after clicking on icon
+    for (let i=0; i<summAllArray.length; i++) {
+
+        switch (summAllArray[i].classList.contains("ns-active")) {
+            case true:
+
+                switch (summAllArray[i].id) {
+                    case "ext-fusion":
+                        iconBodyToggle(bodyFusion)
+                        break
+
+                    case "ext-micro" :
+                        iconBodyToggle(bodyMicro)
+                        break
+
+                    case "ext-shrinks" :
+                        iconBodyToggle(bodyShrink)
+                        break
+                    
+                    case "ext-tape" :
+                        iconBodyToggle(bodyTape)
+                        break
+                    
+                    case "ext-comb" :
+                        iconBodyToggle(bodyComb)
+                        break 
+
+                    case "tr-botox" :
+                        iconBodyToggle(bodyBotox)
+                        break
+                        
+                    case "tr-kreatyna" :
+                        iconBodyToggle(bodyKreatyna)
+                        break                          
                 }
-            }
-        }
 
-        // body toggle
-        switch(e.target.id) {
-
-            case "tr-botox":
-                bodyToggle("tr-b-botox")
                 break;
-    
-            case "tr-kreatyna":
-                bodyToggle("tr-b-kreatyna")
-                break;
-    
         }
+    }
 }
