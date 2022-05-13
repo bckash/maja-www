@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- HEADER  + NAV -->
-    <header class="showcase">
+    <header id="showcase" class="showcase">
 
         <!-- showcase  -->
         <img class="showcase__logo" src="img/newlife_logo.png" alt="">
@@ -220,25 +220,86 @@
 
     <!-- CUSTOMERS OPINION -->
     <section class="co-container">
-        <div class="customer-opinion br">
-            <div class="customer-opinion__header">
-                <div class="customer-opinion__header--photo">
-                    <img class="rounded-circle" src="img/alicja.jpg" alt="">
+        <header id="co-title" class="">
+            Customers say:
+        </header>
+        <div class="p-absolute-fix">
+            <!-- OPINION 1 -->
+            <div id="cu-op-1" class="customer-opinion">
+                <div class="customer-opinion__header">
+                    <!-- photo -->
+                    <div id="op-photo-1" class="customer-opinion__header--photo">
+                        <img class="rounded-circle" src="img/alicja.jpg" alt="">
+                    </div>
+                    <!-- name -->
+                    <div class="customer-opinion__header--name">
+                        <p>Alicja</p>
+                    </div>
+                    <!-- icon -->
+                    <div class="customer-opinion__header--icon">
+                        <span class="material-icons">
+                            verified_user
+                        </span>
+                    </div>
                 </div>
-                <div class="customer-opinion__header--name">
-                    <p>Alicja</p>
-                </div>
-                <div class="customer-opinion__header--icon">
-                    <span class="material-icons">
-                        verified_user
-                    </span>
+                <!-- opinion -->
+                <div class="customer-opinion__opinion">
+                    <span id="corner-float"></span>
+                    Cudne warkocze kochana,  chciala  bym je po kolana !! albo i dluzej bo ten komentarz musi miec troche tresci w sobie wiadomix elo ziomeczku.
                 </div>
             </div>
-            <div class="customer-opinion__opinion">
-                <span id="corner-float"></span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit itaque sunt quidem quae. Minima tempora doloremque molestiae sequi debitis nobis?
+
+            <!-- OPINION 2 -->
+            <div id="cu-op-2" class="customer-opinion">
+                <div class="customer-opinion__header">
+                    <!-- photo -->
+                    <div id="op-photo-2" class="customer-opinion__header--photo">
+                        <img class="rounded-circle" src="img/joanna.jpg" alt="">
+                    </div>
+                    <!-- name -->
+                    <div class="customer-opinion__header--name">
+                        <p>Joanna</p>
+                    </div>
+                    <!-- icon -->
+                    <div class="customer-opinion__header--icon">
+                        <span class="material-icons">
+                            verified_user
+                        </span>
+                    </div>
+                </div>
+                <!-- opinion -->
+                <div class="customer-opinion__opinion">
+                    <span id="corner-float"></span>
+                    Dzieki super bardzo pieknie !
+                </div>
             </div>
-        </div>
+
+            <!-- OPINION 3 -->
+            <div id="cu-op-3" class="customer-opinion">
+                <div class="customer-opinion__header">
+                    <!-- photo -->
+                    <div id="op-photo-3" class="customer-opinion__header--photo">
+                        <img class="rounded-circle" src="img/zuza.jpg" alt="">
+                    </div>
+                    <!-- name -->
+                    <div class="customer-opinion__header--name">
+                        <p>Zuzanna</p>
+                    </div>
+                    <!-- icon -->
+                    <div class="customer-opinion__header--icon">
+                        <span class="material-icons">
+                            verified_user
+                        </span>
+                    </div>
+                </div>
+                <!-- opinion -->
+                <div class="customer-opinion__opinion">
+                    <span id="corner-float"></span>
+                    Bardzo mi sie podoba, napewno odwiedze Cie jeszcze nie raz.
+                </div>
+            </div>
+
+        </div>      
     </section>
 
     <!-- B5 -->
@@ -336,6 +397,15 @@
             </div>
         </div>
     </section>
+
+    <!-- pull back menu.................... -->
+    <nav id="pull-back" class="pull-back opa-0">
+        <a href="#showcase">
+            <span id="arrow-nav" class="material-icons">
+                arrow_circle_left
+            </span>
+        </a>
+    </nav>
 
     <!-- FOOTER -->
     <footer class="">

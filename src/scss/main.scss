@@ -3,7 +3,7 @@
 
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
 
 
 *, *::before, *::after {
@@ -85,10 +85,10 @@ ul {
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #420d0d;
     text-transform: uppercase;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
     z-index: 10;
 
     & ul {
@@ -113,7 +113,7 @@ ul {
     & a {
         display: block;
         padding: 1.5rem 0;
-        color: rgb(122, 13, 13);
+        color: rgb(233, 113, 113);
     }
 }
 
@@ -148,7 +148,7 @@ ul {
             width: 15rem;
             height: auto;
             margin-right: 5rem;
-            box-shadow: 1px 1px 20px rgb(170, 70, 70);
+            @include v.photo-shad;
         }
 
         & span {
@@ -261,9 +261,29 @@ ul {
     display: none;
 }
 
+// CUSTOMER OPINION
 
 .co-container {
     background-color: v.$nl-back-red;
+}
+
+#co-title {
+    @include v.title;
+    width: 35rem;
+    text-align: center;
+    padding-top: 6rem;
+    margin-bottom: 0rem;
+    border: 0;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 5rem;
+    color: v.$nl-back-pink-dark;
+}
+
+.p-absolute-fix {
+    position: relative;
+    margin: auto;
+    width: 40rem;
+    height: 25rem;
 }
 
 .customer-opinion {
@@ -292,16 +312,20 @@ ul {
             z-index: 5;
             width: 170px;
             border: 2px white solid;
+            @include v.photo-shad;
         }
 
         &--icon span {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            margin-bottom: .5rem;
+            color: v.$nl-red;
         }
     }   
     
     &__opinion {
+        @include v.photo-shad;
         position: absolute;
+        font-style: italic;
         top: 9rem;
         left: 180px;
         width: 22rem;
@@ -315,12 +339,80 @@ ul {
     }
 }
 
+#cu-op-1, #cu-op-2, #cu-op-3 {
+    // display: none;
+    position: absolute;
+    top: 0;
+}
+
+#cu-op-1, #cu-op-2, #cu-op-3 {
+    opacity: 0;
+}
+
+.animation__in-left-right {
+    animation-name: inLeftRight;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+.animation__out-left-right {
+    animation-name: outLeftRight;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+.animation__out-left-right--delay {
+    animation-name: outLeftRight;
+    animation-duration: .2s;
+    animation-delay: 8800ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes inLeftRight {
+     from {
+        opacity: 0;
+        transform: translateX(-15rem);
+     } 
+     to {
+        opacity: 1;
+        transform: translateX(0);
+     } 
+    }
+
+
+@keyframes inLeftRightZ {
+    from {
+        z-index: 10;
+        opacity: 0;
+        transform: translateX(-15rem);
+    } 
+    to {
+        z-index: 10;
+        opacity: 1;
+        transform: translateX(0);
+    } 
+}    
+
+@keyframes outLeftRight {
+    from {
+        z-index: 10;
+        opacity: 1;
+        transform: translateX(0);
+    } 
+    to {
+        z-index: 10;
+        opacity: 0;
+        transform: translateX(15rem);
+    } 
+}
+
 #corner-float {
     width: 60px;
     height: 20px;
     float: left;
 }
 
+// PRICES
 
 .prices {
     background-color: v.$nl-back-pink-ultra-light;
@@ -388,15 +480,42 @@ ul {
 
             & > * {
                 display: inline-block;
-                margin: 2rem 1.5rem;
+                margin: 2rem 1.2rem;
 
                 & img {
-                    width: 40px;
+                    width: 30px;
                 }
             }
 
         }
     }
+}
+
+// pulback menu
+
+.pull-back {
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1rem;
+    z-index: 1000;
+    transition: opacity .4s;
+
+    & span {
+        font-size: 3rem;
+        transform: rotate(90deg);
+        color: var(--marin-blue);
+        transition: color .4s;
+    }
+}
+
+.opa-1 {
+    opacity: 1;
+}
+
+.opa-0 {
+    opacity: 0;
 }
 
 

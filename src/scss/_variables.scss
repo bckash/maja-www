@@ -36,3 +36,7 @@ $nl-back-pastel: #418bad;
         margin: .5rem 1rem;
     }
 }
+
+@mixin photo-shad {
+    box-shadow: 1px 1px 20px rgb(170, 70, 70);
+}
