@@ -5,7 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Julius+Sans+One&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11193,32 +11193,18 @@ ul {
   border-bottom: 8px solid;
 }
 .main-nav li {
-  padding: 1.5rem 0;
   width: 25%;
   text-align: center;
   border-bottom-color: rgba(255, 0, 0, 0);
 }
 .main-nav li:hover {
   background-color: rgba(238, 175, 175, 0.116);
-  border-bottom-color: black;
+  border-bottom-color: #970a0a;
 }
-
-.bridge-1 {
-  background-color: #CE4C4C;
-  height: 20rem;
-}
-
-.bridge-1-1 {
-  position: relative;
-  background-color: #E097A0;
-}
-.bridge-1-1 div {
-  height: max-content;
-  width: 100%;
-}
-.bridge-1-1__svg--right {
-  position: absolute;
-  top: 1rem;
+.main-nav a {
+  display: block;
+  padding: 1.5rem 0;
+  color: #7a0d0d;
 }
 
 .about-me {
@@ -11234,9 +11220,15 @@ ul {
 .about-me__content--head {
   font-size: 3rem;
   padding: 1rem;
+  width: 20rem;
+  margin: auto;
+  border-bottom: 1px grey solid;
+  color: #B41A1A;
   text-align: center;
   color: pink;
-  padding-left: 22rem;
+  margin-left: 26rem;
+  margin-bottom: 2rem;
+  border-color: pink;
 }
 .about-me__content--main {
   display: flex;
@@ -11252,13 +11244,9 @@ ul {
 .about-me__content span {
   display: inline-block;
   border-left: 20px solid #D97F8A;
+  color: #810606;
   padding: 1rem;
   padding-left: 3.5rem;
-}
-
-.bridge-2 {
-  background-color: #E097A0;
-  height: max-content;
 }
 
 .paralax-1 {
@@ -11277,10 +11265,6 @@ ul {
   background-size: cover;
 }
 
-.bridge-3 {
-  background-color: #F0D5D5;
-}
-
 .offer {
   background-color: #F0D5D5;
 }
@@ -11295,6 +11279,10 @@ ul {
 .offer__content--head {
   font-size: 3rem;
   padding: 1rem;
+  width: 20rem;
+  margin: auto;
+  border-bottom: 1px grey solid;
+  color: #B41A1A;
   padding: 1rem 0;
 }
 .offer__content--nav-small {
@@ -11354,11 +11342,6 @@ ul {
   display: none;
 }
 
-.bridge-4 {
-  background-color: #F0D5D5;
-  height: max-content;
-}
-
 .co-container {
   background-color: #CE4C4C;
 }
@@ -11411,10 +11394,6 @@ ul {
   float: left;
 }
 
-.bridge-5 {
-  background-color: #F8EEEE;
-}
-
 .prices {
   background-color: #F8EEEE;
 }
@@ -11426,6 +11405,10 @@ ul {
 .prices__content--header {
   font-size: 3rem;
   padding: 1rem;
+  width: 20rem;
+  margin: auto;
+  border-bottom: 1px grey solid;
+  color: #B41A1A;
   text-align: center;
 }
 .prices__content--nav-ul {
@@ -11441,14 +11424,13 @@ ul {
   text-align: center;
 }
 
-.contact__content {
-  width: 50rem;
-  height: max-content;
-  margin: auto;
-}
 .contact__content--header {
   font-size: 3rem;
   padding: 1rem;
+  width: 20rem;
+  margin: auto;
+  border-bottom: 1px grey solid;
+  color: #B41A1A;
   text-align: center;
 }
 .contact__content--body-tel, .contact__content--body-email {
@@ -11469,9 +11451,6 @@ ul {
 }
 
 .media__content {
-  width: 50rem;
-  height: max-content;
-  margin: auto;
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 2rem;
@@ -11479,13 +11458,54 @@ ul {
 .media__content--header {
   font-size: 3rem;
   padding: 1rem;
+  width: 20rem;
+  margin: auto;
+  border-bottom: 1px grey solid;
+  color: #B41A1A;
+  border-bottom: 1px grey solid;
 }
 .media__content--icons > * {
   display: inline-block;
-  margin: 2rem;
+  margin: 2rem 1.5rem;
 }
 .media__content--icons > * img {
   width: 40px;
+}
+
+.bridge-1 {
+  background-color: #CE4C4C;
+  height: 20rem;
+}
+
+.bridge-1-1 {
+  position: relative;
+  background-color: #E097A0;
+}
+.bridge-1-1 div {
+  height: max-content;
+  width: 100%;
+}
+.bridge-1-1__svg--right {
+  position: absolute;
+  top: 1rem;
+}
+
+.bridge-2 {
+  background-color: #E097A0;
+  height: max-content;
+}
+
+.bridge-3 {
+  background-color: #F0D5D5;
+}
+
+.bridge-4 {
+  background-color: #F0D5D5;
+  height: max-content;
+}
+
+.bridge-5 {
+  background-color: #F8EEEE;
 }
 
 footer {
@@ -11495,7 +11515,6 @@ footer {
   margin-bottom: 0rem;
   margin: auto;
   padding: 1rem;
-  border-top: 1px #d1d1d1 solid;
 }
 footer img {
   opacity: 0.5;

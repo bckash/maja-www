@@ -3,7 +3,7 @@
 
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Julius+Sans+One&display=swap');
 
 
 *, *::before, *::after {
@@ -77,7 +77,6 @@ ul {
 }
 
 
-
 // MAIN NAV
 //------------------
 
@@ -101,7 +100,6 @@ ul {
     }
 
     & li {
-        padding: 1.5rem 0;
         width: 25%;
         text-align: center;
         border-bottom-color: rgba(255, 0, 0, 0);
@@ -109,7 +107,13 @@ ul {
 
     & li:hover {
         background-color: rgba(238, 175, 175, 0.116);
-        border-bottom-color:  black;
+        border-bottom-color:  rgb(151, 10, 10);
+    }
+
+    & a {
+        display: block;
+        padding: 1.5rem 0;
+        color: rgb(122, 13, 13);
     }
 }
 
@@ -117,26 +121,6 @@ ul {
 // SECTIONS
 //------------------
 
-
-.bridge-1 {
-    background-color: v.$nl-back-red;
-    height: 20rem;
-}
-
-.bridge-1-1 {
-    position: relative;
-    background-color: v.$nl-back-pink;
-
-    & div {
-        height: max-content;
-        width: 100%;
-    }
-
-    &__svg--right {
-        position: absolute;
-        top: 1rem;
-    }
-}
 
 .about-me {
     background-color: v.$nl-back-pink;
@@ -150,7 +134,9 @@ ul {
         @include v.title;
         text-align: center;
         color: pink;
-        padding-left: 22rem;
+        margin-left: 26rem;
+        margin-bottom: 2rem;
+        border-color: pink;
     }
 
     &--main {
@@ -168,14 +154,10 @@ ul {
         & span {
             display: inline-block;
             border-left: 20px solid v.$nl-back-pink-dark;
+            color: rgb(129, 6, 6);
             padding: 1rem;
             padding-left: 3.5rem;
         }
-}
-
-.bridge-2 {
-    background-color: v.$nl-back-pink;
-    height: max-content;
 }
 
 .paralax-1 {
@@ -195,10 +177,6 @@ ul {
 
     }
 
-}
-
-.bridge-3 {
-    background-color: v.$nl-back-pink-light;
 }
 
 .offer {
@@ -283,10 +261,6 @@ ul {
     display: none;
 }
 
-.bridge-4 {
-    background-color: v.$nl-back-pink-light;
-    height: max-content;
-}
 
 .co-container {
     background-color: v.$nl-back-red;
@@ -347,9 +321,6 @@ ul {
     float: left;
 }
 
-.bridge-5 {
-    background-color: v.$nl-back-pink-ultra-light;
-}
 
 .prices {
     background-color: v.$nl-back-pink-ultra-light;
@@ -376,11 +347,10 @@ ul {
 .contact {
 
     &__content {
-        @include v.article;
 
         &--header {
             @include v.title;
-            text-align: center
+            text-align: center;
         }
 
         &--body-tel, &--body-email {
@@ -403,21 +373,22 @@ ul {
 }
 
 .media {
+
     &__content {
-        @include v.article;
         text-align: center;
         margin-top: 4rem;
         margin-bottom: 2rem;
 
         &--header {
             @include v.title;
+            border-bottom: 1px grey solid;
         }
 
         &--icons {
 
             & > * {
                 display: inline-block;
-                margin: 2rem;
+                margin: 2rem 1.5rem;
 
                 & img {
                     width: 40px;
@@ -428,6 +399,52 @@ ul {
     }
 }
 
+
+// BRIDGES
+//------------------
+
+
+.bridge-1 {
+    background-color: v.$nl-back-red;
+    height: 20rem;
+}
+
+.bridge-1-1 {
+    position: relative;
+    background-color: v.$nl-back-pink;
+
+    & div {
+        height: max-content;
+        width: 100%;
+    }
+
+    &__svg--right {
+        position: absolute;
+        top: 1rem;
+    }
+}
+
+.bridge-2 {
+    background-color: v.$nl-back-pink;
+    height: max-content;
+}
+
+.bridge-3 {
+    background-color: v.$nl-back-pink-light;
+}
+
+.bridge-4 {
+    background-color: v.$nl-back-pink-light;
+    height: max-content;
+}
+.bridge-5 {
+    background-color: v.$nl-back-pink-ultra-light;
+}
+
+
+// FOOTER
+//------------------
+
 footer {
     width: 200px;
     text-align: center;
@@ -435,7 +452,6 @@ footer {
     margin-bottom: 0rem;
     margin: auto;
     padding: 1rem;
-    border-top: 1px rgb(209, 209, 209) solid;
 
     & img {
         opacity: .5;

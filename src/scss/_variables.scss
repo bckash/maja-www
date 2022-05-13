@@ -1,6 +1,7 @@
 
 // colors
 
+$nl-red: #B41A1A;
 $nl-back-red: #CE4C4C;
 $nl-back-pink: #E097A0;
 $nl-back-pink-dark: #D97F8A;
@@ -20,6 +21,10 @@ $nl-back-pastel: #418bad;
 @mixin title {
     font-size: 3rem;
     padding: 1rem;
+    width: 20rem;
+    margin: auto;
+    border-bottom: 1px grey solid;
+    color: $nl-red;
 }
 
 @mixin nav-big {
