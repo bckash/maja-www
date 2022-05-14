@@ -127,6 +127,15 @@ const custOpinion3 = document.getElementById("cu-op-3")
 const pullBack = document.getElementById("pull-back");
 const arrUp = document.getElementById("arrow-nav");
 
+// prices nav
+const pricesBodyExt = document.getElementById("pc-c-ext")
+const pricesBodyTreat = document.getElementById("pc-c-treat")
+const pricesBodyStyle = document.getElementById("pc-c-style")
+const pricesNavExt = document.getElementById("prices--nav-ext")
+const pricesNavTreat = document.getElementById("prices--nav-treat")
+const pricesNavStyle = document.getElementById("prices--nav-style")
+
+
 // 2. EL
 //-------------
 
@@ -150,6 +159,10 @@ if (sideNav) {
 }
 
 window.addEventListener("scroll", showNav);
+
+pricesNavExt.addEventListener("click", pricesNav)
+pricesNavTreat.addEventListener("click", pricesNav)
+pricesNavStyle.addEventListener("click", pricesNav)
 
 // 3. FUNCTIONS ->
 //---------------
@@ -205,10 +218,10 @@ function showBody(el, ch) {
 // A) "NAV BIG" TABS (OFFER)
 function showContent (e) {
 
-    // hide side nav bar
+    // hide "side nav" 
     sideNav.style.display = "none"
 
-    // reset styles
+    // reset "small nav" and "body" styles
     introMain.style.display = "none";
     for (let i=0; i<trBodyAll.length; i++) {
             trBodyAll[i].style.display = "none";
@@ -600,3 +613,34 @@ function showNav(){
 
     }
 } 
+
+// G) "PRICES"  NAV
+function pricesNav (e) {
+
+        // set "active" and "non-active" tabs, show "body".
+        function setNav (activBG, activIntro, nonAct1BG, nonAct1Intro, nonAct2BG, nonAct2Intro) {
+            activBG.classList.add("ns-active");
+            activIntro.style.display = "block"
+            nonAct1BG.classList.remove("ns-active");
+            nonAct1Intro.style.display = "none"
+            nonAct2BG.classList.remove("ns-active");
+            nonAct2Intro.style.display = "none";
+        }
+
+            // "extension" clicked
+    if (e.target.id === pricesNavExt.id) {
+
+        setNav(pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle)
+
+    // "treatment clicked"
+    } else if (e.target.id === pricesNavTreat.id) {
+
+        setNav(pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt)
+    
+    // "style" clicked
+    } else if (e.target.id === pricesNavStyle.id) {
+
+        setNav(pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat)
+
+    }
+}

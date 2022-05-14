@@ -269,13 +269,13 @@ ul {
 
 #co-title {
     @include v.title;
-    width: 35rem;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 5rem;
     text-align: center;
+    width: 35rem;
     padding-top: 6rem;
     margin-bottom: 0rem;
     border: 0;
-    font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 5rem;
     color: v.$nl-back-pink-dark;
 }
 
@@ -429,12 +429,19 @@ ul {
             @include v.nav-big;
         }
 
+        &--nav-ul:hover {
+            cursor: pointer;
+        }
+
         &--body {
             margin-top: 2rem;
             text-align: center;
+            height: 43rem;
         }
     }
 }
+
+// CONTACT
 
 .contact {
 
@@ -463,6 +470,8 @@ ul {
 .contact-txt {
     font-size: 1.6rem;
 }
+
+// MEDIA
 
 .media {
 
@@ -584,7 +593,7 @@ footer {
 
 // for overlay : position absolute + mix-blend-mode: overlay;
 
-// Sass --watch src/scss:dist/css
+
 
 
 

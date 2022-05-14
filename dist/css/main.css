@@ -11353,13 +11353,13 @@ ul {
   margin: auto;
   border-bottom: 1px grey solid;
   color: #B41A1A;
-  width: 35rem;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 5rem;
   text-align: center;
+  width: 35rem;
   padding-top: 6rem;
   margin-bottom: 0rem;
   border: 0;
-  font-family: "Oleo Script Swash Caps", cursive;
-  font-size: 5rem;
   color: #D97F8A;
 }
 
@@ -11509,9 +11509,13 @@ ul {
 .prices__content--nav-ul li {
   margin: 0.5rem 1rem;
 }
+.prices__content--nav-ul:hover {
+  cursor: pointer;
+}
 .prices__content--body {
   margin-top: 2rem;
   text-align: center;
+  height: 43rem;
 }
 
 .contact__content--header {
