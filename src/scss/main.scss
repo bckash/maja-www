@@ -437,9 +437,99 @@ ul {
             margin-top: 2rem;
             text-align: center;
             height: 43rem;
+
+            &-ext, &-treat, &-style {
+                display: none;
+            }
+
+            &-treat {
+                position: relative;
+            }
+
+            &-treat .price-line {
+                position: absolute;
+                left: 50%;
+                text-align: right;
+                width: 0;
+                border-bottom: 4px solid;
+
+                & span {
+                    display: none;
+                }
+            }
+
+            &-treat .pl-pink {
+                top: 8rem;
+                border-color: pink;
+
+                & span {
+                    background-color: rgba(255, 192, 203, 0.493);
+                }
+            }
+
+            &-treat .pl-peach {
+                top: 16rem;
+                border-color: orange;
+
+                & span {
+                    background-color: rgba(255, 166, 0, 0.493);
+                }
+            }
+
+            &-treat .pl-red {
+                top: 24rem;
+                border-color: red;
+
+                & span {
+                    background-color: rgba(255, 0, 0, 0.521);
+                }
+            }
         }
     }
 }
+
+.animation__line-in, .animation__line-in-d1, .animation__line-in-d2 {
+    animation-name: line-left-right;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+.animation__line-in-d1 {
+    animation-delay: .1s;
+}
+
+.animation__line-in-d2 {
+    animation-delay: .2s;
+}
+
+@keyframes line-left-right {
+    from {width: 0;} 
+    to {width: 15rem;} 
+}
+
+.animation__height-up ,.animation__height-up-d1, .animation__height-up-d2 {
+    animation-name: line-up;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+.animation__height-up {
+    animation-delay: .5s;
+}
+
+.animation__height-up-d1 {
+    animation-delay: .7s;
+}
+
+.animation__height-up-d2 {
+    animation-delay: .9s;
+}
+
+@keyframes line-up {
+    from {height: 0;} 
+    to {height: 5rem;} 
+}
+
 
 // CONTACT
 

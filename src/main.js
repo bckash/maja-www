@@ -131,9 +131,15 @@ const arrUp = document.getElementById("arrow-nav");
 const pricesBodyExt = document.getElementById("pc-c-ext")
 const pricesBodyTreat = document.getElementById("pc-c-treat")
 const pricesBodyStyle = document.getElementById("pc-c-style")
+const pricesBodyIntro = document.getElementById("pc-c-intro")
 const pricesNavExt = document.getElementById("prices--nav-ext")
 const pricesNavTreat = document.getElementById("prices--nav-treat")
 const pricesNavStyle = document.getElementById("prices--nav-style")
+
+// prices "span-1"
+const priceSpan1 = document.getElementById("price-span-1")
+const priceSpan2 = document.getElementById("price-span-2")
+const priceSpan3 = document.getElementById("price-span-3")
 
 
 // 2. EL
@@ -617,6 +623,8 @@ function showNav(){
 // G) "PRICES"  NAV
 function pricesNav (e) {
 
+        pricesBodyIntro.style.display = "none";
+
         // set "active" and "non-active" tabs, show "body".
         function setNav (activBG, activIntro, nonAct1BG, nonAct1Intro, nonAct2BG, nonAct2Intro) {
             activBG.classList.add("ns-active");
@@ -627,20 +635,28 @@ function pricesNav (e) {
             nonAct2Intro.style.display = "none";
         }
 
+        function showSpan(sp) {
+            sp.style.display = "block"
+        }
+
             // "extension" clicked
     if (e.target.id === pricesNavExt.id) {
 
-        setNav(pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle)
+        setNav(pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle);
 
     // "treatment clicked"
     } else if (e.target.id === pricesNavTreat.id) {
 
-        setNav(pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt)
+        setNav(pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt);
+
+        setTimeout(showSpan(priceSpan1),700)
+        setTimeout(showSpan(priceSpan2),1000)
+        setTimeout(showSpan(priceSpan3),1300)
     
     // "style" clicked
     } else if (e.target.id === pricesNavStyle.id) {
 
-        setNav(pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat)
+        setNav(pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat);
 
     }
 }

@@ -11517,7 +11517,92 @@ ul {
   text-align: center;
   height: 43rem;
 }
+.prices__content--body-ext, .prices__content--body-treat, .prices__content--body-style {
+  display: none;
+}
+.prices__content--body-treat {
+  position: relative;
+}
+.prices__content--body-treat .price-line {
+  position: absolute;
+  left: 50%;
+  text-align: right;
+  width: 0;
+  border-bottom: 4px solid;
+}
+.prices__content--body-treat .price-line span {
+  display: none;
+}
+.prices__content--body-treat .pl-pink {
+  top: 8rem;
+  border-color: pink;
+}
+.prices__content--body-treat .pl-pink span {
+  background-color: rgba(255, 192, 203, 0.493);
+}
+.prices__content--body-treat .pl-peach {
+  top: 16rem;
+  border-color: orange;
+}
+.prices__content--body-treat .pl-peach span {
+  background-color: rgba(255, 166, 0, 0.493);
+}
+.prices__content--body-treat .pl-red {
+  top: 24rem;
+  border-color: red;
+}
+.prices__content--body-treat .pl-red span {
+  background-color: rgba(255, 0, 0, 0.521);
+}
 
+.animation__line-in, .animation__line-in-d1, .animation__line-in-d2 {
+  animation-name: line-left-right;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.animation__line-in-d1 {
+  animation-delay: 0.1s;
+}
+
+.animation__line-in-d2 {
+  animation-delay: 0.2s;
+}
+
+@keyframes line-left-right {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15rem;
+  }
+}
+.animation__height-up, .animation__height-up-d1, .animation__height-up-d2 {
+  animation-name: line-up;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.animation__height-up {
+  animation-delay: 0.5s;
+}
+
+.animation__height-up-d1 {
+  animation-delay: 0.7s;
+}
+
+.animation__height-up-d2 {
+  animation-delay: 0.9s;
+}
+
+@keyframes line-up {
+  from {
+    height: 0;
+  }
+  to {
+    height: 5rem;
+  }
+}
 .contact__content--header {
   font-size: 3rem;
   padding: 1rem;
