@@ -11524,40 +11524,75 @@ ul {
   position: relative;
 }
 .prices__content--body-treat .price-line {
+  display: flex;
+  align-items: center;
+  justify-content: end;
   position: absolute;
   left: 50%;
   text-align: right;
   width: 0;
   border-bottom: 4px solid;
+  padding-right: 1rem;
 }
-.prices__content--body-treat .price-line span {
+.prices__content--body-treat .price-line .price-holder {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  width: 7rem;
+  border: 1px solid;
+}
+.prices__content--body-treat .price-line .price-holder span {
+  display: block;
+  font-weight: bold;
+}
+.prices__content--body-treat .price-line .price-holder--value {
+  font-size: 2.2rem;
 }
 .prices__content--body-treat .pl-pink {
-  top: 8rem;
+  top: 1rem;
   border-color: pink;
+  background-color: rgba(255, 192, 203, 0.4);
+}
+.prices__content--body-treat .pl-pink .price-holder {
+  border-color: #6b1120;
 }
 .prices__content--body-treat .pl-pink span {
-  background-color: rgba(255, 192, 203, 0.493);
+  color: #6b1120;
 }
 .prices__content--body-treat .pl-peach {
-  top: 16rem;
+  top: 10rem;
   border-color: orange;
+  background-color: rgba(255, 166, 0, 0.4);
+}
+.prices__content--body-treat .pl-peach .price-holder {
+  border-color: #cf6814;
 }
 .prices__content--body-treat .pl-peach span {
-  background-color: rgba(255, 166, 0, 0.493);
+  color: #cf6814;
 }
 .prices__content--body-treat .pl-red {
-  top: 24rem;
+  top: 19rem;
   border-color: red;
+  background-color: rgba(255, 0, 0, 0.4);
+}
+.prices__content--body-treat .pl-red .price-holder {
+  border-color: #a00e0e;
 }
 .prices__content--body-treat .pl-red span {
-  background-color: rgba(255, 0, 0, 0.521);
+  color: #a00e0e;
 }
 
-.animation__line-in, .animation__line-in-d1, .animation__line-in-d2 {
+.animation__line-in {
   animation-name: line-left-right;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.animation__line-in-d1, .animation__line-in-d2 {
+  animation-name: line-left-right2;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -11570,37 +11605,41 @@ ul {
 }
 
 @keyframes line-left-right {
-  from {
+  0% {
     width: 0;
+    height: 0;
   }
-  to {
+  50% {
     width: 15rem;
+    height: 0;
+  }
+  100% {
+    width: 15rem;
+    height: 9rem;
   }
 }
-.animation__height-up, .animation__height-up-d1, .animation__height-up-d2 {
-  animation-name: line-up;
+@keyframes line-left-right2 {
+  0% {
+    width: 15rem;
+    height: 0;
+  }
+  100% {
+    width: 15rem;
+    height: 9rem;
+  }
+}
+.animation__price {
+  animation-name: price-appear;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
-.animation__height-up {
-  animation-delay: 0.5s;
-}
-
-.animation__height-up-d1 {
-  animation-delay: 0.7s;
-}
-
-.animation__height-up-d2 {
-  animation-delay: 0.9s;
-}
-
-@keyframes line-up {
+@keyframes price-appear {
   from {
-    height: 0;
+    opacity: 0;
   }
   to {
-    height: 5rem;
+    opacity: 1;
   }
 }
 .contact__content--header {

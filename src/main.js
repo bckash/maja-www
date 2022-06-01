@@ -141,6 +141,7 @@ const priceSpan1 = document.getElementById("price-span-1")
 const priceSpan2 = document.getElementById("price-span-2")
 const priceSpan3 = document.getElementById("price-span-3")
 
+// price holder 
 
 // 2. EL
 //-------------

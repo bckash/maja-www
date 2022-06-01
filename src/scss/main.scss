@@ -447,50 +447,93 @@ ul {
             }
 
             &-treat .price-line {
+                display: flex;
+                align-items:center;
+                justify-content: end;
                 position: absolute;
                 left: 50%;
                 text-align: right;
                 width: 0;
                 border-bottom: 4px solid;
+                padding-right: 1rem;
 
-                & span {
+                & .price-holder {
                     display: none;
-                }
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: .2rem;
+                    width: 7rem;
+                    border: 1px solid;
+
+                    & span {
+                        display: block;
+                        font-weight: bold;
+                    }
+
+                    &--value {
+                        font-size: 2.2rem;
+                    }
+
+                }              
             }
 
             &-treat .pl-pink {
-                top: 8rem;
+                top: 1rem;
                 border-color: pink;
+                background-color: rgba(255, 192, 203, 0.4);
+
+                & .price-holder {
+                    border-color: rgb(107, 17, 32);
+                }
 
                 & span {
-                    background-color: rgba(255, 192, 203, 0.493);
+                    color: rgb(107, 17, 32);
                 }
             }
 
             &-treat .pl-peach {
-                top: 16rem;
+                top: 10rem;
                 border-color: orange;
+                background-color: rgba(255, 166, 0, 0.4);
+
+                & .price-holder {
+                    border-color: rgb(207, 104, 20);
+                }
 
                 & span {
-                    background-color: rgba(255, 166, 0, 0.493);
+                    color: rgb(207, 104, 20);
                 }
             }
 
             &-treat .pl-red {
-                top: 24rem;
+                top: 19rem;
                 border-color: red;
+                background-color: rgba(255, 0, 0, 0.4);
+
+                & .price-holder {
+                    border-color: rgb(160, 14, 14);
+                }
 
                 & span {
-                    background-color: rgba(255, 0, 0, 0.521);
+                    color: rgb(160, 14, 14);
                 }
             }
         }
     }
 }
 
-.animation__line-in, .animation__line-in-d1, .animation__line-in-d2 {
+// animation price zones
+
+.animation__line-in  {
     animation-name: line-left-right;
-    animation-duration: .3s;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+.animation__line-in-d1, .animation__line-in-d2 {
+    animation-name: line-left-right2;
+    animation-duration: .2s;
     animation-fill-mode: forwards;
 }
 
@@ -503,33 +546,45 @@ ul {
 }
 
 @keyframes line-left-right {
-    from {width: 0;} 
-    to {width: 15rem;} 
+    0% {
+        width: 0;
+        height: 0;
+    }
+    25% {}
+    50% {
+        width: 15rem;
+        height: 0;
+    }
+    75% {}
+    100% {
+        width: 15rem;
+        height: 9rem;
+    } 
 }
 
-.animation__height-up ,.animation__height-up-d1, .animation__height-up-d2 {
-    animation-name: line-up;
+@keyframes line-left-right2 {
+    0% {
+        width: 15rem;
+        height: 0;
+    }
+    100% {
+        width: 15rem;
+        height: 9rem;
+    } 
+}
+
+// animation - price holder
+
+.animation__price  {
+    animation-name: price-appear;
     animation-duration: .2s;
     animation-fill-mode: forwards;
 }
 
-.animation__height-up {
-    animation-delay: .5s;
+@keyframes price-appear {
+    from {opacity: 0}
+    to {opacity:1}
 }
-
-.animation__height-up-d1 {
-    animation-delay: .7s;
-}
-
-.animation__height-up-d2 {
-    animation-delay: .9s;
-}
-
-@keyframes line-up {
-    from {height: 0;} 
-    to {height: 5rem;} 
-}
-
 
 // CONTACT
 
