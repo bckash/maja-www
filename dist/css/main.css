@@ -11556,10 +11556,10 @@ ul {
   background-color: rgba(255, 192, 203, 0.4);
 }
 .prices__content--body-treat .pl-pink .price-holder {
-  border-color: #6b1120;
+  border-color: #df93a0;
 }
 .prices__content--body-treat .pl-pink span {
-  color: #6b1120;
+  color: #c24799;
 }
 .prices__content--body-treat .pl-peach {
   top: 10rem;
@@ -11567,10 +11567,10 @@ ul {
   background-color: rgba(255, 166, 0, 0.4);
 }
 .prices__content--body-treat .pl-peach .price-holder {
-  border-color: #cf6814;
+  border-color: #db853f;
 }
 .prices__content--body-treat .pl-peach span {
-  color: #cf6814;
+  color: #bb6016;
 }
 .prices__content--body-treat .pl-red {
   top: 19rem;
@@ -11578,7 +11578,7 @@ ul {
   background-color: rgba(255, 0, 0, 0.4);
 }
 .prices__content--body-treat .pl-red .price-holder {
-  border-color: #a00e0e;
+  border-color: #cc4f4f;
 }
 .prices__content--body-treat .pl-red span {
   color: #a00e0e;
@@ -11592,16 +11592,16 @@ ul {
 
 .animation__line-in-d1, .animation__line-in-d2 {
   animation-name: line-left-right2;
-  animation-duration: 0.2s;
+  animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
 
 .animation__line-in-d1 {
-  animation-delay: 0.1s;
+  animation-delay: 0.05s;
 }
 
 .animation__line-in-d2 {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 @keyframes line-left-right {
@@ -11609,7 +11609,7 @@ ul {
     width: 0;
     height: 0;
   }
-  50% {
+  75% {
     width: 15rem;
     height: 0;
   }
@@ -11621,6 +11621,9 @@ ul {
 @keyframes line-left-right2 {
   0% {
     width: 15rem;
+    height: 0;
+  }
+  25% {
     height: 0;
   }
   100% {

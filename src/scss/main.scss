@@ -484,11 +484,11 @@ ul {
                 background-color: rgba(255, 192, 203, 0.4);
 
                 & .price-holder {
-                    border-color: rgb(107, 17, 32);
+                    border-color: rgb(223, 147, 160);
                 }
 
                 & span {
-                    color: rgb(107, 17, 32);
+                    color: rgb(194, 71, 153);
                 }
             }
 
@@ -498,11 +498,11 @@ ul {
                 background-color: rgba(255, 166, 0, 0.4);
 
                 & .price-holder {
-                    border-color: rgb(207, 104, 20);
+                    border-color: rgb(219, 133, 63);
                 }
 
                 & span {
-                    color: rgb(207, 104, 20);
+                    color: rgb(187, 96, 22);
                 }
             }
 
@@ -512,7 +512,7 @@ ul {
                 background-color: rgba(255, 0, 0, 0.4);
 
                 & .price-holder {
-                    border-color: rgb(160, 14, 14);
+                    border-color: rgb(204, 79, 79);
                 }
 
                 & span {
@@ -533,16 +533,16 @@ ul {
 
 .animation__line-in-d1, .animation__line-in-d2 {
     animation-name: line-left-right2;
-    animation-duration: .2s;
+    animation-duration: .4s;
     animation-fill-mode: forwards;
 }
 
 .animation__line-in-d1 {
-    animation-delay: .1s;
+    animation-delay: .05s;
 }
 
 .animation__line-in-d2 {
-    animation-delay: .2s;
+    animation-delay: .10s;
 }
 
 @keyframes line-left-right {
@@ -551,11 +551,11 @@ ul {
         height: 0;
     }
     25% {}
-    50% {
+    75% {
         width: 15rem;
         height: 0;
     }
-    75% {}
+
     100% {
         width: 15rem;
         height: 9rem;
@@ -565,6 +565,9 @@ ul {
 @keyframes line-left-right2 {
     0% {
         width: 15rem;
+        height: 0;
+    }
+    25% {
         height: 0;
     }
     100% {

@@ -136,12 +136,10 @@ const pricesNavExt = document.getElementById("prices--nav-ext")
 const pricesNavTreat = document.getElementById("prices--nav-treat")
 const pricesNavStyle = document.getElementById("prices--nav-style")
 
-// prices "span-1"
-const priceSpan1 = document.getElementById("price-span-1")
-const priceSpan2 = document.getElementById("price-span-2")
-const priceSpan3 = document.getElementById("price-span-3")
-
 // price holder 
+const priceHolder1 = document.getElementById("ph-1")
+const priceHolder2 = document.getElementById("ph-2")
+const priceHolder3 = document.getElementById("ph-3")
 
 // 2. EL
 //-------------
@@ -404,44 +402,44 @@ setTimeout(() => {
     // A
 
     setTimeout(()=> {
-        console.log("A1 - in")
+        // console.log("A1 - in")
         custOpinion1.classList.add("animation__in-left-right")
     }, 0)
 
     setTimeout(()=> {
-        console.log("A2 - in")
+        // console.log("A2 - in")
         custOpinion3.classList.remove("animation__out-left-right")
     }, 800)
 
     setTimeout(()=> {
-        console.log("A1 - out")
+        // console.log("A1 - out")
         custOpinion1.classList.add("animation__out-left-right")
     }, 8000)
 
     setTimeout(()=> {
-        console.log("A2 - out")
+        // console.log("A2 - out")
         custOpinion1.classList.remove("animation__in-left-right")
     }, 8800)
 
     // B
 
     setTimeout(()=> {
-        console.log("B1 - in")
+        // console.log("B1 - in")
         custOpinion2.classList.add("animation__in-left-right")
     }, 9600)
 
     setTimeout(()=> {
-        console.log("B2 - in")
+        // console.log("B2 - in")
         custOpinion1.classList.remove("animation__out-left-right")
     }, 10400)
 
     setTimeout(()=> {
-        console.log("B1 - out")
+        // console.log("B1 - out")
         custOpinion2.classList.add("animation__out-left-right")
     }, 17600)
 
     setTimeout(()=> {
-        console.log("B2 - out")
+        // console.log("B2 - out")
         custOpinion2.classList.remove("animation__in-left-right")
     }, 18400)
 
@@ -452,7 +450,7 @@ setTimeout(() => {
     }, 19200)
 
     setTimeout(()=> {
-        console.log("C2 - in")
+        // console.log("C2 - in")
         custOpinion2.classList.remove("animation__out-left-right")
     }, 20000)
 
@@ -461,7 +459,7 @@ setTimeout(() => {
     }, 27200)
 
     setTimeout(()=> {
-        console.log("C2 - out")
+        // console.log("C2 - out")
         custOpinion3.classList.remove("animation__in-left-right")
     }, 28000)
 
@@ -472,44 +470,44 @@ setInterval(() => {
     // A
 
     setTimeout(()=> {
-        console.log("A1 - in")
+        // console.log("A1 - in")
         custOpinion1.classList.add("animation__in-left-right")
     }, 0)
 
     setTimeout(()=> {
-        console.log("A2 - in")
+        // console.log("A2 - in")
         custOpinion3.classList.remove("animation__out-left-right")
     }, 800)
 
     setTimeout(()=> {
-        console.log("A1 - out")
+        // console.log("A1 - out")
         custOpinion1.classList.add("animation__out-left-right")
     }, 8000)
 
     setTimeout(()=> {
-        console.log("A2 - out")
+        // console.log("A2 - out")
         custOpinion1.classList.remove("animation__in-left-right")
     }, 8800)
 
     // B
 
     setTimeout(()=> {
-        console.log("B1 - in")
+        // console.log("B1 - in")
         custOpinion2.classList.add("animation__in-left-right")
     }, 9600)
 
     setTimeout(()=> {
-        console.log("B2 - in")
+        // console.log("B2 - in")
         custOpinion1.classList.remove("animation__out-left-right")
     }, 10400)
 
     setTimeout(()=> {
-        console.log("B1 - out")
+        // console.log("B1 - out")
         custOpinion2.classList.add("animation__out-left-right")
     }, 17600)
 
     setTimeout(()=> {
-        console.log("B2 - out")
+        // console.log("B2 - out")
         custOpinion2.classList.remove("animation__in-left-right")
     }, 18400)
 
@@ -520,7 +518,7 @@ setInterval(() => {
     }, 19200)
 
     setTimeout(()=> {
-        console.log("C2 - in")
+        // console.log("C2 - in")
         custOpinion2.classList.remove("animation__out-left-right")
     }, 20000)
 
@@ -529,7 +527,7 @@ setInterval(() => {
     }, 27200)
 
     setTimeout(()=> {
-        console.log("C2 - out")
+        // console.log("C2 - out")
         custOpinion3.classList.remove("animation__in-left-right")
     }, 28000)
 
@@ -567,7 +565,7 @@ function showNav(){
     }
 
 
-    console.log(pos);
+    // console.log(pos);
 
     // "pull up menu" for window < 630px
     if (window.innerWidth < 630) {
@@ -636,12 +634,20 @@ function pricesNav (e) {
             nonAct2Intro.style.display = "none";
         }
 
-        function showSpan(sp) {
-            sp.style.display = "block"
+        function showSpan(sp, time) {
+            setTimeout(()=> {
+                sp.style.display = "flex"
+                console.log("fi")
+            }, time)
+
         }
 
-            // "extension" clicked
+    // "extension" clicked
     if (e.target.id === pricesNavExt.id) {
+
+        priceHolder1.style.display = "none";
+        priceHolder2.style.display = "none";
+        priceHolder3.style.display = "none";
 
         setNav(pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle);
 
@@ -650,12 +656,16 @@ function pricesNav (e) {
 
         setNav(pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt);
 
-        setTimeout(showSpan(priceSpan1),700)
-        setTimeout(showSpan(priceSpan2),1000)
-        setTimeout(showSpan(priceSpan3),1300)
+        showSpan(priceHolder1, 200)
+        showSpan(priceHolder2, 300)
+        showSpan(priceHolder3, 400)
     
     // "style" clicked
     } else if (e.target.id === pricesNavStyle.id) {
+
+        priceHolder1.style.display = "none";
+        priceHolder2.style.display = "none";
+        priceHolder3.style.display = "none";
 
         setNav(pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat);
 
