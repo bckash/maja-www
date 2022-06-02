@@ -61,47 +61,6 @@ addArraysToArray(extAllArr);
 addArraysToArray(trAllArr);
 
 
-// multimedia for small nav "offer"
-const mediaExt = [
-    {   
-        info: "11",
-        photo: "img/extension/p1.jpg",
-        vid: "img/extension/v1.jpg"
-    },
-    {   
-        info: "12",
-        photo: "img/extension/p2.jpg",
-        vid: "img/extension/v2.jpg"
-    },
-    {   
-        info: "13",
-        photo: "img/extension/p3.jpg",
-        vid: "img/extension/v3.jpg"
-    },
-    {   
-        info: "14",
-        photo: "img/extension/p4.jpg",
-        vid: "img/extension/v4.jpg"
-    },
-    {   
-        info: "15",
-        photo: "img/extension/p5.jpg",
-        vid: "img/extension/v5.jpg"
-    }
-]
-
-const mediaTreat = [
-    {   
-        info: "21",
-        photo: "img/treatment/p1.jpg",
-        vid: "img/treatment/v1.jpg"
-    },
-    {   
-        info: "22",
-        photo: "img/treatment/p2.jpg",
-        vid: "img/treatment/v2.jpg"
-    }
-]
 
 // side nav "offer"
 const sideNav = document.getElementById("side-nav")
@@ -111,14 +70,14 @@ const snVid = document.getElementById("sn-vid")
 const snAll = document.querySelectorAll(".sn-all")
 
 // create content components for "buildContent" in "showContent".
-function createComponent (el) {
-    let comp = document.createElement(el);
-    return comp;
-}
+// function createComponent (el) {
+//     let comp = document.createElement(el);
+//     return comp;
+// }
 
-const componentInfo = createComponent ("div")
-const componentPhoto = createComponent ("div")
-const componentVid = createComponent ("div")
+// const componentInfo = createComponent ("div")
+// const componentPhoto = createComponent ("div")
+// const componentVid = createComponent ("div")
 
 
 // 2. EL
@@ -179,26 +138,26 @@ function bodyToggle(cl, all) {
 
 // -- for building content inside "main body container". 
 // "arr" - array; "nr" - array element
-function buildContentAll (arr, nr) {
+// function buildContentAll (arr, nr) {
 
-    function buildContent (comp, inner) {
-        comp.innerHTML = inner;
-        return comp;
-    }
+//     function buildContent (comp, inner) {
+//         comp.innerHTML = inner;
+//         return comp;
+//     }
 
-    buildContent(componentInfo, `<span>${arr[nr].info}</span>`)
-    buildContent(componentPhoto, `<img src="${arr[nr].photo}">`)
-    buildContent(componentVid, `<img src="${arr[nr].vid}">`)
-}    
+//     buildContent(componentInfo, `<span>${arr[nr].info}</span>`)
+//     buildContent(componentPhoto, `<img src="${arr[nr].photo}">`)
+//     buildContent(componentVid, `<img src="${arr[nr].vid}">`)
+// }    
 
 // -- remove previous element and append present one
-function showBody(el, ch) {
-    if (el.firstElementChild) {
-        el.removeChild(el.firstElementChild);
-      }
+// function showBody(el, ch) {
+//     if (el.firstElementChild) {
+//         el.removeChild(el.firstElementChild);
+//       }
 
-    el.appendChild(ch)
-}    
+//     el.appendChild(ch)
+// }    
 
 
 
@@ -266,39 +225,28 @@ function showContent2 (e) {
 
     activeTabs(extAll, e.target);
 
-    // main body toggle (in "showContent4")
-    switch(e.target.id) {
-
+    switch (e.target.id) {
         case "ext-fusion":
             bodyToggle("ext-b-fusion", extBodyAll)
-            buildContentAll(mediaExt, 0);
-            showBody(bodyFusion, componentInfo);
             break;
 
         case "ext-micro":
             bodyToggle("ext-b-micro", extBodyAll)
-            buildContentAll(mediaExt, 1);
-            showBody(bodyMicro, componentInfo);
             break;
 
         case "ext-shrinks":
             bodyToggle("ext-b-shrinks", extBodyAll)
-            buildContentAll(mediaExt, 2);
-            showBody(bodyShrink, componentInfo);
             break;
 
         case "ext-tape":
             bodyToggle("ext-b-tape", extBodyAll)
-            buildContentAll(mediaExt, 3);
-            showBody(bodyTape, componentInfo);
             break;
             
         case "ext-comb":
             bodyToggle("ext-b-comb", extBodyAll)
-            buildContentAll(mediaExt, 4);
-            showBody(bodyComb, componentInfo);
             break;
     }
+
 }
 
 // C) "TREATMENT" "NAV SMALL" (OFFER)
@@ -309,21 +257,17 @@ function showContent3(e) {
 
     activeTabs(trAll, e.target);
 
-    // prepare indyvidual cases - for main body toggle (in "showContent4")
     switch(e.target.id) {
 
         case "tr-botox":
             bodyToggle("tr-b-botox", trBodyAll)
-            buildContentAll(mediaTreat, 0);
-            showBody(bodyBotox, componentInfo);
             break;
 
         case "tr-kreatyna":
             bodyToggle("tr-b-kreatyna", trBodyAll)
-            buildContentAll(mediaTreat, 1);
-            showBody(bodyKreatyna, componentInfo);
             break;
-    }    
+    } 
+
 }
 
 // D) SIDE NAV 
