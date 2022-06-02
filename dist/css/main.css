@@ -11181,7 +11181,6 @@ ul {
   bottom: 0;
   width: 100%;
   font-size: 1.2rem;
-  color: #420d0d;
   text-transform: uppercase;
   font-family: "Roboto Condensed", sans-serif;
   z-index: 10;
@@ -11195,20 +11194,20 @@ ul {
 .main-nav li {
   width: 25%;
   text-align: center;
-  border-bottom-color: rgba(255, 0, 0, 0);
+  border-bottom-color: rgba(117, 20, 20, 0);
 }
 .main-nav li:hover {
-  background-color: rgba(238, 175, 175, 0.116);
-  border-bottom-color: #970a0a;
+  background-color: rgba(240, 152, 152, 0.116);
+  border-bottom-color: #740b0b;
 }
 .main-nav a {
   display: block;
   padding: 1.5rem 0;
-  color: #e97171;
+  color: #571212;
 }
 
 .about-me {
-  background-color: #E097A0;
+  background-color: #f3eee8;
   padding: 10rem 0;
 }
 
@@ -11223,12 +11222,12 @@ ul {
   width: 20rem;
   margin: auto;
   border-bottom: 1px grey solid;
-  color: #B41A1A;
+  color: #745b4d;
   text-align: center;
-  color: pink;
+  color: #745b4d;
   margin-left: 26rem;
   margin-bottom: 2rem;
-  border-color: pink;
+  border-color: #745b4d;
 }
 .about-me__content--main {
   display: flex;
@@ -11239,22 +11238,22 @@ ul {
   width: 15rem;
   height: auto;
   margin-right: 5rem;
-  box-shadow: 1px 1px 20px #aa4646;
+  box-shadow: 1px 1px 20px #4e331a;
 }
 .about-me__content span {
   display: inline-block;
-  border-left: 20px solid #D97F8A;
+  border-left: 20px solid #dfc7b9;
   color: #810606;
   padding: 1rem;
   padding-left: 3.5rem;
 }
 
 .paralax-1 {
-  background-color: #CE4C4C;
+  background-color: #B4917D;
   padding: 8rem 0;
 }
 .paralax-1 div {
-  outline: 30px solid #D97F8A;
+  outline: 17px solid #dfc7b9;
   height: 20rem;
   width: 75%;
   margin: auto;
@@ -11266,11 +11265,11 @@ ul {
 }
 
 .offer {
-  background-color: #F0D5D5;
+  background-color: #f8f5ef;
 }
 
 .offer__content {
-  background-color: #F0D5D5;
+  background-color: #f8f5ef;
   text-align: center;
   width: 50rem;
   height: max-content;
@@ -11282,7 +11281,7 @@ ul {
   width: 20rem;
   margin: auto;
   border-bottom: 1px grey solid;
-  color: #B41A1A;
+  color: #745b4d;
   padding: 1rem 0;
 }
 .offer__content--nav-small {
@@ -11343,7 +11342,7 @@ ul {
 }
 
 .co-container {
-  background-color: #CE4C4C;
+  background-color: #B4917D;
 }
 
 #co-title {
@@ -11352,15 +11351,15 @@ ul {
   width: 20rem;
   margin: auto;
   border-bottom: 1px grey solid;
-  color: #B41A1A;
+  color: #745b4d;
   font-family: "Oleo Script Swash Caps", cursive;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
   width: 35rem;
   padding-top: 6rem;
   margin-bottom: 0rem;
   border: 0;
-  color: #D97F8A;
+  color: #dfc7b9;
 }
 
 .p-absolute-fix {
@@ -11394,15 +11393,15 @@ ul {
   z-index: 5;
   width: 170px;
   border: 2px white solid;
-  box-shadow: 1px 1px 20px #aa4646;
+  box-shadow: 1px 1px 20px #4e331a;
 }
 .customer-opinion__header--icon span {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
-  color: #B41A1A;
+  color: #745b4d;
 }
 .customer-opinion__opinion {
-  box-shadow: 1px 1px 20px #aa4646;
+  box-shadow: 1px 1px 20px #4e331a;
   position: absolute;
   font-style: italic;
   top: 9rem;
@@ -11498,7 +11497,7 @@ ul {
   width: 20rem;
   margin: auto;
   border-bottom: 1px grey solid;
-  color: #B41A1A;
+  color: #745b4d;
   text-align: center;
 }
 .prices__content--nav-ul {
@@ -11545,15 +11544,14 @@ ul {
 }
 .prices__content--body-treat .price-line .price-holder span {
   display: block;
-  font-weight: bold;
 }
 .prices__content--body-treat .price-line .price-holder--value {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
 }
 .prices__content--body-treat .pl-pink {
   top: 1rem;
   border-color: pink;
-  background-color: rgba(255, 192, 203, 0.4);
+  background-color: rgba(255, 192, 203, 0.1);
 }
 .prices__content--body-treat .pl-pink .price-holder {
   border-color: #df93a0;
@@ -11564,7 +11562,7 @@ ul {
 .prices__content--body-treat .pl-peach {
   top: 10rem;
   border-color: orange;
-  background-color: rgba(255, 166, 0, 0.4);
+  background-color: rgba(255, 166, 0, 0.1);
 }
 .prices__content--body-treat .pl-peach .price-holder {
   border-color: #db853f;
@@ -11575,7 +11573,7 @@ ul {
 .prices__content--body-treat .pl-red {
   top: 19rem;
   border-color: red;
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.1);
 }
 .prices__content--body-treat .pl-red .price-holder {
   border-color: #cc4f4f;
@@ -11651,7 +11649,7 @@ ul {
   width: 20rem;
   margin: auto;
   border-bottom: 1px grey solid;
-  color: #B41A1A;
+  color: #745b4d;
   text-align: center;
 }
 .contact__content--body-tel, .contact__content--body-email {
@@ -11682,7 +11680,7 @@ ul {
   width: 20rem;
   margin: auto;
   border-bottom: 1px grey solid;
-  color: #B41A1A;
+  color: #745b4d;
   border-bottom: 1px grey solid;
 }
 .media__content--icons > * {
@@ -11717,14 +11715,18 @@ ul {
   opacity: 0;
 }
 
+.color-dark {
+  fill: #B4917D;
+}
+
 .bridge-1 {
-  background-color: #CE4C4C;
+  background-color: #B4917D;
   height: 20rem;
 }
 
 .bridge-1-1 {
   position: relative;
-  background-color: #E097A0;
+  background-color: #f3eee8;
 }
 .bridge-1-1 div {
   height: max-content;
@@ -11736,16 +11738,16 @@ ul {
 }
 
 .bridge-2 {
-  background-color: #E097A0;
+  background-color: #f3eee8;
   height: max-content;
 }
 
 .bridge-3 {
-  background-color: #F0D5D5;
+  background-color: #f8f5ef;
 }
 
 .bridge-4 {
-  background-color: #F0D5D5;
+  background-color: #f8f5ef;
   height: max-content;
 }
 

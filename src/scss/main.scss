@@ -86,7 +86,6 @@ ul {
     bottom: 0;
     width: 100%;
     font-size: 1.2rem;
-    color: #420d0d;
     text-transform: uppercase;
     font-family: 'Roboto Condensed', sans-serif;
     z-index: 10;
@@ -102,18 +101,18 @@ ul {
     & li {
         width: 25%;
         text-align: center;
-        border-bottom-color: rgba(255, 0, 0, 0);
+        border-bottom-color: rgba(117, 20, 20, 0);
     }
 
     & li:hover {
-        background-color: rgba(238, 175, 175, 0.116);
-        border-bottom-color:  rgb(151, 10, 10);
+        background-color: rgba(240, 152, 152, 0.116);
+        border-bottom-color:  rgb(116, 11, 11);
     }
 
     & a {
         display: block;
         padding: 1.5rem 0;
-        color: rgb(233, 113, 113);
+        color: rgb(87, 18, 18);
     }
 }
 
@@ -133,10 +132,10 @@ ul {
     &--head {
         @include v.title;
         text-align: center;
-        color: pink;
+        color: v.$nl-red;
         margin-left: 26rem;
         margin-bottom: 2rem;
-        border-color: pink;
+        border-color: v.$nl-red;
     }
 
     &--main {
@@ -161,11 +160,11 @@ ul {
 }
 
 .paralax-1 {
-    background-color: v.$nl-back-red;
+    background-color: v.$nl-dark-fill;
     padding: 8rem 0;
 
     & div {
-        outline: 30px solid v.$nl-back-pink-dark;
+        outline: 17px solid v.$nl-back-pink-dark;
         height: 20rem;
         width: 75%;
         margin: auto;
@@ -264,13 +263,13 @@ ul {
 // CUSTOMER OPINION
 
 .co-container {
-    background-color: v.$nl-back-red;
+    background-color: v.$nl-dark-fill;
 }
 
 #co-title {
     @include v.title;
     font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     width: 35rem;
     padding-top: 6rem;
@@ -468,11 +467,11 @@ ul {
 
                     & span {
                         display: block;
-                        font-weight: bold;
+
                     }
 
                     &--value {
-                        font-size: 2.2rem;
+                        font-size: 1.5rem;
                     }
 
                 }              
@@ -481,7 +480,7 @@ ul {
             &-treat .pl-pink {
                 top: 1rem;
                 border-color: pink;
-                background-color: rgba(255, 192, 203, 0.4);
+                background-color: rgba(255, 192, 203, 0.1);
 
                 & .price-holder {
                     border-color: rgb(223, 147, 160);
@@ -495,7 +494,7 @@ ul {
             &-treat .pl-peach {
                 top: 10rem;
                 border-color: orange;
-                background-color: rgba(255, 166, 0, 0.4);
+                background-color: rgba(255, 166, 0, 0.1);
 
                 & .price-holder {
                     border-color: rgb(219, 133, 63);
@@ -509,7 +508,7 @@ ul {
             &-treat .pl-red {
                 top: 19rem;
                 border-color: red;
-                background-color: rgba(255, 0, 0, 0.4);
+                background-color: rgba(255, 0, 0, 0.1);
 
                 & .price-holder {
                     border-color: rgb(204, 79, 79);
@@ -679,9 +678,12 @@ ul {
 // BRIDGES
 //------------------
 
+.color-dark {
+    fill: v.$nl-dark-fill;
+}
 
 .bridge-1 {
-    background-color: v.$nl-back-red;
+    background-color: v.$nl-dark-fill;
     height: 20rem;
 }
 
