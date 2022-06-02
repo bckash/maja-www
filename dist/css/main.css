@@ -11323,7 +11323,7 @@ ul {
   font-size: 3rem;
 }
 .offer__content--main-body {
-  height: 40rem;
+  height: max-content;
   width: 90%;
 }
 .offer__content--main-icons {
@@ -11331,6 +11331,54 @@ ul {
 }
 .offer__content--main-icons:hover {
   cursor: pointer;
+}
+
+.info-holder__photo {
+  position: relative;
+  height: 20rem;
+  background-image: url("/src/img/example-del.jpg");
+  background-position: center;
+}
+.info-holder__photo--title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.199);
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+}
+.info-holder__info--about {
+  font-style: italic;
+  width: 70%;
+  margin: 2rem auto;
+  text-align: left;
+  border-left: 8px solid #745b4d;
+  padding-left: 2rem;
+}
+.info-holder__info--rest {
+  display: flex;
+  justify-content: center;
+}
+.info-holder__info--rest .info-rest__example {
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+  margin: 1rem 0.4rem;
+}
+.info-holder__info--rest .info-rest__example--icon span {
+  color: #745b4d;
+  font-size: 3rem;
+}
+.info-holder__info--rest .info-rest__example--title {
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+.info-holder__info--rest .info-rest__example--descr {
+  width: 80%;
+  margin: auto;
+  font-size: 0.8rem;
 }
 
 .ns-active {

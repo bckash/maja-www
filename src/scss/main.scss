@@ -120,6 +120,7 @@ ul {
 // SECTIONS
 //------------------
 
+// ABOUT ME
 
 .about-me {
     background-color: v.$nl-back-pink;
@@ -159,6 +160,9 @@ ul {
         }
 }
 
+
+// PARALAX
+
 .paralax-1 {
     background-color: v.$nl-dark-fill;
     padding: 8rem 0;
@@ -177,6 +181,9 @@ ul {
     }
 
 }
+
+
+// OFFER
 
 .offer {
     background-color: v.$nl-back-pink-light;
@@ -235,7 +242,7 @@ ul {
         }
 
         &-body {
-            height: 40rem;
+            height: max-content;
             width: 90%;
         }
 
@@ -248,7 +255,67 @@ ul {
         }
 
     }
+}
 
+.info-holder {
+    &__photo {
+        position: relative;
+        height: 20rem;
+        background-image: url("/src/img/example-del.jpg");
+        background-position: center;
+
+        &--title {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.199);
+            color: white;
+            font-size: 2rem;
+            padding: .5rem 0;
+        }
+    }
+
+    &__info {
+
+        &--about {
+            font-style: italic;
+            width: 70%;
+            margin: 2rem auto;
+            text-align: left;
+            border-left: 8px solid v.$nl-red;
+            padding-left: 2rem;
+        }
+
+        &--rest {
+            display: flex;
+            justify-content: center;
+
+            & .info-rest__example {
+                display: flex;
+                flex-direction: column;
+
+                width: 26%;
+                margin: 1rem .4rem;
+
+                &--icon span {
+                    color: v.$nl-red;
+                    font-size: 3rem;
+                }
+
+                &--title {
+                    font-size: 1.3rem;
+                    margin: 1rem;
+                }
+
+                &--descr {
+                    width: 80%;
+                    margin: auto;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
 }
 
 // nav-small active state
