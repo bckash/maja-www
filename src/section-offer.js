@@ -380,3 +380,7 @@ function showContent4 (e) {
         }
     }
 }
+
+// E) SLIDESHOW FOR INFO
+
+

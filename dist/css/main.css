@@ -11484,31 +11484,12 @@ ul {
   animation-fill-mode: forwards;
 }
 
-.animation__out-left-right--delay {
-  animation-name: outLeftRight;
-  animation-duration: 0.2s;
-  animation-delay: 8800ms;
-  animation-fill-mode: forwards;
-}
-
 @keyframes inLeftRight {
   from {
     opacity: 0;
     transform: translateX(-15rem);
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes inLeftRightZ {
-  from {
-    z-index: 10;
-    opacity: 0;
-    transform: translateX(-15rem);
-  }
-  to {
-    z-index: 10;
     opacity: 1;
     transform: translateX(0);
   }

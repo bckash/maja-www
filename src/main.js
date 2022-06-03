@@ -29,6 +29,7 @@ window.addEventListener("scroll", showNav);
 
 // "CUSTOMER OPINION" SLIDESHOW
 
+// first iteration
 setTimeout(() => {
 
     // A
@@ -97,6 +98,7 @@ setTimeout(() => {
 
 }, 0)
 
+// iteration > 0
 setInterval(() => {
 
     // A
@@ -164,6 +166,7 @@ setInterval(() => {
     }, 28000)
 
 }, 28800)
+
 
 
 // "PULL BACK NAV"
