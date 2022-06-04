@@ -260,9 +260,25 @@ ul {
 .info-holder {
     &__photo {
         position: relative;
-        height: 20rem;
-        background-image: url("/src/img/example-del.jpg");
-        background-position: center;
+        height: max-content;
+        // height: 20rem;
+        // background-image: url("/src/img/example-del.jpg");
+        // background-position: center;
+
+        &--photo {
+            position: relative;
+            overflow: hidden;
+            height: 20rem;
+
+            #ihp-1, #ihp-2, #ihp-3 {
+                @include v.slideshow;
+                left:0;
+                right:0;
+                bottom: 0;
+                object-fit: cover;
+                width:100%;
+            }
+        }
 
         &--title {
             position: absolute;
@@ -300,7 +316,7 @@ ul {
 
                 &--icon span {
                     color: v.$nl-red;
-                    font-size: 3rem;
+                    font-size: 2.4rem;
                 }
 
                 &--title {
@@ -317,6 +333,43 @@ ul {
         }
     }
 }
+
+// slideshow animations
+
+.animation__slideIN {
+    animation-name: slideIN;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.animation__oslideOUT {
+    animation-name: sildeOUT;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIN {
+    from {
+       opacity: 1;
+       transform: translateX(-30rem);
+    } 
+    to {
+       opacity: 1;
+       transform: translateX(0);
+    } 
+   }
+
+@keyframes slideOUT {
+   from {
+       opacity: 1;
+       transform: translateX(0);
+   } 
+   to {
+       opacity: 1;
+       transform: translateX(30rem);
+   } 
+}
+
 
 // nav-small active state
 .ns-active {
@@ -350,6 +403,7 @@ ul {
     margin: auto;
     width: 40rem;
     height: 25rem;
+    overflow: hidden;
 }
 
 .customer-opinion {
@@ -406,18 +460,12 @@ ul {
 }
 
 #cu-op-1, #cu-op-2, #cu-op-3 {
-    // display: none;
-    position: absolute;
-    top: 0;
-}
-
-#cu-op-1, #cu-op-2, #cu-op-3 {
-    opacity: 0;
+    @include v.slideshow
 }
 
 .animation__in-left-right {
     animation-name: inLeftRight;
-    animation-duration: .3s;
+    animation-duration: .2s;
     animation-fill-mode: forwards;
 }
 

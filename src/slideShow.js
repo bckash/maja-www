@@ -8,7 +8,7 @@
 // space   - "time in [ms]" between present and next animations (between out & in)
 
 
-function slideShow (el1, el2, el3, animIN, animOut, time) {
+function slideShow (el1, el2, el3, animIN, animOut, time, space) {
     // iteration 0
     setTimeout(() => {
 

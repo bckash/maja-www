@@ -11335,9 +11335,22 @@ ul {
 
 .info-holder__photo {
   position: relative;
+  height: max-content;
+}
+.info-holder__photo--photo {
+  position: relative;
+  overflow: hidden;
   height: 20rem;
-  background-image: url("/src/img/example-del.jpg");
-  background-position: center;
+}
+.info-holder__photo--photo #ihp-1, .info-holder__photo--photo #ihp-2, .info-holder__photo--photo #ihp-3 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  width: 100%;
 }
 .info-holder__photo--title {
   position: absolute;
@@ -11369,7 +11382,7 @@ ul {
 }
 .info-holder__info--rest .info-rest__example--icon span {
   color: #745b4d;
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 .info-holder__info--rest .info-rest__example--title {
   font-size: 1.3rem;
@@ -11381,6 +11394,38 @@ ul {
   font-size: 0.8rem;
 }
 
+.animation__slideIN {
+  animation-name: slideIN;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animation__oslideOUT {
+  animation-name: sildeOUT;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideIN {
+  from {
+    opacity: 1;
+    transform: translateX(-30rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideOUT {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(30rem);
+  }
+}
 .ns-active {
   font-weight: bold;
 }
@@ -11415,6 +11460,7 @@ ul {
   margin: auto;
   width: 40rem;
   height: 25rem;
+  overflow: hidden;
 }
 
 .customer-opinion {
@@ -11464,17 +11510,14 @@ ul {
 }
 
 #cu-op-1, #cu-op-2, #cu-op-3 {
+  opacity: 0;
   position: absolute;
   top: 0;
 }
 
-#cu-op-1, #cu-op-2, #cu-op-3 {
-  opacity: 0;
-}
-
 .animation__in-left-right {
   animation-name: inLeftRight;
-  animation-duration: 0.3s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
