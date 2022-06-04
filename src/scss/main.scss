@@ -350,8 +350,8 @@ ul {
 
 @keyframes slideIN {
     from {
-       opacity: 1;
-       transform: translateX(-30rem);
+       opacity: 0;
+       transform: translateX(-15rem);
     } 
     to {
        opacity: 1;
@@ -361,12 +361,14 @@ ul {
 
 @keyframes slideOUT {
    from {
+       z-index: 10;
        opacity: 1;
        transform: translateX(0);
    } 
    to {
-       opacity: 1;
-       transform: translateX(30rem);
+       z-index: 10;
+       opacity: 0;
+       transform: translateX(15rem);
    } 
 }
 

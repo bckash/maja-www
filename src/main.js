@@ -30,143 +30,298 @@ window.addEventListener("scroll", showNav);
 // "CUSTOMER OPINION" SLIDESHOW
 
 // first iteration
-setTimeout(() => {
+// setTimeout(() => {
 
-    // A
+//     // A
 
-    setTimeout(()=> {
-        // console.log("A1 - in")
-        custOpinion1.classList.add("animation__in-left-right")
-    }, 0)
+//     setTimeout(()=> {
+//         // console.log("A1 - in")
+//         custOpinion1.classList.add("animation__in-left-right")
+//     }, 0)
 
-    setTimeout(()=> {
-        // console.log("A2 - in")
-        custOpinion3.classList.remove("animation__out-left-right")
-    }, 800)
+//     setTimeout(()=> {
+//         // console.log("A2 - in")
+//         custOpinion3.classList.remove("animation__out-left-right")
+//     }, 800)
 
-    setTimeout(()=> {
-        // console.log("A1 - out")
-        custOpinion1.classList.add("animation__out-left-right")
-    }, 8000)
+//     setTimeout(()=> {
+//         // console.log("A1 - out")
+//         custOpinion1.classList.add("animation__out-left-right")
+//     }, 8000)
 
-    setTimeout(()=> {
-        // console.log("A2 - out")
-        custOpinion1.classList.remove("animation__in-left-right")
-    }, 8800)
+//     setTimeout(()=> {
+//         // console.log("A2 - out")
+//         custOpinion1.classList.remove("animation__in-left-right")
+//     }, 8800)
 
-    // B
+//     // B
 
-    setTimeout(()=> {
-        // console.log("B1 - in")
-        custOpinion2.classList.add("animation__in-left-right")
-    }, 9600)
+//     setTimeout(()=> {
+//         // console.log("B1 - in")
+//         custOpinion2.classList.add("animation__in-left-right")
+//     }, 9600)
 
-    setTimeout(()=> {
-        // console.log("B2 - in")
-        custOpinion1.classList.remove("animation__out-left-right")
-    }, 10400)
+//     setTimeout(()=> {
+//         // console.log("B2 - in")
+//         custOpinion1.classList.remove("animation__out-left-right")
+//     }, 10400)
 
-    setTimeout(()=> {
-        // console.log("B1 - out")
-        custOpinion2.classList.add("animation__out-left-right")
-    }, 17600)
+//     setTimeout(()=> {
+//         // console.log("B1 - out")
+//         custOpinion2.classList.add("animation__out-left-right")
+//     }, 17600)
 
-    setTimeout(()=> {
-        // console.log("B2 - out")
-        custOpinion2.classList.remove("animation__in-left-right")
-    }, 18400)
+//     setTimeout(()=> {
+//         // console.log("B2 - out")
+//         custOpinion2.classList.remove("animation__in-left-right")
+//     }, 18400)
 
-    // C
+//     // C
 
-    setTimeout(()=> {
-        custOpinion3.classList.add("animation__in-left-right")
-    }, 19200)
+//     setTimeout(()=> {
+//         custOpinion3.classList.add("animation__in-left-right")
+//     }, 19200)
 
-    setTimeout(()=> {
-        // console.log("C2 - in")
-        custOpinion2.classList.remove("animation__out-left-right")
-    }, 20000)
+//     setTimeout(()=> {
+//         // console.log("C2 - in")
+//         custOpinion2.classList.remove("animation__out-left-right")
+//     }, 20000)
 
-    setTimeout(()=> {
-        custOpinion3.classList.add("animation__out-left-right")
-    }, 27200)
+//     setTimeout(()=> {
+//         custOpinion3.classList.add("animation__out-left-right")
+//     }, 27200)
 
-    setTimeout(()=> {
-        // console.log("C2 - out")
-        custOpinion3.classList.remove("animation__in-left-right")
-    }, 28000)
+//     setTimeout(()=> {
+//         // console.log("C2 - out")
+//         custOpinion3.classList.remove("animation__in-left-right")
+//     }, 28000)
 
-}, 0)
+// }, 0)
 
 // iteration > 0
-setInterval(() => {
+// setInterval(() => {
 
-    // A
+//     // A
 
-    setTimeout(()=> {
-        // console.log("A1 - in")
-        custOpinion1.classList.add("animation__in-left-right")
+//     setTimeout(()=> {
+//         // console.log("A1 - in")
+//         custOpinion1.classList.add("animation__in-left-right")
+//     }, 0)
+
+//     setTimeout(()=> {
+//         // console.log("A2 - in")
+//         custOpinion3.classList.remove("animation__out-left-right")
+//     }, 800)
+
+//     setTimeout(()=> {
+//         // console.log("A1 - out")
+//         custOpinion1.classList.add("animation__out-left-right")
+//     }, 8000)
+
+//     setTimeout(()=> {
+//         // console.log("A2 - out")
+//         custOpinion1.classList.remove("animation__in-left-right")
+//     }, 8800)
+
+//     // B
+
+//     setTimeout(()=> {
+//         // console.log("B1 - in")
+//         custOpinion2.classList.add("animation__in-left-right")
+//     }, 9600)
+
+//     setTimeout(()=> {
+//         // console.log("B2 - in")
+//         custOpinion1.classList.remove("animation__out-left-right")
+//     }, 10400)
+
+//     setTimeout(()=> {
+//         // console.log("B1 - out")
+//         custOpinion2.classList.add("animation__out-left-right")
+//     }, 17600)
+
+//     setTimeout(()=> {
+//         // console.log("B2 - out")
+//         custOpinion2.classList.remove("animation__in-left-right")
+//     }, 18400)
+
+//     // C
+
+//     setTimeout(()=> {
+//         custOpinion3.classList.add("animation__in-left-right")
+//     }, 19200)
+
+//     setTimeout(()=> {
+//         // console.log("C2 - in")
+//         custOpinion2.classList.remove("animation__out-left-right")
+//     }, 20000)
+
+//     setTimeout(()=> {
+//         custOpinion3.classList.add("animation__out-left-right")
+//     }, 27200)
+
+//     setTimeout(()=> {
+//         // console.log("C2 - out")
+//         custOpinion3.classList.remove("animation__in-left-right")
+//     }, 28000)
+
+// }, 28800)
+
+
+// SLIDESHOW 
+
+// el1,2,3 - "element" to apply animation
+// animIN  - "animation class name" for element to enter
+// animOUT - "animation class name" for element to exit
+// time    - "time in [ms]" between enter and exit
+// space   - "time in [ms]" between present and next animations (between out & in)
+
+
+function slideShow (el1, el2, el3, animIN, animOut, time, space) {
+    // iteration 0
+    setTimeout(() => {
+
+        // A
+
+        setTimeout(()=> {
+            // console.log("A1 - in")
+            el1.classList.add(animIN)
+        }, 0)
+
+        setTimeout(()=> {
+            // console.log("A2 - in")
+            el3.classList.remove(animOut)
+        }, space)
+
+        setTimeout(()=> {
+            // console.log("A1 - out")
+            el1.classList.add(animOut)
+        }, time)
+
+        setTimeout(()=> {
+            // console.log("A2 - out")
+            el1.classList.remove(animIN)
+        }, time+space)
+
+        // B
+
+        setTimeout(()=> {
+            // console.log("B1 - in")
+            el2.classList.add(animIN)
+        }, time+(space*2))
+
+        setTimeout(()=> {
+            // console.log("B2 - in")
+            el1.classList.remove(animOut)
+        }, time+(space*3))
+
+        setTimeout(()=> {
+            // console.log("B1 - out")
+            el2.classList.add(animOut)
+        }, (time*2)+(space*2))
+
+        setTimeout(()=> {
+            // console.log("B2 - out")
+            el2.classList.remove(animIN)
+        }, (time*2)+(space*3))
+
+        // C
+
+        setTimeout(()=> {
+            // console.log("C1 - in")
+            el3.classList.add(animIN)
+        }, (time*2)+(space*4))
+
+        setTimeout(()=> {
+            // console.log("C2 - in")
+            el2.classList.remove(animOut)
+        }, (time*2)+(space*5))
+
+        setTimeout(()=> {
+            // console.log("C1 - out")
+            el3.classList.add(animOut)
+        }, (time*3)+(space*4))
+
+        setTimeout(()=> {
+            // console.log("C2 - out")
+            el3.classList.remove(animIN)
+        }, (time*3)+(space*5))
+
     }, 0)
 
-    setTimeout(()=> {
-        // console.log("A2 - in")
-        custOpinion3.classList.remove("animation__out-left-right")
-    }, 800)
+    // iteration 1++
+    setInterval(() => {
 
-    setTimeout(()=> {
-        // console.log("A1 - out")
-        custOpinion1.classList.add("animation__out-left-right")
-    }, 8000)
+        // A
 
-    setTimeout(()=> {
-        // console.log("A2 - out")
-        custOpinion1.classList.remove("animation__in-left-right")
-    }, 8800)
+        setTimeout(()=> {
+            // console.log("A1 - in")
+            el1.classList.add(animIN)
+        }, 0)
 
-    // B
+        setTimeout(()=> {
+            // console.log("A2 - in")
+            el3.classList.remove(animOut)
+        }, space)
 
-    setTimeout(()=> {
-        // console.log("B1 - in")
-        custOpinion2.classList.add("animation__in-left-right")
-    }, 9600)
+        setTimeout(()=> {
+            // console.log("A1 - out")
+            el1.classList.add(animOut)
+        }, time)
 
-    setTimeout(()=> {
-        // console.log("B2 - in")
-        custOpinion1.classList.remove("animation__out-left-right")
-    }, 10400)
+        setTimeout(()=> {
+            // console.log("A2 - out")
+            el1.classList.remove(animIN)
+        }, time+space)
 
-    setTimeout(()=> {
-        // console.log("B1 - out")
-        custOpinion2.classList.add("animation__out-left-right")
-    }, 17600)
+        // B
 
-    setTimeout(()=> {
-        // console.log("B2 - out")
-        custOpinion2.classList.remove("animation__in-left-right")
-    }, 18400)
+        setTimeout(()=> {
+            // console.log("B1 - in")
+            el2.classList.add(animIN)
+        }, time+(space*2))
 
-    // C
+        setTimeout(()=> {
+            // console.log("B2 - in")
+            el1.classList.remove(animOut)
+        }, time+(space*3))
 
-    setTimeout(()=> {
-        custOpinion3.classList.add("animation__in-left-right")
-    }, 19200)
+        setTimeout(()=> {
+            // console.log("B1 - out")
+            el2.classList.add(animOut)
+        }, (time*2)+(space*2))
 
-    setTimeout(()=> {
-        // console.log("C2 - in")
-        custOpinion2.classList.remove("animation__out-left-right")
-    }, 20000)
+        setTimeout(()=> {
+            // console.log("B2 - out")
+            el2.classList.remove(animIN)
+        }, (time*2)+(space*3))
 
-    setTimeout(()=> {
-        custOpinion3.classList.add("animation__out-left-right")
-    }, 27200)
+        // C
 
-    setTimeout(()=> {
-        // console.log("C2 - out")
-        custOpinion3.classList.remove("animation__in-left-right")
-    }, 28000)
+        setTimeout(()=> {
+            // console.log("C1 - in")
+            el3.classList.add(animIN)
+        }, (time*2)+(space*4))
 
-}, 28800)
+        setTimeout(()=> {
+            // console.log("C2 - in")
+            el2.classList.remove(animOut)
+        }, (time*2)+(space*5))
 
+        setTimeout(()=> {
+            // console.log("C1 - out")
+            el3.classList.add(animOut)
+        }, (time*3)+(space*4))
+
+        setTimeout(()=> {
+            // console.log("C2 - out")
+            el3.classList.remove(animIN)
+        }, (time*3)+(space*5))
+
+    }, (time*3)+(space*5))
+}
+
+slideShow (custOpinion1, custOpinion2, custOpinion3, "animation__in-left-right", "animation__out-left-right", 8000, 800)
 
 
 // "PULL BACK NAV"
