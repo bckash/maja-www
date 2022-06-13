@@ -4,19 +4,19 @@
 // ---> VARIABLES
 //----------------
 
-// slideshow container
-const slideshow = document.getElementById("slideshow");
+// container for slideshow
+const slideshow = document.getElementById("ksh-slideshow");
 
-// slideshow animations
+// animations for slideshow
 let animations = {
-    imgIn : "animation__in",
-    imgOut : "animation__out",
-    pag : "animation__pagination"
+    imgIn : "ksh-animation__in",
+    imgOut : "ksh-animation__out",
+    pag : "ksh-animation__pagination"
 }
 
 // building "imgParArray" :  array of objects containing "img elements" and "pagination elements" as properties - for slideshowAbstract()
-const pagIcons = document.querySelectorAll(".pag-icons")
-const showImages = document.querySelectorAll(".show-images");
+const pagIcons = document.querySelectorAll(".ksh-pag-icons")
+const showImages = document.querySelectorAll(".ksh-show-images");
 
 let imgParArray = [];
 
@@ -78,19 +78,27 @@ function slideShowAbstract (pagsImgs, animationsObj, time) {
                     // animations add
                     setTimeout(() => {
                         img.classList.add(aIN);
+                        console.log("1")
                         pag.classList.add(aPAG);
+                        console.log("2")
                     }, time*i)
                 
                     // animation remove
                     setTimeout(() => {
                         imgNext.classList.remove(aIN);
+                        console.log("3")
                         pagNext.classList.remove(aPAG);
+                        console.log("4")
                     }, (time*i+t))
             }
         }
         
-        setTimeout(() => backend(), 0);
-        setInterval(() => backend(), time*pagsImgs.length);
+
+            setTimeout(() => backend(), 0);
+            setInterval(() => backend(), time*pagsImgs.length);
+
+
+
 }
 
 // sets the "height" for slideshow to be responsive. sets CSS variables when "slideshow" changes width, for animation to work properly
@@ -113,8 +121,8 @@ function responsiveWidth() {
 //----------------
 
 // start value for slideshow container, if <= window width 
-responsiveWidth()
+
 
 // run slideshow. "time" should have the same value as "--animation-out-delay" in CSS
-slideShowAbstract(imgParArray, animations, 5000)
+
 

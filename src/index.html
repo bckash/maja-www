@@ -59,6 +59,7 @@
 
     <!-- ABOUT ME -->
     <article id="about" class="about-me">
+        
         <div class="about-me__content">
             <div class="about-me__content--head">
                 About me
@@ -88,6 +89,7 @@
 
     <!-- B3 -->
     <section class="bridge-3">
+        
         <div>
             <svg viewBox="0 0 934 98" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="color-dark" d="M0 98L944 -1.88965e-05H233.448H0V98Z" />
@@ -139,6 +141,7 @@
             <section class="offer__content--main">
                 <!-- body -->
                 <div class="offer__content--main-body br">
+                    
                     <!-- intro -->
                     <article id="o-intro">
                         Intro page : main picture , please pick extension / treatment or style
@@ -146,8 +149,31 @@
                     <!-- extensions -->
                     <section id="extension">
                         <article class="info-holder" id="ext-intro">
-                            <!-- photo -->
-                            <div class="info-holder__photo">
+                            
+                            <!-- slideshow -->
+                            <section>
+                                <div id="ksh-slideshow" class="ksh-slideshow">
+                                    <!-- for best performance images dimensions should be in (--slideshow-max-width) / (--slideshow-height) ratio -->
+                                    <div class="ksh-slideshow__showcase">
+                                        <img class="ksh-show-images" src="img/14-dl-1.jpg" alt="">
+                                        <img class="ksh-show-images" src="img/14-dl-2.jpg" alt="">
+                                        <img class="ksh-show-images" src="img/14-dl-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="ksh-pagination">
+                                    <span class="material-icons ksh-pag-icons">
+                                        maximize
+                                    </span>
+                                    <span class="material-icons ksh-pag-icons">
+                                        maximize
+                                    </span>
+                                    <span class="material-icons ksh-pag-icons">
+                                        maximize
+                                    </span>
+                                </div>
+                            </section>
+
+                            <!-- <div class="info-holder__photo">
                                 <div class="info-holder__photo--photo">
                                     <img id="ihp-1" src="img/example-del.jpg" alt="">
                                     <img id="ihp-2" src="img/example-del2.jpg" alt="">
@@ -156,7 +182,7 @@
                                 <div class="info-holder__photo--title">
                                     <span>Fusion Bonds</span>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="info-holder__info">
                                 <!-- about -->
                                 <div class="info-holder__info--about">
@@ -540,7 +566,7 @@
     <script src="section-offer.js"></script>
     <script src="section-prices.js"></script>
     <script src="slideshow-old.js"></script>
-    <!-- <script src="slideshow.js"></script> -->
+    <script src="slideshow.js"></script>
 
 </body>
 </html>

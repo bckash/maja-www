@@ -249,12 +249,16 @@ function showContent (e) {
     if (e.target.id === navBigExt.id) {
 
         setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
+        //slideshow
+        responsiveWidth()
+        slideShowAbstract(imgParArray, animations, 5000)
 
     // "treatment clicked"
     } else if (e.target.id === navBigTreat.id) {
 
         setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
-    
+        
+
     // "style" clicked
     } else if (e.target.id === navBigStyle.id) {
 
@@ -541,5 +545,5 @@ function slideShow (el1, el2, el3, animIN, animOut, time, space) {
     }, (time*3)+(space*5))
 }
 
-slideShow (slidePhoto1, slidePhoto2, slidePhoto3, "animation__slideIN", "animation__slideOUT", 10000, 0)
+// slideShow (slidePhoto1, slidePhoto2, slidePhoto3, "animation__slideIN", "animation__slideOUT", 10000, 0)
 
