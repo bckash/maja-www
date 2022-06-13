@@ -1,5 +1,6 @@
 
 @use "./variables" as v;
+// @use "_slideshow";
 
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -342,7 +343,7 @@ ul {
     animation-fill-mode: forwards;
 }
 
-.animation__oslideOUT {
+.animation__slideOUT {
     animation-name: sildeOUT;
     animation-duration: .5s;
     animation-fill-mode: forwards;
@@ -495,18 +496,7 @@ ul {
      } 
     }
 
-// @keyframes inLeftRightZ {
-//     from {
-//         z-index: 10;
-//         opacity: 0;
-//         transform: translateX(-15rem);
-//     } 
-//     to {
-//         z-index: 10;
-//         opacity: 1;
-//         transform: translateX(0);
-//     } 
-// }    
+   
 
 @keyframes outLeftRight {
     from {

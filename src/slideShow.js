@@ -1,149 +1,120 @@
 
-// SLIDESHOW 
-
-// el1,2,3 - "element" to apply animation
-// animIN  - "animation class name" for element to enter
-// animOUT - "animation class name" for element to exit
-// time    - "time in [ms]" between enter and exit
-// space   - "time in [ms]" between present and next animations (between out & in)
 
 
-function slideShow (el1, el2, el3, animIN, animOut, time, space) {
-    // iteration 0
-    setTimeout(() => {
+// ---> VARIABLES
+//----------------
 
-        // A
+// slideshow container
+const slideshow = document.getElementById("slideshow");
 
-        setTimeout(()=> {
-            // console.log("A1 - in")
-            el1.classList.add(animIN)
-        }, 0)
-
-        setTimeout(()=> {
-            // console.log("A2 - in")
-            el3.classList.remove(animOut)
-        }, space)
-
-        setTimeout(()=> {
-            // console.log("A1 - out")
-            el1.classList.add(animOut)
-        }, time)
-
-        setTimeout(()=> {
-            // console.log("A2 - out")
-            el1.classList.remove(animIN)
-        }, time+space)
-
-        // B
-
-        setTimeout(()=> {
-            // console.log("B1 - in")
-            el2.classList.add(animIN)
-        }, time+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - in")
-            el1.classList.remove(animOut)
-        }, time+(space*3))
-
-        setTimeout(()=> {
-            // console.log("B1 - out")
-            el2.classList.add(animOut)
-        }, (time*2)+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - out")
-            el2.classList.remove(animIN)
-        }, (time*2)+(space*3))
-
-        // C
-
-        setTimeout(()=> {
-            el3.classList.add(animIN)
-        }, (time*2)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - in")
-            el2.classList.remove(animOut)
-        }, (time*2)+(space*5))
-
-        setTimeout(()=> {
-            el3.classList.add(animOut)
-        }, (time*3)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - out")
-            el3.classList.remove(animIN)
-        }, (time*3)+(space*5))
-
-    }, 0)
-
-    // iteration 1++
-    setInterval(() => {
-
-        // A
-
-        setTimeout(()=> {
-            // console.log("A1 - in")
-            el1.classList.add(animIN)
-        }, 0)
-
-        setTimeout(()=> {
-            // console.log("A2 - in")
-            el3.classList.remove(animOut)
-        }, space)
-
-        setTimeout(()=> {
-            // console.log("A1 - out")
-            el1.classList.add(animOut)
-        }, time)
-
-        setTimeout(()=> {
-            // console.log("A2 - out")
-            el1.classList.remove(animIN)
-        }, time+space)
-
-        // B
-
-        setTimeout(()=> {
-            // console.log("B1 - in")
-            el2.classList.add(animIN)
-        }, time+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - in")
-            el1.classList.remove(animOut)
-        }, time+(space*3))
-
-        setTimeout(()=> {
-            // console.log("B1 - out")
-            el2.classList.add(animOut)
-        }, (time*2)+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - out")
-            el2.classList.remove(animIN)
-        }, (time*2)+(space*3))
-
-        // C
-
-        setTimeout(()=> {
-            el3.classList.add(animIN)
-        }, (time*2)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - in")
-            el2.classList.remove(animOut)
-        }, (time*2)+(space*5))
-
-        setTimeout(()=> {
-            el3.classList.add(animOut)
-        }, (time*3)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - out")
-            el3.classList.remove(animIN)
-        }, (time*3)+(space*5))
-
-    }, (time*3)+(space*5))
+// slideshow animations
+let animations = {
+    imgIn : "animation__in",
+    imgOut : "animation__out",
+    pag : "animation__pagination"
 }
+
+// building "imgParArray" :  array of objects containing "img elements" and "pagination elements" as properties - for slideshowAbstract()
+const pagIcons = document.querySelectorAll(".pag-icons")
+const showImages = document.querySelectorAll(".show-images");
+
+let imgParArray = [];
+
+function toArray (pags, imgs, arr) {
+
+        pags.forEach(el => {
+            let obj = {};
+            obj.pag = el;
+            arr.push(obj)
+        })
+
+        for (i=0; i<arr.length; i++) {
+            arr[i].img = imgs[i]
+        }
+
+
+}
+
+toArray (pagIcons, showImages, imgParArray)
+
+
+
+// ---> EL 
+//----------
+
+window.addEventListener("resize", responsiveWidth);
+
+
+
+// --> FUNCTIONS
+//----------------
+
+
+// slideshow 
+function slideShowAbstract (pagsImgs, animationsObj, time) {
+
+    // get values from "imgParArray"
+    function makeVar (arr, index, prop) {
+        return Object.values(arr[index])[prop]
+    }
+
+    const aIN = Object.values(animationsObj)[0];
+    const aPAG = Object.values(animationsObj)[2];
+    const t = time/3;
+
+        function backend () {
+            for (let i=0; i<pagsImgs.length; i++) {
+
+                let img = makeVar(pagsImgs, i, 1);
+                let pag = makeVar(pagsImgs, i, 0);
+                let imgNext = makeVar(pagsImgs, 0, 1);
+                let pagNext = makeVar(pagsImgs, 0, 0);
+    
+                if (i !== pagsImgs.length-1) {
+                    imgNext = makeVar(pagsImgs, i+1, 1);
+                    pagNext = makeVar(pagsImgs, i+1, 0);
+                } 
+    
+                    // animations add
+                    setTimeout(() => {
+                        img.classList.add(aIN);
+                        pag.classList.add(aPAG);
+                    }, time*i)
+                
+                    // animation remove
+                    setTimeout(() => {
+                        imgNext.classList.remove(aIN);
+                        pagNext.classList.remove(aPAG);
+                    }, (time*i+t))
+            }
+        }
+        
+        setTimeout(() => backend(), 0);
+        setInterval(() => backend(), time*pagsImgs.length);
+}
+
+// sets the "height" for slideshow to be responsive. sets CSS variables when "slideshow" changes width, for animation to work properly
+function responsiveWidth() {
+
+    const slideshowWidth = slideshow.offsetWidth;
+
+    document.documentElement.style
+    .setProperty('--img-distance-X', `${slideshowWidth}px`);
+    document.documentElement.style
+    .setProperty('--img-distance-X-minus', `-${slideshowWidth}px`);
+
+    slideshow.style.height = `${slideshowWidth/4}px`
+
+  }
+
+
+
+// | CALL
+//----------------
+
+// start value for slideshow container, if <= window width 
+responsiveWidth()
+
+// run slideshow. "time" should have the same value as "--animation-out-delay" in CSS
+slideShowAbstract(imgParArray, animations, 5000)
+
