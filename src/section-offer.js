@@ -4,46 +4,52 @@
 //------------
 
 
-// "offer" "nav big" tabs
-const navBigExt = document.getElementById("nav-big-ext");
-const navBigTreat = document.getElementById("nav-big-treat");
-const navBigStyle = document.getElementById("nav-big-style");
-
-// "offer" "nav small" sections
-const navSmallTreat = document.getElementById("nav-small-treat");
-const navSmallExt = document.getElementById("nav-small-ext");
-const navSmallStyle = document.getElementById("nav-small-style");
-
-// "offer" "nav small" - "intro" body
-const introExt = document.getElementById("ext-intro")
-const introTreat = document.getElementById("tr-intro")
-const introStyle = document.getElementById("st-intro")
-const introMain = document.getElementById("o-intro")
-
-// "offer" "nav small" - "body"
-const extBodyAll = document.querySelectorAll(".ext-b-all")
-const trBodyAll = document.querySelectorAll(".tr-b-all")
-
-const bodyFusion = document.getElementById("ext-b-fusion")
-const bodyMicro = document.getElementById("ext-b-micro")
-const bodyShrink = document.getElementById("ext-b-shrinks")
-const bodyTape = document.getElementById("ext-b-tape")
-const bodyComb = document.getElementById("ext-b-comb")
-const bodyBotox = document.getElementById("tr-b-botox");
-const bodyKreatyna = document.getElementById("tr-b-kreatyna")
+const  // "offer" "nav big" tabs
+    navBigExt = document.getElementById("nav-big-ext"),
+    navBigTreat = document.getElementById("nav-big-treat"),
+    navBigStyle = document.getElementById("nav-big-style");
 
 
-// "offer" "nav small" tabs
-const extAll = document.querySelectorAll(".ext-all")
-const trAll = document.querySelectorAll(".tr-all")
+const // "offer" "nav small" sections
+    navSmallTreat = document.getElementById("nav-small-treat"),
+    navSmallExt = document.getElementById("nav-small-ext"),
+    navSmallStyle = document.getElementById("nav-small-style");
 
-const extFusion = document.getElementById("ext-fusion")
-const extMicro = document.getElementById("ext-micro")
-const extShrink = document.getElementById("ext-shrinks")
-const extTape = document.getElementById("ext-tape")
-const extComb = document.getElementById("ext-comb")
-const trBotox = document.getElementById("tr-botox");
-const trKreatyna = document.getElementById("tr-kreatyna")
+
+const // "offer" "nav small" - "intro" body
+    introExt = document.getElementById("ext-intro"),
+    introTreat = document.getElementById("tr-intro"),
+    introStyle = document.getElementById("st-intro"),
+    introMain = document.getElementById("o-intro");
+
+
+const // "offer" "nav small" - "body"
+    extBodyAll = document.querySelectorAll(".ext-b-all"),
+    trBodyAll = document.querySelectorAll(".tr-b-all");
+
+const 
+    bodyFusion = document.getElementById("ext-b-fusion"),
+    bodyMicro = document.getElementById("ext-b-micro"),
+    bodyShrink = document.getElementById("ext-b-shrinks"),
+    bodyTape = document.getElementById("ext-b-tape"),
+    bodyComb = document.getElementById("ext-b-comb"),
+    bodyBotox = document.getElementById("tr-b-botox"),
+    bodyKreatyna = document.getElementById("tr-b-kreatyna");
+
+
+
+const // "offer" "nav small" tabs
+    extAll = document.querySelectorAll(".ext-all"),
+    trAll = document.querySelectorAll(".tr-all");
+
+const 
+    extFusion = document.getElementById("ext-fusion"),
+    extMicro = document.getElementById("ext-micro"),
+    extShrink = document.getElementById("ext-shrinks"),
+    extTape = document.getElementById("ext-tape"),
+    extComb = document.getElementById("ext-comb"),
+    trBotox = document.getElementById("tr-botox"),
+    trKreatyna = document.getElementById("tr-kreatyna");
 
 
 // summ of extAll and trAll
@@ -124,15 +130,17 @@ const componentVid = createComponent ("div")
 const slidePhoto1 = document.getElementById("ihp-1")
 const slidePhoto2 = document.getElementById("ihp-2")
 const slidePhoto3 = document.getElementById("ihp-3")
+let slideshowControl10;
+let slideshowControl11;
 
 
 // 2. EL
 //-------------
 
 
-navBigExt.addEventListener("click", showContent)
-navBigTreat.addEventListener("click", showContent)
-navBigStyle.addEventListener("click", showContent)
+navBigExt.addEventListener("click", showContentExtension)
+navBigTreat.addEventListener("click", showContentTreatment)
+navBigStyle.addEventListener("click", showContentStyle)
 
 extComb.addEventListener("click", showContent2)
 extFusion.addEventListener("click", showContent2)
@@ -153,12 +161,10 @@ if (sideNav) {
 //---------------
 
 
-
-// [for A+B]
-
+// [SIDE] for A,B,C
 
 
-// -- for active tabs. 
+// --> for active tabs. 
 // "all" - all tabs collection
 function activeTabs (all, tgt) {
     for (let i=0; i<all.length; i++) {
@@ -170,7 +176,7 @@ function activeTabs (all, tgt) {
     }
 }
 
-// -- for "main body container" display toggle. 
+// --> for "main body container" display toggle. 
 // "cl" - class; "all" - all body containers collection
 function bodyToggle(cl, all) {
     for (let i=0; i<all.length; i++) {
@@ -182,7 +188,7 @@ function bodyToggle(cl, all) {
     }
 }    
 
-// -- for building content inside "main body container". 
+// --> for building content inside "main body container". 
 // "arr" - array; "nr" - array element
 function buildContentAll (arr, nr) {
 
@@ -196,7 +202,7 @@ function buildContentAll (arr, nr) {
     buildContent(componentVid, `<img src="${arr[nr].vid}">`)
 }    
 
-// -- remove previous element and append present one
+// --> remove previous element and append present one
 function showBody(el, ch) {
     if (el.firstElementChild) {
         el.removeChild(el.firstElementChild);
@@ -205,15 +211,8 @@ function showBody(el, ch) {
     el.appendChild(ch)
 }    
 
-
-
-// [MAIN]
-
-
-
-// A) "NAV BIG" TABS (OFFER)
-function showContent (e) {
-
+// --> reset small & side nav styles
+function resetForBigNav () {
     // hide "side nav" 
     sideNav.style.display = "none"
 
@@ -227,45 +226,76 @@ function showContent (e) {
     }
     for (let i=0; i<trAll.length; i++) {
         trAll[i].classList.remove("ns-active");
-}
+    }
     for (let i=0; i<extAll.length; i++) {
         extAll[i].classList.remove("ns-active");
+    }
 }
 
-    // set "active" and "non-active" tabs (display, style and intro).
-    function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intro, nonAct2SM, nonAct2BG, nonAct2Intro) {
-        activSM.style.display = "flex";
-        activBG.classList.add("ns-active");
-        activIntro.style.display = "block"
-        nonAct1SM.style.display = "none";
-        nonAct1BG.classList.remove("ns-active");
-        nonAct1Intro.style.display = "none"
-        nonAct2SM.style.display = "none";
-        nonAct2BG.classList.remove("ns-active");
-        nonAct2Intro.style.display = "none";
+// --> set "active" and "non-active" tabs (display, style and intro).
+function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intro, nonAct2SM, nonAct2BG, nonAct2Intro) {
+    activSM.style.display = "flex";
+    activBG.classList.add("ns-active");
+    activIntro.style.display = "block"
+    nonAct1SM.style.display = "none";
+    nonAct1BG.classList.remove("ns-active");
+    nonAct1Intro.style.display = "none"
+    nonAct2SM.style.display = "none";
+    nonAct2BG.classList.remove("ns-active");
+    nonAct2Intro.style.display = "none";
+}
+
+// --> turn OFF slideshow when clicking menu button (& reset controls to prevent interval overlapping in "slideshowON")
+function slideshowOFF (control1, control2) {
+    clearTimeout(control1);
+    control1 = null;
+    clearInterval(control2);
+    control2 = null;
+}
+
+
+// [MAIN]
+
+// A)
+
+// EXTENSION TAB 
+function showContentExtension () {
+
+    resetForBigNav()
+
+    setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
+
+    // slideshow
+    responsiveWidth()
+    // -> ON
+    if (!slideshowControl10) {
+        slideshowControl10 = setTimeout(() => slideShowAbstract(imgParArray, animations, 5000), 0); 
+        slideshowControl11 = setInterval(() => slideShowAbstract(imgParArray, animations, 5000), 5000*imgParArray.length); 
     }
 
-    // "extension" clicked
-    if (e.target.id === navBigExt.id) {
-
-        setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
-        //slideshow
-        responsiveWidth()
-        slideShowAbstract(imgParArray, animations, 5000)
-
-    // "treatment clicked"
-    } else if (e.target.id === navBigTreat.id) {
-
-        setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
         
-
-    // "style" clicked
-    } else if (e.target.id === navBigStyle.id) {
-
-        setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
-
-    }
 }
+
+// TREATMENT TAB
+function showContentTreatment () {
+
+    resetForBigNav()
+
+    setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
+    
+    // slideshow OFF
+    slideshowOFF(slideshowControl10, slideshowControl11)
+}
+
+// STYLE TAB
+function showContentStyle () {
+
+    resetForBigNav()
+
+    setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
+
+}
+
 
 // B) "EXTENSION" "NAV SMALL" (OFFER)
 function showContent2 (e) {
@@ -390,160 +420,6 @@ function showContent4 (e) {
     }
 }
 
-// E) SLIDESHOW FOR INFO
-
-// SLIDESHOW 
-
-// el1,2,3 - "element" to apply animation
-// animIN  - "animation class name" for element to enter
-// animOUT - "animation class name" for element to exit
-// time    - "time in [ms]" between enter and exit
-// space   - "time in [ms]" between present and next animations (between out & in)
 
 
-function slideShow (el1, el2, el3, animIN, animOut, time, space) {
-    // iteration 0
-    setTimeout(() => {
-
-        // A
-
-        setTimeout(()=> {
-            // console.log("A1 - in")
-            el1.classList.add(animIN)
-        }, 0)
-
-        setTimeout(()=> {
-            // console.log("A2 - in")
-            el3.classList.remove(animOut)
-        }, space)
-
-        setTimeout(()=> {
-            // console.log("A1 - out")
-            el1.classList.add(animOut)
-        }, time)
-
-        setTimeout(()=> {
-            // console.log("A2 - out")
-            el1.classList.remove(animIN)
-        }, time+space)
-
-        // B
-
-        setTimeout(()=> {
-            // console.log("B1 - in")
-            el2.classList.add(animIN)
-        }, time+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - in")
-            el1.classList.remove(animOut)
-        }, time+(space*3))
-
-        setTimeout(()=> {
-            // console.log("B1 - out")
-            el2.classList.add(animOut)
-        }, (time*2)+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - out")
-            el2.classList.remove(animIN)
-        }, (time*2)+(space*3))
-
-        // C
-
-        setTimeout(()=> {
-            // console.log("C1 - in")
-            el3.classList.add(animIN)
-        }, (time*2)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - in")
-            el2.classList.remove(animOut)
-        }, (time*2)+(space*5))
-
-        setTimeout(()=> {
-            // console.log("C1 - out")
-            el3.classList.add(animOut)
-        }, (time*3)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - out")
-            el3.classList.remove(animIN)
-        }, (time*3)+(space*5))
-
-    }, 0)
-
-    // iteration 1++
-    setInterval(() => {
-
-        // A
-
-        setTimeout(()=> {
-            // console.log("A1 - in")
-            el1.classList.add(animIN)
-        }, 0)
-
-        setTimeout(()=> {
-            // console.log("A2 - in")
-            el3.classList.remove(animOut)
-        }, space)
-
-        setTimeout(()=> {
-            // console.log("A1 - out")
-            el1.classList.add(animOut)
-        }, time)
-
-        setTimeout(()=> {
-            // console.log("A2 - out")
-            el1.classList.remove(animIN)
-        }, time+space)
-
-        // B
-
-        setTimeout(()=> {
-            // console.log("B1 - in")
-            el2.classList.add(animIN)
-        }, time+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - in")
-            el1.classList.remove(animOut)
-        }, time+(space*3))
-
-        setTimeout(()=> {
-            // console.log("B1 - out")
-            el2.classList.add(animOut)
-        }, (time*2)+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - out")
-            el2.classList.remove(animIN)
-        }, (time*2)+(space*3))
-
-        // C
-
-        setTimeout(()=> {
-            // console.log("C1 - in")
-            el3.classList.add(animIN)
-        }, (time*2)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - in")
-            el2.classList.remove(animOut)
-        }, (time*2)+(space*5))
-
-        setTimeout(()=> {
-            // console.log("C1 - out")
-            el3.classList.add(animOut)
-        }, (time*3)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - out")
-            el3.classList.remove(animIN)
-        }, (time*3)+(space*5))
-
-    }, (time*3)+(space*5))
-}
-
-// slideShow (slidePhoto1, slidePhoto2, slidePhoto3, "animation__slideIN", "animation__slideOUT", 10000, 0)
 

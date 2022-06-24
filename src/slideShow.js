@@ -31,12 +31,9 @@ function toArray (pags, imgs, arr) {
         for (i=0; i<arr.length; i++) {
             arr[i].img = imgs[i]
         }
-
-
 }
 
 toArray (pagIcons, showImages, imgParArray)
-
 
 
 // ---> EL 
@@ -50,7 +47,7 @@ window.addEventListener("resize", responsiveWidth);
 //----------------
 
 
-// slideshow 
+// for slideshow to run, "slideshowAbstarct" -> 1. goes as a callback for a) setTimeout, with execution delay=0 and b) setInterval with execution interval = time*pagsImgs.length) 2. "time" should have the same value as "--animation-out-delay" in CSS
 function slideShowAbstract (pagsImgs, animationsObj, time) {
 
     // get values from "imgParArray"
@@ -58,47 +55,39 @@ function slideShowAbstract (pagsImgs, animationsObj, time) {
         return Object.values(arr[index])[prop]
     }
 
-    const aIN = Object.values(animationsObj)[0];
-    const aPAG = Object.values(animationsObj)[2];
-    const t = time/3;
-
-        function backend () {
-            for (let i=0; i<pagsImgs.length; i++) {
-
-                let img = makeVar(pagsImgs, i, 1);
-                let pag = makeVar(pagsImgs, i, 0);
-                let imgNext = makeVar(pagsImgs, 0, 1);
-                let pagNext = makeVar(pagsImgs, 0, 0);
+        const aIN = Object.values(animationsObj)[0];
+        const aPAG = Object.values(animationsObj)[2];
+        const t = time/3;
     
-                if (i !== pagsImgs.length-1) {
-                    imgNext = makeVar(pagsImgs, i+1, 1);
-                    pagNext = makeVar(pagsImgs, i+1, 0);
-                } 
+                for (let i=0; i<pagsImgs.length; i++) {
     
+                    let img = makeVar(pagsImgs, i, 1);
+                    let pag = makeVar(pagsImgs, i, 0);
+                    let imgNext = makeVar(pagsImgs, 0, 1);
+                    let pagNext = makeVar(pagsImgs, 0, 0);
+        
+                    if (i !== pagsImgs.length-1) {
+                        imgNext = makeVar(pagsImgs, i+1, 1);
+                        pagNext = makeVar(pagsImgs, i+1, 0);
+                    } 
+        
                     // animations add
                     setTimeout(() => {
-                        img.classList.add(aIN);
-                        console.log("1")
-                        pag.classList.add(aPAG);
-                        console.log("2")
+                            img.classList.add(aIN);
+                            console.clear()
+                            console.log("1")
+                            pag.classList.add(aPAG);
+                            console.log("2")
                     }, time*i)
-                
+                    
                     // animation remove
                     setTimeout(() => {
-                        imgNext.classList.remove(aIN);
-                        console.log("3")
-                        pagNext.classList.remove(aPAG);
-                        console.log("4")
+                            imgNext.classList.remove(aIN);
+                            console.log("3")
+                            pagNext.classList.remove(aPAG);
+                            console.log("4")
                     }, (time*i+t))
-            }
-        }
-        
-
-            setTimeout(() => backend(), 0);
-            setInterval(() => backend(), time*pagsImgs.length);
-
-
-
+                }
 }
 
 // sets the "height" for slideshow to be responsive. sets CSS variables when "slideshow" changes width, for animation to work properly
@@ -116,13 +105,7 @@ function responsiveWidth() {
   }
 
 
-
 // | CALL
 //----------------
-
-// start value for slideshow container, if <= window width 
-
-
-// run slideshow. "time" should have the same value as "--animation-out-delay" in CSS
 
 
