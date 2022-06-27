@@ -74,7 +74,7 @@ function slideShowAbstract (pagsImgs, animationsObj, time) {
                     // animations add
                     setTimeout(() => {
                             img.classList.add(aIN);
-                            console.clear()
+                            // console.clear()
                             console.log("1")
                             pag.classList.add(aPAG);
                             console.log("2")

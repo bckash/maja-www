@@ -4,26 +4,26 @@
 //------------
 
 
-const  // "offer" "nav big" tabs
+const  // "nav big" tabs
     navBigExt = document.getElementById("nav-big-ext"),
     navBigTreat = document.getElementById("nav-big-treat"),
     navBigStyle = document.getElementById("nav-big-style");
 
 
-const // "offer" "nav small" sections
+const // "nav small" sections
     navSmallTreat = document.getElementById("nav-small-treat"),
     navSmallExt = document.getElementById("nav-small-ext"),
     navSmallStyle = document.getElementById("nav-small-style");
 
 
-const // "offer" "nav small" - "intro" body
+const // "nav small" - "intro" body
     introExt = document.getElementById("ext-intro"),
     introTreat = document.getElementById("tr-intro"),
     introStyle = document.getElementById("st-intro"),
     introMain = document.getElementById("o-intro");
 
 
-const // "offer" "nav small" - "body"
+const // "nav small" - "body"
     extBodyAll = document.querySelectorAll(".ext-b-all"),
     trBodyAll = document.querySelectorAll(".tr-b-all");
 
@@ -38,7 +38,7 @@ const
 
 
 
-const // "offer" "nav small" tabs
+const // "nav small" tabs
     extAll = document.querySelectorAll(".ext-all"),
     trAll = document.querySelectorAll(".tr-all");
 
@@ -67,7 +67,41 @@ addArraysToArray(extAllArr);
 addArraysToArray(trAllArr);
 
 
-// multimedia for small nav "offer"
+// MULTIMEDIA
+
+
+// "nav small" mulrimedia
+const mediaSN = [
+    {
+        info: "fusion bonds",
+        suitable: "fusion bonds",
+        achieve: "fusion bonds",
+        last: "fusion bonds"
+    },
+    {
+        info: "micro rings",
+        suitable: "micro rings",
+        achieve: "micro rings",
+        last: "micro rings"
+    },    {
+        info: "shirnks",
+        suitable: "shirnks",
+        achieve: "shirnks",
+        last: "shirnks"
+    },    {
+        info: "tape on",
+        suitable: "tape on",
+        achieve: "tape on",
+        last: "tape on"
+    },    {
+        info: "combline",
+        suitable: "combline",
+        achieve: "combline",
+        last: "combline"
+    },
+]
+
+// "side nav" multimedia
 const mediaExt = [
     {   
         info: "11",
@@ -109,7 +143,7 @@ const mediaTreat = [
     }
 ]
 
-// side nav "offer"
+// "side nav" 
 const sideNav = document.getElementById("side-nav")
 const snInfo = document.getElementById("sn-info")
 const snImg = document.getElementById("sn-img")
@@ -177,7 +211,8 @@ function activeTabs (all, tgt) {
 }
 
 // --> for "main body container" display toggle. 
-// "cl" - class; "all" - all body containers collection
+// "cl"  - class; 
+// "all" - all body containers collection
 function bodyToggle(cl, all) {
     for (let i=0; i<all.length; i++) {
         if (all[i].id === cl) {
@@ -189,7 +224,8 @@ function bodyToggle(cl, all) {
 }    
 
 // --> for building content inside "main body container". 
-// "arr" - array; "nr" - array element
+// "arr" - array; 
+//  "nr" - array element
 function buildContentAll (arr, nr) {
 
     function buildContent (comp, inner) {
@@ -245,13 +281,6 @@ function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intr
     nonAct2Intro.style.display = "none";
 }
 
-// --> turn OFF slideshow when clicking menu button (& reset controls to prevent interval overlapping in "slideshowON")
-function slideshowOFF (control1, control2) {
-    clearTimeout(control1);
-    control1 = null;
-    clearInterval(control2);
-    control2 = null;
-}
 
 
 // [MAIN]
@@ -264,16 +293,7 @@ function showContentExtension () {
     resetForBigNav()
 
     setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
-
-    // slideshow
-    responsiveWidth()
-    // -> ON
-    if (!slideshowControl10) {
-        slideshowControl10 = setTimeout(() => slideShowAbstract(imgParArray, animations, 5000), 0); 
-        slideshowControl11 = setInterval(() => slideShowAbstract(imgParArray, animations, 5000), 5000*imgParArray.length); 
-    }
-
-        
+     
 }
 
 // TREATMENT TAB
@@ -283,8 +303,6 @@ function showContentTreatment () {
 
     setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
     
-    // slideshow OFF
-    slideshowOFF(slideshowControl10, slideshowControl11)
 }
 
 // STYLE TAB
@@ -297,7 +315,7 @@ function showContentStyle () {
 }
 
 
-// B) "EXTENSION" "NAV SMALL" (OFFER)
+// B) "EXTENSION" -> "NAV SMALL" 
 function showContent2 (e) {
 
     introExt.style.display = "none";
@@ -309,38 +327,38 @@ function showContent2 (e) {
     switch(e.target.id) {
 
         case "ext-fusion":
-            bodyToggle("ext-b-fusion", extBodyAll)
             buildContentAll(mediaExt, 0);
             showBody(bodyFusion, componentInfo);
+            bodyToggle("ext-b-fusion", extBodyAll)
             break;
 
         case "ext-micro":
-            bodyToggle("ext-b-micro", extBodyAll)
             buildContentAll(mediaExt, 1);
             showBody(bodyMicro, componentInfo);
+            bodyToggle("ext-b-micro", extBodyAll)
             break;
 
         case "ext-shrinks":
-            bodyToggle("ext-b-shrinks", extBodyAll)
             buildContentAll(mediaExt, 2);
             showBody(bodyShrink, componentInfo);
+            bodyToggle("ext-b-shrinks", extBodyAll)            
             break;
 
         case "ext-tape":
-            bodyToggle("ext-b-tape", extBodyAll)
             buildContentAll(mediaExt, 3);
             showBody(bodyTape, componentInfo);
+            bodyToggle("ext-b-tape", extBodyAll)
             break;
             
         case "ext-comb":
-            bodyToggle("ext-b-comb", extBodyAll)
             buildContentAll(mediaExt, 4);
             showBody(bodyComb, componentInfo);
+            bodyToggle("ext-b-comb", extBodyAll)
             break;
     }
 }
 
-// C) "TREATMENT" "NAV SMALL" (OFFER)
+// C) "TREATMENT" -> "NAV SMALL" 
 function showContent3(e) {
 
     introTreat.style.display = "none";

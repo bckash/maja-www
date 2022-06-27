@@ -1,7 +1,6 @@
 
 @use "./variables" as v;
-@use "./slideshow";
-
+@use "./slideshowBoot";
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
@@ -259,6 +258,7 @@ ul {
 }
 
 .info-holder {
+
     &__photo {
         position: relative;
         height: max-content;
