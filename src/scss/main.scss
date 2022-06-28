@@ -258,6 +258,7 @@ ul {
 }
 
 .info-holder {
+    display: none;
 
     &__photo {
         position: relative;
@@ -379,7 +380,7 @@ ul {
     font-weight: bold;
 }
 
-#extension article, #treatment article, #style article {
+#treatment article, #style article, .ext-b-all {
     display: none;
 }
 

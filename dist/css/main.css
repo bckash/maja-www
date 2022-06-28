@@ -23,7 +23,6 @@
 #carouselExampleIndicators .carousel-info {
   position: absolute;
   bottom: 1.1rem;
-  padding: 0.5rem;
   font-size: 1.5rem;
   color: white;
   text-align: center;
@@ -11360,6 +11359,9 @@ ul {
   cursor: pointer;
 }
 
+.info-holder {
+  display: none;
+}
 .info-holder__photo {
   position: relative;
   height: max-content;
@@ -11459,7 +11461,7 @@ ul {
   font-weight: bold;
 }
 
-#extension article, #treatment article, #style article {
+#treatment article, #style article, .ext-b-all {
   display: none;
 }
 

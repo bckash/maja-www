@@ -34,7 +34,8 @@ const
     bodyTape = document.getElementById("ext-b-tape"),
     bodyComb = document.getElementById("ext-b-comb"),
     bodyBotox = document.getElementById("tr-b-botox"),
-    bodyKreatyna = document.getElementById("tr-b-kreatyna");
+    bodyKreatyna = document.getElementById("tr-b-kreatyna"),
+    infoHolderExt = document.getElementById("info-holder__extension")
 
 
 
@@ -67,38 +68,53 @@ addArraysToArray(extAllArr);
 addArraysToArray(trAllArr);
 
 
+const // "info holder" elements
+    infoHolderAbout = document.getElementById("ih-about"),
+    infoHolderSuitable = document.getElementById("ih-suitable"),
+    infoHolderAchieve = document.getElementById("ih-achieve"),
+    infoHolderLast = document.getElementById("ih-last")
+
+
 // MULTIMEDIA
 
 
 // "nav small" mulrimedia
 const mediaSN = [
     {
-        info: "fusion bonds",
-        suitable: "fusion bonds",
-        achieve: "fusion bonds",
-        last: "fusion bonds"
+        id: "fusion bonds",
+        about: "Hot fusion extensions attach strands of hair to the client's head with a keratin-based tip. The process uses a heating element to attach or fuse the keratin bond and extension to the client's hair. Since human hair is 95% keratin, the fusion method is safe, comfortable and long-lasting.",
+        suitable: "all hair types, great for fine/weak hair ",
+        achieve: "This method is classic and reliable, creates a free-fall natural effects ",
+        last: "3-4 months"
     },
     {
-        info: "micro rings",
-        suitable: "micro rings",
-        achieve: "micro rings",
-        last: "micro rings"
-    },    {
-        info: "shirnks",
-        suitable: "shirnks",
-        achieve: "shirnks",
-        last: "shirnks"
-    },    {
-        info: "tape on",
-        suitable: "tape on",
-        achieve: "tape on",
-        last: "tape on"
-    },    {
-        info: "combline",
-        suitable: "combline",
-        achieve: "combline",
-        last: "combline"
+        id: "mico rings",
+        about: "Micro/nano ring are made od metal, offer hair extension application with absolutely no glue, no heat and no braid. The hair extensions strands are placed into the hairline with colour coded rings to suit your root colour. ",
+        suitable: "all hair types",
+        achieve: "method use no glue/heat or adhesives, silicine-lined protect the hair and provide more grip.",
+        last: "3-4 months"
     },
+    {
+        id: "easy shrinks",
+        about: "Shrink tube hair extensions get their name from little plastic tubes known as “shrink tubes” or “shrinkies.” These tubes shrink when they are heated and are sometimes composed of an inner coating of keratin. Keratin is used in several hair extension methods and can naturally be found in human skin, hair, and nails.",
+        suitable: "perfect for thin or short hair",
+        achieve: "These are virtually undetectable, lightweight and secure. The aim of this technique is to heat shrinkies into position and blend in with the hair.",
+        last: "2-3 months"
+    },
+    {
+        id: "tape on",
+        about: "Tape-in extensions are one to one and a half inches of sections of hair that are pre-taped with medical-grade glue to your hair, making it highly secure and natural looking. The hair can be reused making this method one of the most cost effective. ",
+        suitable: "all types of hair , including those with fine hair or those who have previously suffered from hair lost ",
+        achieve: "lightweight and relatively invisible, lays flat against the head.",
+        last: "6-8 weeks"
+    },
+    {
+        id: "combline",
+        about: "CombLine hair extension application is creating invisible, light weight and super comfortable bonds. It is for both men and women of all ages, an extremely versatile extension application used for both thickening and lengthening, it can be applied to the fringe, sides and crown areas a Real all over application. With the ability to straighten, blow dry, color and perm over the bonds CombLine is the best choice for any hair extension application.",
+        suitable: "all hair types, perfect fot thin hair",
+        achieve: "Gives both thickening and lengthening, bond are invisible. Easy to pull up and hide in ponytail.",
+        last: "up to 8 weeks"
+    }
 ]
 
 // "side nav" multimedia
@@ -171,19 +187,22 @@ let slideshowControl11;
 // 2. EL
 //-------------
 
+// big nav
+navBigExt.addEventListener("click", showContentBigNav)
+navBigTreat.addEventListener("click", showContentBigNav)
+navBigStyle.addEventListener("click", showContentBigNav)
 
-navBigExt.addEventListener("click", showContentExtension)
-navBigTreat.addEventListener("click", showContentTreatment)
-navBigStyle.addEventListener("click", showContentStyle)
-
+// small nav
 extComb.addEventListener("click", showContent2)
 extFusion.addEventListener("click", showContent2)
 extMicro.addEventListener("click", showContent2)
 extShrink.addEventListener("click", showContent2)
 extTape.addEventListener("click", showContent2)
+
 trBotox.addEventListener("click", showContent3)
 trKreatyna.addEventListener("click", showContent3)
 
+// side nav
 if (sideNav) {
     snInfo.addEventListener("click", showContent4)
     snImg.addEventListener("click", showContent4)
@@ -238,19 +257,16 @@ function buildContentAll (arr, nr) {
     buildContent(componentVid, `<img src="${arr[nr].vid}">`)
 }    
 
-// --> remove previous element and append present one
-function showBody(el, ch) {
-    if (el.firstElementChild) {
-        el.removeChild(el.firstElementChild);
-      }
-
-    el.appendChild(ch)
-}    
+// --> fill the fields in in "info holder" (beneath carousel comnponent), when clicking on "small nav" tabs
+function fillFields() {
+    
+}
 
 // --> reset small & side nav styles
 function resetForBigNav () {
     // hide "side nav" 
     sideNav.style.display = "none"
+    infoHolderExt.style.display = "none"
 
     // reset "small nav" and "body" styles
     introMain.style.display = "none";
@@ -285,41 +301,27 @@ function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intr
 
 // [MAIN]
 
-// A)
+// A) BIG NAV
 
-// EXTENSION TAB 
-function showContentExtension () {
-
-    resetForBigNav()
-
-    setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
-     
-}
-
-// TREATMENT TAB
-function showContentTreatment () {
+function showContentBigNav (e) {
 
     resetForBigNav()
 
-    setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
-    
+    if (e.target.id === "nav-big-ext") {
+        setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
+    } else if (e.target.id === "nav-big-treat") {
+        setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
+    } else if (e.target.id === "nav-big-style") {
+        setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
+    }
 }
-
-// STYLE TAB
-function showContentStyle () {
-
-    resetForBigNav()
-
-    setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
-
-}
-
 
 // B) "EXTENSION" -> "NAV SMALL" 
 function showContent2 (e) {
 
     introExt.style.display = "none";
-    sideNav.style.display = "block"
+    sideNav.style.display = "block";
+    infoHolderExt.style.display = "block";
 
     activeTabs(extAll, e.target);
 
@@ -327,32 +329,27 @@ function showContent2 (e) {
     switch(e.target.id) {
 
         case "ext-fusion":
-            buildContentAll(mediaExt, 0);
-            showBody(bodyFusion, componentInfo);
+
             bodyToggle("ext-b-fusion", extBodyAll)
             break;
 
         case "ext-micro":
-            buildContentAll(mediaExt, 1);
-            showBody(bodyMicro, componentInfo);
+
             bodyToggle("ext-b-micro", extBodyAll)
             break;
 
         case "ext-shrinks":
-            buildContentAll(mediaExt, 2);
-            showBody(bodyShrink, componentInfo);
+
             bodyToggle("ext-b-shrinks", extBodyAll)            
             break;
 
         case "ext-tape":
-            buildContentAll(mediaExt, 3);
-            showBody(bodyTape, componentInfo);
+
             bodyToggle("ext-b-tape", extBodyAll)
             break;
             
         case "ext-comb":
-            buildContentAll(mediaExt, 4);
-            showBody(bodyComb, componentInfo);
+
             bodyToggle("ext-b-comb", extBodyAll)
             break;
     }
@@ -370,14 +367,14 @@ function showContent3(e) {
     switch(e.target.id) {
 
         case "tr-botox":
-            bodyToggle("tr-b-botox", trBodyAll)
-            buildContentAll(mediaTreat, 0);
+            // bodyToggle("tr-b-botox", trBodyAll)
+            // buildContentAll(mediaTreat, 0);
             showBody(bodyBotox, componentInfo);
             break;
 
         case "tr-kreatyna":
-            bodyToggle("tr-b-kreatyna", trBodyAll)
-            buildContentAll(mediaTreat, 1);
+            // bodyToggle("tr-b-kreatyna", trBodyAll)
+            // buildContentAll(mediaTreat, 1);
             showBody(bodyKreatyna, componentInfo);
             break;
     }    
@@ -389,11 +386,11 @@ function showContent4 (e) {
     // function for changing content after clicking on icon
     function iconBodyToggle(smNavEl) {
         if (e.target.id === "sn-info") {
-            showBody(smNavEl, componentInfo)
+
         } else if (e.target.id === "sn-img") {
-            showBody(smNavEl, componentPhoto)
+
         } else if (e.target.id === "sn-vid") {
-            showBody(smNavEl, componentVid)
+
         }
     } 
 
