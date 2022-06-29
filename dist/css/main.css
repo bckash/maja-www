@@ -11161,10 +11161,10 @@ ul {
 }
 .showcase .polka {
   opacity: 0.2;
-  background-image: radial-gradient(white 22.4%, transparent 22.4%), radial-gradient(white 22.4%, transparent 22.4%);
+  background-image: radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%), radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%);
   background-position: 0px 0px, 4px 4px;
   background-size: 8px 8px;
-  background-color: #c70f0f;
+  background-color: rgb(199, 15, 15);
 }
 .showcase__grad {
   position: absolute;
@@ -11172,8 +11172,8 @@ ul {
   height: 300px;
   width: 100%;
   z-index: 5;
-  background: white;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 100%);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
 }
 
 .main-nav {
@@ -11198,12 +11198,12 @@ ul {
 }
 .main-nav li:hover {
   background-color: rgba(240, 152, 152, 0.116);
-  border-bottom-color: #740b0b;
+  border-bottom-color: rgb(116, 11, 11);
 }
 .main-nav a {
   display: block;
   padding: 1.5rem 0;
-  color: #571212;
+  color: rgb(87, 18, 18);
 }
 
 .about-me {
@@ -11238,12 +11238,12 @@ ul {
   width: 15rem;
   height: auto;
   margin-right: 5rem;
-  box-shadow: 1px 1px 20px #4e331a;
+  box-shadow: 1px 1px 20px rgb(78, 51, 26);
 }
 .about-me__content span {
   display: inline-block;
   border-left: 20px solid #dfc7b9;
-  color: #810606;
+  color: rgb(129, 6, 6);
   padding: 1rem;
   padding-left: 3.5rem;
 }
@@ -11400,7 +11400,7 @@ ul {
   animation-fill-mode: forwards;
 }
 
-.animation__oslideOUT {
+.animation__slideOUT {
   animation-name: sildeOUT;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -11489,7 +11489,7 @@ ul {
   z-index: 5;
   width: 170px;
   border: 2px white solid;
-  box-shadow: 1px 1px 20px #4e331a;
+  box-shadow: 1px 1px 20px rgb(78, 51, 26);
 }
 .customer-opinion__header--icon span {
   font-size: 1.4rem;
@@ -11497,7 +11497,7 @@ ul {
   color: #745b4d;
 }
 .customer-opinion__opinion {
-  box-shadow: 1px 1px 20px #4e331a;
+  box-shadow: 1px 1px 20px rgb(78, 51, 26);
   position: absolute;
   font-style: italic;
   top: 9rem;
@@ -11628,10 +11628,10 @@ ul {
   background-color: rgba(255, 192, 203, 0.1);
 }
 .prices__content--body-treat .pl-pink .price-holder {
-  border-color: #df93a0;
+  border-color: rgb(223, 147, 160);
 }
 .prices__content--body-treat .pl-pink span {
-  color: #c24799;
+  color: rgb(194, 71, 153);
 }
 .prices__content--body-treat .pl-peach {
   top: 10rem;
@@ -11639,10 +11639,10 @@ ul {
   background-color: rgba(255, 166, 0, 0.1);
 }
 .prices__content--body-treat .pl-peach .price-holder {
-  border-color: #db853f;
+  border-color: rgb(219, 133, 63);
 }
 .prices__content--body-treat .pl-peach span {
-  color: #bb6016;
+  color: rgb(187, 96, 22);
 }
 .prices__content--body-treat .pl-red {
   top: 19rem;
@@ -11650,10 +11650,10 @@ ul {
   background-color: rgba(255, 0, 0, 0.1);
 }
 .prices__content--body-treat .pl-red .price-holder {
-  border-color: #cc4f4f;
+  border-color: rgb(204, 79, 79);
 }
 .prices__content--body-treat .pl-red span {
-  color: #a00e0e;
+  color: rgb(160, 14, 14);
 }
 
 .animation__line-in {
@@ -11841,7 +11841,7 @@ footer img {
   opacity: 0.5;
 }
 footer p {
-  color: #c98c8c;
+  color: rgb(201, 140, 140);
 }
 
 /*# sourceMappingURL=main.css.map */
