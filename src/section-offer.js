@@ -4,51 +4,36 @@
 //------------
 
 
-// "offer" "nav big" tabs
-const navBigExt = document.getElementById("nav-big-ext");
-const navBigTreat = document.getElementById("nav-big-treat");
-const navBigStyle = document.getElementById("nav-big-style");
-
-// "offer" "nav small" sections
-const navSmallTreat = document.getElementById("nav-small-treat");
-const navSmallExt = document.getElementById("nav-small-ext");
-const navSmallStyle = document.getElementById("nav-small-style");
-
-// "offer" "nav small" - "intro" body
-const introExt = document.getElementById("ext-intro")
-const introTreat = document.getElementById("tr-intro")
-const introStyle = document.getElementById("st-intro")
-const introMain = document.getElementById("o-intro")
-
-// "offer" "nav small" - "body"
-const extBodyAll = document.querySelectorAll(".ext-b-all")
-const trBodyAll = document.querySelectorAll(".tr-b-all")
-
-const bodyFusion = document.getElementById("ext-b-fusion")
-const bodyMicro = document.getElementById("ext-b-micro")
-const bodyShrink = document.getElementById("ext-b-shrinks")
-const bodyTape = document.getElementById("ext-b-tape")
-const bodyComb = document.getElementById("ext-b-comb")
-const bodyBotox = document.getElementById("tr-b-botox");
-const bodyKreatyna = document.getElementById("tr-b-kreatyna")
+// -> (BIG & SMALL) NAV TABS |
 
 
-// "offer" "nav small" tabs
-const extAll = document.querySelectorAll(".ext-all")
-const trAll = document.querySelectorAll(".tr-all")
+const  // big, <li>
+    navBigExt = document.getElementById("nav-big-ext"),
+    navBigTreat = document.getElementById("nav-big-treat"),
+    navBigStyle = document.getElementById("nav-big-style");
 
-const extFusion = document.getElementById("ext-fusion")
-const extMicro = document.getElementById("ext-micro")
-const extShrink = document.getElementById("ext-shrinks")
-const extTape = document.getElementById("ext-tape")
-const extComb = document.getElementById("ext-comb")
-const trBotox = document.getElementById("tr-botox");
-const trKreatyna = document.getElementById("tr-kreatyna")
+const // small, <ul>
+    navSmallTreat = document.getElementById("nav-small-treat"),
+    navSmallExt = document.getElementById("nav-small-ext"),
+    navSmallStyle = document.getElementById("nav-small-style");
 
+const // small, <li>
+    extFusion = document.getElementById("ext-fusion"),
+    extMicro = document.getElementById("ext-micro"),
+    extShrink = document.getElementById("ext-shrinks"),
+    extTape = document.getElementById("ext-tape"),
+    extComb = document.getElementById("ext-comb"),
+    trBotox = document.getElementById("tr-botox"),
+    trKreatyna = document.getElementById("tr-kreatyna");
 
-// summ of extAll and trAll
-extAllArr = Array.from(extAll)
-trAllArr = Array.from(trAll)
+const // small, <li> groups
+    extAll = document.querySelectorAll(".ext-all"),
+    trAll = document.querySelectorAll(".tr-all");
+
+// array from:  small, <li> groups
+//................................................
+    extAllArr = Array.from(extAll)
+    trAllArr = Array.from(trAll)
 let summAllArray = [];
 
 function addArraysToArray (arr) {
@@ -59,9 +44,114 @@ function addArraysToArray (arr) {
 
 addArraysToArray(extAllArr);
 addArraysToArray(trAllArr);
+//.................................................
 
 
-// multimedia for small nav "offer"
+// -> CONTENT : ELEMENTS |
+
+
+const // intro 
+    introExt = document.getElementById("ext-intro"),
+    introTreat = document.getElementById("tr-intro"),
+    introStyle = document.getElementById("st-intro"),
+    introMain = document.getElementById("o-intro"), 
+    extBodyAll = document.querySelectorAll(".ext-b-all"),
+    trBodyAll = document.querySelectorAll(".tr-b-all");
+
+const // carousel
+    bodyFusion = document.getElementById("ext-b-fusion"),
+    bodyMicro = document.getElementById("ext-b-micro"),
+    bodyShrink = document.getElementById("ext-b-shrinks"),
+    bodyTape = document.getElementById("ext-b-tape"),
+    bodyComb = document.getElementById("ext-b-comb"),
+    bodyBotox = document.getElementById("tr-b-botox"),
+    bodyKreatyna = document.getElementById("tr-b-kreatyna");
+
+const // info holder <article>
+    infoHolderExt = document.getElementById("info-holder__extension")
+
+const // "info holder" fill fields
+    infoHolderAbout = document.getElementById("ih-about"),
+    infoHolderSuitable = document.getElementById("ih-suitable"),
+    infoHolderAchieve = document.getElementById("ih-achieve"),
+    infoHolderLast = document.getElementById("ih-last"),
+    infoHolderAll = document.getElementsByClassName("fill-fields"),
+    infoHolderAllArray = Array.from(infoHolderAll);
+
+
+// -> CONTENT : DATA |
+
+
+// fill fields data
+const mediaSN = [
+    {
+        id: "fusion bonds",
+        about: "Hot fusion extensions attach strands of hair to the client's head with a keratin-based tip. The process uses a heating element to attach or fuse the keratin bond and extension to the client's hair. Since human hair is 95% keratin, the fusion method is safe, comfortable and long-lasting.",
+        suitable: "all hair types, great for fine/weak hair ",
+        achieve: "This method is classic and reliable, creates a free-fall natural effects ",
+        last: "3-4 months"
+    },
+    {
+        id: "mico rings",
+        about: "Micro/nano ring are made od metal, offer hair extension application with absolutely no glue, no heat and no braid. The hair extensions strands are placed into the hairline with colour coded rings to suit your root colour. ",
+        suitable: "all hair types",
+        achieve: "method use no glue/heat or adhesives, silicine-lined protect the hair and provide more grip.",
+        last: "3-4 months"
+    },
+    {
+        id: "easy shrinks",
+        about: "Shrink tube hair extensions get their name from little plastic tubes known as “shrink tubes” or “shrinkies.” These tubes shrink when they are heated and are sometimes composed of an inner coating of keratin. Keratin is used in several hair extension methods and can naturally be found in human skin, hair, and nails.",
+        suitable: "perfect for thin or short hair",
+        achieve: "These are virtually undetectable, lightweight and secure. The aim of this technique is to heat shrinkies into position and blend in with the hair.",
+        last: "2-3 months"
+    },
+    {
+        id: "tape on",
+        about: "Tape-in extensions are one to one and a half inches of sections of hair that are pre-taped with medical-grade glue to your hair, making it highly secure and natural looking. The hair can be reused making this method one of the most cost effective. ",
+        suitable: "all types of hair , including those with fine hair or those who have previously suffered from hair lost ",
+        achieve: "lightweight and relatively invisible, lays flat against the head.",
+        last: "6-8 weeks"
+    },
+    {
+        id: "combline",
+        about: "CombLine hair extension application is creating invisible, light weight and super comfortable bonds. It is for both men and women of all ages, an extremely versatile extension application used for both thickening and lengthening, it can be applied to the fringe, sides and crown areas a Real all over application. With the ability to straighten, blow dry, color and perm over the bonds CombLine is the best choice for any hair extension application.",
+        suitable: "all hair types, perfect fot thin hair",
+        achieve: "Gives both thickening and lengthening, bond are invisible. Easy to pull up and hide in ponytail.",
+        last: "up to 8 weeks"
+    }
+]
+
+// fill fields array (for functions)
+function objectToAraay (arr) {
+
+    let fillArray = []
+
+    for (const key in arr) {
+        fillArray.push(arr[key])
+    }
+
+    return fillArray;
+
+}
+
+const arrayFusionBonds = objectToAraay(mediaSN[0])
+const arrayMicroRings = objectToAraay(mediaSN[1])
+const arrayEasyShrinks = objectToAraay(mediaSN[2])
+const arrayTapeOn = objectToAraay(mediaSN[3])
+const arrayCombline = objectToAraay(mediaSN[4])
+
+
+
+// -> SIDE NAV |
+
+const // container + children
+    sideNav = document.getElementById("side-nav"),
+    snInfo = document.getElementById("sn-info"),
+    snImg = document.getElementById("sn-img"),
+    snVid = document.getElementById("sn-vid"),
+    snAll = document.querySelectorAll(".sn-all");
+
+// data
 const mediaExt = [
     {   
         info: "11",
@@ -103,13 +193,6 @@ const mediaTreat = [
     }
 ]
 
-// side nav "offer"
-const sideNav = document.getElementById("side-nav")
-const snInfo = document.getElementById("sn-info")
-const snImg = document.getElementById("sn-img")
-const snVid = document.getElementById("sn-vid")
-const snAll = document.querySelectorAll(".sn-all")
-
 // create content components for "buildContent" in "showContent".
 function createComponent (el) {
     let comp = document.createElement(el);
@@ -120,28 +203,29 @@ const componentInfo = createComponent ("div")
 const componentPhoto = createComponent ("div")
 const componentVid = createComponent ("div")
 
-// for info slideshow
-const slidePhoto1 = document.getElementById("ihp-1")
-const slidePhoto2 = document.getElementById("ihp-2")
-const slidePhoto3 = document.getElementById("ihp-3")
+
 
 
 // 2. EL
 //-------------
 
 
-navBigExt.addEventListener("click", showContent)
-navBigTreat.addEventListener("click", showContent)
-navBigStyle.addEventListener("click", showContent)
+// big nav
+navBigExt.addEventListener("click", showContentBigNav)
+navBigTreat.addEventListener("click", showContentBigNav)
+navBigStyle.addEventListener("click", showContentBigNav)
 
+// small nav
 extComb.addEventListener("click", showContent2)
 extFusion.addEventListener("click", showContent2)
 extMicro.addEventListener("click", showContent2)
 extShrink.addEventListener("click", showContent2)
 extTape.addEventListener("click", showContent2)
+
 trBotox.addEventListener("click", showContent3)
 trKreatyna.addEventListener("click", showContent3)
 
+// side nav
 if (sideNav) {
     snInfo.addEventListener("click", showContent4)
     snImg.addEventListener("click", showContent4)
@@ -149,73 +233,18 @@ if (sideNav) {
 }
 
 
-// 3. FUNCTIONS ->
+// 3. FUNCTIONS 
 //---------------
 
 
-
-// [for A+B]
-
+// -> FOR EL FUNCTIONS |
 
 
-// -- for active tabs. 
-// "all" - all tabs collection
-function activeTabs (all, tgt) {
-    for (let i=0; i<all.length; i++) {
-        if (tgt.id === all[i].id) {
-            all[i].classList.add("ns-active")
-        } else {
-            all[i].classList.remove("ns-active")
-        }
-    }
-}
-
-// -- for "main body container" display toggle. 
-// "cl" - class; "all" - all body containers collection
-function bodyToggle(cl, all) {
-    for (let i=0; i<all.length; i++) {
-        if (all[i].id === cl) {
-            all[i].style.display = "block"
-        } else {
-            all[i].style.display = "none"
-        }
-    }
-}    
-
-// -- for building content inside "main body container". 
-// "arr" - array; "nr" - array element
-function buildContentAll (arr, nr) {
-
-    function buildContent (comp, inner) {
-        comp.innerHTML = inner;
-        return comp;
-    }
-
-    buildContent(componentInfo, `<span>${arr[nr].info}</span>`)
-    buildContent(componentPhoto, `<img src="${arr[nr].photo}">`)
-    buildContent(componentVid, `<img src="${arr[nr].vid}">`)
-}    
-
-// -- remove previous element and append present one
-function showBody(el, ch) {
-    if (el.firstElementChild) {
-        el.removeChild(el.firstElementChild);
-      }
-
-    el.appendChild(ch)
-}    
-
-
-
-// [MAIN]
-
-
-
-// A) "NAV BIG" TABS (OFFER)
-function showContent (e) {
-
+// --> style reset for BIG NAV
+function resetForBigNav () {
     // hide "side nav" 
     sideNav.style.display = "none"
+    infoHolderExt.style.display = "none"
 
     // reset "small nav" and "body" styles
     introMain.style.display = "none";
@@ -227,86 +256,112 @@ function showContent (e) {
     }
     for (let i=0; i<trAll.length; i++) {
         trAll[i].classList.remove("ns-active");
-}
+    }
     for (let i=0; i<extAll.length; i++) {
         extAll[i].classList.remove("ns-active");
+    }
 }
 
-    // set "active" and "non-active" tabs (display, style and intro).
-    function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intro, nonAct2SM, nonAct2BG, nonAct2Intro) {
-        activSM.style.display = "flex";
-        activBG.classList.add("ns-active");
-        activIntro.style.display = "block"
-        nonAct1SM.style.display = "none";
-        nonAct1BG.classList.remove("ns-active");
-        nonAct1Intro.style.display = "none"
-        nonAct2SM.style.display = "none";
-        nonAct2BG.classList.remove("ns-active");
-        nonAct2Intro.style.display = "none";
+// --> active and inactive tabs for BIG NAV
+function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intro, nonAct2SM, nonAct2BG, nonAct2Intro) {
+    activSM.style.display = "flex";
+    activBG.classList.add("ns-active");
+    activIntro.style.display = "block"
+    nonAct1SM.style.display = "none";
+    nonAct1BG.classList.remove("ns-active");
+    nonAct1Intro.style.display = "none"
+    nonAct2SM.style.display = "none";
+    nonAct2BG.classList.remove("ns-active");
+    nonAct2Intro.style.display = "none";
+}
+
+// --> takes array of all nav tabs,  adds active class to choosen tab, and innactive to rest
+function activeTabs (all, tgt) {
+    for (let i=0; i<all.length; i++) {
+        if (tgt.id === all[i].id) {
+            all[i].classList.add("ns-active")
+        } else {
+            all[i].classList.remove("ns-active")
+        }
     }
+}
 
-    // "extension" clicked
-    if (e.target.id === navBigExt.id) {
+// --> takes collection of all content, toglles visibility when clicking on nav tab
+function bodyToggle(cl, all) {
+    for (let i=0; i<all.length; i++) {
+        if (all[i].id === cl) {
+            all[i].style.display = "block"
+        } else {
+            all[i].style.display = "none"
+        }
+    }
+}    
 
+// --> fill the fields in "info holder" (beneath carousel comnponent), when clicking on "small nav" tabs. 
+function fillFields(arrElements, arrTxt) {
+    for (let i=0; i<arrElements.length; i++){
+        arrElements[i].innerHTML = arrTxt[i+1]
+    }
+}
+
+
+
+// -> EL FUNCTIONS |
+
+
+// A) BIG NAV
+function showContentBigNav (e) {
+
+    resetForBigNav()
+
+    if (e.target.id === "nav-big-ext") {
         setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
-
-    // "treatment clicked"
-    } else if (e.target.id === navBigTreat.id) {
-
+    } else if (e.target.id === "nav-big-treat") {
         setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
-    
-    // "style" clicked
-    } else if (e.target.id === navBigStyle.id) {
-
+    } else if (e.target.id === "nav-big-style") {
         setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
-
     }
 }
 
-// B) "EXTENSION" "NAV SMALL" (OFFER)
+// B) SMALL NAV : "EXTENSION"
 function showContent2 (e) {
 
     introExt.style.display = "none";
-    sideNav.style.display = "block"
+    sideNav.style.display = "block";
+    infoHolderExt.style.display = "block";
 
     activeTabs(extAll, e.target);
 
-    // main body toggle (in "showContent4")
     switch(e.target.id) {
 
         case "ext-fusion":
+            fillFields(infoHolderAll, arrayFusionBonds)
             bodyToggle("ext-b-fusion", extBodyAll)
-            buildContentAll(mediaExt, 0);
-            showBody(bodyFusion, componentInfo);
             break;
 
         case "ext-micro":
+            fillFields(infoHolderAll, arrayMicroRings)
             bodyToggle("ext-b-micro", extBodyAll)
-            buildContentAll(mediaExt, 1);
-            showBody(bodyMicro, componentInfo);
             break;
 
         case "ext-shrinks":
-            bodyToggle("ext-b-shrinks", extBodyAll)
-            buildContentAll(mediaExt, 2);
-            showBody(bodyShrink, componentInfo);
+            fillFields(infoHolderAll, arrayEasyShrinks)
+            bodyToggle("ext-b-shrinks", extBodyAll)            
             break;
 
         case "ext-tape":
+            fillFields(infoHolderAll, arrayTapeOn)
             bodyToggle("ext-b-tape", extBodyAll)
-            buildContentAll(mediaExt, 3);
-            showBody(bodyTape, componentInfo);
             break;
             
         case "ext-comb":
+            fillFields(infoHolderAll, arrayCombline)
             bodyToggle("ext-b-comb", extBodyAll)
-            buildContentAll(mediaExt, 4);
-            showBody(bodyComb, componentInfo);
             break;
     }
 }
 
-// C) "TREATMENT" "NAV SMALL" (OFFER)
+// C) SMALL NAV :  "TREATMENT"
 function showContent3(e) {
 
     introTreat.style.display = "none";
@@ -318,14 +373,12 @@ function showContent3(e) {
     switch(e.target.id) {
 
         case "tr-botox":
-            bodyToggle("tr-b-botox", trBodyAll)
-            buildContentAll(mediaTreat, 0);
+
             showBody(bodyBotox, componentInfo);
             break;
 
         case "tr-kreatyna":
-            bodyToggle("tr-b-kreatyna", trBodyAll)
-            buildContentAll(mediaTreat, 1);
+
             showBody(bodyKreatyna, componentInfo);
             break;
     }    
@@ -337,11 +390,11 @@ function showContent4 (e) {
     // function for changing content after clicking on icon
     function iconBodyToggle(smNavEl) {
         if (e.target.id === "sn-info") {
-            showBody(smNavEl, componentInfo)
+
         } else if (e.target.id === "sn-img") {
-            showBody(smNavEl, componentPhoto)
+
         } else if (e.target.id === "sn-vid") {
-            showBody(smNavEl, componentVid)
+
         }
     } 
 
@@ -386,160 +439,6 @@ function showContent4 (e) {
     }
 }
 
-// E) SLIDESHOW FOR INFO
-
-// SLIDESHOW 
-
-// el1,2,3 - "element" to apply animation
-// animIN  - "animation class name" for element to enter
-// animOUT - "animation class name" for element to exit
-// time    - "time in [ms]" between enter and exit
-// space   - "time in [ms]" between present and next animations (between out & in)
 
 
-function slideShow (el1, el2, el3, animIN, animOut, time, space) {
-    // iteration 0
-    setTimeout(() => {
-
-        // A
-
-        setTimeout(()=> {
-            // console.log("A1 - in")
-            el1.classList.add(animIN)
-        }, 0)
-
-        setTimeout(()=> {
-            // console.log("A2 - in")
-            el3.classList.remove(animOut)
-        }, space)
-
-        setTimeout(()=> {
-            // console.log("A1 - out")
-            el1.classList.add(animOut)
-        }, time)
-
-        setTimeout(()=> {
-            // console.log("A2 - out")
-            el1.classList.remove(animIN)
-        }, time+space)
-
-        // B
-
-        setTimeout(()=> {
-            // console.log("B1 - in")
-            el2.classList.add(animIN)
-        }, time+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - in")
-            el1.classList.remove(animOut)
-        }, time+(space*3))
-
-        setTimeout(()=> {
-            // console.log("B1 - out")
-            el2.classList.add(animOut)
-        }, (time*2)+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - out")
-            el2.classList.remove(animIN)
-        }, (time*2)+(space*3))
-
-        // C
-
-        setTimeout(()=> {
-            // console.log("C1 - in")
-            el3.classList.add(animIN)
-        }, (time*2)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - in")
-            el2.classList.remove(animOut)
-        }, (time*2)+(space*5))
-
-        setTimeout(()=> {
-            // console.log("C1 - out")
-            el3.classList.add(animOut)
-        }, (time*3)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - out")
-            el3.classList.remove(animIN)
-        }, (time*3)+(space*5))
-
-    }, 0)
-
-    // iteration 1++
-    setInterval(() => {
-
-        // A
-
-        setTimeout(()=> {
-            // console.log("A1 - in")
-            el1.classList.add(animIN)
-        }, 0)
-
-        setTimeout(()=> {
-            // console.log("A2 - in")
-            el3.classList.remove(animOut)
-        }, space)
-
-        setTimeout(()=> {
-            // console.log("A1 - out")
-            el1.classList.add(animOut)
-        }, time)
-
-        setTimeout(()=> {
-            // console.log("A2 - out")
-            el1.classList.remove(animIN)
-        }, time+space)
-
-        // B
-
-        setTimeout(()=> {
-            // console.log("B1 - in")
-            el2.classList.add(animIN)
-        }, time+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - in")
-            el1.classList.remove(animOut)
-        }, time+(space*3))
-
-        setTimeout(()=> {
-            // console.log("B1 - out")
-            el2.classList.add(animOut)
-        }, (time*2)+(space*2))
-
-        setTimeout(()=> {
-            // console.log("B2 - out")
-            el2.classList.remove(animIN)
-        }, (time*2)+(space*3))
-
-        // C
-
-        setTimeout(()=> {
-            // console.log("C1 - in")
-            el3.classList.add(animIN)
-        }, (time*2)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - in")
-            el2.classList.remove(animOut)
-        }, (time*2)+(space*5))
-
-        setTimeout(()=> {
-            // console.log("C1 - out")
-            el3.classList.add(animOut)
-        }, (time*3)+(space*4))
-
-        setTimeout(()=> {
-            // console.log("C2 - out")
-            el3.classList.remove(animIN)
-        }, (time*3)+(space*5))
-
-    }, (time*3)+(space*5))
-}
-
-slideShow (slidePhoto1, slidePhoto2, slidePhoto3, "animation__slideIN", "animation__slideOUT", 10000, 0)
 
