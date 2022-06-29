@@ -143,31 +143,40 @@
                 <!-- | body -->
                 <div class="offer__content--main-body br">       
                     <!-- || intro -->
-                    <article id="o-intro">
-                        Intro page : main picture , please pick extension / treatment or style
-                    </article>
-
+                    <section id="o-intro" class="intro-container--main">
+                        <div>
+                            <img src="img/offer-intro/intro-main.jpg" alt="">
+                        </div>
+                        <div class="intro-container__img-overlay">
+                            <span>please choose<br> from the main menu</span>
+                        </div>
+                    </section>
 
                     <!-- || extensions -->
                     <section id="extension">
 
-                        <!-- ||| INTRO -->
+                        <!--  INTRO -->
 
-                        <article id="ext-intro">
-                            intro
-                        </article>
+                        <div id="ext-intro" class="intro-container">
+                            <div class="intro-container__img">
+                                <img src="img/offer-intro/intro-extensions.jpg" alt="">
+                            </div>
+                            <div class="intro-container__img-overlay">
+                                <span>extensions</span>
+                            </div>
+                        </div>
 
                         <!-- CAROUSEL : -->
 
                         <!-- ||| fusion -->
-                        <article class="ext-b-all" id="ext-b-fusion">
+                        <section class="ext-b-all" id="ext-b-fusion">
                             <!-- CAROUSEL -->
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                            <div id="car1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
                                 <!-- | indicators -->
                                 <div class="carousel-indicators">
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#car1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#car1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#car1" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <!-- | img -->
                                 <div class="carousel-inner">
@@ -182,11 +191,11 @@
                                   </div>
                                 </div>
                                 <!-- | prev/next -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#car1" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#car1" data-bs-slide="next">
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Next</span>
                                 </button>
@@ -195,17 +204,16 @@
                                     <span>hot fusion</span>
                                 </div>
                             </div>
-
-                        </article>
+                        </section>
                         <!-- ||| micro rings -->
-                        <article class="ext-b-all" id="ext-b-micro">
+                        <section class="ext-b-all" id="ext-b-micro">
                             <!-- CAROUSEL -->
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                            <div id="car2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
                                 <!-- | indicators -->
                                 <div class="carousel-indicators">
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#car2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#car2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#car2" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <!-- | img -->
                                 <div class="carousel-inner">
@@ -220,11 +228,11 @@
                                   </div>
                                 </div>
                                 <!-- | prev/next -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#car2" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#car2" data-bs-slide="next">
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Next</span>
                                 </button>
@@ -233,16 +241,16 @@
                                     <span>micro rings</span>
                                 </div>
                             </div>
-                        </article>
+                        </section>
                         <!-- ||| easy shrinks -->
-                        <article class="ext-b-all" id="ext-b-shrinks">
+                        <section class="ext-b-all" id="ext-b-shrinks">
                             <!-- CAROUSEL -->
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                            <div id="car3" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
                                 <!-- | indicators -->
                                 <div class="carousel-indicators">
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#car3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#car3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#car3" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <!-- | img -->
                                 <div class="carousel-inner">
@@ -257,11 +265,11 @@
                                   </div>
                                 </div>
                                 <!-- | prev/next -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#car3" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#car3" data-bs-slide="next">
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Next</span>
                                 </button>
@@ -270,16 +278,16 @@
                                     <span>easy shrinks</span>
                                 </div>
                             </div>
-                        </article>
+                        </section>
                         <!-- ||| tape on -->
-                        <article class="ext-b-all" id="ext-b-tape">
+                        <section class="ext-b-all" id="ext-b-tape">
                             <!-- CAROUSEL -->
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                            <div id="car4" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
                                 <!-- | indicators -->
                                 <div class="carousel-indicators">
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#car4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#car4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#car4" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <!-- | img -->
                                 <div class="carousel-inner">
@@ -294,11 +302,11 @@
                                   </div>
                                 </div>
                                 <!-- | prev/next -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#car4" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#car4" data-bs-slide="next">
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Next</span>
                                 </button>
@@ -307,16 +315,16 @@
                                     <span>tape on</span>
                                 </div>
                             </div>
-                        </article>
+                        </section>
                         <!-- ||| combline -->
-                        <article class="ext-b-all" id="ext-b-comb">
+                        <section class="ext-b-all" id="ext-b-comb">
                             <!-- CAROUSEL -->
-                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                            <div id="car5" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
                                 <!-- | indicators -->
                                 <div class="carousel-indicators">
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#car5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#car5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#car5" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <!-- | img -->
                                 <div class="carousel-inner">
@@ -331,11 +339,11 @@
                                   </div>
                                 </div>
                                 <!-- | prev/next -->
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#car5" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#car5" data-bs-slide="next">
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Next</span>
                                 </button>
@@ -344,7 +352,7 @@
                                     <span>combline</span>
                                 </div>
                             </div>                            
-                        </article>
+                        </section>
 
                         <!-- INFO -->
 
@@ -352,8 +360,10 @@
                             <!-- INFO -->
                             <div class="info-holder__info">
                                 <!-- | about -->
-                                <div id="ih-about" class="info-holder__info--about">
-                                <!-- <js> -->
+                                <div class="info-holder__info--about" >
+                                    <span id="ih-about" class="fill-fields" >
+                                        <!-- <js> -->
+                                    </span>
                                 </div>
                                 <!-- | rest -->
                                 <div class="info-holder__info--rest">
@@ -372,7 +382,7 @@
                                         </div>
                                         <!-- descr -->
                                         <div class="info-rest__example--descr">
-                                            <span id="ih-suitable">
+                                            <span id="ih-suitable" class="fill-fields">
                                             <!-- <js> -->
                                             </span>
                                         </div>
@@ -392,7 +402,7 @@
                                         </div>
                                         <!-- descr -->
                                         <div class="info-rest__example--descr">
-                                            <span id="ih-achieve">
+                                            <span id="ih-achieve" class="fill-fields">
                                                 <!-- <js> -->
                                             </span>
                                         </div>
@@ -412,7 +422,7 @@
                                         </div>
                                         <!-- descr -->
                                         <div class="info-rest__example--descr">
-                                            <span id="ih-last">
+                                            <span id="ih-last" class="fill-fields">
                                                 <!-- <js> -->
                                             </span>
                                         </div>
@@ -423,12 +433,16 @@
                         </article>
                     </section>
 
-
                     <!-- || treatment -->
                     <section id="treatment">
-                        <article id="tr-intro">
-                            treatment intro
-                        </article>
+                        <div id="tr-intro" class="intro-container">
+                            <div class="intro-container__img">
+                                <img src="img/offer-intro/intro-treatment.jpg" alt="">
+                            </div>
+                            <div class="intro-container__img-overlay">
+                                <span>treatment</span>
+                            </div>
+                        </div>
 
                         <article class="tr-b-all" id="tr-b-botox">
                             <!-- botox -->
@@ -438,12 +452,19 @@
                             <!-- kreatyna -->
                         </article>
                     </section>
+
                     <!-- || style -->
                     <section id="style">
-                        <article id="st-intro">
-                            style
-                        </article>
+                        <div id="st-intro" class="intro-container">
+                            <div class="intro-container__img">
+                                <img src="img/offer-intro/intro-styling.jpg" alt="">
+                            </div>
+                            <div class="intro-container__img-overlay">
+                                <span>styling</span>
+                            </div>
+                        </div>
                     </section>
+
 
                 </div>
                 <!-- | icons -->

@@ -6,21 +6,21 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap");
-#carouselExampleIndicators {
+#car1, #car2, #car3, #car4, #car5 {
   margin: 1rem;
   padding-bottom: 1.1rem;
 }
-#carouselExampleIndicators .carousel-indicators {
+#car1 .carousel-indicators, #car2 .carousel-indicators, #car3 .carousel-indicators, #car4 .carousel-indicators, #car5 .carousel-indicators {
   margin: 0;
 }
-#carouselExampleIndicators .carousel-indicators button {
+#car1 .carousel-indicators button, #car2 .carousel-indicators button, #car3 .carousel-indicators button, #car4 .carousel-indicators button, #car5 .carousel-indicators button {
   border-radius: 10px;
   background-color: rgb(150, 150, 151);
 }
-#carouselExampleIndicators .carousel-inner {
+#car1 .carousel-inner, #car2 .carousel-inner, #car3 .carousel-inner, #car4 .carousel-inner, #car5 .carousel-inner {
   border-radius: 20px;
 }
-#carouselExampleIndicators .carousel-info {
+#car1 .carousel-info, #car2 .carousel-info, #car3 .carousel-info, #car4 .carousel-info, #car5 .carousel-info {
   position: absolute;
   bottom: 1.1rem;
   font-size: 1.5rem;
@@ -11300,6 +11300,7 @@ ul {
   width: 50rem;
   height: max-content;
   margin: auto;
+  height: 62rem;
 }
 .offer__content--head {
   font-size: 3rem;
@@ -11344,6 +11345,7 @@ ul {
 }
 .offer__content--main-icons #side-nav {
   display: none;
+  color: rgb(216, 211, 204);
 }
 .offer__content--main-icons span {
   font-size: 3rem;
@@ -11351,6 +11353,38 @@ ul {
 .offer__content--main-body {
   height: max-content;
   width: 90%;
+}
+.offer__content--main-body #o-intro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offer__content--main-body .intro-container {
+  display: none;
+}
+.offer__content--main-body .intro-container, .offer__content--main-body .intro-container--main {
+  position: relative;
+}
+.offer__content--main-body .intro-container__img, .offer__content--main-body .intro-container--main__img {
+  border-radius: 20px;
+}
+.offer__content--main-body .intro-container__img-overlay, .offer__content--main-body .intro-container--main__img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+.offer__content--main-body .intro-container__img-overlay span, .offer__content--main-body .intro-container--main__img-overlay span {
+  display: block;
+  width: 100%;
+  font-size: 3rem;
+  color: rgb(197, 191, 191);
+  background-color: rgba(0, 0, 0, 0.288);
 }
 .offer__content--main-icons {
   width: 10%;
@@ -11392,11 +11426,17 @@ ul {
   padding: 0.5rem 0;
 }
 .info-holder__info--about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-style: italic;
+  height: 14rem;
+}
+.info-holder__info--about span {
   width: 70%;
+  border-left: 8px solid #745b4d;
   margin: 2rem auto;
   text-align: left;
-  border-left: 8px solid #745b4d;
   padding-left: 2rem;
 }
 .info-holder__info--rest {
@@ -11418,7 +11458,11 @@ ul {
   margin: 1rem;
 }
 .info-holder__info--rest .info-rest__example--descr {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
   width: 80%;
+  height: 100%;
   margin: auto;
   font-size: 0.8rem;
 }

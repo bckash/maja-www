@@ -4,46 +4,20 @@
 //------------
 
 
-const  // "nav big" tabs
+// -> (BIG & SMALL) NAV TABS |
+
+
+const  // big, <li>
     navBigExt = document.getElementById("nav-big-ext"),
     navBigTreat = document.getElementById("nav-big-treat"),
     navBigStyle = document.getElementById("nav-big-style");
 
-
-const // "nav small" sections
+const // small, <ul>
     navSmallTreat = document.getElementById("nav-small-treat"),
     navSmallExt = document.getElementById("nav-small-ext"),
     navSmallStyle = document.getElementById("nav-small-style");
 
-
-const // "nav small" - "intro" body
-    introExt = document.getElementById("ext-intro"),
-    introTreat = document.getElementById("tr-intro"),
-    introStyle = document.getElementById("st-intro"),
-    introMain = document.getElementById("o-intro");
-
-
-const // "nav small" - "body"
-    extBodyAll = document.querySelectorAll(".ext-b-all"),
-    trBodyAll = document.querySelectorAll(".tr-b-all");
-
-const 
-    bodyFusion = document.getElementById("ext-b-fusion"),
-    bodyMicro = document.getElementById("ext-b-micro"),
-    bodyShrink = document.getElementById("ext-b-shrinks"),
-    bodyTape = document.getElementById("ext-b-tape"),
-    bodyComb = document.getElementById("ext-b-comb"),
-    bodyBotox = document.getElementById("tr-b-botox"),
-    bodyKreatyna = document.getElementById("tr-b-kreatyna"),
-    infoHolderExt = document.getElementById("info-holder__extension")
-
-
-
-const // "nav small" tabs
-    extAll = document.querySelectorAll(".ext-all"),
-    trAll = document.querySelectorAll(".tr-all");
-
-const 
+const // small, <li>
     extFusion = document.getElementById("ext-fusion"),
     extMicro = document.getElementById("ext-micro"),
     extShrink = document.getElementById("ext-shrinks"),
@@ -52,10 +26,14 @@ const
     trBotox = document.getElementById("tr-botox"),
     trKreatyna = document.getElementById("tr-kreatyna");
 
+const // small, <li> groups
+    extAll = document.querySelectorAll(".ext-all"),
+    trAll = document.querySelectorAll(".tr-all");
 
-// summ of extAll and trAll
-extAllArr = Array.from(extAll)
-trAllArr = Array.from(trAll)
+// array from:  small, <li> groups
+//................................................
+    extAllArr = Array.from(extAll)
+    trAllArr = Array.from(trAll)
 let summAllArray = [];
 
 function addArraysToArray (arr) {
@@ -66,19 +44,45 @@ function addArraysToArray (arr) {
 
 addArraysToArray(extAllArr);
 addArraysToArray(trAllArr);
+//.................................................
 
 
-const // "info holder" elements
+// -> CONTENT : ELEMENTS |
+
+
+const // intro 
+    introExt = document.getElementById("ext-intro"),
+    introTreat = document.getElementById("tr-intro"),
+    introStyle = document.getElementById("st-intro"),
+    introMain = document.getElementById("o-intro"), 
+    extBodyAll = document.querySelectorAll(".ext-b-all"),
+    trBodyAll = document.querySelectorAll(".tr-b-all");
+
+const // carousel
+    bodyFusion = document.getElementById("ext-b-fusion"),
+    bodyMicro = document.getElementById("ext-b-micro"),
+    bodyShrink = document.getElementById("ext-b-shrinks"),
+    bodyTape = document.getElementById("ext-b-tape"),
+    bodyComb = document.getElementById("ext-b-comb"),
+    bodyBotox = document.getElementById("tr-b-botox"),
+    bodyKreatyna = document.getElementById("tr-b-kreatyna");
+
+const // info holder <article>
+    infoHolderExt = document.getElementById("info-holder__extension")
+
+const // "info holder" fill fields
     infoHolderAbout = document.getElementById("ih-about"),
     infoHolderSuitable = document.getElementById("ih-suitable"),
     infoHolderAchieve = document.getElementById("ih-achieve"),
-    infoHolderLast = document.getElementById("ih-last")
+    infoHolderLast = document.getElementById("ih-last"),
+    infoHolderAll = document.getElementsByClassName("fill-fields"),
+    infoHolderAllArray = Array.from(infoHolderAll);
 
 
-// MULTIMEDIA
+// -> CONTENT : DATA |
 
 
-// "nav small" mulrimedia
+// fill fields data
 const mediaSN = [
     {
         id: "fusion bonds",
@@ -117,7 +121,37 @@ const mediaSN = [
     }
 ]
 
-// "side nav" multimedia
+// fill fields array (for functions)
+function objectToAraay (arr) {
+
+    let fillArray = []
+
+    for (const key in arr) {
+        fillArray.push(arr[key])
+    }
+
+    return fillArray;
+
+}
+
+const arrayFusionBonds = objectToAraay(mediaSN[0])
+const arrayMicroRings = objectToAraay(mediaSN[1])
+const arrayEasyShrinks = objectToAraay(mediaSN[2])
+const arrayTapeOn = objectToAraay(mediaSN[3])
+const arrayCombline = objectToAraay(mediaSN[4])
+
+
+
+// -> SIDE NAV |
+
+const // container + children
+    sideNav = document.getElementById("side-nav"),
+    snInfo = document.getElementById("sn-info"),
+    snImg = document.getElementById("sn-img"),
+    snVid = document.getElementById("sn-vid"),
+    snAll = document.querySelectorAll(".sn-all");
+
+// data
 const mediaExt = [
     {   
         info: "11",
@@ -159,13 +193,6 @@ const mediaTreat = [
     }
 ]
 
-// "side nav" 
-const sideNav = document.getElementById("side-nav")
-const snInfo = document.getElementById("sn-info")
-const snImg = document.getElementById("sn-img")
-const snVid = document.getElementById("sn-vid")
-const snAll = document.querySelectorAll(".sn-all")
-
 // create content components for "buildContent" in "showContent".
 function createComponent (el) {
     let comp = document.createElement(el);
@@ -176,16 +203,12 @@ const componentInfo = createComponent ("div")
 const componentPhoto = createComponent ("div")
 const componentVid = createComponent ("div")
 
-// for info slideshow
-const slidePhoto1 = document.getElementById("ihp-1")
-const slidePhoto2 = document.getElementById("ihp-2")
-const slidePhoto3 = document.getElementById("ihp-3")
-let slideshowControl10;
-let slideshowControl11;
+
 
 
 // 2. EL
 //-------------
+
 
 // big nav
 navBigExt.addEventListener("click", showContentBigNav)
@@ -210,59 +233,14 @@ if (sideNav) {
 }
 
 
-// 3. FUNCTIONS ->
+// 3. FUNCTIONS 
 //---------------
 
 
-// [SIDE] for A,B,C
+// -> FOR EL FUNCTIONS |
 
 
-// --> for active tabs. 
-// "all" - all tabs collection
-function activeTabs (all, tgt) {
-    for (let i=0; i<all.length; i++) {
-        if (tgt.id === all[i].id) {
-            all[i].classList.add("ns-active")
-        } else {
-            all[i].classList.remove("ns-active")
-        }
-    }
-}
-
-// --> for "main body container" display toggle. 
-// "cl"  - class; 
-// "all" - all body containers collection
-function bodyToggle(cl, all) {
-    for (let i=0; i<all.length; i++) {
-        if (all[i].id === cl) {
-            all[i].style.display = "block"
-        } else {
-            all[i].style.display = "none"
-        }
-    }
-}    
-
-// --> for building content inside "main body container". 
-// "arr" - array; 
-//  "nr" - array element
-function buildContentAll (arr, nr) {
-
-    function buildContent (comp, inner) {
-        comp.innerHTML = inner;
-        return comp;
-    }
-
-    buildContent(componentInfo, `<span>${arr[nr].info}</span>`)
-    buildContent(componentPhoto, `<img src="${arr[nr].photo}">`)
-    buildContent(componentVid, `<img src="${arr[nr].vid}">`)
-}    
-
-// --> fill the fields in in "info holder" (beneath carousel comnponent), when clicking on "small nav" tabs
-function fillFields() {
-    
-}
-
-// --> reset small & side nav styles
+// --> style reset for BIG NAV
 function resetForBigNav () {
     // hide "side nav" 
     sideNav.style.display = "none"
@@ -284,7 +262,7 @@ function resetForBigNav () {
     }
 }
 
-// --> set "active" and "non-active" tabs (display, style and intro).
+// --> active and inactive tabs for BIG NAV
 function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intro, nonAct2SM, nonAct2BG, nonAct2Intro) {
     activSM.style.display = "flex";
     activBG.classList.add("ns-active");
@@ -297,12 +275,41 @@ function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intr
     nonAct2Intro.style.display = "none";
 }
 
+// --> takes array of all nav tabs,  adds active class to choosen tab, and innactive to rest
+function activeTabs (all, tgt) {
+    for (let i=0; i<all.length; i++) {
+        if (tgt.id === all[i].id) {
+            all[i].classList.add("ns-active")
+        } else {
+            all[i].classList.remove("ns-active")
+        }
+    }
+}
+
+// --> takes collection of all content, toglles visibility when clicking on nav tab
+function bodyToggle(cl, all) {
+    for (let i=0; i<all.length; i++) {
+        if (all[i].id === cl) {
+            all[i].style.display = "block"
+        } else {
+            all[i].style.display = "none"
+        }
+    }
+}    
+
+// --> fill the fields in "info holder" (beneath carousel comnponent), when clicking on "small nav" tabs. 
+function fillFields(arrElements, arrTxt) {
+    for (let i=0; i<arrElements.length; i++){
+        arrElements[i].innerHTML = arrTxt[i+1]
+    }
+}
 
 
-// [MAIN]
+
+// -> EL FUNCTIONS |
+
 
 // A) BIG NAV
-
 function showContentBigNav (e) {
 
     resetForBigNav()
@@ -316,7 +323,7 @@ function showContentBigNav (e) {
     }
 }
 
-// B) "EXTENSION" -> "NAV SMALL" 
+// B) SMALL NAV : "EXTENSION"
 function showContent2 (e) {
 
     introExt.style.display = "none";
@@ -325,37 +332,36 @@ function showContent2 (e) {
 
     activeTabs(extAll, e.target);
 
-    // main body toggle (in "showContent4")
     switch(e.target.id) {
 
         case "ext-fusion":
-
+            fillFields(infoHolderAll, arrayFusionBonds)
             bodyToggle("ext-b-fusion", extBodyAll)
             break;
 
         case "ext-micro":
-
+            fillFields(infoHolderAll, arrayMicroRings)
             bodyToggle("ext-b-micro", extBodyAll)
             break;
 
         case "ext-shrinks":
-
+            fillFields(infoHolderAll, arrayEasyShrinks)
             bodyToggle("ext-b-shrinks", extBodyAll)            
             break;
 
         case "ext-tape":
-
+            fillFields(infoHolderAll, arrayTapeOn)
             bodyToggle("ext-b-tape", extBodyAll)
             break;
             
         case "ext-comb":
-
+            fillFields(infoHolderAll, arrayCombline)
             bodyToggle("ext-b-comb", extBodyAll)
             break;
     }
 }
 
-// C) "TREATMENT" -> "NAV SMALL" 
+// C) SMALL NAV :  "TREATMENT"
 function showContent3(e) {
 
     introTreat.style.display = "none";
@@ -367,14 +373,12 @@ function showContent3(e) {
     switch(e.target.id) {
 
         case "tr-botox":
-            // bodyToggle("tr-b-botox", trBodyAll)
-            // buildContentAll(mediaTreat, 0);
+
             showBody(bodyBotox, componentInfo);
             break;
 
         case "tr-kreatyna":
-            // bodyToggle("tr-b-kreatyna", trBodyAll)
-            // buildContentAll(mediaTreat, 1);
+
             showBody(bodyKreatyna, componentInfo);
             break;
     }    

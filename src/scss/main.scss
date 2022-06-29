@@ -193,6 +193,7 @@ ul {
     background-color: v.$nl-back-pink-light;
     text-align: center;
     @include v.article;
+    height: 62rem;
 
     &--head {
         @include v.title;
@@ -235,6 +236,7 @@ ul {
 
         &-icons #side-nav {
             display: none;
+            color: rgb(216, 211, 204);
         }
 
         &-icons span {
@@ -244,6 +246,47 @@ ul {
         &-body {
             height: max-content;
             width: 90%;
+
+            #o-intro {
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .intro-container {
+                display: none;
+            }
+
+            .intro-container, .intro-container--main {
+                position: relative;
+
+                &__img {
+                    border-radius: 20px;
+                }
+
+                &__img-overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(0, 0, 0, 0.24);
+
+                    span {
+                        display: block;
+                        width: 100%;
+                        font-size: 3rem;
+                        color: rgb(197, 191, 191);
+                        background-color: rgba(0, 0, 0, 0.288);
+                    }
+                }
+            }
         }
 
         &-icons {
@@ -297,12 +340,19 @@ ul {
     &__info {
 
         &--about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-style: italic;
-            width: 70%;
-            margin: 2rem auto;
-            text-align: left;
-            border-left: 8px solid v.$nl-red;
-            padding-left: 2rem;
+            height: 14rem;
+
+            span {
+                width: 70%;
+                border-left: 8px solid v.$nl-red;
+                margin: 2rem auto;
+                text-align: left;
+                padding-left: 2rem;
+            }
         }
 
         &--rest {
@@ -327,7 +377,11 @@ ul {
                 }
 
                 &--descr {
+                    display: flex;
+                    justify-content: center;
+                    align-self: flex-start;
                     width: 80%;
+                    height: 100%;
                     margin: auto;
                     font-size: .8rem;
                 }
