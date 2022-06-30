@@ -4,6 +4,8 @@
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+
 
 
 *, *::before, *::after {
@@ -165,7 +167,7 @@ ul {
 
 .paralax-1 {
     background-color: v.$nl-dark-fill;
-    padding: 8rem 0;
+    padding: 3rem 0;
 
     & div {
         outline: 17px solid v.$nl-back-pink-dark;
@@ -781,7 +783,7 @@ ul {
 
 .bridge-1 {
     background-color: v.$nl-dark-fill;
-    height: 20rem;
+    height: 10rem;
 }
 
 .bridge-1-1 {
@@ -822,9 +824,12 @@ ul {
 
 footer {
     @include v.flex-row-center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
 
     .foot-media, .foot-logo, .foot-contact {
         margin: 1rem;
+        margin-bottom: 0;
         height: 6rem;
     }
 
@@ -841,17 +846,23 @@ footer {
             @include v.footer-icons;
             align-items: center;
 
-            img {
+            svg {
                 margin: 0 .5rem;
+
+                path {
+                    fill: v.$nl-red-logo;
+                }
             }
         }
     }
 
     .foot-logo {
+        display: flex;
+        align-items: center;
         margin: 0 5rem;
         
         img {
-            height: 6rem;
+            height: 5rem;
         }
     }
 
@@ -872,17 +883,20 @@ footer {
                 .material-icons {
                     font-size: 2.3rem;
                     margin: 0 1rem;
+                    margin-top: .5rem;
+                    color: v.$nl-red-logo;
                 }
             }
 
             &--tel {
                 margin-right: 2rem;
             }
+
+            .contact-details {
+                text-align: center;
+            }
         }
-
-
     }
-
 }
 
 

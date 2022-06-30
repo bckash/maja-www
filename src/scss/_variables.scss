@@ -1,18 +1,17 @@
 
-// Sass --watch src/scss:dist/css
 
 // colors
 
-$nl-dark-fill: #B4917D;
+$nl-dark-fill: #B4917D; // main bridge 
 
-$nl-red: #745b4d;
-$nl-back-red: #CE4C4C;
-$nl-back-pink: #f3eee8;
-$nl-back-pink-dark: #dfc7b9;
-$nl-back-pink-light: #f8f5ef;
-$nl-back-pink-ultra-light: #F8EEEE;
-$nl-back-pastel: #418bad;
+$nl-red: #745b4d; // about me (text, border); info holder (border, icons); customer opinion icon
+$nl-back-pink: #f3eee8; // about me back; bridge back
+$nl-back-pink-dark: #dfc7b9; // about me (big border); paralax (border); customer opinion (big txt)
+$nl-back-pink-light: #f8f5ef; // offer (back); bridge (back)
+$nl-back-pink-ultra-light: #F8EEEE; //prices (back); bridge (back)
 
+$nl-back-pastel: #418bad; // customers opinion back
+$nl-red-logo :#954444;
 
 // mixins
 
@@ -60,11 +59,15 @@ $nl-back-pastel: #418bad;
 }
 
 @mixin footer-txt-title {
-    font-size: 1.2rem;
+    color: $nl-red-logo;
+    font-size: 1rem;
+    font-weight: bold;
     text-transform: uppercase;
     margin: 0 1rem;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid rgb(192, 192, 192);
 }
 
 @mixin footer-icons {
-    height: 4rem;
+    height: 3rem;
 }

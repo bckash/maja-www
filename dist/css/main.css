@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
 #car1, #car2, #car3, #car4, #car5 {
   margin: 1rem;
   padding-bottom: 1.1rem;
@@ -11276,7 +11277,7 @@ ul {
 
 .paralax-1 {
   background-color: #B4917D;
-  padding: 8rem 0;
+  padding: 3rem 0;
 }
 .paralax-1 div {
   outline: 17px solid #dfc7b9;
@@ -11820,7 +11821,7 @@ ul {
 
 .bridge-1 {
   background-color: #B4917D;
-  height: 20rem;
+  height: 10rem;
 }
 
 .bridge-1-1 {
@@ -11858,15 +11859,22 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
 }
 footer .foot-media, footer .foot-logo, footer .foot-contact {
   margin: 1rem;
+  margin-bottom: 0;
   height: 6rem;
 }
 footer .foot-media__txt {
-  font-size: 1.2rem;
+  color: #954444;
+  font-size: 1rem;
+  font-weight: bold;
   text-transform: uppercase;
   margin: 0 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(192, 192, 192);
   text-align: right;
   margin-right: 0.5rem;
 }
@@ -11874,28 +11882,37 @@ footer .foot-media__icons {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 4rem;
+  height: 3rem;
   align-items: center;
 }
-footer .foot-media__icons img {
+footer .foot-media__icons svg {
   margin: 0 0.5rem;
 }
+footer .foot-media__icons svg path {
+  fill: #954444;
+}
 footer .foot-logo {
+  display: flex;
+  align-items: center;
   margin: 0 5rem;
 }
 footer .foot-logo img {
-  height: 6rem;
+  height: 5rem;
 }
 footer .foot-contact__txt {
-  font-size: 1.2rem;
+  color: #954444;
+  font-size: 1rem;
+  font-weight: bold;
   text-transform: uppercase;
   margin: 0 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(192, 192, 192);
 }
 footer .foot-contact__icons {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 4rem;
+  height: 3rem;
 }
 footer .foot-contact__icons--tel, footer .foot-contact__icons--meil {
   display: flex;
@@ -11906,9 +11923,14 @@ footer .foot-contact__icons--tel, footer .foot-contact__icons--meil {
 footer .foot-contact__icons--tel .material-icons, footer .foot-contact__icons--meil .material-icons {
   font-size: 2.3rem;
   margin: 0 1rem;
+  margin-top: 0.5rem;
+  color: #954444;
 }
 footer .foot-contact__icons--tel {
   margin-right: 2rem;
+}
+footer .foot-contact__icons .contact-details {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
