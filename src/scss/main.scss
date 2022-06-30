@@ -533,12 +533,6 @@ ul {
     animation-fill-mode: forwards;
 }
 
-// .animation__out-left-right--delay {
-//     animation-name: outLeftRight;
-//     animation-duration: .2s;
-//     animation-delay: 8800ms;
-//     animation-fill-mode: forwards;
-// }
 
 @keyframes inLeftRight {
      from {
@@ -551,7 +545,6 @@ ul {
      } 
     }
 
-   
 
 @keyframes outLeftRight {
     from {
@@ -749,64 +742,7 @@ ul {
     to {opacity:1}
 }
 
-// CONTACT
 
-.contact {
-
-    &__content {
-
-        &--header {
-            @include v.title;
-            text-align: center;
-        }
-
-        &--body-tel, &--body-email {
-            text-align: center;
-            margin: 2rem;
-        }
-    }
-}
-
-.contact-icon, .contact-txt {
-    margin: .5rem;
-}
-
-.contact-icon span {
-    font-size: 3rem;
-}
-
-.contact-txt {
-    font-size: 1.6rem;
-}
-
-// MEDIA
-
-.media {
-
-    &__content {
-        text-align: center;
-        margin-top: 4rem;
-        margin-bottom: 2rem;
-
-        &--header {
-            @include v.title;
-            border-bottom: 1px grey solid;
-        }
-
-        &--icons {
-
-            & > * {
-                display: inline-block;
-                margin: 2rem 1.2rem;
-
-                & img {
-                    width: 30px;
-                }
-            }
-
-        }
-    }
-}
 
 // pulback menu
 
@@ -885,20 +821,68 @@ ul {
 //------------------
 
 footer {
-    width: 200px;
-    text-align: center;
-    margin: 2rem;
-    margin-bottom: 0rem;
-    margin: auto;
-    padding: 1rem;
+    @include v.flex-row-center;
 
-    & img {
-        opacity: .5;
+    .foot-media, .foot-logo, .foot-contact {
+        margin: 1rem;
+        height: 6rem;
     }
 
-    & p {
-        color: rgb(201, 140, 140);
+    .foot-media {
+
+        &__txt {
+            @include v.footer-txt-title;
+            text-align: right;
+            margin-right: .5rem;
+        }
+
+        &__icons {
+            @include v.flex-row-center;
+            @include v.footer-icons;
+            align-items: center;
+
+            img {
+                margin: 0 .5rem;
+            }
+        }
     }
+
+    .foot-logo {
+        margin: 0 5rem;
+        
+        img {
+            height: 6rem;
+        }
+    }
+
+    .foot-contact {
+
+        &__txt {
+            @include v.footer-txt-title;
+        }
+
+        &__icons {
+            @include v.flex-row-center;
+            @include v.footer-icons;
+
+            &--tel, &--meil {
+                @include v.flex-row-center;
+                align-items: center;
+
+                .material-icons {
+                    font-size: 2.3rem;
+                    margin: 0 1rem;
+                }
+            }
+
+            &--tel {
+                margin-right: 2rem;
+            }
+        }
+
+
+    }
+
 }
 
 

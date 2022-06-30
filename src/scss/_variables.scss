@@ -50,3 +50,21 @@ $nl-back-pastel: #418bad;
     position: absolute;
     top: 0;
 }
+
+// footer
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin footer-txt-title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 0 1rem;
+}
+
+@mixin footer-icons {
+    height: 4rem;
+}
