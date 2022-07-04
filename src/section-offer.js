@@ -337,6 +337,7 @@ function showContent2 (e) {
         case "ext-fusion":
             fillFields(infoHolderAll, arrayFusionBonds)
             bodyToggle("ext-b-fusion", extBodyAll)
+            // build "side nav content" function
             break;
 
         case "ext-micro":
@@ -391,7 +392,11 @@ function showContent4 (e) {
     function iconBodyToggle(smNavEl) {
         if (e.target.id === "sn-info") {
 
+            // build function that shows "info / photo section" container
+
         } else if (e.target.id === "sn-img") {
+
+            // build function that shows "info / photo section" container
 
         } 
     } 
