@@ -229,7 +229,7 @@ ul {
     &--main {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items:flex-start;
         margin-left: 4.5rem;
 
         &-body, &-icons {
@@ -288,6 +288,14 @@ ul {
                         background-color: rgba(0, 0, 0, 0.288);
                     }
                 }
+            }
+
+            .ext-b-all {
+                justify-content: center;
+            }
+
+            .carousel {
+                width: 380px;
             }
         }
 
@@ -595,6 +603,17 @@ ul {
 
             &-ext, &-treat, &-style {
                 display: none;
+            }
+
+            &-ext {
+                table td, table th {
+                    cursor: default;
+                }
+                
+                td::before {
+                    content: "£ ";
+                }
+
             }
 
             &-treat {

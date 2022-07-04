@@ -11338,7 +11338,7 @@ ul {
 .offer__content--main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-left: 4.5rem;
 }
 .offer__content--main-body, .offer__content--main-icons {
@@ -11386,6 +11386,12 @@ ul {
   font-size: 3rem;
   color: rgb(197, 191, 191);
   background-color: rgba(0, 0, 0, 0.288);
+}
+.offer__content--main-body .ext-b-all {
+  justify-content: center;
+}
+.offer__content--main-body .carousel {
+  width: 380px;
 }
 .offer__content--main-icons {
   width: 10%;
@@ -11666,6 +11672,12 @@ ul {
 }
 .prices__content--body-ext, .prices__content--body-treat, .prices__content--body-style {
   display: none;
+}
+.prices__content--body-ext table td, .prices__content--body-ext table th {
+  cursor: default;
+}
+.prices__content--body-ext td::before {
+  content: "£ ";
 }
 .prices__content--body-treat {
   position: relative;

@@ -290,7 +290,7 @@ function activeTabs (all, tgt) {
 function bodyToggle(cl, all) {
     for (let i=0; i<all.length; i++) {
         if (all[i].id === cl) {
-            all[i].style.display = "block"
+            all[i].style.display = "flex"
         } else {
             all[i].style.display = "none"
         }
@@ -393,9 +393,7 @@ function showContent4 (e) {
 
         } else if (e.target.id === "sn-img") {
 
-        } else if (e.target.id === "sn-vid") {
-
-        }
+        } 
     } 
 
     // in active tab (in small nav), change content after clicking on icon
