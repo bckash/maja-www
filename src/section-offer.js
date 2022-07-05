@@ -58,7 +58,11 @@ const // intro
     extBodyAll = document.querySelectorAll(".ext-b-all"),
     trBodyAll = document.querySelectorAll(".tr-b-all");
 
-const // carousel
+const // body containers
+    snBodyInfo = document.getElementById("ext-info__container"),
+    snBodyImg = document.getElementById("photo__container"); 
+
+const // carousel for INFO
     bodyFusion = document.getElementById("ext-b-fusion"),
     bodyMicro = document.getElementById("ext-b-micro"),
     bodyShrink = document.getElementById("ext-b-shrinks"),
@@ -78,6 +82,13 @@ const // "info holder" fill fields
     infoHolderAll = document.getElementsByClassName("fill-fields"),
     infoHolderAllArray = Array.from(infoHolderAll);
 
+const // PHOTO body
+    photoBodyExtFusion = document.getElementById("ext-photo-fusion"),
+    photoBodyExtMicro = document.getElementById("ext-photo-micro"),
+    photoBodyExtEasy = document.getElementById("ext-photo-easy"),
+    photoBodyExtTape = document.getElementById("ext-photo-tape"),
+    photoBodyExtComb = document.getElementById("ext-photo-comb"),
+    photoBodyExtALL = document.getElementsByClassName("ext-photo");
 
 // -> CONTENT : DATA |
 
@@ -144,64 +155,66 @@ const arrayCombline = objectToAraay(mediaSN[4])
 
 // -> SIDE NAV |
 
-const // container + children
+const // nav container 
     sideNav = document.getElementById("side-nav"),
     snInfo = document.getElementById("sn-info"),
-    snImg = document.getElementById("sn-img"),
-    snVid = document.getElementById("sn-vid"),
-    snAll = document.querySelectorAll(".sn-all");
+    snImg = document.getElementById("sn-img");
+   
+    // snAll = document.querySelectorAll(".sn-all");
+
+
 
 // data
-const mediaExt = [
-    {   
-        info: "11",
-        photo: "img/extension/p1.jpg",
-        vid: "img/extension/v1.jpg"
-    },
-    {   
-        info: "12",
-        photo: "img/extension/p2.jpg",
-        vid: "img/extension/v2.jpg"
-    },
-    {   
-        info: "13",
-        photo: "img/extension/p3.jpg",
-        vid: "img/extension/v3.jpg"
-    },
-    {   
-        info: "14",
-        photo: "img/extension/p4.jpg",
-        vid: "img/extension/v4.jpg"
-    },
-    {   
-        info: "15",
-        photo: "img/extension/p5.jpg",
-        vid: "img/extension/v5.jpg"
-    }
-]
+// const mediaExt = [
+//     {   
+//         info: "11",
+//         photo: "img/extension/p1.jpg",
+//         vid: "img/extension/v1.jpg"
+//     },
+//     {   
+//         info: "12",
+//         photo: "img/extension/p2.jpg",
+//         vid: "img/extension/v2.jpg"
+//     },
+//     {   
+//         info: "13",
+//         photo: "img/extension/p3.jpg",
+//         vid: "img/extension/v3.jpg"
+//     },
+//     {   
+//         info: "14",
+//         photo: "img/extension/p4.jpg",
+//         vid: "img/extension/v4.jpg"
+//     },
+//     {   
+//         info: "15",
+//         photo: "img/extension/p5.jpg",
+//         vid: "img/extension/v5.jpg"
+//     }
+// ]
 
-const mediaTreat = [
-    {   
-        info: "21",
-        photo: "img/treatment/p1.jpg",
-        vid: "img/treatment/v1.jpg"
-    },
-    {   
-        info: "22",
-        photo: "img/treatment/p2.jpg",
-        vid: "img/treatment/v2.jpg"
-    }
-]
+// const mediaTreat = [
+//     {   
+//         info: "21",
+//         photo: "img/treatment/p1.jpg",
+//         vid: "img/treatment/v1.jpg"
+//     },
+//     {   
+//         info: "22",
+//         photo: "img/treatment/p2.jpg",
+//         vid: "img/treatment/v2.jpg"
+//     }
+// ]
 
 // create content components for "buildContent" in "showContent".
-function createComponent (el) {
-    let comp = document.createElement(el);
-    return comp;
-}
+// function createComponent (el) {
+//     let comp = document.createElement(el);
+//     return comp;
+// }
 
-const componentInfo = createComponent ("div")
-const componentPhoto = createComponent ("div")
-const componentVid = createComponent ("div")
+// const componentInfo = createComponent ("div")
+// const componentPhoto = createComponent ("div")
+// const componentVid = createComponent ("div")
 
 
 
@@ -229,7 +242,6 @@ trKreatyna.addEventListener("click", showContent3)
 if (sideNav) {
     snInfo.addEventListener("click", showContent4)
     snImg.addEventListener("click", showContent4)
-    snVid.addEventListener("click", showContent4)
 }
 
 
@@ -245,6 +257,7 @@ function resetForBigNav () {
     // hide "side nav" 
     sideNav.style.display = "none"
     infoHolderExt.style.display = "none"
+    snBodyImg.style.display = "none"
 
     // reset "small nav" and "body" styles
     introMain.style.display = "none";
@@ -337,27 +350,31 @@ function showContent2 (e) {
         case "ext-fusion":
             fillFields(infoHolderAll, arrayFusionBonds)
             bodyToggle("ext-b-fusion", extBodyAll)
-            // build "side nav content" function
+            bodyToggle("ext-photo-fusion", photoBodyExtALL)
             break;
 
         case "ext-micro":
             fillFields(infoHolderAll, arrayMicroRings)
             bodyToggle("ext-b-micro", extBodyAll)
+            bodyToggle("ext-photo-micro", photoBodyExtALL)
             break;
 
         case "ext-shrinks":
             fillFields(infoHolderAll, arrayEasyShrinks)
-            bodyToggle("ext-b-shrinks", extBodyAll)            
+            bodyToggle("ext-b-shrinks", extBodyAll)
+            bodyToggle("ext-photo-easy", photoBodyExtALL)            
             break;
 
         case "ext-tape":
             fillFields(infoHolderAll, arrayTapeOn)
             bodyToggle("ext-b-tape", extBodyAll)
+            bodyToggle("ext-photo-tape", photoBodyExtALL)
             break;
             
         case "ext-comb":
             fillFields(infoHolderAll, arrayCombline)
             bodyToggle("ext-b-comb", extBodyAll)
+            bodyToggle("ext-photo-comb", photoBodyExtALL)
             break;
     }
 }
@@ -392,11 +409,13 @@ function showContent4 (e) {
     function iconBodyToggle(smNavEl) {
         if (e.target.id === "sn-info") {
 
-            // build function that shows "info / photo section" container
+            snBodyInfo.style.display = "block";
+            snBodyImg.style.display = "none"
 
         } else if (e.target.id === "sn-img") {
 
-            // build function that shows "info / photo section" container
+            snBodyImg.style.display = "block";
+            snBodyInfo.style.display = "none";
 
         } 
     } 

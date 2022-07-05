@@ -7,21 +7,21 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
-#car1, #car2, #car3, #car4, #car5 {
+.carousel {
   margin: 1rem;
   padding-bottom: 1.1rem;
 }
-#car1 .carousel-indicators, #car2 .carousel-indicators, #car3 .carousel-indicators, #car4 .carousel-indicators, #car5 .carousel-indicators {
+.carousel .carousel-indicators {
   margin: 0;
 }
-#car1 .carousel-indicators button, #car2 .carousel-indicators button, #car3 .carousel-indicators button, #car4 .carousel-indicators button, #car5 .carousel-indicators button {
+.carousel .carousel-indicators button {
   border-radius: 10px;
   background-color: rgb(150, 150, 151);
 }
-#car1 .carousel-inner, #car2 .carousel-inner, #car3 .carousel-inner, #car4 .carousel-inner, #car5 .carousel-inner {
+.carousel .carousel-inner {
   border-radius: 20px;
 }
-#car1 .carousel-info, #car2 .carousel-info, #car3 .carousel-info, #car4 .carousel-info, #car5 .carousel-info {
+.carousel .carousel-info {
   position: absolute;
   bottom: 1.1rem;
   font-size: 1.5rem;
@@ -11392,6 +11392,12 @@ ul {
 }
 .offer__content--main-body .carousel {
   width: 380px;
+}
+.offer__content--main-body #photo__container {
+  display: none;
+}
+.offer__content--main-body .ext-photo {
+  justify-content: center;
 }
 .offer__content--main-icons {
   width: 10%;

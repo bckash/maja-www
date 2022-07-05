@@ -297,6 +297,14 @@ ul {
             .carousel {
                 width: 380px;
             }
+
+            #photo__container {
+                display: none;
+            }
+
+            .ext-photo {
+                justify-content: center;
+            }
         }
 
         &-icons {
