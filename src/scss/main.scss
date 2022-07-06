@@ -294,12 +294,12 @@ ul {
                 justify-content: center;
             }
 
-            .carousel {
-                width: 380px;
+            #photo__container-ext, #photo__container-tr, #treat-info__container {
+                display: none;
             }
 
-            #photo__container {
-                display: none;
+            .carousel {
+                width: 380px;
             }
 
             .ext-photo {
@@ -317,6 +317,8 @@ ul {
 
     }
 }
+
+
 
 .info-holder {
     display: none;

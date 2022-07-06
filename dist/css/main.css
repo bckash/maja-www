@@ -11390,11 +11390,11 @@ ul {
 .offer__content--main-body .ext-b-all {
   justify-content: center;
 }
+.offer__content--main-body #photo__container-ext, .offer__content--main-body #photo__container-tr, .offer__content--main-body #treat-info__container {
+  display: none;
+}
 .offer__content--main-body .carousel {
   width: 380px;
-}
-.offer__content--main-body #photo__container {
-  display: none;
 }
 .offer__content--main-body .ext-photo {
   justify-content: center;
