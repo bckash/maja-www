@@ -32,8 +32,9 @@ const // small, <li> groups
 
 // array from:  small, <li> groups
 //................................................
-    extAllArr = Array.from(extAll)
-    trAllArr = Array.from(trAll)
+    const extAllArr = Array.from(extAll)
+    const trAllArr = Array.from(trAll)
+//................................................
 let summAllArray = [];
 
 function addArraysToArray (arr) {
@@ -354,66 +355,17 @@ function showContent3(e) {
 // D) SIDE NAV 
 function showContent4 (e) {
 
-    // if (navBigExt.classList.contains("ns-active")) {
-    //     iconBodyToggle(snBodyInfo, snBodyImg, e)
-    // } else if (navBigTreat.classList.contains("ns-active")) {
-    //     iconBodyToggle(snBodyInfoTr, snBodyImgTr, e)
-    // }
+    if (navBigExt.classList.contains("ns-active")) {
+        // switch oof other
+        
+            switch ()
 
-    // function for changing content after clicking on icon
-    function iconBodyToggle() {
-        if (e.target.id === "sn-info") {
+    } else if (navBigTreat.classList.contains("ns-active")) {
+        // switch off other
 
-            snBodyInfo.style.display = "block";
-            snBodyImg.style.display = "none"
-
-        } else if (e.target.id === "sn-img") {
-
-            snBodyImg.style.display = "block";
-            snBodyInfo.style.display = "none";
-
-        } 
-    } 
-
-    // in active tab (in small nav), change content after clicking on icon
-    for (let i=0; i<summAllArray.length; i++) {
-
-        switch (summAllArray[i].classList.contains("ns-active")) {
-            case true:
-
-                switch (summAllArray[i].id) {
-                    case "ext-fusion":
-                        iconBodyToggle(bodyFusion)
-                        break
-
-                    case "ext-micro" :
-                        iconBodyToggle(bodyMicro)
-                        break
-
-                    case "ext-shrinks" :
-                        iconBodyToggle(bodyShrink)
-                        break
-                    
-                    case "ext-tape" :
-                        iconBodyToggle(bodyTape)
-                        break
-                    
-                    case "ext-comb" :
-                        iconBodyToggle(bodyComb)
-                        break 
-
-                    case "tr-botox" :
-                        iconBodyToggle(bodyBotox)
-                        break
-                        
-                    case "tr-kreatyna" :
-                        iconBodyToggle(bodyKreatyna)
-                        break                          
-                }
-
-                break;
-        }
     }
+
+
 }
 
 
