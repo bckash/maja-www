@@ -45,6 +45,8 @@ function addArraysToArray (arr) {
 
 addArraysToArray(extAllArr);
 addArraysToArray(trAllArr);
+
+
 //.................................................
 
 
@@ -355,15 +357,35 @@ function showContent3(e) {
 // D) SIDE NAV 
 function showContent4 (e) {
 
-    if (navBigExt.classList.contains("ns-active")) {
-        // switch oof other
-        
-            switch ()
+    function activeBody(tab) {
 
-    } else if (navBigTreat.classList.contains("ns-active")) {
-        // switch off other
+        snBodyInfo.style.display = "none"
+        snBodyInfoTr.style.display = "none"  
+              
+        if (tab.id === "tr-botox" || tab.id === "tr-kreatyna") {
+            snBodyImgTr.style.display = "block"
+        } else if (tab.id !== "tr-botox" && tab.id !== "tr-kreatyna") {
+            snBodyImg.style.display = "block"
+        }
+
+                
+    }
+
+    if (e.target === snInfo) {
+
+        console.log("info")
+
+    } else if (e.target === snImg ) {
+
+        summAllArray.map(el => {
+            if (el.classList.contains("ns-active")) {
+                activeBody(el) 
+            } 
+        })
 
     }
+
+
 
 
 }
