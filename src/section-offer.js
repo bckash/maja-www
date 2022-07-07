@@ -78,7 +78,8 @@ const // carousel for INFO
     bodyKreatyna = document.getElementById("tr-b-kreatyna");
 
 const // info holder <article>
-    infoHolderExt = document.getElementById("info-holder__extension")
+    infoHolderExt = document.getElementById("info-holder__extension"),
+    infoHolderTreat = document.getElementById("info-holder__treatment")
 
 const // "info holder" fill fields
     infoHolderAbout = document.getElementById("ih-about"),
@@ -87,6 +88,12 @@ const // "info holder" fill fields
     infoHolderLast = document.getElementById("ih-last"),
     infoHolderAll = document.getElementsByClassName("fill-fields"),
     infoHolderAllArray = Array.from(infoHolderAll);
+
+const // info holder for treatment
+    infoTreatBotox = document.getElementById("tr-info-botox"),
+    infoTreatKreatyna = document.getElementById("tr-info-kreatyna"),
+    infoTreatALL = document.getElementsByClassName("tr-info");
+
 
 const // PHOTO body
     photoBodyExtFusion = document.getElementById("ext-photo-fusion"),
@@ -185,7 +192,6 @@ extFusion.addEventListener("click", showContent2)
 extMicro.addEventListener("click", showContent2)
 extShrink.addEventListener("click", showContent2)
 extTape.addEventListener("click", showContent2)
-
 trBotox.addEventListener("click", showContent3)
 trKreatyna.addEventListener("click", showContent3)
 
@@ -205,12 +211,12 @@ if (sideNav) {
 
 // --> style reset for BIG NAV
 function resetForBigNav () {
-    // hide "side nav" 
+
     sideNav.style.display = "none"
-    infoHolderExt.style.display = "none"
-    if (snBodyImg) snBodyImg.style.display = "none"
-    if (snBodyImgTr) snBodyImgTr.style.display = "none"
-  
+    snBodyImg.style.display = "none"
+    snBodyImgTr.style.display = "none"
+    snBodyInfo.style.display = "none"
+    snBodyInfoTr.style.display = "none"
 
     // reset "small nav" and "body" styles
     introMain.style.display = "none";
@@ -291,9 +297,13 @@ function showContentBigNav (e) {
 // B) SMALL NAV : "EXTENSION"
 function showContent2 (e) {
 
-    introExt.style.display = "none";
+    snBodyInfoTr.style.display = "none";
+    snBodyInfo.style.display = "block";
+
     sideNav.style.display = "block";
+    introExt.style.display = "none";
     infoHolderExt.style.display = "block";
+    infoHolderTreat.style.display = "none"
 
     activeTabs(extAll, e.target);
 
@@ -334,8 +344,13 @@ function showContent2 (e) {
 // C) SMALL NAV :  "TREATMENT"
 function showContent3(e) {
 
-    introTreat.style.display = "none";
+    snBodyInfoTr.style.display = "block";
+    snBodyInfo.style.display = "none";
+
     sideNav.style.display = "block"
+    introTreat.style.display = "none";
+    infoHolderTreat.style.display = "block"
+    infoHolderExt.style.display = "none"
 
     activeTabs(trAll, e.target);
 
@@ -343,11 +358,13 @@ function showContent3(e) {
     switch(e.target.id) {
 
         case "tr-botox":
+            bodyToggle("tr-info-botox", infoTreatALL)
             bodyToggle("tr-photo-botox", photoBodyTrALL)
 
             break;
 
         case "tr-kreatyna":
+            bodyToggle("tr-info-kreatyna", infoTreatALL)
             bodyToggle("tr-photo-kreatyna", photoBodyTrALL)
 
             break;
@@ -357,37 +374,42 @@ function showContent3(e) {
 // D) SIDE NAV 
 function showContent4 (e) {
 
-    function activeBody(tab) {
+    function activeBodyAbstract (tab) {
+        
+            // info icon
+        if (e.target === snInfo) {
+            offTr = snBodyImgTr;
+            offExt = snBodyImg;
+            onTr = snBodyInfoTr;
+            onExt = snBodyInfo;
 
-        snBodyInfo.style.display = "none"
-        snBodyInfoTr.style.display = "none"  
-              
-        if (tab.id === "tr-botox" || tab.id === "tr-kreatyna") {
-            snBodyImgTr.style.display = "block"
-        } else if (tab.id !== "tr-botox" && tab.id !== "tr-kreatyna") {
-            snBodyImg.style.display = "block"
+            // img icon
+        } else if (e.target === snImg) {
+            offTr = snBodyInfoTr;
+            offExt = snBodyInfo;
+            onTr = snBodyImgTr;
+            onExt = snBodyImg;
         }
+        
+        offExt.style.display = "none"
+        offTr.style.display = "none"
 
-                
+        if (tab.id === "tr-botox" || tab.id === "tr-kreatyna") {
+            onTr.style.display = "block"
+        } else if (tab.id !== "tr-botox" && tab.id !== "tr-kreatyna") {
+            onExt.style.display = "block"
+        } 
     }
 
-    if (e.target === snInfo) {
-
-        console.log("info")
-
-    } else if (e.target === snImg ) {
-
-        summAllArray.map(el => {
-            if (el.classList.contains("ns-active")) {
-                activeBody(el) 
+    function mapActiveElement (arr, activeClass, fun) {
+        arr.map(el => {
+            if (el.classList.contains(activeClass)) {
+                fun(el) 
             } 
         })
-
     }
 
-
-
-
+    mapActiveElement(summAllArray, "ns-active", activeBodyAbstract)
 }
 
 
