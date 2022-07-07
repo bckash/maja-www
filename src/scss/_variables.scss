@@ -15,6 +15,9 @@ $nl-red-logo :#954444;
 
 $nl-border : rgb(206, 203, 197);
 
+$nl-side-nav-a-light: rgb(207, 160, 98);
+$nl-side-nav-a-dark: rgb(117, 100, 78);
+
 // mixins
 
 @mixin article {
@@ -42,6 +45,15 @@ $nl-border : rgb(206, 203, 197);
         margin: .5rem 1rem;
     }
 }
+
+@mixin nav-big-txt {
+    font-size: 1.2rem;
+}
+
+// @mixin nav-small {
+//     margin-top: 0;
+//     padding-top: 0;
+// }
 
 @mixin photo-shad {
     box-shadow: 1px 1px 20px rgb(78, 51, 26);

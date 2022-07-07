@@ -212,14 +212,16 @@ ul {
 
     &--nav-small-ul {
         display: none;
-
-        & li {
-            height: 2rem;
-        }
+        margin-top: 0;
+        padding-top: 0;
 
         & li:hover {
             cursor: pointer;
         }
+    }
+
+    &--nav-big-ul {
+        @include v.nav-big-txt;
     }
 
     &--nav-big-ul li:hover {
@@ -320,7 +322,7 @@ ul {
             #side-nav {
             display: none;
             margin-top: 1.6rem;
-            color: rgb(131, 101, 59);
+            color: v.$nl-side-nav-a-dark;
             }
 
             span {
@@ -335,6 +337,21 @@ ul {
     }
 }
 
+.side-nav--active {
+    color: v.$nl-side-nav-a-light;
+    animation: side-nav .2s  1 forwards;
+}
+
+@keyframes side-nav {
+    from {
+        color: v.$nl-side-nav-a-dark;
+
+    }
+    to {
+        color: v.$nl-side-nav-a-light;
+
+    }
+}
 
 
 .info-holder {
@@ -441,6 +458,7 @@ ul {
 // nav-small active state
 .ns-active {
     font-weight: bold;
+    color: v.$nl-side-nav-a-light;
 }
 
 #treatment article, #style article, .ext-b-all {

@@ -1,7 +1,9 @@
 
+@use "./variables" as v;
+
 // var
 
-$padding-info: 1.1rem;
+$padding-info: 1.8rem;
 $border-info: 20px;
 
 
@@ -23,6 +25,7 @@ $border-info: 20px;
 
     .carousel-inner {
         border-radius: $border-info;
+        outline: 6px solid v.$nl-side-nav-a-light;
     }
 
     .carousel-info, .carousel-info-big {

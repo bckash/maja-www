@@ -9,7 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap");
 .carousel {
   margin: 1rem;
-  padding-bottom: 1.1rem;
+  padding-bottom: 1.8rem;
 }
 .carousel .carousel-indicators {
   margin: 0;
@@ -20,6 +20,7 @@
 }
 .carousel .carousel-inner {
   border-radius: 20px;
+  outline: 6px solid rgb(207, 160, 98);
 }
 .carousel .carousel-info, .carousel .carousel-info-big {
   display: flex;
@@ -27,7 +28,7 @@
   align-items: center;
   position: absolute;
   width: 100%;
-  bottom: 1.1rem;
+  bottom: 1.8rem;
   font-size: 1.7rem;
   text-transform: capitalize;
   color: white;
@@ -11338,12 +11339,14 @@ ul {
 }
 .offer__content--nav-small-ul {
   display: none;
-}
-.offer__content--nav-small-ul li {
-  height: 2rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 .offer__content--nav-small-ul li:hover {
   cursor: pointer;
+}
+.offer__content--nav-big-ul {
+  font-size: 1.2rem;
 }
 .offer__content--nav-big-ul li:hover {
   cursor: pointer;
@@ -11414,7 +11417,7 @@ ul {
 .offer__content--main-icons #side-nav {
   display: none;
   margin-top: 1.6rem;
-  color: rgb(131, 101, 59);
+  color: rgb(117, 100, 78);
 }
 .offer__content--main-icons span {
   font-size: 3rem;
@@ -11423,6 +11426,19 @@ ul {
   cursor: pointer;
 }
 
+.side-nav--active {
+  color: rgb(207, 160, 98);
+  animation: side-nav 0.2s 1 forwards;
+}
+
+@keyframes side-nav {
+  from {
+    color: rgb(117, 100, 78);
+  }
+  to {
+    color: rgb(207, 160, 98);
+  }
+}
 .info-holder {
   display: none;
 }
@@ -11507,6 +11523,7 @@ ul {
 }
 .ns-active {
   font-weight: bold;
+  color: rgb(207, 160, 98);
 }
 
 #treatment article, #style article, .ext-b-all {

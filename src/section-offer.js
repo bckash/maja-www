@@ -201,7 +201,8 @@ const arrayKreatyna = objectToAraay(mediaSNTreat[1])
 const // nav container 
     sideNav = document.getElementById("side-nav"),
     snInfo = document.getElementById("sn-info"),
-    snImg = document.getElementById("sn-img");
+    snImg = document.getElementById("sn-img"),
+    snALL = document.getElementsByClassName("sn-all")
    
 
 
@@ -276,12 +277,12 @@ function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intr
 }
 
 // --> takes array of all nav tabs,  adds active class to choosen tab, and innactive to rest
-function activeTabs (all, tgt) {
+function activeTabs (all, tgt, cl) {
     for (let i=0; i<all.length; i++) {
         if (tgt.id === all[i].id) {
-            all[i].classList.add("ns-active")
+            all[i].classList.add(cl)
         } else {
-            all[i].classList.remove("ns-active")
+            all[i].classList.remove(cl)
         }
     }
 }
@@ -334,7 +335,10 @@ function showContent2 (e) {
     infoHolderExt.style.display = "block";
     infoHolderTreat.style.display = "none"
 
-    activeTabs(extAll, e.target);
+    activeTabs(extAll, e.target, "ns-active");
+    snImg.classList.remove("side-nav--active");
+    snInfo.classList.add("side-nav--active");
+
 
     switch(e.target.id) {
 
@@ -382,7 +386,9 @@ function showContent3(e) {
     infoHolderTreat.style.display = "block"
     infoHolderExt.style.display = "none"
 
-    activeTabs(trAll, e.target);
+    activeTabs(trAll, e.target, "ns-active");
+    snImg.classList.remove("side-nav--active");
+    snInfo.classList.add("side-nav--active");
 
     // prepare indyvidual cases - for main body toggle (in "showContent4")
     switch(e.target.id) {
@@ -425,6 +431,7 @@ function showContent4 (e) {
         
         offExt.style.display = "none"
         offTr.style.display = "none"
+        activeTabs(snALL, e.target,"side-nav--active")
 
         if (tab.id === "tr-botox" || tab.id === "tr-kreatyna") {
             onTr.style.display = "block"
