@@ -13,6 +13,8 @@ $nl-back-pink-ultra-light: #F8EEEE; //prices (back); bridge (back)
 $nl-back-pastel: #418bad; // customers opinion back
 $nl-red-logo :#954444;
 
+$nl-border : rgb(206, 203, 197);
+
 // mixins
 
 @mixin article {
@@ -26,7 +28,8 @@ $nl-red-logo :#954444;
     padding: 1rem;
     width: 20rem;
     margin: auto;
-    border-bottom: 1px grey solid;
+    border-bottom: 1px solid;
+    border-color: $nl-border;
     color: $nl-red;
 }
 

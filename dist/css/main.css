@@ -6,7 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap");
 .carousel {
   margin: 1rem;
   padding-bottom: 1.1rem;
@@ -21,16 +21,27 @@
 .carousel .carousel-inner {
   border-radius: 20px;
 }
-.carousel .carousel-info {
+.carousel .carousel-info, .carousel .carousel-info-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 1.1rem;
-  font-size: 1.5rem;
-  color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.397);
   width: 100%;
-  border-bottom-left-radius: 20px;
+  bottom: 1.1rem;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: white;
+}
+.carousel .carousel-info {
+  top: 0;
+  border-radius: 20px;
+  background-color: rgba(36, 21, 1, 0.616);
+}
+.carousel .carousel-info-big {
+  padding: 0.5rem 0;
   border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgba(32, 25, 25, 0.37);
 }
 
 :root {
@@ -11155,7 +11166,7 @@ textarea.form-control-lg {
 }
 
 .br {
-  border: 1px grey solid;
+  border: 1px rgb(211, 207, 207) solid;
 }
 
 ul {
@@ -11248,7 +11259,8 @@ ul {
   padding: 1rem;
   width: 20rem;
   margin: auto;
-  border-bottom: 1px grey solid;
+  border-bottom: 1px solid;
+  border-color: rgb(206, 203, 197);
   color: #745b4d;
   text-align: center;
   color: #745b4d;
@@ -11308,7 +11320,8 @@ ul {
   padding: 1rem;
   width: 20rem;
   margin: auto;
-  border-bottom: 1px grey solid;
+  border-bottom: 1px solid;
+  border-color: rgb(206, 203, 197);
   color: #745b4d;
   padding: 1rem 0;
 }
@@ -11344,16 +11357,10 @@ ul {
 .offer__content--main-body, .offer__content--main-icons {
   padding: 1rem;
 }
-.offer__content--main-icons #side-nav {
-  display: none;
-  color: rgb(216, 211, 204);
-}
-.offer__content--main-icons span {
-  font-size: 3rem;
-}
 .offer__content--main-body {
   height: max-content;
   width: 90%;
+  background-color: rgb(250, 248, 244);
 }
 .offer__content--main-body #o-intro img {
   width: 100%;
@@ -11387,14 +11394,16 @@ ul {
   color: rgb(197, 191, 191);
   background-color: rgba(0, 0, 0, 0.288);
 }
-.offer__content--main-body .ext-b-all {
-  justify-content: center;
+.offer__content--main-body .carousel__container {
+  width: 33rem;
+  margin: auto;
 }
 .offer__content--main-body #photo__container-ext, .offer__content--main-body #photo__container-tr, .offer__content--main-body #treat-info__container {
   display: none;
 }
-.offer__content--main-body .carousel {
-  width: 380px;
+.offer__content--main-body #photo__container-ext, .offer__content--main-body #photo__container-tr {
+  width: 65%;
+  margin: auto;
 }
 .offer__content--main-body .ext-photo {
   justify-content: center;
@@ -11402,41 +11411,20 @@ ul {
 .offer__content--main-icons {
   width: 10%;
 }
+.offer__content--main-icons #side-nav {
+  display: none;
+  margin-top: 1.6rem;
+  color: rgb(131, 101, 59);
+}
+.offer__content--main-icons span {
+  font-size: 3rem;
+}
 .offer__content--main-icons:hover {
   cursor: pointer;
 }
 
 .info-holder {
   display: none;
-}
-.info-holder__photo {
-  position: relative;
-  height: max-content;
-}
-.info-holder__photo--photo {
-  position: relative;
-  overflow: hidden;
-  height: 20rem;
-}
-.info-holder__photo--photo #ihp-1, .info-holder__photo--photo #ihp-2, .info-holder__photo--photo #ihp-3 {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-  width: 100%;
-}
-.info-holder__photo--title {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.199);
-  color: white;
-  font-size: 2rem;
-  padding: 0.5rem 0;
 }
 .info-holder__info--about {
   display: flex;
@@ -11447,7 +11435,7 @@ ul {
 }
 .info-holder__info--about span {
   width: 70%;
-  border-left: 8px solid #745b4d;
+  border-left: 6px solid #745b4d;
   margin: 2rem auto;
   text-align: left;
   padding-left: 2rem;
@@ -11459,12 +11447,15 @@ ul {
 .info-holder__info--rest .info-rest__example {
   display: flex;
   flex-direction: column;
-  width: 26%;
-  margin: 1rem 0.4rem;
+  width: 28%;
+  margin: 1rem 0;
 }
 .info-holder__info--rest .info-rest__example--icon span {
   color: #745b4d;
   font-size: 2.4rem;
+}
+.info-holder__info--rest .info-rest__example--icon span:hover {
+  cursor: default;
 }
 .info-holder__info--rest .info-rest__example--title {
   font-size: 1.3rem;
@@ -11531,7 +11522,8 @@ ul {
   padding: 1rem;
   width: 20rem;
   margin: auto;
-  border-bottom: 1px grey solid;
+  border-bottom: 1px solid;
+  border-color: rgb(206, 203, 197);
   color: #745b4d;
   font-family: "Oleo Script Swash Caps", cursive;
   font-size: 4rem;
@@ -11656,7 +11648,8 @@ ul {
   padding: 1rem;
   width: 20rem;
   margin: auto;
-  border-bottom: 1px grey solid;
+  border-bottom: 1px solid;
+  border-color: rgb(206, 203, 197);
   color: #745b4d;
   text-align: center;
 }

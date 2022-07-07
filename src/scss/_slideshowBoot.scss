@@ -25,15 +25,29 @@ $border-info: 20px;
         border-radius: $border-info;
     }
 
-    .carousel-info {
+    .carousel-info, .carousel-info-big {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        bottom: $padding-info;
-        font-size: 1.5rem;
-        color: white;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.397);
         width: 100%;
-        border-bottom-left-radius: $border-info;
+        bottom: $padding-info;
+        font-size: 1.7rem;
+        text-transform: capitalize;
+        color: white;
+
+    }
+
+    .carousel-info {
+        top: 0;
+        border-radius: $border-info;
+        background-color: rgba(36, 21, 1, 0.616);
+    }
+
+    .carousel-info-big {
+        padding: .5rem 0;
         border-bottom-right-radius: $border-info;
+        border-bottom-left-radius: $border-info;
+        background-color: rgba(32, 25, 25, 0.37);
     }
 }

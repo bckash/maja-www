@@ -68,26 +68,34 @@ const // body containers
     snBodyImgTr = document.getElementById("photo__container-tr");
 
 
-const // carousel for INFO
-    bodyFusion = document.getElementById("ext-b-fusion"),
-    bodyMicro = document.getElementById("ext-b-micro"),
-    bodyShrink = document.getElementById("ext-b-shrinks"),
-    bodyTape = document.getElementById("ext-b-tape"),
-    bodyComb = document.getElementById("ext-b-comb"),
-    bodyBotox = document.getElementById("tr-b-botox"),
-    bodyKreatyna = document.getElementById("tr-b-kreatyna");
+// const // carousel for INFO
+//     bodyFusion = document.getElementById("ext-b-fusion"),
+//     bodyMicro = document.getElementById("ext-b-micro"),
+//     bodyShrink = document.getElementById("ext-b-shrinks"),
+//     bodyTape = document.getElementById("ext-b-tape"),
+//     bodyComb = document.getElementById("ext-b-comb"),
+//     bodyBotox = document.getElementById("tr-b-botox"),
+//     bodyKreatyna = document.getElementById("tr-b-kreatyna");
 
 const // info holder <article>
     infoHolderExt = document.getElementById("info-holder__extension"),
     infoHolderTreat = document.getElementById("info-holder__treatment")
 
-const // "info holder" fill fields
+const // "info holder" fill fields | extension
     infoHolderAbout = document.getElementById("ih-about"),
     infoHolderSuitable = document.getElementById("ih-suitable"),
     infoHolderAchieve = document.getElementById("ih-achieve"),
     infoHolderLast = document.getElementById("ih-last"),
-    infoHolderAll = document.getElementsByClassName("fill-fields"),
-    infoHolderAllArray = Array.from(infoHolderAll);
+    infoHolderAll = document.getElementsByClassName("fill-fields")
+    // infoHolderAllArray = Array.from(infoHolderAll);
+
+const // "info holder" fill fields | treatment
+    infoHolderAboutTr = document.getElementById("ih-about-tr"),
+    infoHolderSuitableTr = document.getElementById("ih-suitable-tr"),
+    infoHolderAchieveTr = document.getElementById("ih-achieve-tr"),
+    infoHolderLastTr = document.getElementById("ih-last-tr"),
+    infoHolderAllTr = document.getElementsByClassName("fill-fields-tr")
+    // infoHolderAllArrayTr = Array.from(infoHolderAllTr);
 
 const // info holder for treatment
     infoTreatBotox = document.getElementById("tr-info-botox"),
@@ -148,6 +156,23 @@ const mediaSN = [
     }
 ]
 
+const mediaSNTreat = [
+    {
+        id: "botox",
+        about: "Botox is the ultimate way to revive your hair. An all in one treatment, it restores dry damaged hair, improves texture and shine, hydrates and deeply conditions, treats split ends, tames frizz, and gives UV protection. It’s full of nourishing proteins, antioxidants, vitamins, conditioning oils and other hair-healthy ingredients that fill in the gaps in the hair fibres and restore it to its natural beauty.",
+        suitable: "anyone who’s hair is very damaged, over-processed, thin in structure and in need of deep restoration",
+        achieve: "restores dry damaged hair, improves texture and shine, hydrates and deeply conditions, treats split ends, tames frizz, and gives UV protection.",
+        last: "3-5 months "
+    },
+    {
+        id: "kreatyna",
+        about: "A keratin treatment is a process that smooths and often straightens hair. You might also hear it called a Brazilian keratin treatment or a Brazilian blowout. It involves applying products to the hair, blow-drying it, and sealing it with a flat iron. Keratin is a natural type of protein in your skin, hair, and nails.",
+        suitable: "People who like very straight hair with a significant reduction of volume",
+        achieve: "It regenerates hair in depth and straightens it without changing its structure. Rectifying dry and damaged hair",
+        last: "3-4 months"
+    }    
+]
+
 // fill fields array (for functions)
 function objectToAraay (arr) {
 
@@ -166,6 +191,9 @@ const arrayMicroRings = objectToAraay(mediaSN[1])
 const arrayEasyShrinks = objectToAraay(mediaSN[2])
 const arrayTapeOn = objectToAraay(mediaSN[3])
 const arrayCombline = objectToAraay(mediaSN[4])
+
+const arrayBotox = objectToAraay(mediaSNTreat[0])
+const arrayKreatyna = objectToAraay(mediaSNTreat[1])
 
 
 // -> SIDE NAV |
@@ -360,13 +388,15 @@ function showContent3(e) {
     switch(e.target.id) {
 
         case "tr-botox":
-            bodyToggle("tr-info-botox", infoTreatALL)
+            fillFields(infoHolderAllTr,arrayBotox)
+            bodyToggle("tr-b-botox", trBodyAll)
             bodyToggle("tr-photo-botox", photoBodyTrALL)
 
             break;
 
         case "tr-kreatyna":
-            bodyToggle("tr-info-kreatyna", infoTreatALL)
+            fillFields(infoHolderAllTr, arrayKreatyna)
+            bodyToggle("tr-b-kreatyna", trBodyAll)
             bodyToggle("tr-photo-kreatyna", photoBodyTrALL)
 
             break;

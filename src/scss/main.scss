@@ -4,7 +4,7 @@
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap');
 
 
 
@@ -17,7 +17,7 @@
 }
 
 .br {
-    border: 1px grey solid;
+    border: 1px rgb(211, 207, 207) solid;
 }
 
 ul {
@@ -236,18 +236,10 @@ ul {
             padding: 1rem;
         }
 
-        &-icons #side-nav {
-            display: none;
-            color: rgb(216, 211, 204);
-        }
-
-        &-icons span {
-            font-size: 3rem;
-        }
-
         &-body {
             height: max-content;
             width: 90%;
+            background-color: rgb(250, 248, 244);
 
             #o-intro {
 
@@ -290,29 +282,54 @@ ul {
                 }
             }
 
-            .ext-b-all {
-                justify-content: center;
+            .carousel__container {
+                width: 33rem;
+                margin: auto;
             }
 
             #photo__container-ext, #photo__container-tr, #treat-info__container {
                 display: none;
             }
 
-            .carousel {
-                width: 380px;
+            #photo__container-ext, #photo__container-tr {
+                width: 65%;
+                margin: auto;
             }
 
             .ext-photo {
                 justify-content: center;
             }
-        }
 
+            // .photo-gallery-head {
+            //     margin-top: 1rem;
+            //     margin-right: 1rem;
+            //     text-align: right;
+
+            //     span {
+            //         font-family: 'Great Vibes', cursive;
+            //         font-size: 1.8rem;
+            //         color: rgb(194, 187, 180);
+            //     }
+            // }
+        }
+        
         &-icons {
-            width: 10%;
-        }
 
-        &-icons:hover {
-            cursor: pointer;
+            width: 10%;
+            
+            #side-nav {
+            display: none;
+            margin-top: 1.6rem;
+            color: rgb(131, 101, 59);
+            }
+
+            span {
+                font-size: 3rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
     }
@@ -322,40 +339,6 @@ ul {
 
 .info-holder {
     display: none;
-
-    &__photo {
-        position: relative;
-        height: max-content;
-        // height: 20rem;
-        // background-image: url("/src/img/example-del.jpg");
-        // background-position: center;
-
-        &--photo {
-            position: relative;
-            overflow: hidden;
-            height: 20rem;
-
-            #ihp-1, #ihp-2, #ihp-3 {
-                @include v.slideshow;
-                left:0;
-                right:0;
-                bottom: 0;
-                object-fit: cover;
-                width:100%;
-            }
-        }
-
-        &--title {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.199);
-            color: white;
-            font-size: 2rem;
-            padding: .5rem 0;
-        }
-    }
 
     &__info {
 
@@ -368,7 +351,7 @@ ul {
 
             span {
                 width: 70%;
-                border-left: 8px solid v.$nl-red;
+                border-left: 6px solid v.$nl-red;
                 margin: 2rem auto;
                 text-align: left;
                 padding-left: 2rem;
@@ -383,12 +366,18 @@ ul {
                 display: flex;
                 flex-direction: column;
 
-                width: 26%;
-                margin: 1rem .4rem;
+                width: 28%;
+                margin: 1rem 0;
 
-                &--icon span {
+                &--icon {
+                    span {
                     color: v.$nl-red;
                     font-size: 2.4rem;
+                    }
+
+                    span:hover {
+                        cursor: default;
+                    }
                 }
 
                 &--title {
