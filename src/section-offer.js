@@ -299,6 +299,7 @@ function showContent2 (e) {
 
     snBodyInfoTr.style.display = "none";
     snBodyInfo.style.display = "block";
+    snBodyImg.style.display = "none"
 
     sideNav.style.display = "block";
     introExt.style.display = "none";
@@ -346,6 +347,7 @@ function showContent3(e) {
 
     snBodyInfoTr.style.display = "block";
     snBodyInfo.style.display = "none";
+    snBodyImgTr.style.display = "none"
 
     sideNav.style.display = "block"
     introTreat.style.display = "none";
@@ -376,14 +378,14 @@ function showContent4 (e) {
 
     function activeBodyAbstract (tab) {
         
-            // info icon
+        // info icon
         if (e.target === snInfo) {
             offTr = snBodyImgTr;
             offExt = snBodyImg;
             onTr = snBodyInfoTr;
             onExt = snBodyInfo;
 
-            // img icon
+        // img icon
         } else if (e.target === snImg) {
             offTr = snBodyInfoTr;
             offExt = snBodyInfo;
