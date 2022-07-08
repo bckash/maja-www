@@ -24,7 +24,8 @@ const // small, <li>
     extTape = document.getElementById("ext-tape"),
     extComb = document.getElementById("ext-comb"),
     trBotox = document.getElementById("tr-botox"),
-    trKreatyna = document.getElementById("tr-kreatyna");
+    trKreatyna = document.getElementById("tr-kreatyna"),
+    spinnerSt = document.getElementById("spinner-style")
 
 const // small, <li> groups
     extAll = document.querySelectorAll(".ext-all"),
@@ -45,6 +46,7 @@ function addArraysToArray (arr) {
 
 addArraysToArray(extAllArr);
 addArraysToArray(trAllArr);
+summAllArray.push(navBigStyle)
 
 
 //.................................................
@@ -65,8 +67,9 @@ const // body containers
     snBodyInfo = document.getElementById("ext-info__container"),
     snBodyImg = document.getElementById("photo__container-ext"),
     snBodyInfoTr = document.getElementById("treat-info__container"),
-    snBodyImgTr = document.getElementById("photo__container-tr");
-
+    snBodyImgTr = document.getElementById("photo__container-tr"),
+    snBodyInfoSt = document.getElementById("style-info__container"),    
+    snBodyImgSt = document.getElementById("photo__container-st")
 
 // const // carousel for INFO
 //     bodyFusion = document.getElementById("ext-b-fusion"),
@@ -216,18 +219,18 @@ navBigTreat.addEventListener("click", showContentBigNav)
 navBigStyle.addEventListener("click", showContentBigNav)
 
 // small nav
-extComb.addEventListener("click", showContent2)
-extFusion.addEventListener("click", showContent2)
-extMicro.addEventListener("click", showContent2)
-extShrink.addEventListener("click", showContent2)
-extTape.addEventListener("click", showContent2)
-trBotox.addEventListener("click", showContent3)
-trKreatyna.addEventListener("click", showContent3)
+extComb.addEventListener("click", showContentExt)
+extFusion.addEventListener("click", showContentExt)
+extMicro.addEventListener("click", showContentExt)
+extShrink.addEventListener("click", showContentExt)
+extTape.addEventListener("click", showContentExt)
+trBotox.addEventListener("click", showContentTreat)
+trKreatyna.addEventListener("click", showContentTreat)
 
 // side nav
 if (sideNav) {
-    snInfo.addEventListener("click", showContent4)
-    snImg.addEventListener("click", showContent4)
+    snInfo.addEventListener("click", showContentSideNav)
+    snImg.addEventListener("click", showContentSideNav)
 }
 
 
@@ -246,11 +249,14 @@ function resetForBigNav () {
     snBodyImgTr.style.display = "none"
     snBodyInfo.style.display = "none"
     snBodyInfoTr.style.display = "none"
+    snBodyInfoSt.style.display = "none"
+    snBodyImgSt.style.display = "none"
+    spinnerSt.style.display = "block"
 
     // reset "small nav" and "body" styles
     introMain.style.display = "none";
     for (let i=0; i<trBodyAll.length; i++) {
-            trBodyAll[i].style.display = "none";
+        trBodyAll[i].style.display = "none";
     }
     for (let i=0; i<extBodyAll.length; i++) {
         extBodyAll[i].style.display = "none";
@@ -261,6 +267,13 @@ function resetForBigNav () {
     for (let i=0; i<extAll.length; i++) {
         extAll[i].classList.remove("ns-active");
     }
+}
+
+// --> style reset for SMALL NAV
+function resetForSmallNav() {
+    sideNav.style.display = "block"
+    snImg.classList.remove("side-nav--active");
+    snInfo.classList.add("side-nav--active");
 }
 
 // --> active and inactive tabs for BIG NAV
@@ -306,6 +319,7 @@ function fillFields(arrElements, arrTxt) {
 }
 
 
+
 // -> EL FUNCTIONS |
 
 
@@ -320,25 +334,32 @@ function showContentBigNav (e) {
         setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
     } else if (e.target.id === "nav-big-style") {
         setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
+
+        setTimeout(() => {
+            
+            introStyle.style.display = "none"
+            snBodyInfoSt.style.display = "block"
+            spinnerSt.style.display = "none"
+            sideNav.style.display = "block"
+
+        }, 1000);
     }
 }
 
 // B) SMALL NAV : "EXTENSION"
-function showContent2 (e) {
+function showContentExt (e) {
 
     snBodyInfoTr.style.display = "none";
     snBodyInfo.style.display = "block";
     snBodyImg.style.display = "none"
+    snBodyInfoSt.style.display = "none"
 
-    sideNav.style.display = "block";
     introExt.style.display = "none";
     infoHolderExt.style.display = "block";
     infoHolderTreat.style.display = "none"
 
     activeTabs(extAll, e.target, "ns-active");
-    snImg.classList.remove("side-nav--active");
-    snInfo.classList.add("side-nav--active");
-
+    resetForSmallNav()
 
     switch(e.target.id) {
 
@@ -375,20 +396,19 @@ function showContent2 (e) {
 }
 
 // C) SMALL NAV :  "TREATMENT"
-function showContent3(e) {
+function showContentTreat(e) {
 
     snBodyInfoTr.style.display = "block";
     snBodyInfo.style.display = "none";
     snBodyImgTr.style.display = "none"
+    snBodyInfoSt.style.display = "none"
 
-    sideNav.style.display = "block"
     introTreat.style.display = "none";
     infoHolderTreat.style.display = "block"
     infoHolderExt.style.display = "none"
 
     activeTabs(trAll, e.target, "ns-active");
-    snImg.classList.remove("side-nav--active");
-    snInfo.classList.add("side-nav--active");
+    resetForSmallNav()
 
     // prepare indyvidual cases - for main body toggle (in "showContent4")
     switch(e.target.id) {
@@ -410,7 +430,7 @@ function showContent3(e) {
 }
 
 // D) SIDE NAV 
-function showContent4 (e) {
+function showContentSideNav (e) {
 
     function activeBodyAbstract (tab) {
         
@@ -418,28 +438,37 @@ function showContent4 (e) {
         if (e.target === snInfo) {
             offTr = snBodyImgTr;
             offExt = snBodyImg;
+            offSt = snBodyImgSt;
             onTr = snBodyInfoTr;
             onExt = snBodyInfo;
+            onSt = snBodyInfoSt;
 
         // img icon
         } else if (e.target === snImg) {
             offTr = snBodyInfoTr;
             offExt = snBodyInfo;
+            offSt =snBodyInfoSt;
             onTr = snBodyImgTr;
             onExt = snBodyImg;
+            onSt = snBodyImgSt;
         }
         
         offExt.style.display = "none"
         offTr.style.display = "none"
+        offSt.style.display = "none"
         activeTabs(snALL, e.target,"side-nav--active")
+
 
         if (tab.id === "tr-botox" || tab.id === "tr-kreatyna") {
             onTr.style.display = "block"
-        } else if (tab.id !== "tr-botox" && tab.id !== "tr-kreatyna") {
+        } else if (tab.id !== "tr-botox" && tab.id !== "tr-kreatyna" && tab.id !==navBigStyle.id) {
             onExt.style.display = "block"
-        } 
+        } else if (tab.id === navBigStyle.id) {
+            onSt.style.display = "block"
+        }
     }
 
+    // "extensions" and "treatment"
     function mapActiveElement (arr, activeClass, fun) {
         arr.map(el => {
             if (el.classList.contains(activeClass)) {

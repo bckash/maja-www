@@ -1,6 +1,6 @@
 
 @use "./variables" as v;
-@use "./slideshowBoot";
+@use "./carousel-bootstrap";
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
@@ -204,6 +204,10 @@ ul {
 
     &--nav-small {
         height: 3.5rem;
+
+        .spinner-border {
+            color: rgb(223, 213, 213);
+        }
     }
 
     &--nav-big-ul, &--nav-small-ul {
@@ -289,11 +293,12 @@ ul {
                 margin: auto;
             }
 
-            #photo__container-ext, #photo__container-tr, #treat-info__container {
+            #treat-info__container, #style-info__container, #ext-info__container {
                 display: none;
             }
 
-            #photo__container-ext, #photo__container-tr {
+            #photo__container-ext, #photo__container-tr, #photo__container-st {
+                display: none;
                 width: 65%;
                 margin: auto;
             }
@@ -327,10 +332,10 @@ ul {
 
             span {
                 font-size: 3rem;
-            }
 
-            &:hover {
-                cursor: pointer;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 
@@ -340,7 +345,12 @@ ul {
 .side-nav--active {
     color: v.$nl-side-nav-a-light;
     animation: side-nav .2s  1 forwards;
+
+    &:hover {
+        cursor: default !important;
+    }
 }
+
 
 @keyframes side-nav {
     from {
@@ -355,7 +365,7 @@ ul {
 
 
 .info-holder {
-    display: none;
+    // display: none;
 
     &__info {
 
@@ -382,7 +392,6 @@ ul {
             & .info-rest__example {
                 display: flex;
                 flex-direction: column;
-
                 width: 28%;
                 margin: 1rem 0;
 
@@ -410,6 +419,12 @@ ul {
                     height: 100%;
                     margin: auto;
                     font-size: .8rem;
+                }
+
+                &--descr-st {
+                    margin-left: 2rem;
+                    list-style-type: disc;
+                    text-align: left;
                 }
             }
         }

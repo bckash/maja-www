@@ -11329,6 +11329,9 @@ ul {
 .offer__content--nav-small {
   height: 3.5rem;
 }
+.offer__content--nav-small .spinner-border {
+  color: rgb(223, 213, 213);
+}
 .offer__content--nav-big-ul, .offer__content--nav-small-ul {
   display: flex;
   justify-content: center;
@@ -11401,10 +11404,11 @@ ul {
   width: 33rem;
   margin: auto;
 }
-.offer__content--main-body #photo__container-ext, .offer__content--main-body #photo__container-tr, .offer__content--main-body #treat-info__container {
+.offer__content--main-body #treat-info__container, .offer__content--main-body #style-info__container, .offer__content--main-body #ext-info__container {
   display: none;
 }
-.offer__content--main-body #photo__container-ext, .offer__content--main-body #photo__container-tr {
+.offer__content--main-body #photo__container-ext, .offer__content--main-body #photo__container-tr, .offer__content--main-body #photo__container-st {
+  display: none;
   width: 65%;
   margin: auto;
 }
@@ -11422,13 +11426,16 @@ ul {
 .offer__content--main-icons span {
   font-size: 3rem;
 }
-.offer__content--main-icons:hover {
+.offer__content--main-icons span:hover {
   cursor: pointer;
 }
 
 .side-nav--active {
   color: rgb(207, 160, 98);
   animation: side-nav 0.2s 1 forwards;
+}
+.side-nav--active:hover {
+  cursor: default !important;
 }
 
 @keyframes side-nav {
@@ -11438,9 +11445,6 @@ ul {
   to {
     color: rgb(207, 160, 98);
   }
-}
-.info-holder {
-  display: none;
 }
 .info-holder__info--about {
   display: flex;
@@ -11485,6 +11489,11 @@ ul {
   height: 100%;
   margin: auto;
   font-size: 0.8rem;
+}
+.info-holder__info--rest .info-rest__example--descr-st {
+  margin-left: 2rem;
+  list-style-type: disc;
+  text-align: left;
 }
 
 .animation__slideIN {
