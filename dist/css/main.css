@@ -11326,12 +11326,6 @@ ul {
   color: #745b4d;
   padding: 1rem 0;
 }
-.offer__content--nav-small {
-  height: 3.5rem;
-}
-.offer__content--nav-small .spinner-border {
-  color: rgb(223, 213, 213);
-}
 .offer__content--nav-big-ul, .offer__content--nav-small-ul {
   display: flex;
   justify-content: center;
@@ -11340,19 +11334,22 @@ ul {
 .offer__content--nav-big-ul li, .offer__content--nav-small-ul li {
   margin: 0.5rem 1rem;
 }
+.offer__content--nav-big-ul li:hover, .offer__content--nav-small-ul li:hover {
+  cursor: pointer;
+}
+.offer__content--nav-small {
+  height: 3.5rem;
+}
 .offer__content--nav-small-ul {
   display: none;
   margin-top: 0;
   padding-top: 0;
 }
-.offer__content--nav-small-ul li:hover {
-  cursor: pointer;
+.offer__content--nav-small .spinner-border {
+  color: rgb(223, 213, 213);
 }
 .offer__content--nav-big-ul {
   font-size: 1.2rem;
-}
-.offer__content--nav-big-ul li:hover {
-  cursor: pointer;
 }
 .offer__content--main {
   display: flex;
@@ -11679,16 +11676,27 @@ ul {
   color: #745b4d;
   text-align: center;
 }
-.prices__content--nav-ul {
+.prices__content--nav-big-ul, .prices__content--nav-small-ul {
   display: flex;
   justify-content: center;
   padding: 0.5rem 0;
 }
-.prices__content--nav-ul li {
+.prices__content--nav-big-ul li, .prices__content--nav-small-ul li {
   margin: 0.5rem 1rem;
 }
-.prices__content--nav-ul:hover {
+.prices__content--nav-big-ul li:hover, .prices__content--nav-small-ul li:hover {
   cursor: pointer;
+}
+.prices__content--nav-small {
+  height: 3.5rem;
+}
+.prices__content--nav-small-ul {
+  display: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+.prices__content--nav-big-ul {
+  font-size: 1.2rem;
 }
 .prices__content--body {
   margin-top: 2rem;
@@ -11708,7 +11716,7 @@ ul {
   position: relative;
 }
 .prices__content--body-treat .price-line {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: end;
   position: absolute;
@@ -11765,6 +11773,12 @@ ul {
 }
 .prices__content--body-treat .pl-red span {
   color: rgb(160, 14, 14);
+}
+.prices__content--body-treat .price-holder {
+  text-transform: capitalize;
+}
+.prices__content--body-style table td::before {
+  content: "£ ";
 }
 
 .animation__line-in {

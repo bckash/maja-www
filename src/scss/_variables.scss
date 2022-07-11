@@ -36,7 +36,7 @@ $nl-side-nav-a-dark: rgb(117, 100, 78);
     color: $nl-red;
 }
 
-@mixin nav-big {
+@mixin nav {
     display: flex;
     justify-content: center;
     padding: .5rem 0;
@@ -44,16 +44,25 @@ $nl-side-nav-a-dark: rgb(117, 100, 78);
     & li {
         margin: .5rem 1rem;
     }
+
+    & li:hover {
+        cursor: pointer;
+    }
 }
 
 @mixin nav-big-txt {
     font-size: 1.2rem;
 }
 
-// @mixin nav-small {
-//     margin-top: 0;
-//     padding-top: 0;
-// }
+@mixin nav-small {
+    height: 3.5rem;
+
+    &-ul {
+        display: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
 
 @mixin photo-shad {
     box-shadow: 1px 1px 20px rgb(78, 51, 26);

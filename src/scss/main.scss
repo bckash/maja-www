@@ -202,34 +202,20 @@ ul {
         padding: 1rem 0;
     }
 
+    &--nav-big-ul, &--nav-small-ul {
+        @include v.nav;
+    }
+
     &--nav-small {
-        height: 3.5rem;
+        @include v.nav-small;
 
         .spinner-border {
             color: rgb(223, 213, 213);
         }
     }
 
-    &--nav-big-ul, &--nav-small-ul {
-        @include v.nav-big;
-    }
-
-    &--nav-small-ul {
-        display: none;
-        margin-top: 0;
-        padding-top: 0;
-
-        & li:hover {
-            cursor: pointer;
-        }
-    }
-
     &--nav-big-ul {
         @include v.nav-big-txt;
-    }
-
-    &--nav-big-ul li:hover {
-        cursor: pointer;
     }
 
     &--main {
@@ -620,12 +606,16 @@ ul {
             text-align: center
         }
 
-        &--nav-ul {
-            @include v.nav-big;
+        &--nav-big-ul, &--nav-small-ul {
+            @include v.nav;
         }
-
-        &--nav-ul:hover {
-            cursor: pointer;
+    
+        &--nav-small {
+            @include v.nav-small;
+        }
+    
+        &--nav-big-ul {
+            @include v.nav-big-txt;
         }
 
         &--body {
@@ -650,81 +640,97 @@ ul {
 
             &-treat {
                 position: relative;
-            }
 
-            &-treat .price-line {
-                display: flex;
-                align-items:center;
-                justify-content: end;
-                position: absolute;
-                left: 50%;
-                text-align: right;
-                width: 0;
-                border-bottom: 4px solid;
-                padding-right: 1rem;
-
-                & .price-holder {
+                & .price-line {
                     display: none;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    padding: .2rem;
-                    width: 7rem;
-                    border: 1px solid;
+                    align-items:center;
+                    justify-content: end;
+                    position: absolute;
+                    left: 50%;
+                    text-align: right;
+                    width: 0;
+                    border-bottom: 4px solid;
+                    padding-right: 1rem;
+    
+                    & .price-holder {
+                        display: none;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: .2rem;
+                        width: 7rem;
+                        border: 1px solid;
+    
+                        & span {
+                            display: block;
+    
+                        }
+    
+                        &--value {
+                            font-size: 1.5rem;
+                        }
+    
+                    }              
+                }
 
+                & .pl-pink {
+                    top: 1rem;
+                    border-color: pink;
+                    background-color: rgba(255, 192, 203, 0.1);
+    
+                    & .price-holder {
+                        border-color: rgb(223, 147, 160);
+                    }
+    
                     & span {
-                        display: block;
-
+                        color: rgb(194, 71, 153);
                     }
-
-                    &--value {
-                        font-size: 1.5rem;
+                }
+    
+                & .pl-peach {
+                    top: 10rem;
+                    border-color: orange;
+                    background-color: rgba(255, 166, 0, 0.1);
+    
+                    & .price-holder {
+                        border-color: rgb(219, 133, 63);
                     }
-
-                }              
-            }
-
-            &-treat .pl-pink {
-                top: 1rem;
-                border-color: pink;
-                background-color: rgba(255, 192, 203, 0.1);
+    
+                    & span {
+                        color: rgb(187, 96, 22);
+                    }
+                }
+    
+                & .pl-red {
+                    top: 19rem;
+                    border-color: red;
+                    background-color: rgba(255, 0, 0, 0.1);
+    
+                    & .price-holder {
+                        border-color: rgb(204, 79, 79);
+                    }
+    
+                    & span {
+                        color: rgb(160, 14, 14);
+                    }
+                }
 
                 & .price-holder {
-                    border-color: rgb(223, 147, 160);
-                }
-
-                & span {
-                    color: rgb(194, 71, 153);
+                    text-transform: capitalize;
                 }
             }
 
-            &-treat .pl-peach {
-                top: 10rem;
-                border-color: orange;
-                background-color: rgba(255, 166, 0, 0.1);
+            &-style {
 
-                & .price-holder {
-                    border-color: rgb(219, 133, 63);
-                }
+                & table {
 
-                & span {
-                    color: rgb(187, 96, 22);
+                    & td::before {
+                        content: "£ "
+                    }
                 }
             }
 
-            &-treat .pl-red {
-                top: 19rem;
-                border-color: red;
-                background-color: rgba(255, 0, 0, 0.1);
 
-                & .price-holder {
-                    border-color: rgb(204, 79, 79);
-                }
-
-                & span {
-                    color: rgb(160, 14, 14);
-                }
-            }
         }
     }
 }
