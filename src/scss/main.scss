@@ -202,35 +202,22 @@ ul {
         padding: 1rem 0;
     }
 
-    &--nav-small {
-        height: 3.5rem;
-
-        .spinner-border {
-            color: rgb(223, 213, 213);
-        }
-    }
-
     &--nav-big-ul, &--nav-small-ul {
-        @include v.nav-big;
-    }
-
-    &--nav-small-ul {
-        display: none;
-        margin-top: 0;
-        padding-top: 0;
-
-        & li:hover {
-            cursor: pointer;
-        }
+        @include v.nav;
     }
 
     &--nav-big-ul {
         @include v.nav-big-txt;
     }
 
-    &--nav-big-ul li:hover {
-        cursor: pointer;
+    &--nav-small {
+        @include v.nav-small;
+
+        .spinner-border {
+            color: rgb(223, 213, 213);
+        }
     }
+
 
     &--main {
         display: flex;
@@ -620,12 +607,12 @@ ul {
             text-align: center
         }
 
-        &--nav-ul {
-            @include v.nav-big;
+        &--nav-big-ul, &--nav-small-ul {
+            @include v.nav;
         }
 
-        &--nav-ul:hover {
-            cursor: pointer;
+        &--nav-small-ul {
+
         }
 
         &--body {
