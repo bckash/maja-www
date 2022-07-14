@@ -187,9 +187,20 @@ ul {
             }
 
             .about-cert-info {
-                font-style: italic;
+
                 font-size: .8rem;
             }
+
+            .about__span-holder {
+                border: 1px solid rgb(209, 179, 179);
+                border-radius: 10px;
+                // text-align: right;
+                float: right;
+                padding: .2rem .8rem;
+                color: rgb(129, 6, 6);
+            }
+
+
         }
 }
 

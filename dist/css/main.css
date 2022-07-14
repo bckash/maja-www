@@ -11310,8 +11310,14 @@ ul {
   border-bottom: 1px solid rgb(194, 194, 194);
 }
 .about-me__content .about-txt--container .about-cert-info {
-  font-style: italic;
   font-size: 0.8rem;
+}
+.about-me__content .about-txt--container .about__span-holder {
+  border: 1px solid rgb(209, 179, 179);
+  border-radius: 10px;
+  float: right;
+  padding: 0.2rem 0.8rem;
+  color: rgb(129, 6, 6);
 }
 
 .paralax-1 {
