@@ -11272,7 +11272,7 @@ ul {
 .about-me__content--main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .about-me__content img {
   width: 15rem;
@@ -11280,12 +11280,38 @@ ul {
   margin-right: 5rem;
   box-shadow: 1px 1px 20px rgb(78, 51, 26);
 }
-.about-me__content span {
+.about-me__content .about-txt--container {
   display: inline-block;
   border-left: 20px solid #dfc7b9;
   color: rgb(129, 6, 6);
   padding: 1rem;
   padding-left: 3.5rem;
+}
+.about-me__content .about-txt--container span {
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+}
+.about-me__content .about-txt--container .about-hi {
+  font-size: 1.5em;
+  padding-left: 2rem;
+  padding-bottom: 2.5rem;
+}
+.about-me__content .about-txt--container .about-hairstylist {
+  font-size: 1.25em;
+  text-align: left;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.about-me__content .about-txt--container .about-divider {
+  display: block;
+  width: 50%;
+  margin: 2rem auto;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+.about-me__content .about-txt--container .about-cert-info {
+  font-style: italic;
+  font-size: 0.8rem;
 }
 
 .paralax-1 {

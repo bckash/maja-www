@@ -144,7 +144,7 @@ ul {
     &--main {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
         & img {
             width: 15rem;
@@ -153,12 +153,43 @@ ul {
             @include v.photo-shad;
         }
 
-        & span {
+        & .about-txt--container {
             display: inline-block;
             border-left: 20px solid v.$nl-back-pink-dark;
             color: rgb(129, 6, 6);
             padding: 1rem;
             padding-left: 3.5rem;
+
+            span {
+                vertical-align: middle;
+                display: inline-block;
+                text-align: center;
+            }
+
+            .about-hi {
+                font-size: 1.5em;
+                padding-left: 2rem;
+                padding-bottom: 2.5rem;
+            }
+
+            .about-hairstylist {
+                font-size:  1.25em;
+                text-align: left;
+                margin-left: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .about-divider {
+                display: block;
+                width: 50%;
+                margin: 2rem auto;
+                border-bottom: 1px solid rgb(194, 194, 194);
+            }
+
+            .about-cert-info {
+                font-style: italic;
+                font-size: .8rem;
+            }
         }
 }
 
