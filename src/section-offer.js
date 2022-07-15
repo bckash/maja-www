@@ -117,6 +117,7 @@ const // PHOTO body
     photoBodyTrTreatment = document.getElementById("tr-photo-treatment"),
     photoBodyTrALL = document.getElementsByClassName("tr-photo");
 
+
 // -> CONTENT : DATA |
 
 
@@ -337,6 +338,8 @@ function showContentBigNav (e) {
 
         setTimeout(() => {
             
+            snImg.classList.remove("side-nav--active");
+            snInfo.classList.add("side-nav--active");
             introStyle.style.display = "none"
             snBodyInfoSt.style.display = "block"
             spinnerSt.style.display = "none"
@@ -465,6 +468,7 @@ function showContentSideNav (e) {
             onExt.style.display = "block"
         } else if (tab.id === navBigStyle.id) {
             onSt.style.display = "block"
+            console.log(onSt)
         }
     }
 
