@@ -7,6 +7,7 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap");
 .carousel {
   margin: 1rem;
   padding-bottom: 1.8rem;
@@ -11291,11 +11292,12 @@ ul {
   box-shadow: 1px 1px 20px rgb(78, 51, 26);
 }
 .about-me__content .about-txt--container {
+  position: relative;
   display: inline-block;
-  border-left: 20px solid #dfc7b9;
-  color: rgb(129, 6, 6);
+  border: 1px solid rgb(219, 216, 216);
+  border-radius: 20px;
   padding: 1rem;
-  padding-left: 3.5rem;
+  background-color: rgb(250, 248, 244);
 }
 .about-me__content .about-txt--container span {
   vertical-align: middle;
@@ -11304,33 +11306,58 @@ ul {
 }
 .about-me__content .about-txt--container .about-hi {
   font-size: 1.2em;
-  padding-left: 2rem;
-  padding-bottom: 2.5rem;
+  padding-left: 4rem;
+  padding-bottom: 0.5rem;
   opacity: 0.8;
 }
 .about-me__content .about-txt--container .about-hairstylist {
   font-size: 1.25em;
   text-align: left;
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+  padding-left: 2rem;
 }
-.about-me__content .about-txt--container .about-divider {
-  display: block;
-  width: 50%;
-  margin: 2rem auto;
-  border-bottom: 1px solid rgb(194, 194, 194);
+.about-me__content .about-txt--container #about-p2::first-letter {
+  margin-top: -0.5rem;
+  font-size: 2.3em;
+  float: left;
+  padding-right: 0.5rem;
+  font-weight: bold;
+  color: rgb(161, 68, 40);
+}
+.about-me__content .about-txt--container .about-span-color {
+  color: rgb(161, 68, 40);
+}
+.about-me__content .about-txt--container hr {
+  background-color: rgb(146, 143, 143);
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-me__content .about-txt--container #about-triangle {
+  position: absolute;
+  left: -20.7px;
+  height: 40px;
+  width: 40px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgb(211, 207, 207);
+  background-color: rgb(250, 248, 244);
+  transform: rotate(45deg);
 }
 .about-me__content .about-txt--container .about-cert-info {
   font-size: 0.8rem;
 }
 .about-me__content .about-txt--container .about__span-holder {
   margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
   border: 1px solid rgb(209, 179, 179);
   border-radius: 10px;
   float: right;
   padding: 0.2rem 0.8rem;
-  color: rgb(129, 6, 6);
   background-color: rgb(248, 244, 238);
+}
+.about-me__content .without-border {
+  padding: 1rem;
+  background-color: rgb(250, 248, 244);
 }
 
 .animation-emoji {
@@ -11346,19 +11373,48 @@ ul {
   }
 }
 .paralax-1 {
+  position: relative;
   background-color: #B4917D;
-  padding: 3rem 0;
+  padding-bottom: 3rem;
 }
-.paralax-1 div {
+.paralax-1 header {
+  position: relative;
+  top: -6rem;
+  width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.paralax-1 header hr {
+  height: 2px;
+  width: 100px;
+  background-color: #dfc7b9;
+  margin-right: 3rem;
+}
+.paralax-1 header p {
+  color: #dfc7b9;
+  font-size: 1.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: right;
+  font-style: italic;
+  margin: 2.5rem;
+}
+.paralax-1 #paralax-content {
   outline: 17px solid #dfc7b9;
   height: 20rem;
   width: 75%;
-  margin: auto;
+  margin: -3rem auto 4rem auto;
   background-image: url("/src/img/paralax-1.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.paralax-gradient {
+  background: rgb(224, 115, 50);
+  background: linear-gradient(180deg, rgb(224, 115, 50) 0%, rgb(187, 101, 53) 46%, rgb(115, 59, 29) 100%);
 }
 
 .offer {
@@ -11716,7 +11772,7 @@ ul {
 }
 
 .prices {
-  background-color: #F8EEEE;
+  background-color: #f3f2ef;
 }
 .prices__content {
   width: 50rem;
@@ -11762,6 +11818,10 @@ ul {
 }
 .prices__content--body-ext, .prices__content--body-treat, .prices__content--body-style {
   display: none;
+}
+.prices__content--body-ext {
+  background-color: rgb(250, 248, 244);
+  padding: 1rem 2rem;
 }
 .prices__content--body-ext table td, .prices__content--body-ext table th {
   cursor: default;
@@ -11833,6 +11893,10 @@ ul {
 }
 .prices__content--body-treat .price-holder {
   text-transform: capitalize;
+}
+.prices__content--body-style {
+  background-color: rgb(250, 248, 244);
+  padding: 1rem 2rem;
 }
 .prices__content--body-style table td::before {
   content: "£ ";
@@ -11960,7 +12024,7 @@ ul {
 }
 
 .bridge-5 {
-  background-color: #F8EEEE;
+  background-color: #f3f2ef;
 }
 
 footer {

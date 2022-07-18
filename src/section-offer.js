@@ -468,7 +468,6 @@ function showContentSideNav (e) {
             onExt.style.display = "block"
         } else if (tab.id === navBigStyle.id) {
             onSt.style.display = "block"
-            console.log(onSt)
         }
     }
 

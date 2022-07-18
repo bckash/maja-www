@@ -18,6 +18,11 @@ $nl-border : rgb(206, 203, 197);
 $nl-side-nav-a-light: rgb(207, 160, 98);
 $nl-side-nav-a-dark: rgb(117, 100, 78);
 
+
+$nl-content-body: rgb(250, 248, 244);
+
+$nl-font-nav: 'Satisfy', cursive;
+
 // mixins
 
 @mixin article {
@@ -72,6 +77,11 @@ $nl-side-nav-a-dark: rgb(117, 100, 78);
     opacity: 0;
     position: absolute;
     top: 0;
+}
+
+@mixin table-body {
+    background-color: $nl-content-body;
+    padding: 1rem 2rem;
 }
 
 // footer

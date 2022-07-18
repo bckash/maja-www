@@ -5,6 +5,7 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
 
 
 
@@ -154,11 +155,14 @@ ul {
         }
 
         & .about-txt--container {
+            position: relative;
             display: inline-block;
-            border-left: 20px solid v.$nl-back-pink-dark;
-            color: rgb(129, 6, 6);
+            // border-left: 20px solid v.$nl-back-pink-dark;
+            border: 1px solid rgb(219, 216, 216);
+            border-radius: 20px;
             padding: 1rem;
-            padding-left: 3.5rem;
+            // padding-left: 3.5rem;
+            background-color: v.$nl-content-body;
 
             span {
                 vertical-align: middle;
@@ -168,24 +172,60 @@ ul {
 
             .about-hi {
                 font-size: 1.2em;
-                padding-left: 2rem;
-                padding-bottom: 2.5rem;
+                padding-left: 4rem;
+                padding-bottom: .5rem;
                 opacity: 0.8;
             }
 
             .about-hairstylist {
                 font-size:  1.25em;
                 text-align: left;
-                margin-left: 2rem;
-                margin-bottom: 2rem;
+                // margin-left: 2rem;
+                // margin-bottom: 2rem;
+                // border-left: 10px solid rgba(240, 223, 169, 0.527);
+                padding-left: 2rem;
             }
 
-            .about-divider {
-                display: block;
-                width: 50%;
-                margin: 2rem auto;
-                border-bottom: 1px solid rgb(194, 194, 194);
+            #about-p2::first-letter {
+                margin-top: -.5rem;
+                font-size: 2.3em;
+                float: left;
+                padding-right: .5rem;
+                font-weight: bold;
+                color: rgb(161, 68, 40);
+
             }
+
+            .about-span-color {
+                color: rgb(161, 68, 40);
+            }
+
+            hr {
+                background-color: rgb(146, 143, 143);
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #about-triangle {
+                position: absolute;
+                left: -20.7px;
+                height: 40px;
+                width: 40px;
+                border-left: 1px  solid;
+                border-bottom: 1px  solid;
+                border-color: rgb(211, 207, 207);
+                background-color:  v.$nl-content-body;
+                transform: rotate(45deg);
+            }
+
+
+            // .about-divider {
+            //     display: block;
+            //     width: 50%;
+            //     margin: 2rem auto;
+            //     border-bottom: 1px solid rgb(194, 194, 194);
+            // }
 
             .about-cert-info {
 
@@ -194,16 +234,22 @@ ul {
 
             .about__span-holder {
                 margin-top: .5rem;
+                margin-bottom: .3rem;
                 border: 1px solid rgb(209, 179, 179);
                 border-radius: 10px;
                 // text-align: right;
                 float: right;
                 padding: .2rem .8rem;
-                color: rgb(129, 6, 6);
+
                 background-color: rgb(248, 244, 238);
             }
 
 
+        }
+
+        .without-border {
+            padding: 1rem;
+            background-color: v.$nl-content-body;
         }
 }
 
@@ -226,23 +272,55 @@ ul {
 // PARALAX
 
 .paralax-1 {
+    position: relative;
     background-color: v.$nl-dark-fill;
-    padding: 3rem 0;
+    padding-bottom: 3rem;
 
-    & div {
+    header {
+        position: relative;
+        top: -6rem;
+        width: 700px;
+        margin: auto;
+        // padding-left: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        hr {
+            height: 2px;
+            width: 100px;
+            background-color: v.$nl-back-pink-dark;
+            margin-right: 3rem;         
+        }
+
+        p {
+            color: v.$nl-back-pink-dark;
+            font-size: 1.8rem;
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: right;
+            font-style: italic;
+            margin: 2.5rem;
+        }
+    }
+
+    #paralax-content {
         outline: 17px solid v.$nl-back-pink-dark;
         height: 20rem;
         width: 75%;
-        margin: auto;
+        margin: -3rem auto 4rem auto;
         background-image: url("/src/img/paralax-1.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-
     }
-
 }
+
+.paralax-gradient {
+    background: rgb(224,115,50);
+    background: linear-gradient(180deg, rgba(224,115,50,1) 0%, rgba(187,101,53,1) 46%, rgba(115,59,29,1) 100%);
+}
+
 
 
 // OFFER
@@ -352,18 +430,6 @@ ul {
             .ext-photo {
                 justify-content: center;
             }
-
-            // .photo-gallery-head {
-            //     margin-top: 1rem;
-            //     margin-right: 1rem;
-            //     text-align: right;
-
-            //     span {
-            //         font-family: 'Great Vibes', cursive;
-            //         font-size: 1.8rem;
-            //         color: rgb(194, 187, 180);
-            //     }
-            // }
         }
         
         &-icons {
@@ -656,7 +722,7 @@ ul {
 // PRICES
 
 .prices {
-    background-color: v.$nl-back-pink-ultra-light;
+    background-color: #f3f2ef;
 
     &__content {
         @include v.article;
@@ -688,6 +754,9 @@ ul {
             }
 
             &-ext {
+
+                @include v.table-body;
+
                 table td, table th {
                     cursor: default;
                 }
@@ -781,6 +850,7 @@ ul {
             }
 
             &-style {
+                @include v.table-body;
 
                 & table {
 
@@ -925,6 +995,8 @@ ul {
 
 .bridge-3 {
     background-color: v.$nl-back-pink-light;
+
+
 }
 
 .bridge-4 {
@@ -932,7 +1004,7 @@ ul {
     height: max-content;
 }
 .bridge-5 {
-    background-color: v.$nl-back-pink-ultra-light;
+    background-color: #f3f2ef;
 }
 
 
