@@ -15,13 +15,18 @@ $nl-red-logo :#954444;
 
 $nl-border : rgb(206, 203, 197);
 
-$nl-side-nav-a-light: rgb(207, 160, 98);
+
+
+$nl-side-nav-a-light: rgb(209, 135, 39);
 $nl-side-nav-a-dark: rgb(117, 100, 78);
 
 
 $nl-content-body: rgb(250, 248, 244);
+$nl-red-detail: rgb(114, 34, 10);
+$nl-brown-detail: rgb(79,33,8);
+$nl-brown-detail-light: rgba(79, 33, 8, 0.63);
 
-$nl-font-nav: 'Satisfy', cursive;
+
 
 // mixins
 
@@ -32,13 +37,14 @@ $nl-font-nav: 'Satisfy', cursive;
 }
 
 @mixin title {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    font-weight: 300;
     padding: 1rem;
     width: 20rem;
     margin: auto;
     border-bottom: 1px solid;
     border-color: $nl-border;
-    color: $nl-red;
+    color: $nl-brown-detail-light;
 }
 
 @mixin nav {
@@ -82,6 +88,7 @@ $nl-font-nav: 'Satisfy', cursive;
 @mixin table-body {
     background-color: $nl-content-body;
     padding: 1rem 2rem;
+    border-radius: 30px;
 }
 
 // footer
