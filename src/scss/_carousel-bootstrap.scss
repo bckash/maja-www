@@ -1,13 +1,16 @@
 
 @use "./variables" as v;
 
-// var
+// VAR
 
 $padding-info: 1.8rem;
 $border-info: 20px;
 
 
-// style
+// STYLE
+
+
+// gallery - offer 
 
 .carousel {
     margin: 1rem;
@@ -55,12 +58,12 @@ $border-info: 20px;
     }
 }
 
+// gallery - modal
+
 #car00 {
 
-    height: 20rem;
-
     .carousel-inner {
-        // outline: none;
+        outline-color: antiquewhite;
     }
 
     // .carousel-control-next {
@@ -83,4 +86,16 @@ $border-info: 20px;
 
     
 
+}
+
+// modal
+
+#AboutMe {
+    .modal-body {
+        background-color: rgb(247, 243, 239);
+    }
+
+    .modal-footer {
+        height: 5rem;
+    }
 }

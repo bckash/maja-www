@@ -46,14 +46,21 @@
   background-color: rgba(32, 25, 25, 0.37);
 }
 
-#car00 {
-  height: 20rem;
+#car00 .carousel-inner {
+  outline-color: antiquewhite;
 }
 #car00 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23af1e1e'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 #car00 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23af1e1e'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+#AboutMe .modal-body {
+  background-color: rgb(247, 243, 239);
+}
+#AboutMe .modal-footer {
+  height: 5rem;
 }
 
 :root {
