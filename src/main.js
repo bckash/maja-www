@@ -13,14 +13,20 @@ const custOpinion3 = document.getElementById("cu-op-3")
 const pullBack = document.getElementById("pull-back");
 const arrUp = document.getElementById("arrow-nav");
 
-
+// modal
+const descrModalFooter4Carousel1 = document.getElementById("mf-descr-1")
+const descrModalFooter4Carousel2 = document.getElementById("mf-descr-2")
+const descrModalFooter4Carousel3 = document.getElementById("mf-descr-3")
+const carsuouselItemsALL = Array.from(document.getElementsByClassName("ciJS"))
+const modalTriggerButton = document.getElementById("modal-trigger-button")
+const mutationTagetNode = document.getElementById("mutationTN")
 
 // 2. EL
 //-------------
 
 
 window.addEventListener("scroll", showNav);
-
+modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter)
 
 
 // 3. FUNCTIONS ->
@@ -216,3 +222,29 @@ function showNav(){
 
 } 
 
+
+
+const config = { attributes: true, childList: true, subtree: true };
+
+function mutationCallback(mutations) {
+    for (let m of mutations) {
+        if (m.type === 'attributes' && !m.target.classList.contains("active") && !m.target.classList.contains("carousel-item-start")) {
+            console.log(m.target)
+        }
+    }
+}
+
+let classObserver = new MutationObserver(mutationCallback);
+
+
+// MODAL
+function showCarouselDescriptionInModalFooter () {
+
+    console.clear()
+
+
+
+    classObserver.observe(mutationTagetNode, config)
+
+
+}

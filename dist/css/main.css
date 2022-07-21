@@ -11240,7 +11240,7 @@ ul {
 
 .main-nav {
   position: relative;
-  top: 40rem;
+  top: 39.5rem;
   width: 25rem;
   margin: auto;
   font-size: 1.2rem;
@@ -11322,13 +11322,13 @@ ul {
   justify-content: center;
   align-items: flex-start;
 }
-.about-me__content img {
+.about-me__content--main img {
   width: 15rem;
   height: auto;
   margin-right: 5rem;
   box-shadow: 1px 1px 20px rgb(78, 51, 26);
 }
-.about-me__content .about-txt--container {
+.about-me__content--main .about-txt--container {
   position: relative;
   display: inline-block;
   border: 1px solid rgb(206, 203, 197);
@@ -11337,23 +11337,23 @@ ul {
   background-color: rgb(250, 248, 244);
   box-shadow: 3px 3px 10px rgb(228, 222, 222);
 }
-.about-me__content .about-txt--container span {
+.about-me__content--main .about-txt--container span {
   vertical-align: middle;
   display: inline-block;
   text-align: center;
 }
-.about-me__content .about-txt--container .about-hi {
+.about-me__content--main .about-txt--container .about-hi {
   font-size: 1.2em;
   padding-left: 4rem;
   padding-bottom: 0.5rem;
   opacity: 0.8;
 }
-.about-me__content .about-txt--container .about-hairstylist {
+.about-me__content--main .about-txt--container .about-hairstylist {
   font-size: 1.25em;
   text-align: left;
   padding-left: 2rem;
 }
-.about-me__content .about-txt--container #about-p2::first-letter {
+.about-me__content--main .about-txt--container #about-p2::first-letter {
   margin-top: -0.5rem;
   font-size: 2.3em;
   float: left;
@@ -11361,16 +11361,16 @@ ul {
   font-weight: bold;
   color: rgb(114, 34, 10);
 }
-.about-me__content .about-txt--container .about-span-color {
+.about-me__content--main .about-txt--container .about-span-color {
   color: rgb(114, 34, 10);
 }
-.about-me__content .about-txt--container hr {
+.about-me__content--main .about-txt--container hr {
   background-color: rgb(146, 143, 143);
   width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
-.about-me__content .about-txt--container #about-triangle {
+.about-me__content--main .about-txt--container #about-triangle {
   position: absolute;
   left: -20.7px;
   height: 40px;
@@ -11381,10 +11381,10 @@ ul {
   background-color: rgb(250, 248, 244);
   transform: rotate(45deg);
 }
-.about-me__content .about-txt--container .about-cert-info {
+.about-me__content--main .about-txt--container .about-cert-info {
   font-size: 0.8rem;
 }
-.about-me__content .about-txt--container .about__span-holder {
+.about-me__content--main .about-txt--container .about__span-holder {
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
   border: 1px solid rgb(209, 179, 179);
