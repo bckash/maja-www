@@ -11,7 +11,8 @@ const custOpinion3 = document.getElementById("cu-op-3")
 
 // pull back nav
 const pullBack = document.getElementById("pull-back");
-const arrUp = document.getElementById("arrow-nav");
+const arrUpLink = document.getElementById("pb-arrow-link");
+const animatedBorder = document.getElementById("animation-border-div")
 
 // modal
 const descrModalFooter4Carousel1 = document.getElementById("mf-descr-1")
@@ -26,7 +27,14 @@ const mutationTagetNode = document.getElementById("mutationTN")
 
 
 window.addEventListener("scroll", showNav);
-modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter)
+modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter);
+
+arrUpLink.addEventListener("click", (()=>{
+    animatedBorder.classList.add("animation-border")
+    setTimeout(() => {
+        animatedBorder.classList.remove("animation-border")
+    }, 1500);
+}))
 
 
 // 3. FUNCTIONS ->
@@ -204,6 +212,7 @@ function showNav(){
         addRemove("opa-1", "opa-0")
     } else {
         addRemove("opa-0", "opa-1")
+
     }
 
     // if (pos>0 && pos<1392) {
