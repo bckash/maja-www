@@ -293,6 +293,33 @@ ul {
             padding: 1rem;
             background-color: v.$nl-content-body;
         }
+
+        .modal-footer {
+            justify-content: center;
+            border: #dbdad4 1px solid;
+
+            .car-description-modal {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #mf-descr-1 {
+                display: flex;                
+                color: #a15414;
+            }
+
+            #mf-descr-2 {
+                color: #6b6140;
+            }
+
+            #mf-descr-3 {
+                color: #920d50;
+            }
+
+        }
+
+        #mf-descr-1 {display: flex}
 }
 
 .animation-emoji {

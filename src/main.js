@@ -14,16 +14,21 @@ const pullBack = document.getElementById("pull-back");
 const arrUpLink = document.getElementById("pb-arrow-link");
 const animatedBorder = document.getElementById("animation-border-div")
 
-// modal
+// MODAL
 const descrModalFooter4Carousel1 = document.getElementById("mf-descr-1")
 const descrModalFooter4Carousel2 = document.getElementById("mf-descr-2")
 const descrModalFooter4Carousel3 = document.getElementById("mf-descr-3")
-const carsuouselItemsALL = Array.from(document.getElementsByClassName("ciJS"))
+const carsuouselDescrALL = Array.from(document.getElementsByClassName("car-description-modal"))
+
 const modalTriggerButton = document.getElementById("modal-trigger-button")
 const mutationTagetNode = document.getElementById("mutationTN")
 
+
+
+//
 // 2. EL
 //-------------
+
 
 
 window.addEventListener("scroll", showNav);
@@ -39,6 +44,7 @@ arrUpLink.addEventListener("click", (()=>{
 
 // 3. FUNCTIONS ->
 //---------------
+
 
 // SLIDESHOW 
 
@@ -197,8 +203,7 @@ slideShow (custOpinion1, custOpinion2, custOpinion3, "animation__in-left-right",
 
 
 // "PULL BACK NAV"
-
-// show & hide bottom nav
+// show & hide 
 function showNav(){
     
     let pos = window.scrollY;
@@ -232,28 +237,48 @@ function showNav(){
 } 
 
 
+//------------------------------------------------------------------------------
+// setting up "mutation watch for carousel" inside modal - to catch change that i can built "display toggle function" upon ( to show "descriptions for carousel imgs" in modal footer)
+// ----------------------------------------------------------------------------
 
+
+// config for mutation observer
 const config = { attributes: true, childList: true, subtree: true };
-
+// callback for MO
 function mutationCallback(mutations) {
     for (let m of mutations) {
         if (m.type === 'attributes' && !m.target.classList.contains("active") && !m.target.classList.contains("carousel-item-start")) {
-            console.log(m.target)
+            // console.log(m.target.id)
+
+            function toggleVisibility(ID){
+                carsuouselDescrALL.map( div => {
+                    div.id === ID ? div.style.display = "flex" : div.style.display = "none"
+                })
+            }
+
+            switch(m.target.id) {
+                case "c1":
+                    console.log("2")
+                    toggleVisibility("mf-descr-2")
+                    break;
+                case "c2":
+                    console.log("3")
+                    toggleVisibility("mf-descr-3")
+                    break;
+                case "c3":
+                    console.log("1")
+                    toggleVisibility("mf-descr-1")
+                    break;
+              }
         }
     }
 }
-
+// new MO
 let classObserver = new MutationObserver(mutationCallback);
 
 
-// MODAL
+// CAROUSLE DESCRIPTIONS INSIDE MODAL
 function showCarouselDescriptionInModalFooter () {
-
     console.clear()
-
-
-
     classObserver.observe(mutationTagetNode, config)
-
-
 }
