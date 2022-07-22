@@ -211,6 +211,10 @@ ul {
                 text-align: center;
             }
 
+            p:nth-of-type(1) {
+                text-align: center;
+            }
+
             .about-hi {
                 font-size: 1.2em;
                 padding-left: 4rem;
@@ -1069,12 +1073,7 @@ ul {
     }
 
     .pb-container a {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1001;
+
     }
 
     #arrow-nav {
@@ -1087,6 +1086,11 @@ ul {
     #animation-border-div {
         height: 40px;
         border-radius: 50%;
+        // position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
     }
 
     .animation-border {

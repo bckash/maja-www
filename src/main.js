@@ -29,12 +29,12 @@ const mutationTagetNode = document.getElementById("mutationTN")
 window.addEventListener("scroll", showNav);
 modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter);
 
-arrUpLink.addEventListener("click", (()=>{
-    animatedBorder.classList.add("animation-border")
-    setTimeout(() => {
-        animatedBorder.classList.remove("animation-border")
-    }, 1500);
-}))
+// arrUpLink.addEventListener("click", (()=>{
+//     animatedBorder.classList.add("animation-border")
+//     setTimeout(() => {
+//         animatedBorder.classList.remove("animation-border")
+//     }, 1500);
+// }))
 
 
 // 3. FUNCTIONS ->
