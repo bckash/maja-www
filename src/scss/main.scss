@@ -1077,7 +1077,7 @@ ul {
     }
 
     #arrow-nav {
-        font-size: 2.5rem;
+        font-size: 3rem;
         transform: rotate(90deg);
         color: rgb(161, 161, 170);
         transition: color .4s;
@@ -1098,8 +1098,6 @@ ul {
     }
 }
 
-
-
 .opa-1 {
     opacity: 1;
 }
@@ -1108,11 +1106,6 @@ ul {
     opacity: 0;
 }
 
-
-@keyframes pull-up {
-    from {opacity: 1; outline: 0px rgb(71, 71, 71) solid;}
-    to {opacity:0; outline: 14px rgb(48, 48, 48) solid;}
-}
 
 
 

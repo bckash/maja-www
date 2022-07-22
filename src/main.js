@@ -11,8 +11,7 @@ const custOpinion3 = document.getElementById("cu-op-3")
 
 // pull back nav
 const pullBack = document.getElementById("pull-back");
-const arrUpLink = document.getElementById("pb-arrow-link");
-const animatedBorder = document.getElementById("animation-border-div")
+const arrUp = document.getElementById("arrow-nav");
 
 // modal
 const descrModalFooter4Carousel1 = document.getElementById("mf-descr-1")
@@ -212,7 +211,6 @@ function showNav(){
         addRemove("opa-1", "opa-0")
     } else {
         addRemove("opa-0", "opa-1")
-
     }
 
     // if (pos>0 && pos<1392) {
