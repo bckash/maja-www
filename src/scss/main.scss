@@ -211,10 +211,6 @@ ul {
                 text-align: center;
             }
 
-            p:nth-of-type(1) {
-                text-align: center;
-            }
-
             .about-hi {
                 font-size: 1.2em;
                 padding-left: 4rem;
@@ -1072,8 +1068,17 @@ ul {
         position: relative;
     }
 
+    .pb-container a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1001;
+    }
+
     #arrow-nav {
-        font-size: 3rem;
+        font-size: 2.5rem;
         transform: rotate(90deg);
         color: rgb(161, 161, 170);
         transition: color .4s;
@@ -1082,17 +1087,14 @@ ul {
     #animation-border-div {
         height: 40px;
         border-radius: 50%;
-        // position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
     }
 
     .animation-border {
         animation: pull-up .4s 1 linear;
     }
 }
+
+
 
 .opa-1 {
     opacity: 1;
@@ -1102,6 +1104,11 @@ ul {
     opacity: 0;
 }
 
+
+@keyframes pull-up {
+    from {opacity: 1; outline: 0px rgb(71, 71, 71) solid;}
+    to {opacity:0; outline: 14px rgb(48, 48, 48) solid;}
+}
 
 
 

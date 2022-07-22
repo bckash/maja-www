@@ -11342,9 +11342,6 @@ ul {
   display: inline-block;
   text-align: center;
 }
-.about-me__content--main .about-txt--container p:nth-of-type(1) {
-  text-align: center;
-}
 .about-me__content--main .about-txt--container .about-hi {
   font-size: 1.2em;
   padding-left: 4rem;
@@ -12079,8 +12076,16 @@ ul {
 .pull-back .pb-container {
   position: relative;
 }
+.pull-back .pb-container a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1001;
+}
 .pull-back #arrow-nav {
-  font-size: 3rem;
+  font-size: 2.5rem;
   transform: rotate(90deg);
   color: rgb(161, 161, 170);
   transition: color 0.4s;
@@ -12088,10 +12093,6 @@ ul {
 .pull-back #animation-border-div {
   height: 40px;
   border-radius: 50%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
 }
 .pull-back .animation-border {
   animation: pull-up 0.4s 1 linear;
@@ -12105,6 +12106,16 @@ ul {
   opacity: 0;
 }
 
+@keyframes pull-up {
+  from {
+    opacity: 1;
+    outline: 0px rgb(71, 71, 71) solid;
+  }
+  to {
+    opacity: 0;
+    outline: 14px rgb(48, 48, 48) solid;
+  }
+}
 footer {
   display: flex;
   flex-direction: row;
