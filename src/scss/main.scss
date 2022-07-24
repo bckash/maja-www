@@ -302,20 +302,21 @@ ul {
                 display: none;
                 flex-direction: column;
                 text-align: center;
+                color: #55504b;
             }
 
-            #mf-descr-1 {
-                display: flex;                
-                color: #a15414;
-            }
+            // #mf-descr-1 {
+            //     display: flex;                
+            //     color: #a15414;
+            // }
 
-            #mf-descr-2 {
-                color: #6b6140;
-            }
+            // #mf-descr-2 {
+            //     color: #6b6140;
+            // }
 
-            #mf-descr-3 {
-                color: #920d50;
-            }
+            // #mf-descr-3 {
+            //     color: #920d50;
+            // }
 
         }
 
@@ -433,7 +434,7 @@ ul {
 }
 
 .offer__content {
-    background-color: v.$nl-back-pink-light;
+
     text-align: center;
     @include v.article;
     height: 62rem;
@@ -470,9 +471,8 @@ ul {
         }
 
         &-body {
-            height: max-content;
             width: 90%;
-            background-color: rgb(250, 248, 244);
+            background-color: v.$nl-content-body;
 
             #o-intro {
 
@@ -490,27 +490,31 @@ ul {
             .intro-container, .intro-container--main {
                 position: relative;
 
-                &__img {
-                    border-radius: 20px;
+                img {
+                    border: 10px solid rgb(236, 209, 193);
+                    border-radius: 1500px;
                 }
 
                 &__img-overlay {
                     position: absolute;
                     top: 0;
-                    bottom: 0;
+                    bottom: 0rem;
                     left: 0;
                     right: 0;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: rgba(0, 0, 0, 0.24);
+                    // background-color: rgba(0, 0, 0, 0.24);
 
                     span {
-                        display: block;
-                        width: 100%;
-                        font-size: 3rem;
-                        color: rgb(197, 191, 191);
-                        background-color: rgba(0, 0, 0, 0.288);
+                        display: inline-block;
+                        width: 64%;
+                        font-size: 2.5rem;
+                        color: rgb(255, 227, 215);
+                        background-color: rgba(41, 17, 8, 0.568);
+                        // border-bottom-left-radius:50px;
+                        // border-bottom-right-radius: 50px;
+                        padding: 1rem 0;
                     }
                 }
             }
@@ -536,7 +540,6 @@ ul {
         }
         
         &-icons {
-
             width: 10%;
             
             #side-nav {
@@ -589,12 +592,12 @@ ul {
             align-items: center;
             justify-content: center;
             font-style: italic;
-            height: 14rem;
+            height: 12rem;
 
             span {
                 width: 70%;
                 border-left: 6px solid v.$nl-brown-detail-light;
-                margin: 2rem auto;
+                margin: 0rem auto 1rem auto;
                 text-align: left;
                 padding-left: 2rem;
             }
@@ -604,11 +607,18 @@ ul {
             display: flex;
             justify-content: center;
 
-            & .info-rest__example {
+            .info-rest__example {
                 display: flex;
                 flex-direction: column;
                 width: 28%;
                 margin: 1rem 0;
+
+                .title-span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    height: 4rem;
+                }
 
                 &--icon {
                     span {
@@ -1133,8 +1143,8 @@ ul {
 
 
 @keyframes pull-up {
-    from {opacity: 1; outline: 0px rgb(71, 71, 71) solid;}
-    to {opacity:0; outline: 14px rgb(48, 48, 48) solid;}
+    from {opacity: 1; outline: 0px rgb(112, 8, 26) solid;}
+    to {opacity:0; outline: 14px rgb(65, 5, 40) solid;}
 }
 
 

@@ -71,15 +71,6 @@ const // body containers
     snBodyInfoSt = document.getElementById("style-info__container"),    
     snBodyImgSt = document.getElementById("photo__container-st")
 
-// const // carousel for INFO
-//     bodyFusion = document.getElementById("ext-b-fusion"),
-//     bodyMicro = document.getElementById("ext-b-micro"),
-//     bodyShrink = document.getElementById("ext-b-shrinks"),
-//     bodyTape = document.getElementById("ext-b-tape"),
-//     bodyComb = document.getElementById("ext-b-comb"),
-//     bodyBotox = document.getElementById("tr-b-botox"),
-//     bodyKreatyna = document.getElementById("tr-b-kreatyna");
-
 const // info holder <article>
     infoHolderExt = document.getElementById("info-holder__extension"),
     infoHolderTreat = document.getElementById("info-holder__treatment")
@@ -141,7 +132,7 @@ const mediaSN = [
         id: "easy shrinks",
         about: "Shrink tube hair extensions get their name from little plastic tubes known as “shrink tubes” or “shrinkies.” These tubes shrink when they are heated and are sometimes composed of an inner coating of keratin. Keratin is used in several hair extension methods and can naturally be found in human skin, hair, and nails.",
         suitable: "perfect for thin or short hair",
-        achieve: "These are virtually undetectable, lightweight and secure. The aim of this technique is to heat shrinkies into position and blend in with the hair.",
+        achieve: "Virtually undetectable, lightweight and secure. The aim of this technique is to heat shrinkies into position and blend in with the hair.",
         last: "2-3 months"
     },
     {
@@ -153,7 +144,7 @@ const mediaSN = [
     },
     {
         id: "combline",
-        about: "CombLine hair extension application is creating invisible, light weight and super comfortable bonds. It is for both men and women of all ages, an extremely versatile extension application used for both thickening and lengthening, it can be applied to the fringe, sides and crown areas a Real all over application. With the ability to straighten, blow dry, color and perm over the bonds CombLine is the best choice for any hair extension application.",
+        about: "CombLine hair extension application is creating invisible, light weight and super comfortable bonds. It can be applied to the fringe, sides and crown areas - a real all over application. With the ability to straighten, blow dry, color and perm over the bonds CombLine is the best choice for any hair extension application.",
         suitable: "all hair types, perfect fot thin hair",
         achieve: "Gives both thickening and lengthening, bond are invisible. Easy to pull up and hide in ponytail.",
         last: "up to 8 weeks"
@@ -163,7 +154,7 @@ const mediaSN = [
 const mediaSNTreat = [
     {
         id: "botox",
-        about: "Botox is the ultimate way to revive your hair. An all in one treatment, it restores dry damaged hair, improves texture and shine, hydrates and deeply conditions, treats split ends, tames frizz, and gives UV protection. It’s full of nourishing proteins, antioxidants, vitamins, conditioning oils and other hair-healthy ingredients that fill in the gaps in the hair fibres and restore it to its natural beauty.",
+        about: "Botox is the ultimate way to revive your hair. An all in one treatment, restores and improves dry damged hair in various ways. It’s full of nourishing proteins, antioxidants, vitamins, conditioning oils and other hair-healthy ingredients that fill in the gaps in the hair fibres and restore it to its natural beauty.",
         suitable: "anyone who’s hair is very damaged, over-processed, thin in structure and in need of deep restoration",
         achieve: "restores dry damaged hair, improves texture and shine, hydrates and deeply conditions, treats split ends, tames frizz, and gives UV protection.",
         last: "3-5 months "
