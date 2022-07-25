@@ -12,21 +12,18 @@
 
 </head>
 <body>
-    <!-- HEADER  + NAV -->
-    <header id="showcase" class="showcase">
 
-        <!-- showcase  -->
-        <div class="showcase__logo--container">
-            <img class="showcase__logo" src="img/newlife_logo.png" alt="">
+    <header id="showcase" class="showcase">
+        <div class="showcase__logo">
+            <img src="img/newlife_logo.png" alt="New Life 4 Hair logo">
         </div>
         <video src="video/vid1.mp4" muted loop autoplay></video>
-        <div class="overlay polka"></div>
-        <div class="showcase__grad"></div>
-
+        <div class="showcase__overlay"></div>
+        <div class="showcase__bottom-gradient"></div>
         <!-- main nav -->
         <nav class="main-nav">
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about-me-container">About</a></li>
                 <li><a href="#offer">Offer</a></li>
                 <li><a href="#price">Price</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -34,1277 +31,1266 @@
         </nav>
     </header>
 
-    <!-- B1-->
-    <section class="bridge-1 paralax-gradient-1">
-        <div>
-            <svg  viewBox="0 0 934 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_221_8)">
-                <path d="M934 30L0 156H703.025H934V30Z" fill="#FFF9F5"/>
-                </g>
-                <defs>
-                <filter id="filter0_d_221_8" x="-30" y="0" width="994" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset/>
-                <feGaussianBlur stdDeviation="15"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_8"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_8" result="shape"/>
-                </filter>
-                </defs>
-                </svg>
-                
-        </div>
-        <div class="bridge-1-1__svg--right">
-
-        </div>
-
-    </section>
-
-    <!-- ABOUT ME -->
-    <article id="about" class="about-me">
-        
-        <div class="about-me__content">
-            <!-- head -->
-            <div class="about-me__content--head">
-                About me
+    <main>
+        <!-- bridge 1-->
+        <section class="gradient-bridge--1 gradient--gb1">
+            <div>
+                <svg  viewBox="0 0 934 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_221_8)">
+                    <path d="M934 30L0 156H703.025H934V30Z" fill="#FFF9F5"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_221_8" x="-30" y="0" width="994" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="15"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_8"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_8" result="shape"/>
+                    </filter>
+                    </defs>
+                </svg>                    
             </div>
-            <!-- main -->
-            <div class="about-me__content--main">
-                <div>
-                    <img class="rounded-circle" src="img/maja500.jpg" alt="">
+        </section>
+
+        <!-- ABOUT ME -->
+        <article id="about-me-container">
+            <div class="about-me">
+                <!-- head -->
+                <div class="about-me__head">
+                    About me
                 </div>
-                <!-- | tx container -->
-                <div class="about-txt--container">
-                    <div class="without-border">
-                        <p>
-                            <span class="about-hi animation-emoji">🖐</span><span class="about-hairstylist"> Hi, my name is <strong class="about-span-color">Maja</strong>,<br>I am a <strong class="about-span-color">mobile hairstylist.</strong></span> <br> 
-                        </p>                      
-                        <div id="about-triangle"></div>
-                        <p id="about-p2">
-                            My professional experience started in 2021, when I became certified <em>Hair Extension Stylist*</em>. Since then, I've been gaining skills and perfecting my craft, to create hairstyles that complement uniqueness of my clients.<br> 
-                            I always loved working with hair - fascinated how my work could completely change not only how people look but how they feet about themselves. Making this happen throughout my passion – is a wonderful feeling.<hr> My job is to recreate your vision or help to recover - adding <strong class="about-span-color">New Life</strong> to your hair.
-                        </p>
-                        <!-- Button trigger modal -->
-                        <button id="modal-trigger-button" type="button" class="btn about__span-holder shadow-sm" data-bs-toggle="modal" data-bs-target="#AboutMe">
-                            <span class="about-cert-info">* Show Certifications</span>
-                            <span class="material-icons">
-                                workspace_premium
-                            </span>
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="AboutMe" tabindex="-1" aria-labelledby="AboutMeLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="AboutMeLabel">Certification Gallery</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <!-- modal body -->
-                                <div class="modal-body">
-                                    <!-- carrousel -->
-                                    <div id="car00" class="carousel slide" data-bs-ride="carousel">
-                                        <div id="mutationTN" class="carousel-inner">
-                                        <!-- 1 -->
-                                          <div id="c1" class="carousel-item active">
-                                            <img src="img/certification/certification-1.jpg" class="d-block w-100" alt="...">
-                                          </div>
-                                          <!-- 2 -->
-                                          <div id="c2" class="carousel-item">
-                                            <img src="img/certification/certification-2.jpg" class="d-block w-100" alt="...">
-                                          </div>
-                                          <!-- 3 -->
-                                          <div id="c3" class="carousel-item">
-                                            <img src="img/certification/certification-3.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#car00" data-bs-slide="prev">
-                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                          <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#car00" data-bs-slide="next">
-                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                          <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- footer -->
-                                <div class="modal-footer">
-                                    <div id="mf-descr-1" class="car-description-modal">
-
-
-                                            <h5>Hair Extension Specialist</h5>
-                                            <p><i>Belle Academy</i> | 15.06.2021</p>
-
-                                    </div>
-                                    <div id="mf-descr-2" class="car-description-modal">
-                                     
-
-                                            <h5>Professional Brazilian Keratin Hair Treatments</h5>
-                                        <p><i>COCOCHOCO Professional</i> | 08.10.2021</p>
-
-                                        
-                                    </div>
-                                    <div id="mf-descr-3" class="car-description-modal">
-                                       
-
-                                            <h5>Professional Hair Botox Treatments</h5>
-                                        <p><i>COCOCHOCO Professional</i> | 08.10.2021</p>
-
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+                <!-- main -->
+                <div class="about-me__main">
+                    <!-- | img -->
+                    <div>
+                        <img class="rounded-circle" src="img/maja500.jpg" alt="">
                     </div>
-                    
-                </div>
-            </div>
-        </div>
-    </article>
+                    <!-- | txt container -->
+                    <div class="txt-container">
+                            <p>
+                                <span class="p1--hi animation-emoji">
+                                    🖐
+                                </span>
+                                <span class="p1--hairstylist">
+                                    Hi, my name is <strong class="about-span-color">Maja</strong>,<br>I am a <strong class="about-span-color">mobile hairstylist.</strong>
+                                </span><br> 
+                            </p>                      
 
-    <!-- B2 -->
-    <section class="bridge-2">
-        <div>
-            <svg viewBox="0 0 934 158" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_221_7)">
-                <path d="M0 138L934 0H230.975H0V138Z" fill="#FFF9F5"/>
-                </g>
-                <defs>
-                <filter id="filter0_d_221_7" x="-10" y="0" width="954" height="158" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dy="10"/>
-                <feGaussianBlur stdDeviation="5"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0.370833 0 0 0 0 0.322934 0 0 0 0 0.322934 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_7"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_7" result="shape"/>
-                </filter>
-                </defs>
-            </svg>
-        </div>
-    </section>
-
-    <!-- PARALAX -->
-    <section class="paralax-1 paralax-gradient">
-        <header class="">
-            <hr>
-            <p><q>I believe,<br> hairstyle is a <strong>perfect way</strong><br> of expressing ourselves.</q></p>
-            <hr>
-        </header>
-        <div id="paralax-content"></div>
-    </section>
-
-    <!-- B3 -->
-    <section class="bridge-3">   
-        <div>
-            <svg  viewBox="0 0 934 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_221_8)">
-                <path d="M934 30L0 156H703.025H934V30Z" fill="#FFF9F5"/>
-                </g>
-                <defs>
-                <filter id="filter0_d_221_8" x="-30" y="0" width="994" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset/>
-                <feGaussianBlur stdDeviation="15"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_8"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_8" result="shape"/>
-                </filter>
-                </defs>
-                </svg>
-        </div>
-    </section>
-
-    <!-- OFFER -->
-    <section class="offer" id="offer">
-        <div class="offer__content">
-            <!-- header -->
-            <header class="offer__content--head">
-                Offer
-            </header>
-            <!-- nav big -->
-            <nav class="offer__content--nav-big">
-                <ul class="offer__content--nav-big-ul">
-                    <li id="nav-big-ext">extension</li>
-                    <li id="nav-big-treat">treatment</li>
-                    <li id="nav-big-style">styling</li>
-                </ul>
-            </nav>
-            <!-- nav small -->
-            <nav class="offer__content--nav-small">
-                <!-- | extensions -->
-                <ul id="nav-small-ext" class="offer__content--nav-small-ul">
-                    <li class="ext-all" id="ext-fusion">fusion bonds</li>
-                    <li class="ext-all" id="ext-micro">micro rings</li>
-                    <li class="ext-all" id="ext-shrinks">easy shrinks</li>
-                    <li class="ext-all" id="ext-tape">tape on</li>
-                    <li class="ext-all" id="ext-comb">combline</li>
-                </ul>
-                <!-- | treatment -->
-                <ul id="nav-small-treat" class="offer__content--nav-small-ul">
-                    <li class="tr-all" id="tr-botox">botox</li>
-                    <li class="tr-all" id="tr-kreatyna">keratyna</li>
-                </ul>
-                <!-- | style -->
-                <ul id="nav-small-style" class="offer__content--nav-small-ul">
-                    <li>
-                        <div id="spinner-style" class="spinner-border" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <!-- main content-->
-            <section class="offer__content--main">
-                <!-- | body -->
-                <div class="offer__content--main-body br"> 
-                    <!-- || intro -->
-                    <section id="o-intro" class="intro-container--main">
-                        <div>
-                            <img src="img/offer-intro/intro-main.jpg" alt="">
-                        </div>
-                        <div class="intro-container__img-overlay">
-                            <span>please choose<br> from the main menu</span>
-                        </div>
-                    </section>
-                    <!-- || extensions -->
-                    <section id="extension">
-                        <!-- INTRO -->
-                        <div id="ext-intro" class="intro-container">
-                            <div class="intro-container__img">
-                                <img src="img/offer-intro/intro-extensions.jpg" alt="">
-                            </div>
-                            <div class="intro-container__img-overlay">
-                                <span>extensions</span>
-                            </div>
-                        </div>
-                        <!-- INFO -->
-                        <section id="ext-info__container">
-                            <!-- carousel -->
-                            <section class="carousel__container">
-                                <!-- ||| fusion -->
-                                <section class="ext-b-all" id="ext-b-fusion">
-                                    <div id="car1" class="carousel slide" data-bs-ride="carousel"> 
-                                        <!-- | img -->
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="img/extension/sn-info-fb.jpg" class="d-block w-100" alt="...">
+                            <p id="about-p2">
+                                My professional experience started in 2021, when I became certified <em>Hair Extension Stylist*</em>. Since then, I've been gaining skills and perfecting my craft, to create hairstyles that complement uniqueness of my clients.<br> 
+                                I always loved working with hair - fascinated how my work could completely change not only how people look but how they feet about themselves. Making this happen throughout my passion – is a wonderful feeling.<hr> My job is to recreate your vision or help to recover - adding <strong class="about-span-color">New Life</strong> to your hair.
+                            </p>
+                            <div id="about-triangle"></div>
+                            <!-- Button trigger modal -->
+                            <button id="modal-trigger-button" type="button" class="btn about__span-holder shadow-sm" data-bs-toggle="modal" data-bs-target="#AboutMe">
+                                <span class="about-cert-info">* Show Certifications</span>
+                                <span class="material-icons">
+                                    workspace_premium
+                                </span>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="AboutMe" tabindex="-1" aria-labelledby="AboutMeLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="AboutMeLabel">Certification Gallery</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <!-- modal body -->
+                                    <div class="modal-body">
+                                        <!-- carrousel -->
+                                        <div id="car00" class="carousel slide" data-bs-ride="carousel">
+                                            <div id="mutationTN" class="carousel-inner">
+                                                <!-- 1 -->
+                                                <div id="c1" class="carousel-item active">
+                                                    <img src="img/certification/certification-1.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                                <!-- 2 -->
+                                                <div id="c2" class="carousel-item">
+                                                    <img src="img/certification/certification-2.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                                <!-- 3 -->
+                                                <div id="c3" class="carousel-item">
+                                                    <img src="img/certification/certification-3.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#car00" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button" data-bs-target="#car00" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                                </button>
                                             </div>
                                         </div>
-                                        <!-- title -->
-                                        <div class="carousel-info">
-                                            <span>fusion bonds</span>
+                                    </div>
+                                    <!-- modal footer -->
+                                    <div class="modal-footer">
+                                        <div id="mf-descr-1" class="car-description-modal">
+                                                <h5>Hair Extension Specialist</h5>
+                                                <p><i>Belle Academy</i> | 15.06.2021</p>
+                                        </div>
+                                        <div id="mf-descr-2" class="car-description-modal">
+                                            <h5>Professional Brazilian Keratin Hair Treatments</h5>
+                                            <p><i>COCOCHOCO Professional</i> | 08.10.2021</p>   
+                                        </div>
+                                        <div id="mf-descr-3" class="car-description-modal">
+                                            <h5>Professional Hair Botox Treatments</h5>
+                                            <p><i>COCOCHOCO Professional</i> | 08.10.2021</p>  
                                         </div>
                                     </div>
+                                </div>
+                                </div>
+                            </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- B2 -->
+        <section class="bridge-2">
+            <div>
+                <svg viewBox="0 0 934 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_221_7)">
+                    <path d="M0 138L934 0H230.975H0V138Z" fill="#FFF9F5"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_221_7" x="-10" y="0" width="954" height="158" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="10"/>
+                    <feGaussianBlur stdDeviation="5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.370833 0 0 0 0 0.322934 0 0 0 0 0.322934 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_7"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_7" result="shape"/>
+                    </filter>
+                    </defs>
+                </svg>
+            </div>
+        </section>
+
+        <!-- PARALAX -->
+        <section class="paralax-1 paralax-gradient">
+            <header class="">
+                <hr>
+                <p><q>I believe,<br> hairstyle is a <strong>perfect way</strong><br> of expressing ourselves.</q></p>
+                <hr>
+            </header>
+            <div id="paralax-content"></div>
+        </section>
+
+        <!-- B3 -->
+        <section class="bridge-3">   
+            <div>
+                <svg  viewBox="0 0 934 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_221_8)">
+                    <path d="M934 30L0 156H703.025H934V30Z" fill="#FFF9F5"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_221_8" x="-30" y="0" width="994" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="15"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_8"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_8" result="shape"/>
+                    </filter>
+                    </defs>
+                    </svg>
+            </div>
+        </section>
+
+        <!-- OFFER -->
+        <section class="offer" id="offer">
+            <div class="offer__content">
+                <!-- header -->
+                <header class="offer__content--head">
+                    Offer
+                </header>
+                <!-- nav big -->
+                <nav class="offer__content--nav-big">
+                    <ul class="offer__content--nav-big-ul">
+                        <li id="nav-big-ext">extension</li>
+                        <li id="nav-big-treat">treatment</li>
+                        <li id="nav-big-style">styling</li>
+                    </ul>
+                </nav>
+                <!-- nav small -->
+                <nav class="offer__content--nav-small">
+                    <!-- | extensions -->
+                    <ul id="nav-small-ext" class="offer__content--nav-small-ul">
+                        <li class="ext-all" id="ext-fusion">fusion bonds</li>
+                        <li class="ext-all" id="ext-micro">micro rings</li>
+                        <li class="ext-all" id="ext-shrinks">easy shrinks</li>
+                        <li class="ext-all" id="ext-tape">tape on</li>
+                        <li class="ext-all" id="ext-comb">combline</li>
+                    </ul>
+                    <!-- | treatment -->
+                    <ul id="nav-small-treat" class="offer__content--nav-small-ul">
+                        <li class="tr-all" id="tr-botox">botox</li>
+                        <li class="tr-all" id="tr-kreatyna">keratyna</li>
+                    </ul>
+                    <!-- | style -->
+                    <ul id="nav-small-style" class="offer__content--nav-small-ul">
+                        <li>
+                            <div id="spinner-style" class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- main content-->
+                <section class="offer__content--main">
+                    <!-- | body -->
+                    <div class="offer__content--main-body br"> 
+                        <!-- || intro -->
+                        <section id="o-intro" class="intro-container--main">
+                            <div>
+                                <img src="img/offer-intro/intro-main.jpg" alt="">
+                            </div>
+                            <div class="intro-container__img-overlay">
+                                <span>please choose<br> from the main menu</span>
+                            </div>
+                        </section>
+                        <!-- || extensions -->
+                        <section id="extension">
+                            <!-- INTRO -->
+                            <div id="ext-intro" class="intro-container">
+                                <div class="intro-container__img">
+                                    <img src="img/offer-intro/intro-extensions.jpg" alt="">
+                                </div>
+                                <div class="intro-container__img-overlay">
+                                    <span>extensions</span>
+                                </div>
+                            </div>
+                            <!-- INFO -->
+                            <section id="ext-info__container">
+                                <!-- carousel -->
+                                <section class="carousel__container">
+                                    <!-- ||| fusion -->
+                                    <section class="ext-b-all" id="ext-b-fusion">
+                                        <div id="car1" class="carousel slide" data-bs-ride="carousel"> 
+                                            <!-- | img -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="img/extension/sn-info-fb.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                            </div>
+                                            <!-- title -->
+                                            <div class="carousel-info">
+                                                <span>fusion bonds</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!-- ||| micro rings -->
+                                    <section class="ext-b-all" id="ext-b-micro">
+                                        <div id="car2" class="carousel slide" data-bs-ride="carousel"> 
+                                            <!-- | img -->
+                                            <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="img/14-dl-1.jpg" class="d-block w-100" alt="...">
+                                            </div>
+                                            </div>
+                                            <!-- title -->
+                                            <div class="carousel-info">
+                                                <span>micro rings</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!-- ||| easy shrinks -->
+                                    <section class="ext-b-all" id="ext-b-shrinks">
+                                        <div id="car3" class="carousel slide" data-bs-ride="carousel"> 
+                                            <!-- | img -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="img/extension/sn-info-easy.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                            </div>
+                                            <!-- title -->
+                                            <div class="carousel-info">
+                                                <span>easy shrinks</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!-- ||| tape on -->
+                                    <section class="ext-b-all" id="ext-b-tape">
+                                        <div id="car4" class="carousel slide" data-bs-ride="carousel"> 
+                                            <!-- | img -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="img/extension/sn-info-tape.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                            </div>
+                                            <!-- title -->
+                                            <div class="carousel-info">
+                                                <span>tape on</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!-- ||| combline -->
+                                    <section class="ext-b-all" id="ext-b-comb">
+                                        <div id="car5" class="carousel slide" data-bs-ride="carousel"> 
+                                            <!-- | img -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="img/14-dl-3.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                            </div>
+                                            <!-- title -->
+                                            <div class="carousel-info">
+                                                <span>combline</span>
+                                            </div>
+                                        </div>                            
+                                    </section>
                                 </section>
-                                <!-- ||| micro rings -->
-                                <section class="ext-b-all" id="ext-b-micro">
-                                    <div id="car2" class="carousel slide" data-bs-ride="carousel"> 
+                                <!-- information -->
+                                <article class="info-holder" id="info-holder__extension">
+                                    <!-- INFO -->
+                                    <div class="info-holder__info">
+                                        <!-- | about -->
+                                        <div class="info-holder__info--about" >
+                                            <span id="ih-about" class="fill-fields" >
+                                                <!-- <js> -->
+                                            </span>
+                                        </div>
+                                        <!-- | rest -->
+                                        <div class="info-holder__info--rest">
+
+                                            <!-- Suitable -->
+                                            <div class="info-rest__example">
+                                                <!-- icon -->
+                                                <div class="info-rest__example--icon">
+                                                    <span class="material-icons">
+                                                        face_3
+                                                    </span>
+                                                </div>
+                                                <!-- title -->
+                                                <div class="info-rest__example--title">
+                                                    <span class="title-span">Suitable<br> for:</span>
+                                                </div>
+                                                <!-- descr -->
+                                                <div class="info-rest__example--descr">
+                                                    <span id="ih-suitable" class="fill-fields">
+                                                    <!-- <js> -->
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <!-- Achieve -->
+                                            <div class="info-rest__example">
+                                                <!-- icon -->
+                                                <div class="info-rest__example--icon">
+                                                    <span class="material-icons">
+                                                        auto_awesome
+                                                    </span>
+                                                </div>
+                                                <!-- title -->
+                                                <div class="info-rest__example--title">
+                                                    <span class="title-span">What they achieve:</span>
+                                                </div>
+                                                <!-- descr -->
+                                                <div class="info-rest__example--descr">
+                                                    <span id="ih-achieve" class="fill-fields">
+                                                        <!-- <js> -->
+                                                    </span>
+                                                </div>
+                                            </div>
+                                                
+                                            <!-- How Long -->
+                                            <div class="info-rest__example">
+                                                <!-- icon -->
+                                                <div class="info-rest__example--icon">
+                                                    <span class="material-icons">
+                                                        watch_later
+                                                    </span>
+                                                </div>
+                                                <!-- title -->
+                                                <div class="info-rest__example--title">
+                                                    <span class="title-span">Duration:</span>
+                                                </div>
+                                                <!-- descr -->
+                                                <div class="info-rest__example--descr">
+                                                    <span id="ih-last" class="fill-fields">
+                                                        <!-- <js> -->
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </article>
+                            </section>
+                            <!-- PHOTO (off)-->
+                            <section id="photo__container-ext">
+                                <!-- / header -->
+                                <!-- <header class="photo-gallery-head">
+                                    <div>
+                                        <span>| Gallery</span>
+                                    </div>
+                                </header> -->
+                                <!-- | ext : fusion -->
+                                <section class="ext-photo" id="ext-photo-fusion">
+                                    <!-- CAROUSEL -->
+                                    <div id="car11" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                                        <!-- | indicators -->
+                                        <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#car11" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#car11" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#car11" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#car11" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#car11" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#car11" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                        </div>
                                         <!-- | img -->
                                         <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="img/14-dl-1.jpg" class="d-block w-100" alt="...">
+                                            <img src="img/extension/fusion/fb1.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/fusion/fb2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/fusion/fb3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/fusion/fb4.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/fusion/fb5.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/fusion/fb6.jpg" class="d-block w-100" alt="...">
                                         </div>
                                         </div>
+                                        <!-- | prev/next -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#car11" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#car11" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                        </button>
                                         <!-- title -->
-                                        <div class="carousel-info">
-                                            <span>micro rings</span>
+                                        <div class="carousel-info-big">
+                                            <span>hot fusion</span>
                                         </div>
                                     </div>
                                 </section>
-                                <!-- ||| easy shrinks -->
-                                <section class="ext-b-all" id="ext-b-shrinks">
-                                    <div id="car3" class="carousel slide" data-bs-ride="carousel"> 
+                                <!-- | ext : micro -->
+                                <section class="ext-photo" id="ext-photo-micro"> 
+                                </section> 
+                                <!-- | ext :  easy-->
+                                <section class="ext-photo" id="ext-photo-easy">
+                                    <!-- CAROUSEL -->
+                                    <div id="car21" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                                        <!-- | indicators -->
+                                        <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#car21" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#car21" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#car21" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#car21" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#car21" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#car21" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                        <button type="button" data-bs-target="#car21" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                        <button type="button" data-bs-target="#car21" data-bs-slide-to="7" aria-label="Slide 8"></button>                                      
+                                        </div>
                                         <!-- | img -->
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="img/extension/sn-info-easy.jpg" class="d-block w-100" alt="...">
-                                            </div>
+                                        <div class="carousel-item active">
+                                            <img src="img/extension/easy/e1.jpg" class="d-block w-100" alt="...">
                                         </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/easy/e2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/easy/e3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/easy/e4.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/easy/e5.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/easy/e6.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/easy/e7.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/easy/e8.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        </div>
+                                        <!-- | prev/next -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#car21" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#car21" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                        </button>
                                         <!-- title -->
-                                        <div class="carousel-info">
-                                            <span>easy shrinks</span>
+                                        <div class="carousel-info-big">
+                                            <span>easy schrinks</span>
                                         </div>
                                     </div>
                                 </section>
-                                <!-- ||| tape on -->
-                                <section class="ext-b-all" id="ext-b-tape">
-                                    <div id="car4" class="carousel slide" data-bs-ride="carousel"> 
+                                <!-- | ext :  tape-->
+                                <section class="ext-photo" id="ext-photo-tape">
+                                    <!-- CAROUSEL -->
+                                    <div id="car41" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                                        <!-- | indicators -->
+                                        <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#car41" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#car41" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#car41" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    
+                                        </div>
                                         <!-- | img -->
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="img/extension/sn-info-tape.jpg" class="d-block w-100" alt="...">
-                                            </div>
+                                        <div class="carousel-item active">
+                                            <img src="img/extension/tape/t1.jpg" class="d-block w-100" alt="...">
                                         </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/tape/t2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/tape/t3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        </div>
+                                        <!-- | prev/next -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#car41" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#car41" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                        </button>
                                         <!-- title -->
-                                        <div class="carousel-info">
+                                        <div class="carousel-info-big">
                                             <span>tape on</span>
                                         </div>
                                     </div>
                                 </section>
-                                <!-- ||| combline -->
-                                <section class="ext-b-all" id="ext-b-comb">
-                                    <div id="car5" class="carousel slide" data-bs-ride="carousel"> 
+                                <!-- | ext :  comb-->
+                                <section class="ext-photo" id="ext-photo-comb">
+                                    <!-- CAROUSEL -->
+                                    <div id="car51" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                                        <!-- | indicators -->
+                                        <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#car51" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#car51" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#car51" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#car51" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#car51" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    
+                                        </div>
                                         <!-- | img -->
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="img/14-dl-3.jpg" class="d-block w-100" alt="...">
-                                            </div>
+                                        <div class="carousel-item active">
+                                            <img src="img/extension/combline/c1.jpg" class="d-block w-100" alt="...">
                                         </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/combline/c2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/combline/c3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/combline/c4.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/extension/combline/c5.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        </div>
+                                        <!-- | prev/next -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#car51" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#car51" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                        </button>
                                         <!-- title -->
-                                        <div class="carousel-info">
+                                        <div class="carousel-info-big">
                                             <span>combline</span>
                                         </div>
-                                    </div>                            
+                                    </div>
                                 </section>
                             </section>
-                            <!-- information -->
-                            <article class="info-holder" id="info-holder__extension">
+                        </section>
+                        <!-- || treatment -->
+                        <section id="treatment">
+                            <!-- INTRO -->
+                            <div id="tr-intro" class="intro-container">
+                                <div class="intro-container__img">
+                                    <img src="img/offer-intro/intro-treatment.jpg" alt="">
+                                </div>
+                                <div class="intro-container__img-overlay">
+                                    <span>treatment</span>
+                                </div>
+                            </div>
+                            <!-- INFO -->
+                            <section id="treat-info__container">
+                                <!-- | carousel -->
+                                <section class="carousel__container">
+                                    <!-- || botox -->
+                                    <section class="tr-b-all" id="tr-b-botox">
+                                        <div id="car21" class="carousel slide" data-bs-ride="carousel"> 
+                                            <!-- | img -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="img/treatment/sn-info-botox.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                            </div>
+                                            <!-- title -->
+                                            <div class="carousel-info">
+                                                <span>botox</span>
+                                            </div>
+                                        </div>                                    
+                                    </section>
+                                    <!-- || kreatyna -->
+                                    <section class="tr-b-all" id="tr-b-kreatyna">
+                                        <div id="car22" class="carousel slide" data-bs-ride="carousel"> 
+                                            <!-- | img -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="img/treatment/sn-info-keratine.jpg" class="d-block w-100" alt="...">
+                                                </div>
+                                            </div>
+                                            <!-- title -->
+                                            <div class="carousel-info">
+                                                <span>kreatyna</span>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </section>
+                                <!-- | information -->
+                                <section class="info-holder" id="info-holder__treatment">
                                 <!-- INFO -->
                                 <div class="info-holder__info">
-                                    <!-- | about -->
-                                    <div class="info-holder__info--about" >
-                                        <span id="ih-about" class="fill-fields" >
-                                            <!-- <js> -->
-                                        </span>
-                                    </div>
-                                    <!-- | rest -->
-                                    <div class="info-holder__info--rest">
-
-                                        <!-- Suitable -->
-                                        <div class="info-rest__example">
-                                            <!-- icon -->
-                                            <div class="info-rest__example--icon">
-                                                <span class="material-icons">
-                                                    face_3
-                                                </span>
-                                            </div>
-                                            <!-- title -->
-                                            <div class="info-rest__example--title">
-                                                <span class="title-span">Suitable<br> for:</span>
-                                            </div>
-                                            <!-- descr -->
-                                            <div class="info-rest__example--descr">
-                                                <span id="ih-suitable" class="fill-fields">
+                                        <!-- | about -->
+                                        <div class="info-holder__info--about" >
+                                            <span id="ih-about-tr" class="fill-fields-tr" >
                                                 <!-- <js> -->
-                                                </span>
-                                            </div>
+                                            </span>
                                         </div>
+                                        <!-- | rest -->
+                                        <div class="info-holder__info--rest">
 
-                                        <!-- Achieve -->
-                                        <div class="info-rest__example">
-                                            <!-- icon -->
-                                            <div class="info-rest__example--icon">
-                                                <span class="material-icons">
-                                                    auto_awesome
-                                                </span>
-                                            </div>
-                                            <!-- title -->
-                                            <div class="info-rest__example--title">
-                                                <span class="title-span">What they achieve:</span>
-                                            </div>
-                                            <!-- descr -->
-                                            <div class="info-rest__example--descr">
-                                                <span id="ih-achieve" class="fill-fields">
+                                            <!-- Suitable -->
+                                            <div class="info-rest__example">
+                                                <!-- icon -->
+                                                <div class="info-rest__example--icon">
+                                                    <span class="material-icons">
+                                                        face_3
+                                                    </span>
+                                                </div>
+                                                <!-- title -->
+                                                <div class="info-rest__example--title">
+                                                    <span>Suitable<br>for:</span>
+                                                </div>
+                                                <!-- descr -->
+                                                <div class="info-rest__example--descr">
+                                                    <span id="ih-suitable-tr" class="fill-fields-tr">
                                                     <!-- <js> -->
-                                                </span>
+                                                    </span>
+                                                </div>
                                             </div>
-                                        </div>
-                                            
-                                        <!-- How Long -->
-                                        <div class="info-rest__example">
-                                            <!-- icon -->
-                                            <div class="info-rest__example--icon">
-                                                <span class="material-icons">
-                                                    watch_later
-                                                </span>
+                                            <!-- Achieve -->
+                                            <div class="info-rest__example">
+                                                <!-- icon -->
+                                                <div class="info-rest__example--icon">
+                                                    <span class="material-icons">
+                                                        auto_awesome
+                                                    </span>
+                                                </div>
+                                                <!-- title -->
+                                                <div class="info-rest__example--title">
+                                                    <span>What they achieve:</span>
+                                                </div>
+                                                <!-- descr -->
+                                                <div class="info-rest__example--descr">
+                                                    <span id="ih-achieve-tr" class="fill-fields-tr">
+                                                        <!-- <js> -->
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <!-- title -->
-                                            <div class="info-rest__example--title">
-                                                <span class="title-span">Duration:</span>
+                                            <!-- How Long -->
+                                            <div class="info-rest__example">
+                                                <!-- icon -->
+                                                <div class="info-rest__example--icon">
+                                                    <span class="material-icons">
+                                                        watch_later
+                                                    </span>
+                                                </div>
+                                                <!-- title -->
+                                                <div class="info-rest__example--title">
+                                                    <span>Duration:</span>
+                                                </div>
+                                                <!-- descr -->
+                                                <div class="info-rest__example--descr">
+                                                    <span id="ih-last-tr" class="fill-fields-tr">
+                                                        <!-- <js> -->
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <!-- descr -->
-                                            <div class="info-rest__example--descr">
-                                                <span id="ih-last" class="fill-fields">
-                                                    <!-- <js> -->
-                                                </span>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                </div>
-                            </article>
-                        </section>
-                        <!-- PHOTO (off)-->
-                        <section id="photo__container-ext">
-                            <!-- / header -->
-                            <!-- <header class="photo-gallery-head">
-                                <div>
-                                    <span>| Gallery</span>
-                                </div>
-                            </header> -->
-                            <!-- | ext : fusion -->
-                            <section class="ext-photo" id="ext-photo-fusion">
-                                <!-- CAROUSEL -->
-                                <div id="car11" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
-                                    <!-- | indicators -->
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#car11" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#car11" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#car11" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                      <button type="button" data-bs-target="#car11" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                      <button type="button" data-bs-target="#car11" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                      <button type="button" data-bs-target="#car11" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                    </div>
-                                    <!-- | img -->
-                                    <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                        <img src="img/extension/fusion/fb1.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/fusion/fb2.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/fusion/fb3.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/fusion/fb4.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/fusion/fb5.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/fusion/fb6.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                    </div>
-                                    <!-- | prev/next -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#car11" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#car11" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                    <!-- title -->
-                                    <div class="carousel-info-big">
-                                        <span>hot fusion</span>
-                                    </div>
-                                </div>
+                                        </div>
+                                    </div>                                
+                                </section>  
                             </section>
-                            <!-- | ext : micro -->
-                            <section class="ext-photo" id="ext-photo-micro"> 
-                            </section> 
-                            <!-- | ext :  easy-->
-                            <section class="ext-photo" id="ext-photo-easy">
-                                <!-- CAROUSEL -->
-                                <div id="car21" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
-                                    <!-- | indicators -->
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#car21" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#car21" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#car21" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                      <button type="button" data-bs-target="#car21" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                      <button type="button" data-bs-target="#car21" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                      <button type="button" data-bs-target="#car21" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                      <button type="button" data-bs-target="#car21" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                                      <button type="button" data-bs-target="#car21" data-bs-slide-to="7" aria-label="Slide 8"></button>                                      
-                                    </div>
-                                    <!-- | img -->
-                                    <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                        <img src="img/extension/easy/e1.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/easy/e2.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/easy/e3.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/easy/e4.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/easy/e5.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/easy/e6.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/easy/e7.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/easy/e8.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                    </div>
-                                    <!-- | prev/next -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#car21" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#car21" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                    <!-- title -->
-                                    <div class="carousel-info-big">
-                                        <span>easy schrinks</span>
-                                    </div>
-                                </div>
-                            </section>
-                            <!-- | ext :  tape-->
-                            <section class="ext-photo" id="ext-photo-tape">
-                                <!-- CAROUSEL -->
-                                <div id="car41" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
-                                    <!-- | indicators -->
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#car41" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#car41" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#car41" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                
-                                    </div>
-                                    <!-- | img -->
-                                    <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                        <img src="img/extension/tape/t1.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/tape/t2.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/tape/t3.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                    </div>
-                                    <!-- | prev/next -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#car41" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#car41" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                    <!-- title -->
-                                    <div class="carousel-info-big">
-                                        <span>tape on</span>
-                                    </div>
-                                </div>
-                            </section>
-                            <!-- | ext :  comb-->
-                            <section class="ext-photo" id="ext-photo-comb">
-                                <!-- CAROUSEL -->
-                                <div id="car51" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
-                                    <!-- | indicators -->
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#car51" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#car51" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#car51" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                      <button type="button" data-bs-target="#car51" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                      <button type="button" data-bs-target="#car51" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                
-                                    </div>
-                                    <!-- | img -->
-                                    <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                        <img src="img/extension/combline/c1.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/combline/c2.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/combline/c3.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/combline/c4.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/extension/combline/c5.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                    </div>
-                                    <!-- | prev/next -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#car51" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#car51" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                    <!-- title -->
-                                    <div class="carousel-info-big">
-                                        <span>combline</span>
-                                    </div>
-                                </div>
-                            </section>
-                        </section>
-                    </section>
-                    <!-- || treatment -->
-                    <section id="treatment">
-                        <!-- INTRO -->
-                        <div id="tr-intro" class="intro-container">
-                            <div class="intro-container__img">
-                                <img src="img/offer-intro/intro-treatment.jpg" alt="">
-                            </div>
-                            <div class="intro-container__img-overlay">
-                                <span>treatment</span>
-                            </div>
-                        </div>
-                        <!-- INFO -->
-                        <section id="treat-info__container">
-                            <!-- | carousel -->
-                            <section class="carousel__container">
-                                <!-- || botox -->
-                                <section class="tr-b-all" id="tr-b-botox">
-                                    <div id="car21" class="carousel slide" data-bs-ride="carousel"> 
+                            <!-- PHOTO -->
+                            <section id="photo__container-tr">
+                                <!-- | tr :  botox-->
+                                <section class="tr-photo" id="tr-photo-botox">
+                                    <!-- CAROUSEL -->
+                                    <div id="car211" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                                        <!-- | indicators -->
+                                        <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#car211" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#car211" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#car211" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#car211" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#car211" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#car211" data-bs-slide-to="5" aria-label="Slide 6"></button>                                
+                                        </div>
                                         <!-- | img -->
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="img/treatment/sn-info-botox.jpg" class="d-block w-100" alt="...">
-                                            </div>
+                                        <div class="carousel-item active">
+                                            <img src="img/treatment/botox/b1.jpg" class="d-block w-100" alt="...">
                                         </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/botox/b2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/botox/b3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/botox/b4.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/botox/b5.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/botox/b6.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        </div>
+                                        <!-- | prev/next -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#car211" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#car211" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                        </button>
                                         <!-- title -->
-                                        <div class="carousel-info">
-                                            <span>botox</span>
+                                        <div class="carousel-info-big">
+                                            <span>tape on</span>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 </section>
-                                <!-- || kreatyna -->
-                                <section class="tr-b-all" id="tr-b-kreatyna">
-                                    <div id="car22" class="carousel slide" data-bs-ride="carousel"> 
+                                <!-- | tr :  kreatyna-->
+                                <section class="tr-photo" id="tr-photo-kreatyna">
+                                    <!-- CAROUSEL -->
+                                    <div id="car222" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                                        <!-- | indicators -->
+                                        <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                                        <button type="button" data-bs-target="#car222" data-bs-slide-to="10" aria-label="Slide 11"></button>                                    
+                                    
+                                        </div>
                                         <!-- | img -->
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="img/treatment/sn-info-keratine.jpg" class="d-block w-100" alt="...">
-                                            </div>
+                                        <div class="carousel-item active">
+                                            <img src="img/treatment/kreatyna/k1.jpg" class="d-block w-100" alt="...">
                                         </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k4.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k5.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k6.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k7.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k8.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k9.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k10.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/treatment/kreatyna/k11.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        </div>
+                                        <!-- | prev/next -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#car222" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#car222" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                        </button>
                                         <!-- title -->
-                                        <div class="carousel-info">
+                                        <div class="carousel-info-big">
                                             <span>kreatyna</span>
                                         </div>
                                     </div>
                                 </section>
-                            </section>
-                            <!-- | information -->
-                            <section class="info-holder" id="info-holder__treatment">
-                               <!-- INFO -->
-                               <div class="info-holder__info">
-                                    <!-- | about -->
-                                    <div class="info-holder__info--about" >
-                                        <span id="ih-about-tr" class="fill-fields-tr" >
-                                            <!-- <js> -->
-                                        </span>
-                                    </div>
-                                    <!-- | rest -->
-                                    <div class="info-holder__info--rest">
-
-                                        <!-- Suitable -->
-                                        <div class="info-rest__example">
-                                            <!-- icon -->
-                                            <div class="info-rest__example--icon">
-                                                <span class="material-icons">
-                                                    face_3
-                                                </span>
-                                            </div>
-                                            <!-- title -->
-                                            <div class="info-rest__example--title">
-                                                <span>Suitable<br>for:</span>
-                                            </div>
-                                            <!-- descr -->
-                                            <div class="info-rest__example--descr">
-                                                <span id="ih-suitable-tr" class="fill-fields-tr">
-                                                <!-- <js> -->
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Achieve -->
-                                        <div class="info-rest__example">
-                                            <!-- icon -->
-                                            <div class="info-rest__example--icon">
-                                                <span class="material-icons">
-                                                    auto_awesome
-                                                </span>
-                                            </div>
-                                            <!-- title -->
-                                            <div class="info-rest__example--title">
-                                                <span>What they achieve:</span>
-                                            </div>
-                                            <!-- descr -->
-                                            <div class="info-rest__example--descr">
-                                                <span id="ih-achieve-tr" class="fill-fields-tr">
-                                                    <!-- <js> -->
-                                                </span>
-                                            </div>
-                                        </div>
-                                            
-                                        <!-- How Long -->
-                                        <div class="info-rest__example">
-                                            <!-- icon -->
-                                            <div class="info-rest__example--icon">
-                                                <span class="material-icons">
-                                                    watch_later
-                                                </span>
-                                            </div>
-                                            <!-- title -->
-                                            <div class="info-rest__example--title">
-                                                <span>Duration:</span>
-                                            </div>
-                                            <!-- descr -->
-                                            <div class="info-rest__example--descr">
-                                                <span id="ih-last-tr" class="fill-fields-tr">
-                                                    <!-- <js> -->
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>                                
-                            </section>  
+                            </section> 
                         </section>
-                        <!-- PHOTO -->
-                        <section id="photo__container-tr">
-                            <!-- | tr :  botox-->
-                            <section class="tr-photo" id="tr-photo-botox">
-                                <!-- CAROUSEL -->
-                                <div id="car211" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
-                                    <!-- | indicators -->
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#car211" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#car211" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#car211" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                      <button type="button" data-bs-target="#car211" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                      <button type="button" data-bs-target="#car211" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                      <button type="button" data-bs-target="#car211" data-bs-slide-to="5" aria-label="Slide 6"></button>                                
-                                    </div>
-                                    <!-- | img -->
-                                    <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                        <img src="img/treatment/botox/b1.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/botox/b2.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/botox/b3.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/botox/b4.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/botox/b5.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/botox/b6.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                    </div>
-                                    <!-- | prev/next -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#car211" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#car211" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                    <!-- title -->
-                                    <div class="carousel-info-big">
-                                        <span>tape on</span>
-                                    </div>
+                        <!-- || style -->
+                        <section id="style">
+                            <!-- INTRO -->
+                            <div id="st-intro" class="intro-container">
+                                <div class="intro-container__img">
+                                    <img src="img/offer-intro/intro-styling.jpg" alt="">
                                 </div>
-                            </section>
-                            <!-- | tr :  kreatyna-->
-                            <section class="tr-photo" id="tr-photo-kreatyna">
-                                <!-- CAROUSEL -->
-                                <div id="car222" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
-                                    <!-- | indicators -->
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                                      <button type="button" data-bs-target="#car222" data-bs-slide-to="10" aria-label="Slide 11"></button>                                    
-                                
-                                    </div>
-                                    <!-- | img -->
-                                    <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                        <img src="img/treatment/kreatyna/k1.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k2.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k3.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k4.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k5.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k6.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k7.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k8.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k9.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k10.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/treatment/kreatyna/k11.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                    </div>
-                                    <!-- | prev/next -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#car222" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#car222" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                    <!-- title -->
-                                    <div class="carousel-info-big">
-                                        <span>kreatyna</span>
-                                    </div>
+                                <div class="intro-container__img-overlay">
+                                    <span>styling</span>
                                 </div>
-                            </section>
-                        </section> 
-                    </section>
-                    <!-- || style -->
-                    <section id="style">
-                        <!-- INTRO -->
-                        <div id="st-intro" class="intro-container">
-                            <div class="intro-container__img">
-                                <img src="img/offer-intro/intro-styling.jpg" alt="">
                             </div>
-                            <div class="intro-container__img-overlay">
-                                <span>styling</span>
-                            </div>
-                        </div>
-                        <!-- INFO -->
-                        <section id="style-info__container">
-                            <!-- | carousel -->
-                            <section class="carousel__container">
-                                <section class="st-b-all" id="st-b">
-                                    <div id="car333" class="carousel slide" data-bs-ride="carousel"> 
-                                        <!-- | img -->
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="img/styling/sn-info-style.jpg" class="d-block w-100" alt="...">
+                            <!-- INFO -->
+                            <section id="style-info__container">
+                                <!-- | carousel -->
+                                <section class="carousel__container">
+                                    <section class="st-b-all" id="st-b">
+                                        <div id="car333" class="carousel slide" data-bs-ride="carousel"> 
+                                            <!-- | img -->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="img/styling/sn-info-style.jpg" class="d-block w-100" alt="...">
+                                                </div>
                                             </div>
+                                            <!-- title -->
+                                            <div class="carousel-info">
+                                                <span>styling</span>
+                                            </div>
+                                        </div>                                    
+                                    </section>
+                                </section>
+                                <!-- information -->
+                                <section class="info-holder" id="info-holder-style">
+                                        <!-- | about -->
+                                        <div class="info-holder__info--about" >
+                                            <span id="ih-about-st">
+                                                There are many occasions that may call for a special hair style. Parties and holidays, homecoming and prom, even weddings or other formal events all call for something with more flair than an everyday hairdo. Whatever the occasion, there are many different styles you can choose from for a memorable and beautiful look
+                                            </span>
                                         </div>
-                                        <!-- title -->
-                                        <div class="carousel-info">
-                                            <span>styling</span>
-                                        </div>
-                                    </div>                                    
+                                        <!-- | rest -->
+                                        <div class="info-holder__info--rest">
+                                            <!-- specialization -->
+                                            <div class="info-rest__example-st">
+                                                <!-- icon -->
+                                                <div class="info-rest__example--icon">
+                                                    <span class="material-icons">
+                                                        auto_awesome
+                                                    </span>
+                                                </div>
+                                                <!-- title -->
+                                                <div class="info-rest__example--title">
+                                                    <span>Specialize in:</span>
+                                                </div>
+                                                <!-- descr -->
+                                                <ul class="info-rest__example--descr-st">
+                                                    <li>Feed in braids;</li>
+                                                    <li>Waves/Curls/Straightening;</li>
+                                                    <li>Hairstyle for a special occasion;</li>
+                                                </ul>
+                                            </div>
+                                        </div>                                
                                 </section>
                             </section>
-                            <!-- information -->
-                            <section class="info-holder" id="info-holder-style">
-                                    <!-- | about -->
-                                    <div class="info-holder__info--about" >
-                                        <span id="ih-about-st">
-                                            There are many occasions that may call for a special hair style. Parties and holidays, homecoming and prom, even weddings or other formal events all call for something with more flair than an everyday hairdo. Whatever the occasion, there are many different styles you can choose from for a memorable and beautiful look
-                                        </span>
-                                    </div>
-                                    <!-- | rest -->
-                                    <div class="info-holder__info--rest">
-                                        <!-- specialization -->
-                                        <div class="info-rest__example-st">
-                                            <!-- icon -->
-                                            <div class="info-rest__example--icon">
-                                                <span class="material-icons">
-                                                    auto_awesome
-                                                </span>
-                                            </div>
-                                            <!-- title -->
-                                            <div class="info-rest__example--title">
-                                                <span>Specialize in:</span>
-                                            </div>
-                                            <!-- descr -->
-                                            <ul class="info-rest__example--descr-st">
-                                                <li>Feed in braids;</li>
-                                                <li>Waves/Curls/Straightening;</li>
-                                                <li>Hairstyle for a special occasion;</li>
-                                            </ul>
+                            <!-- PHOTO -->
+                            <section id="photo__container-st">
+                                <section class="st-photo" id="st-photo-botox">
+                                    <!-- CAROUSEL -->
+                                    <div id="car399" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
+                                        <!-- | indicators -->
+                                        <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                        <button type="button" data-bs-target="#car399" data-bs-slide-to="9" aria-label="Slide 10"></button>                            
                                         </div>
-                                    </div>                                
+                                        <!-- | img -->
+                                        <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="img/styling/s1.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s4.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s5.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s6.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s7.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s8.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s9.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="img/styling/s10.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        </div>
+                                        <!-- | prev/next -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#car399" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#car399" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                        </button>
+                                        <!-- title -->
+                                        <div class="carousel-info-big">
+                                            <span>styling</span>
+                                        </div>
+                                    </div>
+                                </section>
                             </section>
                         </section>
-                        <!-- PHOTO -->
-                        <section id="photo__container-st">
-                            <section class="st-photo" id="st-photo-botox">
-                                <!-- CAROUSEL -->
-                                <div id="car399" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"> 
-                                    <!-- | indicators -->
-                                    <div class="carousel-indicators">
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                                      <button type="button" data-bs-target="#car399" data-bs-slide-to="9" aria-label="Slide 10"></button>                            
-                                    </div>
-                                    <!-- | img -->
-                                    <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                        <img src="img/styling/s1.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s2.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s3.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s4.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s5.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s6.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s7.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s8.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s9.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                      <div class="carousel-item">
-                                        <img src="img/styling/s10.jpg" class="d-block w-100" alt="...">
-                                      </div>
-                                    </div>
-                                    <!-- | prev/next -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#car399" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#car399" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Next</span>
-                                    </button>
-                                    <!-- title -->
-                                    <div class="carousel-info-big">
-                                        <span>styling</span>
-                                    </div>
-                                </div>
-                            </section>
-                        </section>
-                    </section>
-                </div>
-                <!-- | icons -->
-                <nav class="offer__content--main-icons">
-                    <div id="side-nav">
-                        <span id="sn-info" class="material-icons sn-all side-nav--active">
-                            info
-                        </span>
-                        <span id="sn-img" class="material-icons sn-all">
-                            image
-                        </span>
                     </div>
+                    <!-- | icons -->
+                    <nav class="offer__content--main-icons">
+                        <div id="side-nav">
+                            <span id="sn-info" class="material-icons sn-all side-nav--active">
+                                info
+                            </span>
+                            <span id="sn-img" class="material-icons sn-all">
+                                image
+                            </span>
+                        </div>
+                    </nav>
+                </section>
+            </div>
+        </section>
+
+        <!-- B4 -->
+        <section class="bridge-4">
+            <div>
+                <svg viewBox="0 0 934 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_221_7)">
+                    <path d="M0 138L934 0H230.975H0V138Z" fill="#FFF9F5"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_221_7" x="-10" y="0" width="954" height="158" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="10"/>
+                    <feGaussianBlur stdDeviation="5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.370833 0 0 0 0 0.322934 0 0 0 0 0.322934 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_7"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_7" result="shape"/>
+                    </filter>
+                    </defs>
+                    </svg>
+            </div>
+        </section>
+
+        <!-- CUSTOMERS OPINION -->
+        <section class="co-container gradient-3">
+            <header id="co-title">
+                Customers say:
+            </header>
+            <div class="p-absolute-fix">
+
+                <!-- OPINION 1 -->
+                <div id="cu-op-1" class="customer-opinion">
+                    <div class="customer-opinion__header">
+                        <!-- photo -->
+                        <div id="op-photo-1" class="customer-opinion__header--photo">
+                            <img class="rounded-circle" src="img/alicja.jpg" alt="">
+                        </div>
+                        <!-- name -->
+                        <div class="customer-opinion__header--name">
+                            <p>Alicja</p>
+                        </div>
+                        <!-- icon -->
+                        <div class="customer-opinion__header--icon">
+                            <span class="material-icons">
+                                verified_user
+                            </span>
+                        </div>
+                    </div>
+                    <!-- opinion -->
+                    <div class="customer-opinion__opinion">
+                        <span id="corner-float"></span>
+                        Cudne warkocze kochana,  chciala  bym je po kolana !! albo i dluzej bo ten komentarz musi miec troche tresci w sobie wiadomix elo ziomeczku.
+                    </div>
+                </div>
+
+                <!-- OPINION 2 -->
+                <div id="cu-op-2" class="customer-opinion">
+                    <div class="customer-opinion__header">
+                        <!-- photo -->
+                        <div id="op-photo-2" class="customer-opinion__header--photo">
+                            <img class="rounded-circle" src="img/joanna.jpg" alt="">
+                        </div>
+                        <!-- name -->
+                        <div class="customer-opinion__header--name">
+                            <p>Joanna</p>
+                        </div>
+                        <!-- icon -->
+                        <div class="customer-opinion__header--icon">
+                            <span class="material-icons">
+                                verified_user
+                            </span>
+                        </div>
+                    </div>
+                    <!-- opinion -->
+                    <div class="customer-opinion__opinion">
+                        <span id="corner-float"></span>
+                        Dzieki super bardzo pieknie !
+                    </div>
+                </div>
+
+                <!-- OPINION 3 -->
+                <div id="cu-op-3" class="customer-opinion">
+                    <div class="customer-opinion__header">
+                        <!-- photo -->
+                        <div id="op-photo-3" class="customer-opinion__header--photo">
+                            <img class="rounded-circle" src="img/zuza.jpg" alt="">
+                        </div>
+                        <!-- name -->
+                        <div class="customer-opinion__header--name">
+                            <p>Zuzanna</p>
+                        </div>
+                        <!-- icon -->
+                        <div class="customer-opinion__header--icon">
+                            <span class="material-icons">
+                                verified_user
+                            </span>
+                        </div>
+                    </div>
+                    <!-- opinion -->
+                    <div class="customer-opinion__opinion">
+                        <span id="corner-float"></span>
+                        Bardzo mi sie podoba, napewno odwiedze Cie jeszcze nie raz.
+                    </div>
+                </div>
+
+            </div>      
+        </section>
+
+        <!-- B5 -->
+        <section class="bridge-5">
+            <div>
+                <svg viewBox="0 0 934 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_221_8)">
+                    <path d="M934 30L0 156H703.025H934V30Z" fill="#FFF9F5"/>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_221_8" x="-30" y="0" width="994" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="15"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_8"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_8" result="shape"/>
+                    </filter>
+                    </defs>
+                    </svg>
+            </div>
+        </section>
+
+        <!-- PRICES -->
+        <section id="price" class="prices">
+            <div class="prices__content">
+                <!-- head -->
+                <div class="prices__content--header">
+                    Prices
+                </div>
+                <!-- nav big-->
+                <nav class="prices__content--nav-big">
+                    <ul  class="prices__content--nav-big-ul">
+                        <li id="prices--nav-ext">extension</li>
+                        <li id="prices--nav-treat">treatment</li>
+                        <li id="prices--nav-style">styling</li>
+                    </ul>
                 </nav>
-            </section>
-        </div>
-    </section>
+                <!-- nav small -->
+                <nav class="prices__content--nav-small">
+                    <ul id="nav-small-price" class="prices__content--nav-small-ul">
+                        <li class="pr-all" id="pr-botox">botox</li>
+                        <li class="pr-all" id="pr-kreatyna">keratyna</li>
+                    </ul>
+                </nav>            
+                <!-- content -->
+                <div id="pc-content" class="prices__content--body">
+                    <!-- | intro -->
+                    <div id="pc-c-intro" class="prices__content--body-intro">
+                        please choose from the menu for price details.
+                    </div>
+                    <!-- | ext -->
+                    <div id="pc-c-ext" class="prices__content--body-ext br">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Fusion</th>
+                                <th scope="col">Micro</th>
+                                <th scope="col">Shrink</th>
+                                <th scope="col">Tape On</th>
+                                <th scope="col">Combline</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">Aplication</th>
+                                <td>150-600</td>
+                                <td>150-600</td>
+                                <td>150-600</td>
+                                <td>60-200</td>
+                                <td>200-800</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Removal</th>
+                                <td>30-60</td>
+                                <td>25-60</td>
+                                <td>20-60</td>
+                                <td>30-60</td>
+                                <td>40-60</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Repositioning</th>
+                                <td>200-600</td>
+                                <td>40-80</td>
+                                <td>100-120</td>
+                                <td>60-200</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">End Change</th>
+                                <td>40</td>
+                                <td>30</td>
+                                <td>30</td>
+                                <td>40</td>
+                                <td>-</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- | treat -->
+                    <div id="pc-c-treat" class="prices__content--body-treat">
+                        <!-- woman img -->
+                        <div class="treat-photo__container">
+                            <img src="img/price_woman.png" alt="">
+                        </div>
+                        <!-- || candy floss -->
+                        <div id="line--candy-floss" class="animation__line-in price-line pl-pink">
+                            <div id="ph-1" class="price-holder">
+                                <span class="price-holder--value">£25</span>
+                                <span class="price-holder--name">candy floss</span>
+                            </div>                         
+                        </div>
+                        <!-- || peach -->
+                        <div id="line--peach" class="animation__line-in-d1 price-line pl-peach">
+                            <div id="ph-2" class="price-holder">
+                                <span class="price-holder--value">£35</span>
+                                <span class="price-holder--name">peach sorbet</span>
+                            </div>       
+                        </div>
+                        <!-- || red velvet -->
+                        <div id="line--velvet" class="animation__line-in-d2 price-line pl-red">
+                            <div id="ph-3" class="price-holder">
+                                <span class="price-holder--value">£45</span>
+                                <span class="price-holder--name">red velvet</span>
+                            </div>                           
+                        </div>
+                    </div>
+                    <!-- | style -->
+                    <div id="pc-c-style" class="prices__content--body-style br">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Feed in Braids</th>
+                                <td>20 / two braids</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Waves/Curls/Straightening</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hairstyle for special occasions</th>
+                                <td>45-60</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- B4 -->
-    <section class="bridge-4">
-        <div>
-            <svg viewBox="0 0 934 158" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_221_7)">
-                <path d="M0 138L934 0H230.975H0V138Z" fill="#FFF9F5"/>
-                </g>
-                <defs>
-                <filter id="filter0_d_221_7" x="-10" y="0" width="954" height="158" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dy="10"/>
-                <feGaussianBlur stdDeviation="5"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0.370833 0 0 0 0 0.322934 0 0 0 0 0.322934 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_7"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_7" result="shape"/>
-                </filter>
-                </defs>
+        <!-- B6 -->
+        <section class="bridge-6">
+            <div>
+                <svg viewBox="0 0 375 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-3 55L382 23L375 0H-3V55Z" fill="#f3f2ef"/>
                 </svg>
-        </div>
-    </section>
-
-    <!-- CUSTOMERS OPINION -->
-    <section class="co-container gradient-3">
-        <header id="co-title">
-            Customers say:
-        </header>
-        <div class="p-absolute-fix">
-
-            <!-- OPINION 1 -->
-            <div id="cu-op-1" class="customer-opinion">
-                <div class="customer-opinion__header">
-                    <!-- photo -->
-                    <div id="op-photo-1" class="customer-opinion__header--photo">
-                        <img class="rounded-circle" src="img/alicja.jpg" alt="">
-                    </div>
-                    <!-- name -->
-                    <div class="customer-opinion__header--name">
-                        <p>Alicja</p>
-                    </div>
-                    <!-- icon -->
-                    <div class="customer-opinion__header--icon">
-                        <span class="material-icons">
-                            verified_user
-                        </span>
-                    </div>
-                </div>
-                <!-- opinion -->
-                <div class="customer-opinion__opinion">
-                    <span id="corner-float"></span>
-                    Cudne warkocze kochana,  chciala  bym je po kolana !! albo i dluzej bo ten komentarz musi miec troche tresci w sobie wiadomix elo ziomeczku.
-                </div>
             </div>
+        </section>
+    </main>
 
-            <!-- OPINION 2 -->
-            <div id="cu-op-2" class="customer-opinion">
-                <div class="customer-opinion__header">
-                    <!-- photo -->
-                    <div id="op-photo-2" class="customer-opinion__header--photo">
-                        <img class="rounded-circle" src="img/joanna.jpg" alt="">
-                    </div>
-                    <!-- name -->
-                    <div class="customer-opinion__header--name">
-                        <p>Joanna</p>
-                    </div>
-                    <!-- icon -->
-                    <div class="customer-opinion__header--icon">
-                        <span class="material-icons">
-                            verified_user
-                        </span>
-                    </div>
-                </div>
-                <!-- opinion -->
-                <div class="customer-opinion__opinion">
-                    <span id="corner-float"></span>
-                    Dzieki super bardzo pieknie !
-                </div>
-            </div>
-
-            <!-- OPINION 3 -->
-            <div id="cu-op-3" class="customer-opinion">
-                <div class="customer-opinion__header">
-                    <!-- photo -->
-                    <div id="op-photo-3" class="customer-opinion__header--photo">
-                        <img class="rounded-circle" src="img/zuza.jpg" alt="">
-                    </div>
-                    <!-- name -->
-                    <div class="customer-opinion__header--name">
-                        <p>Zuzanna</p>
-                    </div>
-                    <!-- icon -->
-                    <div class="customer-opinion__header--icon">
-                        <span class="material-icons">
-                            verified_user
-                        </span>
-                    </div>
-                </div>
-                <!-- opinion -->
-                <div class="customer-opinion__opinion">
-                    <span id="corner-float"></span>
-                    Bardzo mi sie podoba, napewno odwiedze Cie jeszcze nie raz.
-                </div>
-            </div>
-
-        </div>      
-    </section>
-
-    <!-- B5 -->
-    <section class="bridge-5">
-        <div>
-            <svg viewBox="0 0 934 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_221_8)">
-                <path d="M934 30L0 156H703.025H934V30Z" fill="#FFF9F5"/>
-                </g>
-                <defs>
-                <filter id="filter0_d_221_8" x="-30" y="0" width="994" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset/>
-                <feGaussianBlur stdDeviation="15"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_221_8"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_221_8" result="shape"/>
-                </filter>
-                </defs>
-                </svg>
-        </div>
-    </section>
-
-    <!-- PRICES -->
-    <section id="price" class="prices">
-        <div class="prices__content">
-            <!-- head -->
-            <div class="prices__content--header">
-                Prices
-            </div>
-            <!-- nav big-->
-            <nav class="prices__content--nav-big">
-                <ul  class="prices__content--nav-big-ul">
-                    <li id="prices--nav-ext">extension</li>
-                    <li id="prices--nav-treat">treatment</li>
-                    <li id="prices--nav-style">styling</li>
-                </ul>
-            </nav>
-            <!-- nav small -->
-            <nav class="prices__content--nav-small">
-                <ul id="nav-small-price" class="prices__content--nav-small-ul">
-                    <li class="pr-all" id="pr-botox">botox</li>
-                    <li class="pr-all" id="pr-kreatyna">keratyna</li>
-                </ul>
-            </nav>            
-            <!-- content -->
-            <div id="pc-content" class="prices__content--body">
-                <!-- | intro -->
-                <div id="pc-c-intro" class="prices__content--body-intro">
-                    please choose from the menu for price details.
-                </div>
-                <!-- | ext -->
-                <div id="pc-c-ext" class="prices__content--body-ext br">
-                    <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Fusion</th>
-                            <th scope="col">Micro</th>
-                            <th scope="col">Shrink</th>
-                            <th scope="col">Tape On</th>
-                            <th scope="col">Combline</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">Aplication</th>
-                            <td>150-600</td>
-                            <td>150-600</td>
-                            <td>150-600</td>
-                            <td>60-200</td>
-                            <td>200-800</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Removal</th>
-                            <td>30-60</td>
-                            <td>25-60</td>
-                            <td>20-60</td>
-                            <td>30-60</td>
-                            <td>40-60</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Repositioning</th>
-                            <td>200-600</td>
-                            <td>40-80</td>
-                            <td>100-120</td>
-                            <td>60-200</td>
-                            <td>-</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">End Change</th>
-                            <td>40</td>
-                            <td>30</td>
-                            <td>30</td>
-                            <td>40</td>
-                            <td>-</td>
-                          </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- | treat -->
-                <div id="pc-c-treat" class="prices__content--body-treat">
-                    <!-- woman img -->
-                    <div class="treat-photo__container">
-                        <img src="img/price_woman.png" alt="">
-                    </div>
-                    <!-- || candy floss -->
-                    <div id="line--candy-floss" class="animation__line-in price-line pl-pink">
-                        <div id="ph-1" class="price-holder">
-                            <span class="price-holder--value">£25</span>
-                            <span class="price-holder--name">candy floss</span>
-                        </div>                         
-                    </div>
-                    <!-- || peach -->
-                     <div id="line--peach" class="animation__line-in-d1 price-line pl-peach">
-                        <div id="ph-2" class="price-holder">
-                            <span class="price-holder--value">£35</span>
-                            <span class="price-holder--name">peach sorbet</span>
-                        </div>       
-                    </div>
-                    <!-- || red velvet -->
-                    <div id="line--velvet" class="animation__line-in-d2 price-line pl-red">
-                        <div id="ph-3" class="price-holder">
-                            <span class="price-holder--value">£45</span>
-                            <span class="price-holder--name">red velvet</span>
-                        </div>                           
-                    </div>
-                </div>
-                <!-- | style -->
-                <div id="pc-c-style" class="prices__content--body-style br">
-                    <table class="table table-hover">
-                        <tbody>
-                          <tr>
-                            <th scope="row">Feed in Braids</th>
-                            <td>20 / two braids</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Waves/Curls/Straightening</th>
-                            <td>30</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Hairstyle for special occasions</th>
-                            <td>45-60</td>
-                          </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- B6 -->
-    <section class="bridge-6">
-        <div>
-            <svg viewBox="0 0 375 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-3 55L382 23L375 0H-3V55Z" fill="#f3f2ef"/>
-            </svg>
-        </div>
-    </section>
-
-    <!-- pull back menu.................... -->
-    <nav id="pull-back" class="pull-back opa-0">
+    <aside>
+        <nav id="pull-back" class="pull-back opa-0">
 
             <div class="pb-container">
                 <a id="pb-arrow-link" href="#showcase">
@@ -1314,11 +1300,9 @@
                 </a>
                 <div id="animation-border-div"></div>
             </div>
+        </nav>
+    </aside>
 
-
-    </nav>
-
-    <!-- FOOTER -->
     <footer id="contact" class="">
         <!-- media -->
         <div class="foot-media">
@@ -1381,6 +1365,7 @@
         </div>
     </footer>
     
+    <!-- SCRIPTS -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
     <script src="section-offer.js"></script>

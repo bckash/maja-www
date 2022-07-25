@@ -1,4 +1,5 @@
 
+
 @use "./variables" as v;
 @use "./carousel-bootstrap";
 
@@ -28,42 +29,43 @@ ul {
 }
 
 
-//  HEADER
-// -----------------
+//-------------------------------------------
+// HEADER
+//-------------------------------------------
 
 
 .showcase {
     position: relative;
     margin: auto;
-    height: 40rem;
+    height: 640px;
     width: 100%;
 
-    &__logo--container {
-        width: 100%;
-        display: block;
-        position: absolute;
-        z-index: 10;
-        bottom: 0;
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
     &__logo {
-        width: 23rem;
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        display: block;
+        width: 100%;
+        margin-bottom: 4rem;
+        text-align: center;
+
+        img {
+            width: 23rem;
+        }
     }
 
-    & video, & .polka {
+    video, &__overlay {
         position: absolute;
         width: 100%;
         height: 100%;
     }
 
-    & video {
-        opacity: 0.8;
+    video {
         object-fit: cover;
+        opacity: 0.8;
     }
 
-    & .polka {
+    &__overlay {
         opacity: 0.2;
         background-image: 
           radial-gradient(rgb(255, 255, 255) 22.4%, transparent 22.4%),
@@ -73,26 +75,22 @@ ul {
         background-color: rgb(209, 16, 16);
     }
 
-    &__grad {
+    &__bottom-gradient {
         position: absolute;
         bottom: 0;
+        z-index: 5;
         height: 300px;
         width: 100%;
-        z-index: 5;
         background: rgb(255,255,255);
         background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
     }
 }
 
 
-// MAIN NAV
-//------------------
-
-
 .main-nav {
     position: relative;
-    top: 39.5rem;
-    width: 25rem;
+    top: 632px;
+    width: 400px;
     margin: auto;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -131,16 +129,19 @@ ul {
 }
 
 
-// SECTIONS
-//------------------
+//-------------------------------------------
+// MAIN
+//--------------------------------------------
 
 
 // BRIDGE 1
+//---------
 
-.bridge-1 {
+
+.gradient-bridge--1 {
     position: relative;
+    height: 288px;
     background-color: v.$nl-dark-fill;
-    height: 18rem;
 
     & div {
         width: 100%;
@@ -156,7 +157,7 @@ ul {
     }
 }
 
-.paralax-gradient-1 {
+.gradient--gb1 {
     background: rgb(166,61,0);
     background: linear-gradient(
         0deg, 
@@ -167,24 +168,26 @@ ul {
 
 
 // ABOUT ME
+//---------
 
-.about-me {
-    background-color: v.$nl-back-pink;
+
+#about-me-container {
     padding: 4rem 0 9rem 0;
+    background-color: v.$nl-back-pink;
 }
 
-.about-me__content {
+.about-me {
     @include v.article;
 
-    &--head {
+    &__head {
         @include v.title;
-        text-align: center;
         margin-left: 26rem;
         margin-bottom: 2rem;
         border-color: v.$nl-border;
+        text-align: center;
     }
 
-    &--main {
+    &__main {
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -196,35 +199,39 @@ ul {
             @include v.photo-shad;
         }
 
-        .about-txt--container {
+        .txt-container {
             position: relative;
             display: inline-block;
+            padding: 2rem;
+            padding-bottom: 1.5rem;
             border: 1px solid v.$nl-border;
             border-radius: 20px;
-            padding: 1rem;
             background-color: v.$nl-content-body;
             box-shadow: 3px 3px 10px rgb(228, 222, 222);
 
-            span {
-                vertical-align: middle;
-                display: inline-block;
-                text-align: center;
+            .p1 {
+
+                &--hi, &--hairstylist {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                &--hi {
+                    padding-left: 4rem;
+                    padding-bottom: .5rem;
+                    font-size: 1.2em;
+                    opacity: 0.8;
+                }
+
+                &--hairstylist {
+                    padding-left: 2rem;
+                    font-size:  1.25em;
+                    text-align: left;
+                }
             }
 
-            .about-hi {
-                font-size: 1.2em;
-                padding-left: 4rem;
-                padding-bottom: .5rem;
-                opacity: 0.8;
-            }
+            .p2 {
 
-            .about-hairstylist {
-                font-size:  1.25em;
-                text-align: left;
-                // margin-left: 2rem;
-                // margin-bottom: 2rem;
-                // border-left: 10px solid rgba(240, 223, 169, 0.527);
-                padding-left: 2rem;
             }
 
             #about-p2::first-letter {
@@ -250,14 +257,15 @@ ul {
 
             #about-triangle {
                 position: absolute;
+                top: 5rem;
                 left: -20.7px;
+                transform: rotate(45deg);
                 height: 40px;
                 width: 40px;
                 border-left: 1px  solid;
                 border-bottom: 1px  solid;
                 border-color: rgb(211, 207, 207);
                 background-color:  v.$nl-content-body;
-                transform: rotate(45deg);
             }
 
             .about-cert-info {
@@ -275,24 +283,19 @@ ul {
             }
         }
 
-    }
-        
-
-        .about-txt--container:hover {
+        .txt-container:hover {
             outline: 3px solid v.$nl-side-nav-a-light;
             border-color: transparent;
+
+            #about-triangle {
+                border-left : 3px solid v.$nl-side-nav-a-light;
+                border-bottom : 3px solid v.$nl-side-nav-a-light;
+                left: -23px;
+            }
         }
 
-        .about-txt--container:hover #about-triangle {
-            border-left : 3px solid v.$nl-side-nav-a-light;
-            border-bottom : 3px solid v.$nl-side-nav-a-light;
-            left: -23px;
-        }
 
-        .without-border {
-            padding: 1rem;
-            background-color: v.$nl-content-body;
-        }
+
 
         .modal-footer {
             justify-content: center;
@@ -321,6 +324,9 @@ ul {
         }
 
         #mf-descr-1 {display: flex}
+
+    }
+        
 }
 
 .animation-emoji {
@@ -339,7 +345,10 @@ ul {
 }
 
 
+
 // BRIDGE 2
+//----------
+
 
 .bridge-2, .bridge-3 {
     position: relative;
@@ -491,7 +500,7 @@ ul {
                 position: relative;
 
                 img {
-                    border: 10px solid rgb(236, 209, 193);
+                    border: 10px solid v.$nl-brown-detail-light;
                     border-radius: 1500px;
                 }
 
@@ -650,6 +659,10 @@ ul {
                     margin-left: 2rem;
                     list-style-type: disc;
                     text-align: left;
+                }
+
+                .fill-fields, .fill-fields-tr {
+                    height: 6.5rem;
                 }
             }
         }
@@ -1117,7 +1130,7 @@ ul {
     #arrow-nav {
         font-size: 2.5rem;
         transform: rotate(90deg);
-        color: rgb(161, 161, 170);
+        color: rgb(212, 205, 191);
         transition: color .4s;
     }
 

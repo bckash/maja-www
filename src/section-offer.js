@@ -132,7 +132,7 @@ const mediaSN = [
         id: "easy shrinks",
         about: "Shrink tube hair extensions get their name from little plastic tubes known as “shrink tubes” or “shrinkies.” These tubes shrink when they are heated and are sometimes composed of an inner coating of keratin. Keratin is used in several hair extension methods and can naturally be found in human skin, hair, and nails.",
         suitable: "perfect for thin or short hair",
-        achieve: "Virtually undetectable, lightweight and secure. The aim of this technique is to heat shrinkies into position and blend in with the hair.",
+        achieve: "These are virtually undetectable, lightweight and secure. The aim of this technique is to heat shrinkies into position and blend in with the hair.",
         last: "2-3 months"
     },
     {

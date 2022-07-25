@@ -25,6 +25,7 @@ $nl-content-body: rgb(250, 248, 244); // background for main secions in "about m
 $nl-red-detail: rgb(114, 34, 10);
 $nl-brown-detail: rgb(79,33,8);
 $nl-brown-detail-light: rgba(79, 33, 8, 0.63);
+$nl-brown-detail-light-xtra: rgba(131, 54, 12, 0.63);
 
 
 //---------------------------------------------------------------
@@ -35,18 +36,18 @@ $nl-brown-detail-light: rgba(79, 33, 8, 0.63);
 // shared
 
 @mixin article {
-    width: 50rem;
+    width: 800px;
     margin: auto;
 }
 
 @mixin title {
-    width: 20rem;
+    width: 320px;
     margin: auto;
-    font-size: 2.8rem;
-    font-weight: 300;
     padding: 1rem;
     border-bottom: 1px solid;
     border-color: $nl-border;
+    font-size: 2.8rem;
+    font-weight: 300;
     color: $nl-brown-detail-light;
 }
 
@@ -75,7 +76,7 @@ $nl-brown-detail-light: rgba(79, 33, 8, 0.63);
 }
 
 @mixin nav-small {
-    height: 3.5rem;
+    height: 56px;
 
     &-ul {
         display: none;
@@ -88,17 +89,17 @@ $nl-brown-detail-light: rgba(79, 33, 8, 0.63);
 // customer opinion
 
 @mixin slideshow {
-    opacity: 0;
     position: absolute;
     top: 0;
+    opacity: 0;
 }
 
 // prices
 
 @mixin table-body {
-    background-color: $nl-content-body;
     padding: 1rem 2rem;
     border-radius: 30px;
+    background-color: $nl-content-body;
 }
 
 // footer
@@ -110,16 +111,16 @@ $nl-brown-detail-light: rgba(79, 33, 8, 0.63);
 }
 
 @mixin footer-txt-title {
-    color: $nl-red-logo;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
     margin: 0 1rem;
     margin-bottom: .5rem;
     border-bottom: 1px solid rgb(192, 192, 192);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $nl-red-logo;
 }
 
 @mixin footer-icons {
-    height: 3rem;
+    height: 48px;
 }
 
