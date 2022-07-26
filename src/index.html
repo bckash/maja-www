@@ -59,68 +59,74 @@
         <article id="about-me-container">
             <div class="about-me">
                 <!-- head -->
-                <div class="about-me__head">
-                    About me
-                </div>
+                <header class="about-me__head">
+                    <h1>About me</h1>
+                </header>
                 <!-- main -->
-                <div class="about-me__main">
-                    <!-- | img -->
-                    <div>
-                        <img class="rounded-circle" src="img/maja500.jpg" alt="">
-                    </div>
-                    <!-- | txt container -->
-                    <div class="txt-container">
-                            <p>
-                                <span class="p1--hi animation-emoji">
-                                    🖐
-                                </span>
-                                <span class="p1--hairstylist">
-                                    Hi, my name is <strong class="about-span-color">Maja</strong>,<br>I am a <strong class="about-span-color">mobile hairstylist.</strong>
-                                </span><br> 
-                            </p>                      
-
-                            <p id="about-p2">
-                                My professional experience started in 2021, when I became certified <em>Hair Extension Stylist*</em>. Since then, I've been gaining skills and perfecting my craft, to create hairstyles that complement uniqueness of my clients.<br> 
-                                I always loved working with hair - fascinated how my work could completely change not only how people look but how they feet about themselves. Making this happen throughout my passion – is a wonderful feeling.<hr> My job is to recreate your vision or help to recover - adding <strong class="about-span-color">New Life</strong> to your hair.
-                            </p>
-                            <div id="about-triangle"></div>
-                            <!-- Button trigger modal -->
-                            <button id="modal-trigger-button" type="button" class="btn about__span-holder shadow-sm" data-bs-toggle="modal" data-bs-target="#AboutMe">
-                                <span class="about-cert-info">* Show Certifications</span>
+                <section class="about-me__main">
+                    <img class="rounded-circle" src="img/maja500.jpg" alt="New Life For Hair business owner Photography">
+                    <div class="caption-box">
+                        <p id="p1">
+                            <span class="p1--hi animation-emoji">
+                                🖐
+                            </span>
+                            <span class="p1--hairstylist">
+                                Hi, my name is <strong class="txt-color">Maja</strong>,<br>I am a <strong class="txt-color">mobile hairstylist.</strong>
+                            </span><br> 
+                        </p>                      
+                        <p id="p2">
+                            My professional experience started in 2021, when I became certified <em>Hair Extension Stylist*</em>. Since then, I've been gaining skills and perfecting my craft, to create hairstyles that complement uniqueness of my clients.<br> 
+                            I always loved working with hair - fascinated how my work could completely change not only how people look but how they feet about themselves. Making this happen throughout my passion – is a wonderful feeling.
+                        </p>
+                        <hr>
+                        <p>
+                            My job is to recreate your vision or help to recover - adding <strong class="txt-color">New Life</strong> to your hair.
+                        </p>    
+                        <div id="outline-triangle"></div>
+                        <!-- || Button trigger modal -->
+                        <button 
+                            id="modal-trigger-button" 
+                            class="btn shadow-sm" 
+                            type="button" 
+                            data-bs-toggle="modal" data-bs-target="#modal--about-me">
+                                <span>* Show Certifications</span>
                                 <span class="material-icons">
                                     workspace_premium
                                 </span>
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="AboutMe" tabindex="-1" aria-labelledby="AboutMeLabel" aria-hidden="true">
+                        </button>
+                        <!-- || Modal -->
+                        <div 
+                            id="modal--about-me" 
+                            class="modal fade" 
+                            tabindex="-1" aria-labelledby="modal--about-meLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                    <h5 class="modal-title" id="AboutMeLabel">Certification Gallery</h5>
+                                    <h5 class="modal-title" id="modal--about-meLabel">Certification Gallery</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <!-- modal body -->
                                     <div class="modal-body">
                                         <!-- carrousel -->
-                                        <div id="car00" class="carousel slide" data-bs-ride="carousel">
+                                        <div id="car--modal" class="carousel slide" data-bs-ride="carousel">
                                             <div id="mutationTN" class="carousel-inner">
                                                 <!-- 1 -->
                                                 <div id="c1" class="carousel-item active">
-                                                    <img src="img/certification/certification-1.jpg" class="d-block w-100" alt="...">
+                                                    <img src="img/certification/certification-1.jpg" class="d-block w-100" alt="Certification for Hair Extension Specialist, Belle Academy 2021">
                                                 </div>
                                                 <!-- 2 -->
                                                 <div id="c2" class="carousel-item">
-                                                    <img src="img/certification/certification-2.jpg" class="d-block w-100" alt="...">
+                                                    <img src="img/certification/certification-2.jpg" class="d-block w-100" alt="Certification for Professional Brazilian Keratin Hair Treatments, COCOCHOCO Professional 2021">
                                                 </div>
                                                 <!-- 3 -->
                                                 <div id="c3" class="carousel-item">
-                                                    <img src="img/certification/certification-3.jpg" class="d-block w-100" alt="...">
+                                                    <img src="img/certification/certification-3.jpg" class="d-block w-100" alt="Certification for Professional Hair Botox Treatments, COCOCHOCO Professional 2021">
                                                 </div>
-                                                <button class="carousel-control-prev" type="button" data-bs-target="#car00" data-bs-slide="prev">
+                                                <button class="carousel-control-prev" type="button" data-bs-target="#car--modal" data-bs-slide="prev">
                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Previous</span>
                                                 </button>
-                                                <button class="carousel-control-next" type="button" data-bs-target="#car00" data-bs-slide="next">
+                                                <button class="carousel-control-next" type="button" data-bs-target="#car--modal" data-bs-slide="next">
                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Next</span>
                                                 </button>
@@ -129,25 +135,24 @@
                                     </div>
                                     <!-- modal footer -->
                                     <div class="modal-footer">
-                                        <div id="mf-descr-1" class="car-description-modal">
+                                        <div id="modal-footer__d1" class="modal-footer__description">
                                                 <h5>Hair Extension Specialist</h5>
                                                 <p><i>Belle Academy</i> | 15.06.2021</p>
                                         </div>
-                                        <div id="mf-descr-2" class="car-description-modal">
+                                        <div id="modal-footer__d2" class="modal-footer__description">
                                             <h5>Professional Brazilian Keratin Hair Treatments</h5>
                                             <p><i>COCOCHOCO Professional</i> | 08.10.2021</p>   
                                         </div>
-                                        <div id="mf-descr-3" class="car-description-modal">
+                                        <div id="modal-footer__d3" class="modal-footer__description">
                                             <h5>Professional Hair Botox Treatments</h5>
                                             <p><i>COCOCHOCO Professional</i> | 08.10.2021</p>  
                                         </div>
                                     </div>
                                 </div>
                                 </div>
-                            </div>
-                   
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
         </article>
 
@@ -1289,19 +1294,17 @@
         </section>
     </main>
 
-    <aside>
-        <nav id="pull-back" class="pull-back opa-0">
+    <nav id="pull-back" class="pull-back opa-0">
+        <div class="pb-container">
+            <a id="pb-arrow-link" href="#showcase">
+                <span id="arrow-nav" class="material-icons">
+                    arrow_circle_left
+                </span>
+            </a>
+            <div id="animation-border-div"></div>
+        </div>
+    </nav>   
 
-            <div class="pb-container">
-                <a id="pb-arrow-link" href="#showcase">
-                    <span id="arrow-nav" class="material-icons">
-                        arrow_circle_left
-                    </span>
-                </a>
-                <div id="animation-border-div"></div>
-            </div>
-        </nav>
-    </aside>
 
     <footer id="contact" class="">
         <!-- media -->

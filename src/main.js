@@ -15,9 +15,9 @@ const arrUpLink = document.getElementById("pb-arrow-link");
 const animatedBorder = document.getElementById("animation-border-div")
 
 // MODAL
-const descrModalFooter4Carousel1 = document.getElementById("mf-descr-1")
-const descrModalFooter4Carousel2 = document.getElementById("mf-descr-2")
-const descrModalFooter4Carousel3 = document.getElementById("mf-descr-3")
+const descrModalFooter4Carousel1 = document.getElementById("modal-footer__d1")
+const descrModalFooter4Carousel2 = document.getElementById("modal-footer__d2")
+const descrModalFooter4Carousel3 = document.getElementById("modal-footer__d3")
 const carsuouselDescrALL = Array.from(document.getElementsByClassName("car-description-modal"))
 
 const modalTriggerButton = document.getElementById("modal-trigger-button")
