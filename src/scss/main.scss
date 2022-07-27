@@ -144,13 +144,15 @@ h1 {
 //---------
 
 
-.gradient-bridge--1 {
+.bridge--1 {
     position: relative;
     height: 288px;
-    background-color: v.$nl-dark-fill;
-
-    & div {
-        width: 100%;
+    background: rgb(166,61,0);
+    background: linear-gradient(
+        0deg, 
+        rgba(166,61,0,1) 21%, 
+        rgba(201,122,54,1) 100%
+        );
 
         svg {
             position: absolute;
@@ -160,17 +162,8 @@ h1 {
                 fill: v.$nl-back-pink;
             }
         }
-    }
 }
 
-.gradient--gb1 {
-    background: rgb(166,61,0);
-    background: linear-gradient(
-        0deg, 
-        rgba(166,61,0,1) 21%, 
-        rgba(201,122,54,1) 100%
-        );
-}
 
 
 // ABOUT ME
@@ -369,7 +362,7 @@ h1 {
 //----------
 
 
-.bridge-2, .bridge-3 {
+.bridge--2, .bridge--3 {
     position: relative;
     
     svg {
@@ -385,46 +378,46 @@ h1 {
 
 
 // PARALAX
+//---------
 
-.paralax-1 {
+#paralax {
     position: relative;
-    background-color: v.$nl-dark-fill;
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding: 12rem 0;
+    background: rgb(175,77,15);
+    background: linear-gradient(180deg, rgba(175,77,15,1) 0%, rgba(65,27,7,1) 100%);
 
     header {
         position: relative;
         z-index: 20;
         top: -6rem;
-        width: 700px;
-        margin: auto;
-        // padding-left: 200px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        width: 700px;
+        margin: auto;
 
         hr {
             height: 2px;
             width: 100px;
-            background-color: v.$nl-back-pink-dark;
             margin-right: 3rem; 
             box-shadow: 2px 2px 20px rgb(82, 79, 79);
+            background-color: v.$nl-back-pink-dark;
         }
 
         p {
-            color: v.$nl-back-pink-dark;
+            margin: 2.5rem;
             font-size: 2rem;
             text-align: right;
             font-style: italic;
-            margin: 2.5rem;
             text-shadow: 3px 2px 10px #8a5320;
+            color: v.$nl-back-pink-dark;
         }
     }
 
     #paralax-content {
-        outline: 17px solid v.$nl-back-pink-dark;
         height: 20rem;
         width: 75%;
+        outline: 17px solid v.$nl-back-pink-dark;
         margin: -3rem auto 4rem auto;
         background-image: url("/src/img/paralax-1.jpg");
         background-attachment: fixed;
@@ -434,16 +427,12 @@ h1 {
     }
 }
 
-.paralax-gradient {
-    background: rgb(175,77,15);
-    background: linear-gradient(180deg, rgba(175,77,15,1) 0%, rgba(65,27,7,1) 100%);
-}
 
 
 // BRIDGE 3
 
 
-.bridge-3 {
+.bridge--3 {
     svg {
         bottom: 0;
 
@@ -457,26 +446,25 @@ h1 {
 
 // OFFER
 
-.offer {
+#offer-container {
     background-color: v.$nl-back-pink-light;
 }
 
-.offer__content {
-
+.offer {
     text-align: center;
     @include v.article;
     height: 62rem;
 
-    &--head {
+    &__head {
         @include v.title;
         padding: 1rem 0;
     }
 
-    &--nav-big-ul, &--nav-small-ul {
+    &__nav--big ul, &__nav--small ul {
         @include v.nav;
     }
 
-    &--nav-small {
+    &__nav--small {
         @include v.nav-small;
 
         .spinner-border {
@@ -484,90 +472,26 @@ h1 {
         }
     }
 
-    &--nav-big-ul {
+    &__nav--big ul {
         @include v.nav-big-txt;
     }
 
-    &--main {
+    &__main {
         display: flex;
         justify-content: center;
         align-items:flex-start;
         margin-left: 4.5rem;
 
-        &-body, &-icons {
+        .offer-main, nav {
             padding: 1rem;
         }
 
-        &-body {
+        .offer-main {
             width: 90%;
             background-color: v.$nl-content-body;
-
-            #o-intro {
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            .intro-container {
-                display: none;
-            }
-
-            .intro-container, .intro-container--main {
-                position: relative;
-
-                img {
-                    border: 10px solid v.$nl-brown-detail-light;
-                    border-radius: 1500px;
-                }
-
-                &__img-overlay {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0rem;
-                    left: 0;
-                    right: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    // background-color: rgba(0, 0, 0, 0.24);
-
-                    span {
-                        display: inline-block;
-                        width: 64%;
-                        font-size: 2.5rem;
-                        color: rgb(255, 227, 215);
-                        background-color: rgba(41, 17, 8, 0.568);
-                        // border-bottom-left-radius:50px;
-                        // border-bottom-right-radius: 50px;
-                        padding: 1rem 0;
-                    }
-                }
-            }
-
-            .carousel__container {
-                width: 33rem;
-                margin: auto;
-            }
-
-            #treat-info__container, #style-info__container, #ext-info__container {
-                display: none;
-            }
-
-            #photo__container-ext, #photo__container-tr, #photo__container-st {
-                display: none;
-                width: 65%;
-                margin: auto;
-            }
-
-            .ext-photo {
-                justify-content: center;
-            }
         }
         
-        &-icons {
+        nav {
             width: 10%;
             
             #side-nav {
@@ -584,7 +508,70 @@ h1 {
                 }
             }
         }
+    }
+}
 
+.offer-main {
+
+    &__intro {
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .intro-container, &__intro {
+        position: relative;
+
+        img {
+            border: 10px solid v.$nl-brown-detail-light;
+            border-radius: 1500px;
+        }
+
+        .intro-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                display: inline-block;
+                width: 64.2%;
+                padding: 1rem 0;
+                font-size: 2.5rem;
+                background-color: rgba(41, 17, 8, 0.568);
+                color: rgb(255, 227, 215);
+            }
+        }
+    }
+
+    .intro-container {
+        display: none;
+    }
+
+    #treat-info, #style-info, #ext-info {
+        display: none;
+    }
+
+    #ext-photo, #treat-photo, #style-photo {
+        display: none;
+        width: 65%;
+        margin: auto;
+    }
+
+    .carousel__container {
+        width: 33rem;
+        margin: auto;
+    }
+
+    .ext-photo {
+        justify-content: center;
     }
 }
 

@@ -57,19 +57,19 @@ summAllArray.push(navBigStyle)
 
 const // intro 
     introExt = document.getElementById("ext-intro"),
-    introTreat = document.getElementById("tr-intro"),
-    introStyle = document.getElementById("st-intro"),
-    introMain = document.getElementById("o-intro"), 
+    introTreat = document.getElementById("treat-intro"),
+    introStyle = document.getElementById("style-intro"),
+    introMain = document.getElementById("om-intro"), 
     extBodyAll = document.querySelectorAll(".ext-b-all"),
     trBodyAll = document.querySelectorAll(".tr-b-all");
 
 const // body containers
-    snBodyInfo = document.getElementById("ext-info__container"),
-    snBodyImg = document.getElementById("photo__container-ext"),
-    snBodyInfoTr = document.getElementById("treat-info__container"),
-    snBodyImgTr = document.getElementById("photo__container-tr"),
-    snBodyInfoSt = document.getElementById("style-info__container"),    
-    snBodyImgSt = document.getElementById("photo__container-st")
+    snBodyInfo = document.getElementById("ext-info"),
+    snBodyImg = document.getElementById("ext-photo"),
+    snBodyInfoTr = document.getElementById("treat-info"),
+    snBodyImgTr = document.getElementById("treat-photo"),
+    snBodyInfoSt = document.getElementById("style-info"),    
+    snBodyImgSt = document.getElementById("style-photo")
 
 const // info holder <article>
     infoHolderExt = document.getElementById("info-holder__extension"),
