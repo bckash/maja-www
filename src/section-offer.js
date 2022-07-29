@@ -4,7 +4,7 @@
 //------------
 
 
-// -> (BIG & SMALL) NAV TABS |
+// -> (BIG & SMALL) NAV 
 
 
 const  // big, <li>
@@ -52,18 +52,18 @@ summAllArray.push(navBigStyle)
 //.................................................
 
 
-// -> CONTENT : ELEMENTS |
+// -> CONTENT : ELEMENTS 
 
 
-const // intro 
+const // HEADERS 
+    introMain = document.getElementById("om-intro"), 
     introExt = document.getElementById("ext-intro"),
     introTreat = document.getElementById("treat-intro"),
     introStyle = document.getElementById("style-intro"),
-    introMain = document.getElementById("om-intro"), 
-    extBodyAll = document.querySelectorAll(".ext-b-all"),
-    trBodyAll = document.querySelectorAll(".tr-b-all");
+    extBodyAll = document.querySelectorAll(".head-sm--ext"),
+    trBodyAll = document.querySelectorAll(".head-sm--treat");
 
-const // body containers
+const // INFO big containers
     snBodyInfo = document.getElementById("ext-info"),
     snBodyImg = document.getElementById("ext-photo"),
     snBodyInfoTr = document.getElementById("treat-info"),
@@ -71,7 +71,7 @@ const // body containers
     snBodyInfoSt = document.getElementById("style-info"),    
     snBodyImgSt = document.getElementById("style-photo")
 
-const // info holder <article>
+const // INFO main 
     infoHolderExt = document.getElementById("info-holder__extension"),
     infoHolderTreat = document.getElementById("info-holder__treatment")
 

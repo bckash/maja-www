@@ -11224,7 +11224,7 @@ h1, .h1 {
   height: 300px;
   width: 100%;
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8603816527) 0%, rgba(0, 212, 255, 0) 100%);
 }
 
 .main-nav {
@@ -11570,14 +11570,14 @@ h1, .h1 {
   height: 100%;
   object-fit: cover;
 }
-.offer-main .intro-container, .offer-main__intro {
+.offer-main__intro, .offer-main__body header {
   position: relative;
 }
-.offer-main .intro-container img, .offer-main__intro img {
+.offer-main__intro img, .offer-main__body header img {
   border: 10px solid rgba(79, 33, 8, 0.63);
   border-radius: 1500px;
 }
-.offer-main .intro-container .intro-overlay, .offer-main__intro .intro-overlay {
+.offer-main__intro .intro-overlay, .offer-main__body header .intro-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -11587,7 +11587,7 @@ h1, .h1 {
   align-items: center;
   justify-content: center;
 }
-.offer-main .intro-container .intro-overlay span, .offer-main__intro .intro-overlay span {
+.offer-main__intro .intro-overlay span, .offer-main__body header .intro-overlay span {
   display: inline-block;
   width: 64.2%;
   padding: 1rem 0;
@@ -11595,41 +11595,22 @@ h1, .h1 {
   background-color: rgba(41, 17, 8, 0.568);
   color: rgb(255, 227, 215);
 }
-.offer-main .intro-container {
+.offer-main__body header {
   display: none;
 }
-.offer-main #treat-info, .offer-main #style-info, .offer-main #ext-info {
+.offer-main__body #treat-info, .offer-main__body #style-info, .offer-main__body #ext-info {
   display: none;
 }
-.offer-main #ext-photo, .offer-main #treat-photo, .offer-main #style-photo {
+.offer-main__body #ext-photo, .offer-main__body #treat-photo, .offer-main__body #style-photo {
   display: none;
   width: 65%;
   margin: auto;
 }
-.offer-main .carousel__container {
+.offer-main__body .carousel__container {
   width: 33rem;
   margin: auto;
 }
-.offer-main .ext-photo {
-  justify-content: center;
-}
 
-.side-nav--active {
-  color: rgb(209, 135, 39);
-  animation: side-nav 0.2s 1 forwards;
-}
-.side-nav--active:hover {
-  cursor: default !important;
-}
-
-@keyframes side-nav {
-  from {
-    color: rgb(117, 100, 78);
-  }
-  to {
-    color: rgb(209, 135, 39);
-  }
-}
 .info-holder__info--about {
   display: flex;
   align-items: center;
@@ -11689,6 +11670,22 @@ h1, .h1 {
   height: 6.5rem;
 }
 
+.side-nav--active {
+  color: rgb(209, 135, 39);
+  animation: side-nav 0.2s 1 forwards;
+}
+.side-nav--active:hover {
+  cursor: default !important;
+}
+
+@keyframes side-nav {
+  from {
+    color: rgb(117, 100, 78);
+  }
+  to {
+    color: rgb(209, 135, 39);
+  }
+}
 .animation__slideIN {
   animation-name: slideIN;
   animation-duration: 0.5s;

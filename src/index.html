@@ -250,16 +250,16 @@
                     <!-- | body -->
                     <div class="offer-main br"> 
                         <!-- || intro -->
-                        <header id="om-intro" class="offer-main__intro">
+                        <header class="offer-main__intro" id="om-intro" >
                             <img src="img/offer-intro/intro-main.jpg" alt="">
                             <p class="intro-overlay">
                                 <span>please choose from the main menu</span>
                             </p>
                         </header>
                         <!-- || extensions -->
-                        <article>
+                        <article class="offer-main__body">
                             <!-- INTRO -->
-                            <header id="ext-intro" class="intro-container">
+                            <header id="ext-intro">
                                 <img src="img/offer-intro/intro-extensions.jpg" alt="">
                                 <p class="intro-overlay">
                                     <span>extensions</span>
@@ -267,25 +267,18 @@
                             </header>
                             <!-- INFO -->
                             <section id="ext-info">
-                                <!-- carousel -->
-                                <section class="carousel__container">
+                                <header>
                                     <!-- ||| fusion -->
-                                    <section class="ext-b-all" id="ext-b-fusion">
-                                        <div id="car1" class="carousel slide" data-bs-ride="carousel"> 
-                                            <!-- | img -->
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src="img/extension/sn-info-fb.jpg" class="d-block w-100" alt="...">
-                                                </div>
-                                            </div>
-                                            <!-- title -->
-                                            <div class="carousel-info">
-                                                <span>fusion bonds</span>
-                                            </div>
+                                    <section class="head-sm--ext" id="ext-b-fusion">
+                                        <div>
+                                            <img src="img/extension/sn-info-fb.jpg" alt="...">
+                                        </div>
+                                        <div>
+                                            <span>fusion bonds</span>
                                         </div>
                                     </section>
                                     <!-- ||| micro rings -->
-                                    <section class="ext-b-all" id="ext-b-micro">
+                                    <section class="head-sm--ext" id="ext-b-micro">
                                         <div id="car2" class="carousel slide" data-bs-ride="carousel"> 
                                             <!-- | img -->
                                             <div class="carousel-inner">
@@ -300,7 +293,7 @@
                                         </div>
                                     </section>
                                     <!-- ||| easy shrinks -->
-                                    <section class="ext-b-all" id="ext-b-shrinks">
+                                    <section class="head-sm--ext" id="ext-b-shrinks">
                                         <div id="car3" class="carousel slide" data-bs-ride="carousel"> 
                                             <!-- | img -->
                                             <div class="carousel-inner">
@@ -315,7 +308,7 @@
                                         </div>
                                     </section>
                                     <!-- ||| tape on -->
-                                    <section class="ext-b-all" id="ext-b-tape">
+                                    <section class="head-sm--ext" id="ext-b-tape">
                                         <div id="car4" class="carousel slide" data-bs-ride="carousel"> 
                                             <!-- | img -->
                                             <div class="carousel-inner">
@@ -330,7 +323,7 @@
                                         </div>
                                     </section>
                                     <!-- ||| combline -->
-                                    <section class="ext-b-all" id="ext-b-comb">
+                                    <section class="head-sm--ext" id="ext-b-comb">
                                         <div id="car5" class="carousel slide" data-bs-ride="carousel"> 
                                             <!-- | img -->
                                             <div class="carousel-inner">
@@ -344,9 +337,9 @@
                                             </div>
                                         </div>                            
                                     </section>
-                                </section>
+                                </header>
                                 <!-- information -->
-                                <article class="info-holder" id="info-holder__extension">
+                                <section class="info-holder" id="info-holder__extension">
                                     <!-- INFO -->
                                     <div class="info-holder__info">
                                         <!-- | about -->
@@ -420,7 +413,7 @@
 
                                         </div>
                                     </div>
-                                </article>
+                                </section>
                             </section>
                             <!-- PHOTO (off)-->
                             <section id="ext-photo">
@@ -626,9 +619,9 @@
                             </section>
                         </article>
                         <!-- || treatment -->
-                        <article>
+                        <article class="offer-main__body">
                             <!-- INTRO -->
-                            <header id="treat-intro" class="intro-container">
+                            <header id="treat-intro">
                                 <img src="img/offer-intro/intro-treatment.jpg" alt="">
                                 <p class="intro-overlay">
                                     <span>treatment</span>
@@ -636,10 +629,9 @@
                             </header>
                             <!-- INFO -->
                             <section id="treat-info">
-                                <!-- | carousel -->
-                                <section class="carousel__container">
+                                <header class="carousel__container">
                                     <!-- || botox -->
-                                    <section class="tr-b-all" id="tr-b-botox">
+                                    <section class="head-sm--treat" id="tr-b-botox">
                                         <div id="car21" class="carousel slide" data-bs-ride="carousel"> 
                                             <!-- | img -->
                                             <div class="carousel-inner">
@@ -654,7 +646,7 @@
                                         </div>                                    
                                     </section>
                                     <!-- || kreatyna -->
-                                    <section class="tr-b-all" id="tr-b-kreatyna">
+                                    <section class="head-sm--treat" id="tr-b-kreatyna">
                                         <div id="car22" class="carousel slide" data-bs-ride="carousel"> 
                                             <!-- | img -->
                                             <div class="carousel-inner">
@@ -668,11 +660,11 @@
                                             </div>
                                         </div>
                                     </section>
-                                </section>
+                                </header>
                                 <!-- | information -->
                                 <section class="info-holder" id="info-holder__treatment">
-                                <!-- INFO -->
-                                <div class="info-holder__info">
+                                    <!-- INFO -->
+                                    <div class="info-holder__info">
                                         <!-- | about -->
                                         <div class="info-holder__info--about" >
                                             <span id="ih-about-tr" class="fill-fields-tr" >
@@ -868,9 +860,9 @@
                             </section> 
                         </article>
                         <!-- || style -->
-                        <article>
+                        <article class="offer-main__body">
                             <!-- INTRO -->
-                            <header id="style-intro" class="intro-container">
+                            <header id="style-intro">
                                 <img src="img/offer-intro/intro-styling.jpg" alt="">
                                 <p class="intro-overlay">
                                     <span>styling</span>
@@ -878,8 +870,8 @@
                             </header>
                             <!-- INFO -->
                             <section id="style-info">
-                                <!-- | carousel -->
-                                <section class="carousel__container">
+                                <!-- carousel -->
+                                <header class="carousel__container">
                                     <section class="st-b-all" id="st-b">
                                         <div id="car333" class="carousel slide" data-bs-ride="carousel"> 
                                             <!-- | img -->
@@ -894,7 +886,7 @@
                                             </div>
                                         </div>                                    
                                     </section>
-                                </section>
+                                </header>
                                 <!-- information -->
                                 <section class="info-holder" id="info-holder-style">
                                         <!-- | about -->

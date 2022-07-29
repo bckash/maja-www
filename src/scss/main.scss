@@ -88,7 +88,7 @@ h1 {
         height: 300px;
         width: 100%;
         background: rgb(255,255,255);
-        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+        background: linear-gradient(0deg, rgba(255,255,255,0.8603816526610644) 0%, rgba(0,212,255,0) 100%);
     }
 }
 
@@ -522,7 +522,7 @@ h1 {
         }
     }
 
-    .intro-container, &__intro {
+    &__intro, &__body header{
         position: relative;
 
         img {
@@ -551,51 +551,34 @@ h1 {
         }
     }
 
-    .intro-container {
+    &__body header {
         display: none;
     }
 
-    #treat-info, #style-info, #ext-info {
-        display: none;
+    &__body {
+        #treat-info, #style-info, #ext-info {
+            display: none;
+        }
+    
+        #ext-photo, #treat-photo, #style-photo {
+            display: none;
+            width: 65%;
+            margin: auto;
+        }
+    
+        // .ext-photo {
+        //     justify-content: center;
+        // }
+    
+        .carousel__container {
+            width: 33rem;
+            margin: auto;
+        }
     }
 
-    #ext-photo, #treat-photo, #style-photo {
-        display: none;
-        width: 65%;
-        margin: auto;
-    }
 
-    .carousel__container {
-        width: 33rem;
-        margin: auto;
-    }
 
-    .ext-photo {
-        justify-content: center;
-    }
 }
-
-.side-nav--active {
-    color: v.$nl-side-nav-a-light;
-    animation: side-nav .2s  1 forwards;
-
-    &:hover {
-        cursor: default !important;
-    }
-}
-
-
-@keyframes side-nav {
-    from {
-        color: v.$nl-side-nav-a-dark;
-
-    }
-    to {
-        color: v.$nl-side-nav-a-light;
-
-    }
-}
-
 
 .info-holder {
     // display: none;
@@ -674,6 +657,30 @@ h1 {
         }
     }
 }
+
+
+.side-nav--active {
+    color: v.$nl-side-nav-a-light;
+    animation: side-nav .2s  1 forwards;
+
+    &:hover {
+        cursor: default !important;
+    }
+}
+
+
+@keyframes side-nav {
+    from {
+        color: v.$nl-side-nav-a-dark;
+
+    }
+    to {
+        color: v.$nl-side-nav-a-light;
+
+    }
+}
+
+
 
 // slideshow animations
 
