@@ -453,7 +453,7 @@ h1 {
 .offer {
     text-align: center;
     @include v.article;
-    height: 62rem;
+    height: 1000px;
 
     &__head {
         @include v.title;
@@ -522,7 +522,7 @@ h1 {
         }
     }
 
-    &__intro, &__body header{
+    &__intro, .omb__head{
         position: relative;
 
         img {
@@ -551,7 +551,7 @@ h1 {
         }
     }
 
-    &__body header {
+    .omb__head {
         display: none;
     }
 
@@ -565,20 +565,36 @@ h1 {
             width: 65%;
             margin: auto;
         }
-    
-        // .ext-photo {
-        //     justify-content: center;
-        // }
-    
-        .carousel__container {
-            width: 33rem;
-            margin: auto;
+        
+        .head-sm, .head-sm img, .head-sm div {
+            border-radius: 20px;
+        }
+
+        .head-sm {
+            position: relative;
+            width: max-content;
+            margin: 1rem auto 2rem auto;
+            outline: 6px solid v.$nl-side-nav-a-light;
+            text-align: center;
+
+            div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.7rem;
+                text-transform: capitalize;
+                background-color: rgba(36, 21, 1, 0.616);
+                color: white;
+            }
         }
     }
-
-
-
 }
+
 
 .info-holder {
     // display: none;

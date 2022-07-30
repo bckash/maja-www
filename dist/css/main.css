@@ -11499,7 +11499,7 @@ h1, .h1 {
   text-align: center;
   width: 800px;
   margin: auto;
-  height: 62rem;
+  height: 1000px;
 }
 .offer__head {
   width: 320px;
@@ -11570,14 +11570,14 @@ h1, .h1 {
   height: 100%;
   object-fit: cover;
 }
-.offer-main__intro, .offer-main__body header {
+.offer-main__intro, .offer-main .omb__head {
   position: relative;
 }
-.offer-main__intro img, .offer-main__body header img {
+.offer-main__intro img, .offer-main .omb__head img {
   border: 10px solid rgba(79, 33, 8, 0.63);
   border-radius: 1500px;
 }
-.offer-main__intro .intro-overlay, .offer-main__body header .intro-overlay {
+.offer-main__intro .intro-overlay, .offer-main .omb__head .intro-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -11587,7 +11587,7 @@ h1, .h1 {
   align-items: center;
   justify-content: center;
 }
-.offer-main__intro .intro-overlay span, .offer-main__body header .intro-overlay span {
+.offer-main__intro .intro-overlay span, .offer-main .omb__head .intro-overlay span {
   display: inline-block;
   width: 64.2%;
   padding: 1rem 0;
@@ -11595,7 +11595,7 @@ h1, .h1 {
   background-color: rgba(41, 17, 8, 0.568);
   color: rgb(255, 227, 215);
 }
-.offer-main__body header {
+.offer-main .omb__head {
   display: none;
 }
 .offer-main__body #treat-info, .offer-main__body #style-info, .offer-main__body #ext-info {
@@ -11606,9 +11606,29 @@ h1, .h1 {
   width: 65%;
   margin: auto;
 }
-.offer-main__body .carousel__container {
-  width: 33rem;
-  margin: auto;
+.offer-main__body .head-sm, .offer-main__body .head-sm img, .offer-main__body .head-sm div {
+  border-radius: 20px;
+}
+.offer-main__body .head-sm {
+  position: relative;
+  width: max-content;
+  margin: 1rem auto 2rem auto;
+  outline: 6px solid rgb(209, 135, 39);
+  text-align: center;
+}
+.offer-main__body .head-sm div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  background-color: rgba(36, 21, 1, 0.616);
+  color: white;
 }
 
 .info-holder__info--about {
