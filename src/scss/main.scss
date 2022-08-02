@@ -1,7 +1,6 @@
 
 
 @use "./variables" as v;
-@use "./carousel-bootstrap";
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
@@ -495,9 +494,9 @@ h1 {
             width: 10%;
             
             #side-nav {
-            display: none;
-            margin-top: 1.6rem;
-            color: v.$nl-brown-detail-light;
+                display: none;
+                margin-top: 1.6rem;
+                color: v.$nl-brown-detail-light;
             }
 
             span {
@@ -556,6 +555,7 @@ h1 {
     }
 
     &__body {
+
         #treat-info, #style-info, #ext-info {
             display: none;
         }
@@ -564,6 +564,42 @@ h1 {
             display: none;
             width: 65%;
             margin: auto;
+
+            .carousel {
+                margin: 1rem;
+                padding-bottom: v.$padding-info;
+            
+                .carousel-indicators {
+                    margin: 0;
+                
+                    button {
+                        border-radius: 10px;
+                        background-color: rgb(150, 150, 151);
+                    }   
+                }
+            
+                .carousel-inner {
+                    border-radius: v.$border-info;
+                    outline: 6px solid v.$nl-side-nav-a-light;
+                }
+            
+                .carousel-header {
+                    position: absolute;
+                    bottom: v.$padding-info;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    padding: .5rem 0;
+                    border-bottom-right-radius: v.$border-info;
+                    border-bottom-left-radius: v.$border-info;
+                    font-size: 1.7rem;
+                    text-transform: capitalize;
+                    background-color: rgba(32, 25, 25, 0.37);
+                    color: white;
+                }
+            }
+            
         }
         
         .head-sm, .head-sm img, .head-sm div {
@@ -595,85 +631,81 @@ h1 {
     }
 }
 
+.js-fill {
 
-.info-holder {
-    // display: none;
+    &__about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 192px;
+        font-style: italic;
 
-    &__info {
-
-        &--about {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-style: italic;
-            height: 12rem;
-
-            span {
-                width: 70%;
-                border-left: 6px solid v.$nl-brown-detail-light;
-                margin: 0rem auto 1rem auto;
-                text-align: left;
-                padding-left: 2rem;
-            }
+        .fill-fields, .fill-fields--tr, .fill-fields--st {
+            width: 70%;
+            margin: 0rem auto 1rem auto;
+            padding-left: 2rem;
+            border-left: 6px solid v.$nl-brown-detail-light;
+            text-align: left;
         }
+    }
 
-        &--rest {
+    &__icon-part {
+        display: flex;
+        justify-content: center;
+
+        .icon-column {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            width: 28%;
+            margin: 1rem 0;
 
-            .info-rest__example {
-                display: flex;
-                flex-direction: column;
-                width: 28%;
-                margin: 1rem 0;
+            &__icon {
 
-                .title-span {
+                span {
+                    color: v.$nl-brown-detail-light;
+                    font-size: 2.4rem;
+    
+                    &:hover {
+                        cursor: default;
+                    }
+                }
+            }
+
+            &__title {
+                font-size: 1.3rem;
+                margin: 1rem;
+
+                span {
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     height: 4rem;
                 }
+            }
 
-                &--icon {
-                    span {
-                    color: v.$nl-brown-detail-light;
-                    font-size: 2.4rem;
-                    }
+            &__descr {
+                display: flex;
+                justify-content: center;
+                align-self: flex-start;
+                width: 80%;
+                height: 100%;
+                margin: auto;
+                font-size: .8rem;
+            }
 
-                    span:hover {
-                        cursor: default;
-                    }
-                }
-
-                &--title {
-                    font-size: 1.3rem;
-                    margin: 1rem;
-                }
-
-                &--descr {
-                    display: flex;
-                    justify-content: center;
-                    align-self: flex-start;
-                    width: 80%;
-                    height: 100%;
-                    margin: auto;
-                    font-size: .8rem;
-                }
-
-                &--descr-st {
-                    margin-left: 2rem;
-                    list-style-type: disc;
-                    text-align: left;
-                }
-
-                .fill-fields, .fill-fields-tr {
-                    height: 6.5rem;
-                }
+            &__descr--st {
+                margin-left: 5rem;
+                list-style-type: disc;
+                text-align: left;
             }
         }
-    }
-}
 
+        .width-fix {
+            width: 50%;
+        }
+    }
+
+}
 
 .side-nav--active {
     color: v.$nl-side-nav-a-light;
