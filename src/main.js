@@ -5,9 +5,9 @@
 
 
 // customer opinion -  animation 
-const custOpinion1 = document.getElementById("cu-op-1")
-const custOpinion2 = document.getElementById("cu-op-2")
-const custOpinion3 = document.getElementById("cu-op-3")
+const custOpinion1 = document.getElementById("opinion-1")
+const custOpinion2 = document.getElementById("opinion-2")
+const custOpinion3 = document.getElementById("opinion-3")
 
 // pull back nav
 const pullBack = document.getElementById("pull-back");

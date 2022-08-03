@@ -730,60 +730,21 @@ h1 {
 
 
 
-// slideshow animations
-
-.animation__slideIN {
-    animation-name: slideIN;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
-
-.animation__slideOUT {
-    animation-name: sildeOUT;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes slideIN {
-    from {
-       opacity: 0;
-       transform: translateX(-15rem);
-    } 
-    to {
-       opacity: 1;
-       transform: translateX(0);
-    } 
-   }
-
-@keyframes slideOUT {
-   from {
-       z-index: 10;
-       opacity: 1;
-       transform: translateX(0);
-   } 
-   to {
-       z-index: 10;
-       opacity: 0;
-       transform: translateX(15rem);
-   } 
-}
-
-
 // nav-small active state
 .ns-active {
     font-weight: bold;
     color: v.$nl-brown-detail;
 }
 
-#treatment article, #style article, .ext-b-all {
-    display: none;
-}
+// #treatment article, #style article, .ext-b-all {
+//     display: none;
+// }
 
 
 
 // BRIDGE 4
 
-.bridge-4, .bridge-5 {
+.bridge--4, .bridge--5 {
     position: relative;
     
     svg {
@@ -800,87 +761,115 @@ h1 {
 
 // CUSTOMER OPINION
 
-.co-container {
-    background-color: v.$nl-dark-fill;
-    padding: 12rem 0 10rem 0;
-}
+#customer-opinion-container {
+    padding: 12rem 0;
+    background: rgb(79,35,11);
+    background: linear-gradient(180deg, rgba(79,35,11,1) 0%, rgba(176,86,1,1) 100%);
 
-#co-title {
-    @include v.title;
-    font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 4rem;
-    text-align: center;
-    width: 35rem;
-    padding-top: 6rem;
-    margin-bottom: 0rem;
-    border: 0;
-    color: v.$nl-back-pink-dark;
-}
-
-.p-absolute-fix {
-    position: relative;
-    margin: auto;
-    width: 40rem;
-    height: 25rem;
-    overflow: hidden;
 }
 
 .customer-opinion {
-    position: relative;
-    padding-bottom: 10rem;
-    width: 40rem;
-    margin: auto;
 
-    &__header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 6rem;
+    &__title {
+        @include v.title;
+        width: 560px;
+        margin-bottom: 2rem;
+        padding-top: 6rem;
+        // padding-left: 5rem;
+        border: 0;
 
-        & > * {
-            margin: 1rem;
+        h1 {
+            font-family: 'Oleo Script Swash Caps', cursive;
+            font-size: 4rem;
+            text-align: center;
+            color: rgb(175, 92, 15);
         }
+    }
 
-        &--name {
-            font-size: 2rem;
-            color: white;
-        }
-
-        &--photo img {
-            position: relative;
-            z-index: 5;
-            width: 170px;
-            border: 2px white solid;
-            @include v.photo-shad;
-        }
-
-        &--icon span {
-            font-size: 1.4rem;
-            margin-bottom: .5rem;
-            color: v.$nl-red;
-        }
-    }   
-    
-    &__opinion {
-        @include v.photo-shad;
-        position: absolute;
-        font-style: italic;
-        top: 9rem;
-        left: 180px;
-        width: 22rem;
+    &__main {
+        position: relative;
+        width: 640px;
+        height: 400px;
         margin: auto;
-        background-color: v.$nl-back-pastel;
-        color: white;
-        padding: 1rem;
-        border: white 4px solid;
-        border-radius: 15px;
+        overflow: hidden;
 
+        .opinions {
+            @include v.slideshow;
+            width: 40rem;
+            margin: auto;
+            padding-bottom: 10rem;
+
+            &__user {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                // margin-right: 6rem;
+                margin-top: 1rem;
+                margin-left: 3.5rem;
+
+                > * {
+                    margin: 1rem;
+                }
+            }   
+            
+            &__content {
+                @include v.photo-shad;
+                position: absolute;
+                top: 140px;
+                left: 200px;
+                width: 350px;
+                margin: auto;
+                padding: 2rem 3rem;
+                border-radius: 15px;
+                border-top-left-radius: 0;
+                font-size: 1.1rem;
+                font-style: italic;
+                background-color: rgba(0, 0, 0, 0.521);
+                color: rgb(241, 226, 204);
+
+                q::after, q::before {
+                    color: #d18d4d;
+                }
+
+                q::before {
+                    margin-right: .2rem;
+                } 
+                
+                q::after {
+                    margin-left: .2rem;
+                }
+            }
+
+            &__content:hover {
+                outline: rgb(228, 127, 34) 4px solid;
+            }
+        }
     }
 }
 
-#cu-op-1, #cu-op-2, #cu-op-3 {
-    @include v.slideshow
+.user {
+
+    &__photo img {
+        position: relative;
+        // z-index: 5;
+        width: 150px;
+        // border: 2px white solid;
+        @include v.photo-shad;
+    }
+
+    &__name {
+        font-size: 2rem;
+        color: rgb(236, 186, 92);
+    }
+        
+    &__icon span {
+        padding-top: .8rem;
+        margin-left: -1.2rem;
+        font-size: 1.1rem;
+        color: rgb(201, 121, 17);
+    }
 }
+
 
 .animation__in-left-right {
     animation-name: inLeftRight;
@@ -920,22 +909,17 @@ h1 {
     } 
 }
 
-#corner-float {
-    width: 60px;
-    height: 20px;
-    float: left;
-}
-
-.gradient-3 {
-    background: rgb(79,35,11);
-    background: linear-gradient(180deg, rgba(79,35,11,1) 0%, rgba(176,86,1,1) 100%);
-}
+// #corner-float {
+//     width: 60px;
+//     height: 20px;
+//     float: left;
+// }
 
 
 
 // BRIDGE 5
 
-.bridge-5 {
+.bridge--5 {
     svg {
         bottom: 0;
         path {
