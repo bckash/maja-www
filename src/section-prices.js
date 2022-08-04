@@ -3,22 +3,22 @@
 //------------
 
 // big nav
-const pricesNavExt = document.getElementById("prices--nav-ext")
-const pricesNavTreat = document.getElementById("prices--nav-treat")
-const pricesNavStyle = document.getElementById("prices--nav-style")
+const pricesNavExt = document.getElementById("p-nav-bg-ext")
+const pricesNavTreat = document.getElementById("p-nav-bg-treat")
+const pricesNavStyle = document.getElementById("p-nav-bg-style")
 
 // small nav
-const priceNavSm = document.getElementById("nav-small-price")
-const priceNavSmBotox = document.getElementById("pr-botox")
-const priceNavSmKreatyna = document.getElementById("pr-kreatyna")
-const priceNavSmALL = document.getElementsByClassName("pr-all")
+const priceNavSm = document.getElementById("p-nav-sm")
+const priceNavSmBotox = document.getElementById("p-nav-sm--botox")
+const priceNavSmKreatyna = document.getElementById("p-nav-sm--kreatyna")
+const priceNavSmALL = document.getElementsByClassName("p-nav-sm--all")
 
 
-// content body
-const pricesBodyExt = document.getElementById("pc-c-ext")
-const pricesBodyTreat = document.getElementById("pc-c-treat")
-const pricesBodyStyle = document.getElementById("pc-c-style")
-const pricesBodyIntro = document.getElementById("pc-c-intro")
+// main
+const pricesBodyIntro = document.getElementById("p-m-intro")
+const pricesBodyExt = document.getElementById("p-m-b--ext")
+const pricesBodyTreat = document.getElementById("p-m-b--treat")
+const pricesBodyStyle = document.getElementById("p-m-b--style")
 
 // price line
 const priceLine = document.getElementsByClassName("price-line")
@@ -63,6 +63,7 @@ function pricesBigNav (e) {
     pricesBodyIntro.style.display = "none";
     priceNavSmBotox.classList.remove("ns-active")
     priceNavSmKreatyna.classList.remove("ns-active")
+
     for (item of priceLine) {
         item.style.display = "none"
     }
@@ -127,7 +128,7 @@ function pricesSmallNav (e) {
     }
 
     switch(e.target.id) {
-        case "pr-botox":
+        case "p-nav-sm--botox":
             activeTabs(priceNavSmALL, e.target, "ns-active");
             
             for (item of priceLine) {
@@ -139,7 +140,7 @@ function pricesSmallNav (e) {
 
             break;
         
-        case "pr-kreatyna":
+        case "p-nav-sm--kreatyna":
             activeTabs(priceNavSmALL, e.target, "ns-active");
 
             for (item of priceLine) {

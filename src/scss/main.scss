@@ -205,7 +205,7 @@ h1 {
             border: 1px solid v.$nl-border;
             border-radius: 20px;
             background-color: v.$nl-content-body;
-            box-shadow: 3px 3px 10px rgb(228, 222, 222);
+            @include v.box-shad;
 
             .p1 {
 
@@ -788,9 +788,10 @@ h1 {
 
     &__main {
         position: relative;
-        width: 640px;
+        width: 800px;
         height: 400px;
         margin: auto;
+        padding-left: 80px;
         overflow: hidden;
 
         .opinions {
@@ -909,11 +910,6 @@ h1 {
     } 
 }
 
-// #corner-float {
-//     width: 60px;
-//     height: 20px;
-//     float: left;
-// }
 
 
 
@@ -931,151 +927,158 @@ h1 {
 
 // PRICES
 
-.prices {
+#prices-container {
     background-color: #f3f2ef;
+}
 
-    &__content {
-        @include v.article;
+.prices {
+    @include v.article;
 
-        &--header {
-            @include v.title;
-            text-align: center
-        }
+    &__header {
+        @include v.title;
+        text-align: center
+    }
 
-        &--nav-big-ul, &--nav-small-ul {
-            @include v.nav;
-        }
-    
-        &--nav-small {
-            @include v.nav-small;
-        }
-    
-        &--nav-big-ul {
-            @include v.nav-big-txt;
-        }
+    &__nav--big ul, &__nav--small ul {
+        @include v.nav;
+    }
 
-        &--body {
-            margin-top: 2rem;
-            text-align: center;
-            height: 43rem;
+    &__nav--small {
+        @include v.nav-small;
+    }
 
-            &-ext, &-treat, &-style {
-                display: none;
-            }
+    &__nav--big ul {
+        @include v.nav-big-txt;
+    }    
 
-            &-ext {
+    &__main {
+        height: 690px;
+        margin-top: 2rem;
+        text-align: center;
 
-                @include v.table-body;
-
-                table td, table th {
-                    cursor: default;
-                }
-                
-                td::before {
-                    content: "£ ";
-                }
-
-            }
-
-            &-treat {
-                position: relative;
-
-                & .price-line {
-                    display: none;
-                    align-items:center;
-                    justify-content: end;
-                    position: absolute;
-                    left: 50%;
-                    text-align: right;
-                    width: 0;
-                    border-bottom: 4px solid;
-                    padding-right: 1rem;
-    
-                    & .price-holder {
-                        display: none;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        padding: .2rem;
-                        width: 7rem;
-                        border: 1px solid;
-    
-                        & span {
-                            display: block;
-    
-                        }
-    
-                        &--value {
-                            font-size: 1.5rem;
-                        }
-    
-                    }              
-                }
-
-                & .pl-pink {
-                    top: 1rem;
-                    border-color: pink;
-                    background-color: rgba(255, 192, 203, 0.1);
-    
-                    & .price-holder {
-                        border-color: rgb(223, 147, 160);
-                    }
-    
-                    & span {
-                        color: rgb(194, 71, 153);
-                    }
-                }
-    
-                & .pl-peach {
-                    top: 10rem;
-                    border-color: orange;
-                    background-color: rgba(255, 166, 0, 0.1);
-    
-                    & .price-holder {
-                        border-color: rgb(219, 133, 63);
-                    }
-    
-                    & span {
-                        color: rgb(187, 96, 22);
-                    }
-                }
-    
-                & .pl-red {
-                    top: 19rem;
-                    border-color: red;
-                    background-color: rgba(255, 0, 0, 0.1);
-    
-                    & .price-holder {
-                        border-color: rgb(204, 79, 79);
-                    }
-    
-                    & span {
-                        color: rgb(160, 14, 14);
-                    }
-                }
-
-                & .price-holder {
-                    text-transform: capitalize;
-                }
-            }
-
-            &-style {
-                @include v.table-body;
-
-                & table {
-
-                    & td::before {
-                        content: "£ "
-                    }
-                }
-            }
-
-
-        }
+        .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+            background-color: rgb(255, 252, 250) ;
+          }
     }
 }
 
-// animation price zones
+.p-main {
+
+    &__body {
+
+        &--ext, &--treat, &--style {
+            display: none;
+        }
+    
+        &--ext {    
+            @include v.table-body;
+            @include v.box-shad;
+    
+            table td, table th {
+                cursor: default;
+            }
+            
+            td::before {
+                content: "£ ";
+            }    
+        }
+    
+        &--treat {
+            position: relative;
+    
+            & .price-line {
+                position: absolute;
+                left: 50%;
+                display: none;
+                align-items:center;
+                justify-content: end;
+                width: 0;
+                border-bottom: 4px solid;
+                padding-right: 1rem;
+                text-align: right;
+    
+                & .price-holder {
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: .2rem;
+                    width: 7rem;
+                    border: 1px solid;
+                    text-transform: capitalize;
+    
+                    & span {
+                        display: block;
+    
+                    }
+    
+                    &__value {
+                        font-size: 1.5rem;
+                    }
+    
+                }              
+            }
+    
+            .pl--candy {
+                top: 1rem;
+                border-color: pink;
+                background-color: rgba(255, 192, 203, 0.1);
+    
+                & .price-holder {
+                    border-color: rgb(223, 147, 160);
+                }
+    
+                & span {
+                    color: rgb(194, 71, 153);
+                }
+            }
+    
+            .pl--peach {
+                top: 10rem;
+                border-color: orange;
+                background-color: rgba(255, 166, 0, 0.1);
+    
+                & .price-holder {
+                    border-color: rgb(219, 133, 63);
+                }
+    
+                & span {
+                    color: rgb(187, 96, 22);
+                }
+            }
+    
+            .pl--red {
+                top: 19rem;
+                border-color: red;
+                background-color: rgba(255, 0, 0, 0.1);
+    
+                & .price-holder {
+                    border-color: rgb(204, 79, 79);
+                }
+    
+                & span {
+                    color: rgb(160, 14, 14);
+                }
+            }
+        }
+    
+        &--style {
+            @include v.table-body;
+            @include v.box-shad;
+    
+            & table {
+    
+                & td::before {
+                    content: "£ "
+                }
+            }
+        }
+    }
+
+
+}
+
+// animations for "price zones"
 
 .animation__line-in  {
     animation-name: line-left-right;
@@ -1083,17 +1086,17 @@ h1 {
     animation-fill-mode: forwards;
 }
 
-.animation__line-in-d1, .animation__line-in-d2 {
+.animation__line-in--d1, .animation__line-in--d2 {
     animation-name: line-left-right2;
     animation-duration: .4s;
     animation-fill-mode: forwards;
 }
 
-.animation__line-in-d1 {
+.animation__line-in--d1 {
     animation-delay: .05s;
 }
 
-.animation__line-in-d2 {
+.animation__line-in--d2 {
     animation-delay: .10s;
 }
 
@@ -1128,22 +1131,22 @@ h1 {
     } 
 }
 
-// animation - price holder
+// animation for price holder
 
-.animation__price  {
-    animation-name: price-appear;
-    animation-duration: .2s;
-    animation-fill-mode: forwards;
-}
+// .animation__price  {
+//     animation-name: price-appear;
+//     animation-duration: .2s;
+//     animation-fill-mode: forwards;
+// }
 
-@keyframes price-appear {
-    from {opacity: 0}
-    to {opacity:1}
-}
+// @keyframes price-appear {
+//     from {opacity: 0}
+//     to {opacity:1}
+// }
 
 
 
-// pulback menu
+// NAV PULL UP
 
 .pull-back {
     display: inline-block;
@@ -1188,8 +1191,6 @@ h1 {
         animation: pull-up .4s 1 linear;
     }
 }
-
-
 
 .opa-1 {
     opacity: 1;

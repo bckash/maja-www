@@ -60,6 +60,10 @@ $border-info: 20px;
     box-shadow: 1px 1px 20px rgb(78, 51, 26);
 }
 
+@mixin box-shad {
+    box-shadow: 3px 3px 10px rgb(228, 222, 222);
+}
+
 // navigation
 
 @mixin nav {

@@ -11742,9 +11742,10 @@ h1, .h1 {
 }
 .customer-opinion__main {
   position: relative;
-  width: 640px;
+  width: 800px;
   height: 400px;
   margin: auto;
+  padding-left: 80px;
   overflow: hidden;
 }
 .customer-opinion__main .opinions {
@@ -11850,14 +11851,15 @@ h1, .h1 {
   fill: #f3f2ef;
 }
 
-.prices {
+#prices-container {
   background-color: #f3f2ef;
 }
-.prices__content {
+
+.prices {
   width: 800px;
   margin: auto;
 }
-.prices__content--header {
+.prices__header {
   width: 320px;
   margin: auto;
   padding: 1rem;
@@ -11868,62 +11870,67 @@ h1, .h1 {
   color: rgba(79, 33, 8, 0.63);
   text-align: center;
 }
-.prices__content--nav-big-ul, .prices__content--nav-small-ul {
+.prices__nav--big ul, .prices__nav--small ul {
   display: flex;
   justify-content: center;
   padding: 0.5rem 0;
 }
-.prices__content--nav-big-ul li, .prices__content--nav-small-ul li {
+.prices__nav--big ul li, .prices__nav--small ul li {
   margin: 0.5rem 1rem;
 }
-.prices__content--nav-big-ul li:hover, .prices__content--nav-small-ul li:hover {
+.prices__nav--big ul li:hover, .prices__nav--small ul li:hover {
   cursor: pointer;
 }
-.prices__content--nav-small {
+.prices__nav--small {
   height: 56px;
 }
-.prices__content--nav-small ul {
+.prices__nav--small ul {
   display: none;
   margin-top: 0;
   padding-top: 0;
 }
-.prices__content--nav-big-ul {
+.prices__nav--big ul {
   font-size: 1.2rem;
 }
-.prices__content--body {
+.prices__main {
+  height: 690px;
   margin-top: 2rem;
   text-align: center;
-  height: 43rem;
 }
-.prices__content--body-ext, .prices__content--body-treat, .prices__content--body-style {
+.prices__main .table-hover tbody tr:hover td, .prices__main .table-hover tbody tr:hover th {
+  background-color: rgb(255, 252, 250);
+}
+
+.p-main__body--ext, .p-main__body--treat, .p-main__body--style {
   display: none;
 }
-.prices__content--body-ext {
+.p-main__body--ext {
   padding: 1rem 2rem;
   border-radius: 30px;
   background-color: rgb(250, 248, 244);
+  box-shadow: 3px 3px 10px rgb(228, 222, 222);
 }
-.prices__content--body-ext table td, .prices__content--body-ext table th {
+.p-main__body--ext table td, .p-main__body--ext table th {
   cursor: default;
 }
-.prices__content--body-ext td::before {
+.p-main__body--ext td::before {
   content: "£ ";
 }
-.prices__content--body-treat {
+.p-main__body--treat {
   position: relative;
 }
-.prices__content--body-treat .price-line {
+.p-main__body--treat .price-line {
+  position: absolute;
+  left: 50%;
   display: none;
   align-items: center;
   justify-content: end;
-  position: absolute;
-  left: 50%;
-  text-align: right;
   width: 0;
   border-bottom: 4px solid;
   padding-right: 1rem;
+  text-align: right;
 }
-.prices__content--body-treat .price-line .price-holder {
+.p-main__body--treat .price-line .price-holder {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -11931,55 +11938,54 @@ h1, .h1 {
   padding: 0.2rem;
   width: 7rem;
   border: 1px solid;
+  text-transform: capitalize;
 }
-.prices__content--body-treat .price-line .price-holder span {
+.p-main__body--treat .price-line .price-holder span {
   display: block;
 }
-.prices__content--body-treat .price-line .price-holder--value {
+.p-main__body--treat .price-line .price-holder__value {
   font-size: 1.5rem;
 }
-.prices__content--body-treat .pl-pink {
+.p-main__body--treat .pl--candy {
   top: 1rem;
   border-color: pink;
   background-color: rgba(255, 192, 203, 0.1);
 }
-.prices__content--body-treat .pl-pink .price-holder {
+.p-main__body--treat .pl--candy .price-holder {
   border-color: rgb(223, 147, 160);
 }
-.prices__content--body-treat .pl-pink span {
+.p-main__body--treat .pl--candy span {
   color: rgb(194, 71, 153);
 }
-.prices__content--body-treat .pl-peach {
+.p-main__body--treat .pl--peach {
   top: 10rem;
   border-color: orange;
   background-color: rgba(255, 166, 0, 0.1);
 }
-.prices__content--body-treat .pl-peach .price-holder {
+.p-main__body--treat .pl--peach .price-holder {
   border-color: rgb(219, 133, 63);
 }
-.prices__content--body-treat .pl-peach span {
+.p-main__body--treat .pl--peach span {
   color: rgb(187, 96, 22);
 }
-.prices__content--body-treat .pl-red {
+.p-main__body--treat .pl--red {
   top: 19rem;
   border-color: red;
   background-color: rgba(255, 0, 0, 0.1);
 }
-.prices__content--body-treat .pl-red .price-holder {
+.p-main__body--treat .pl--red .price-holder {
   border-color: rgb(204, 79, 79);
 }
-.prices__content--body-treat .pl-red span {
+.p-main__body--treat .pl--red span {
   color: rgb(160, 14, 14);
 }
-.prices__content--body-treat .price-holder {
-  text-transform: capitalize;
-}
-.prices__content--body-style {
+.p-main__body--style {
   padding: 1rem 2rem;
   border-radius: 30px;
   background-color: rgb(250, 248, 244);
+  box-shadow: 3px 3px 10px rgb(228, 222, 222);
 }
-.prices__content--body-style table td::before {
+.p-main__body--style table td::before {
   content: "£ ";
 }
 
@@ -11989,17 +11995,17 @@ h1, .h1 {
   animation-fill-mode: forwards;
 }
 
-.animation__line-in-d1, .animation__line-in-d2 {
+.animation__line-in--d1, .animation__line-in--d2 {
   animation-name: line-left-right2;
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
 
-.animation__line-in-d1 {
+.animation__line-in--d1 {
   animation-delay: 0.05s;
 }
 
-.animation__line-in-d2 {
+.animation__line-in--d2 {
   animation-delay: 0.1s;
 }
 
@@ -12028,20 +12034,6 @@ h1, .h1 {
   100% {
     width: 15rem;
     height: 9rem;
-  }
-}
-.animation__price {
-  animation-name: price-appear;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes price-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 .pull-back {

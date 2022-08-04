@@ -25,7 +25,7 @@
             <ul>
                 <li><a href="#about-me-container">About</a></li>
                 <li><a href="#offer-container">Offer</a></li>
-                <li><a href="#price">Price</a></li>
+                <li><a href="#prices-container">Price</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -908,7 +908,7 @@
         </section>
 
         <!-- CUSTOMERS OPINION -->
-        <section id="customer-opinion-container">
+        <article id="customer-opinion-container">
             <header class="customer-opinion__title">
                 <h1>Customers say:</h1>
             </header>
@@ -971,7 +971,7 @@
                     </article>
                 </article>
             </div>      
-        </section>
+        </article>
 
         <!-- B5 -->
         <section class="bridge--5">
@@ -995,45 +995,43 @@
         </section>
 
         <!-- PRICES -->
-        <section id="price" class="prices">
-            <div class="prices__content">
-                <!-- head -->
-                <div class="prices__content--header">
-                    Prices
-                </div>
-                <!-- nav big-->
-                <nav class="prices__content--nav-big">
-                    <ul  class="prices__content--nav-big-ul">
-                        <li id="prices--nav-ext">extension</li>
-                        <li id="prices--nav-treat">treatment</li>
-                        <li id="prices--nav-style">styling</li>
+        <section id="prices-container">
+            <div class="prices">
+                <header class="prices__header">
+                    <h1>Prices</h1>
+                </header>
+                <nav class="prices__nav--big">
+                    <ul>
+                        <li id="p-nav-bg-ext">extension</li>
+                        <li id="p-nav-bg-treat">treatment</li>
+                        <li id="p-nav-bg-style">styling</li>
                     </ul>
                 </nav>
-                <!-- nav small -->
-                <nav class="prices__content--nav-small">
-                    <ul id="nav-small-price" class="prices__content--nav-small-ul">
-                        <li class="pr-all" id="pr-botox">botox</li>
-                        <li class="pr-all" id="pr-kreatyna">keratyna</li>
+                <nav class="prices__nav--small">
+                    <ul id="p-nav-sm">
+                        <li class="p-nav-sm--all" id="p-nav-sm--botox">
+                            botox
+                        </li>
+                        <li class="p-nav-sma--all" id="p-nav-sm--kreatyna">
+                            keratyna
+                        </li>
                     </ul>
                 </nav>            
-                <!-- content -->
-                <div id="pc-content" class="prices__content--body">
-                    <!-- | intro -->
-                    <div id="pc-c-intro" class="prices__content--body-intro">
+                <section class="prices__main">
+                    <section id="p-m-intro" class="p-main__intro">
                         please choose from the menu for price details.
-                    </div>
-                    <!-- | ext -->
-                    <div id="pc-c-ext" class="prices__content--body-ext br">
+                    </section>
+                    <section id="p-m-b--ext" class="p-main__body--ext br">
                         <table class="table table-hover">
                             <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Fusion</th>
-                                <th scope="col">Micro</th>
-                                <th scope="col">Shrink</th>
-                                <th scope="col">Tape On</th>
-                                <th scope="col">Combline</th>
-                            </tr>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Fusion</th>
+                                    <th scope="col">Micro</th>
+                                    <th scope="col">Shrink</th>
+                                    <th scope="col">Tape On</th>
+                                    <th scope="col">Combline</th>
+                                </tr>
                             </thead>
                             <tbody>
                             <tr>
@@ -1070,37 +1068,29 @@
                             </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <!-- | treat -->
-                    <div id="pc-c-treat" class="prices__content--body-treat">
-                        <!-- woman img -->
-                        <div class="treat-photo__container">
-                            <img src="img/price_woman.png" alt="">
+                    </section>
+                    <section id="p-m-b--treat" class="p-main__body--treat">
+                        <img src="img/price_woman.png" alt="">
+                        <div class="pl--candy price-line animation__line-in">
+                            <section id="ph-1" class="price-holder">
+                                <span class="price-holder__value">£25</span>
+                                <span class="price-holder__name">candy floss</span>
+                            </section>                         
                         </div>
-                        <!-- || candy floss -->
-                        <div id="line--candy-floss" class="animation__line-in price-line pl-pink">
-                            <div id="ph-1" class="price-holder">
-                                <span class="price-holder--value">£25</span>
-                                <span class="price-holder--name">candy floss</span>
-                            </div>                         
+                        <div class="pl--peach price-line animation__line-in--d1">
+                            <section id="ph-2" class="price-holder">
+                                <span class="price-holder__value">£35</span>
+                                <span class="price-holder__name">peach sorbet</span>
+                            </section>       
                         </div>
-                        <!-- || peach -->
-                        <div id="line--peach" class="animation__line-in-d1 price-line pl-peach">
-                            <div id="ph-2" class="price-holder">
-                                <span class="price-holder--value">£35</span>
-                                <span class="price-holder--name">peach sorbet</span>
-                            </div>       
+                        <div class="pl--red price-line animation__line-in--d2">
+                            <section id="ph-3" class="price-holder">
+                                <span class="price-holder__value">£45</span>
+                                <span class="price-holder__name">red velvet</span>
+                            </section>                           
                         </div>
-                        <!-- || red velvet -->
-                        <div id="line--velvet" class="animation__line-in-d2 price-line pl-red">
-                            <div id="ph-3" class="price-holder">
-                                <span class="price-holder--value">£45</span>
-                                <span class="price-holder--name">red velvet</span>
-                            </div>                           
-                        </div>
-                    </div>
-                    <!-- | style -->
-                    <div id="pc-c-style" class="prices__content--body-style br">
+                    </section>
+                    <section id="p-m-b--style" class="p-main__body--style br">
                         <table class="table table-hover">
                             <tbody>
                             <tr>
@@ -1117,18 +1107,16 @@
                             </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
+                    </section>
+                </section>
             </div>
         </section>
 
         <!-- B6 -->
         <section class="bridge-6">
-            <div>
                 <svg viewBox="0 0 375 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M-3 55L382 23L375 0H-3V55Z" fill="#f3f2ef"/>
                 </svg>
-            </div>
         </section>
     </main>
 
@@ -1142,7 +1130,6 @@
             <div id="animation-border-div"></div>
         </div>
     </nav>   
-
 
     <footer id="contact" class="">
         <!-- media -->
