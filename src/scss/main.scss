@@ -47,7 +47,7 @@ h1 {
 
     &__logo {
         position: absolute;
-        bottom: 0;
+        bottom: -20px;
         z-index: 10;
         display: block;
         width: 100%;
@@ -84,13 +84,13 @@ h1 {
         position: absolute;
         bottom: 0;
         z-index: 5;
-        height: 300px;
+        height: 100%;
         width: 100%;
         background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,0.8603816526610644) 0%, rgba(0,212,255,0) 100%);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 71%, rgba(0,0,0,0) 100%);
+        opacity: 0.5;
     }
 }
-
 
 .main-nav {
     position: relative;
@@ -332,7 +332,7 @@ h1 {
                     color: #55504b;
                 }
                 
-                div:first-child {
+                footer:first-child {
                     display:flex;
                 }
             }
@@ -1131,64 +1131,48 @@ h1 {
     } 
 }
 
-// animation for price holder
-
-// .animation__price  {
-//     animation-name: price-appear;
-//     animation-duration: .2s;
-//     animation-fill-mode: forwards;
-// }
-
-// @keyframes price-appear {
-//     from {opacity: 0}
-//     to {opacity:1}
-// }
-
 
 
 // NAV PULL UP
 
-.pull-back {
-    display: inline-block;
+
+#pull-back-container {
     position: fixed;
     right: 0;
     bottom: 0;
-    margin: 1rem;
     z-index: 1000;
+    display: inline-block;
+    margin: 1rem;
     transition: opacity .4s;
 
-    .pb-container, .pb-container a {
+    .pull-back, #pull-back__arrow-link {
         height: 39.6px;
         width: 39.6px;
     }
 
-    .pb-container {
+    .pull-back {
         position: relative;
     }
 
-    .pb-container a {
+    #pull-back__arrow-link {
         position: absolute;
+        top: 0;
         left: 0;
         right: 0;
-        top: 0;
         bottom: 0;
         z-index: 1001;
     }
 
     #arrow-nav {
-        font-size: 2.5rem;
         transform: rotate(90deg);
+        font-size: 2.5rem;
         color: rgb(212, 205, 191);
         transition: color .4s;
     }
 
-    #animation-border-div {
+    #pull-back__animation-border {
         height: 40px;
         border-radius: 50%;
-    }
-
-    .animation-border {
-        animation: pull-up .4s 1 linear;
     }
 }
 
@@ -1200,6 +1184,9 @@ h1 {
     opacity: 0;
 }
 
+.animation__border {
+    animation: pull-up .4s 1 linear;
+}
 
 @keyframes pull-up {
     from {opacity: 1; outline: 0px rgb(112, 8, 26) solid;}
@@ -1211,80 +1198,80 @@ h1 {
 // FOOTER
 //------------------
 
-footer {
+.foot-end {
     @include v.flex-row-center;
     align-items: center;
-    font-family: 'Inter', sans-serif;
     margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
 
-    .foot-media, .foot-logo, .foot-contact {
+    &__media, &__logo, &__contact {
+        height: 100px;
         margin: 1rem;
         margin-bottom: 0;
-        height: 6rem;
+    }
+}
+
+.foot-end__media {
+
+    .media__head {
+        @include v.footer-txt-title;
+        text-align: right;
+        margin-right: .5rem;
     }
 
-    .foot-media {
+    .media__icons {
+        @include v.flex-row-center;
+        @include v.footer-icons;
+        align-items: center;
 
-        &__txt {
-            @include v.footer-txt-title;
-            text-align: right;
-            margin-right: .5rem;
+        svg {
+            margin: 0 .5rem;
+
+            path {
+                fill: v.$nl-red-logo;
+            }
         }
+    }
+}
 
-        &__icons {
+.foot-end__logo {
+    display: flex;
+    align-items: center;
+    margin: 0 5rem;
+    
+    img {
+        height: 5rem;
+    }
+}
+
+.foot-end__contact {
+
+    .contact__txt {
+        @include v.footer-txt-title;
+    }
+
+    .contact__icons {
+        @include v.flex-row-center;
+        @include v.footer-icons;
+
+        &--tel, &--meil {
             @include v.flex-row-center;
-            @include v.footer-icons;
             align-items: center;
 
-            svg {
-                margin: 0 .5rem;
-
-                path {
-                    fill: v.$nl-red-logo;
-                }
+            .material-icons {
+                font-size: 2.3rem;
+                margin: 0 1rem;
+                margin-top: .5rem;
+                color: v.$nl-red-logo;
             }
         }
-    }
 
-    .foot-logo {
-        display: flex;
-        align-items: center;
-        margin: 0 5rem;
-        
-        img {
-            height: 5rem;
-        }
-    }
-
-    .foot-contact {
-
-        &__txt {
-            @include v.footer-txt-title;
+        &--tel {
+            margin-right: 2rem;
         }
 
-        &__icons {
-            @include v.flex-row-center;
-            @include v.footer-icons;
-
-            &--tel, &--meil {
-                @include v.flex-row-center;
-                align-items: center;
-
-                .material-icons {
-                    font-size: 2.3rem;
-                    margin: 0 1rem;
-                    margin-top: .5rem;
-                    color: v.$nl-red-logo;
-                }
-            }
-
-            &--tel {
-                margin-right: 2rem;
-            }
-
-            .contact-details {
-                text-align: center;
-            }
+        .contact-details {
+            text-align: center;
         }
     }
 }

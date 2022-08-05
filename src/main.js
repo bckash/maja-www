@@ -10,9 +10,9 @@ const custOpinion2 = document.getElementById("opinion-2")
 const custOpinion3 = document.getElementById("opinion-3")
 
 // pull back nav
-const pullBack = document.getElementById("pull-back");
-const arrUpLink = document.getElementById("pb-arrow-link");
-const animatedBorder = document.getElementById("animation-border-div")
+const pullBack = document.getElementById("pull-back-container");
+const arrUpLink = document.getElementById("pull-back__arrow-link");
+const animatedBorder = document.getElementById("pull-back__animation-border")
 
 // MODAL
 const descrModalFooter4Carousel1 = document.getElementById("modal-footer__d1")
@@ -35,9 +35,9 @@ window.addEventListener("scroll", showNav);
 modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter);
 
 arrUpLink.addEventListener("click", (()=>{
-    animatedBorder.classList.add("animation-border")
+    animatedBorder.classList.add("animation__border")
     setTimeout(() => {
-        animatedBorder.classList.remove("animation-border")
+        animatedBorder.classList.remove("animation__border")
     }, 1500);
 }))
 
