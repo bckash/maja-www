@@ -120,10 +120,10 @@ $border-info: 20px;
 }
 
 @mixin footer-txt-title {
-    margin: 0 1rem;
+    // margin: 0 1rem;
     margin-bottom: .5rem;
     border-bottom: 1px solid rgb(192, 192, 192);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
     color: $nl-red-logo;
