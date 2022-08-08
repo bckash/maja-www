@@ -11135,8 +11135,6 @@ textarea.form-control-lg {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 h1, .h1 {
@@ -11462,7 +11460,7 @@ h1, .h1 {
   text-align: center;
   width: 800px;
   margin: auto;
-  height: 1000px;
+  height: 1100px;
 }
 .offer__head {
   width: 320px;
@@ -11478,21 +11476,22 @@ h1, .h1 {
 .offer__nav--big ul, .offer__nav--small ul {
   display: flex;
   justify-content: center;
-  padding: 0.5rem 0;
+  margin: 1rem 0.5rem;
 }
 .offer__nav--big ul li, .offer__nav--small ul li {
-  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .offer__nav--big ul li:hover, .offer__nav--small ul li:hover {
   cursor: pointer;
+  color: rgb(121, 70, 3);
+  transition: border 1s;
 }
 .offer__nav--small {
   height: 56px;
+  margin-bottom: 1rem;
 }
 .offer__nav--small ul {
   display: none;
-  margin-top: 0;
-  padding-top: 0;
 }
 .offer__nav--small .spinner-border {
   color: rgb(223, 213, 213);
@@ -11528,29 +11527,56 @@ h1, .h1 {
   cursor: pointer;
 }
 
+.offer-main__intro {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
 .offer-main__intro img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border-radius: 30px;
 }
-.offer-main__intro, .offer-main .omb__head {
-  position: relative;
-}
-.offer-main__intro img, .offer-main .omb__head img {
-  border: 10px solid rgba(79, 33, 8, 0.63);
-  border-radius: 1500px;
-}
-.offer-main__intro .intro-overlay, .offer-main .omb__head .intro-overlay {
+.offer-main__intro .intro-overlay {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  bottom: 0rem;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(22, 8, 3, 0.671);
+  margin: 0;
+  border-radius: 30px;
+  border: 8px solid rgb(255, 227, 215);
+}
+.offer-main__intro .intro-overlay span {
+  display: inline-block;
+  margin-top: 16rem;
+  width: 40%;
+  color: rgb(255, 227, 215);
+  font-size: 1.7rem;
+}
+.offer-main .omb__head {
+  position: relative;
+}
+.offer-main .omb__head img {
+  border: 10px solid rgba(79, 33, 8, 0.63);
+  border-radius: 1500px;
+}
+.offer-main .omb__head .intro-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.offer-main__intro .intro-overlay span, .offer-main .omb__head .intro-overlay span {
+.offer-main .omb__head .intro-overlay span {
   display: inline-block;
   width: 64.2%;
   padding: 1rem 0;
@@ -11701,6 +11727,13 @@ h1, .h1 {
 }
 .ns-active {
   font-weight: bold;
+  color: rgb(79, 33, 8);
+}
+
+nav ul li.ns-active:hover {
+  cursor: default;
+  border-bottom: unset;
+  margin-bottom: unset;
   color: rgb(79, 33, 8);
 }
 
@@ -11874,21 +11907,22 @@ h1, .h1 {
 .prices__nav--big ul, .prices__nav--small ul {
   display: flex;
   justify-content: center;
-  padding: 0.5rem 0;
+  margin: 1rem 0.5rem;
 }
 .prices__nav--big ul li, .prices__nav--small ul li {
-  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .prices__nav--big ul li:hover, .prices__nav--small ul li:hover {
   cursor: pointer;
+  color: rgb(121, 70, 3);
+  transition: border 1s;
 }
 .prices__nav--small {
   height: 56px;
+  margin-bottom: 1rem;
 }
 .prices__nav--small ul {
   display: none;
-  margin-top: 0;
-  padding-top: 0;
 }
 .prices__nav--big ul {
   font-size: 1.2rem;
@@ -12144,7 +12178,7 @@ h1, .h1 {
   flex-direction: column;
   align-items: center;
   margin: 0 5rem;
-  color: #8b8a88;
+  color: #7a7a7a;
 }
 .foot-end__logo img {
   display: inline-block;
@@ -12193,6 +12227,7 @@ h1, .h1 {
   margin-right: 2rem;
 }
 .foot-end__contact .contact__icons .contact-details {
+  margin-left: 0.7rem;
   text-align: center;
 }
 

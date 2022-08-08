@@ -23,8 +23,8 @@
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    // margin: 0;
+    // padding: 0;
 }
 
 // adjust with title mixin at the end
@@ -452,7 +452,7 @@ h1 {
 .offer {
     text-align: center;
     @include v.article;
-    height: 1000px;
+    height: 1100px;
 
     &__head {
         @include v.title;
@@ -473,6 +473,7 @@ h1 {
 
     &__nav--big ul {
         @include v.nav-big-txt;
+
     }
 
     &__main {
@@ -513,15 +514,37 @@ h1 {
 .offer-main {
 
     &__intro {
+        position: relative;
+        width: 90%;
+        height: 90%;
+        margin: auto;
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border-radius: 30px;
         }
+
+        .intro-overlay {
+            @include v.intro-overlay;
+            background-color: rgba(22, 8, 3, 0.671);
+            margin: 0;
+            border-radius: 30px;
+            border: 8px solid  rgb(255, 227, 215);
+
+            span {
+                display: inline-block;
+                margin-top: 16rem;
+                width: 40%;
+                color: rgb(255, 227, 215);
+                font-size: 1.7rem;
+
+            }
+        }
+
     }
 
-    &__intro, .omb__head{
+    .omb__head{
         position: relative;
 
         img {
@@ -530,14 +553,7 @@ h1 {
         }
 
         .intro-overlay {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include v.intro-overlay;
 
             span {
                 display: inline-block;
@@ -733,6 +749,13 @@ h1 {
 // nav-small active state
 .ns-active {
     font-weight: bold;
+    color: v.$nl-brown-detail;
+}
+
+nav ul li.ns-active:hover {
+    cursor: default;
+    border-bottom: unset;
+    margin-bottom: unset;
     color: v.$nl-brown-detail;
 }
 
@@ -1243,7 +1266,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     margin: 0 5rem;
-    color: #8b8a88;
+    color: #7a7a7a;
     
     img {
         display: inline-block;
@@ -1294,6 +1317,7 @@ h1 {
         }
 
         .contact-details {
+            margin-left: .7rem;
             text-align: center;
         }
     }

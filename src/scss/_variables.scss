@@ -68,15 +68,22 @@ $border-info: 20px;
 
 @mixin nav {
     display: flex;
-    justify-content: center;
-    padding: .5rem 0;
+    justify-content: center;  
+    margin: 1rem .5rem;
 
-    & li {
-        margin: .5rem 1rem;
+ 
+    li {
+        padding: .5rem 1rem;
+        // border-bottom: transparent solid 2px;
+        // margin-bottom: -2px;
     }
 
-    & li:hover {
+    li:hover {
         cursor: pointer;
+        // border-bottom: $nl-side-nav-a-light solid 2px;
+        // margin-bottom: -2px;
+        color: rgb(121, 70, 3);
+        transition: border 1s;
     }
 }
 
@@ -86,12 +93,25 @@ $border-info: 20px;
 
 @mixin nav-small {
     height: 56px;
+    margin-bottom: 1rem;
 
     ul {
         display: none;
-        margin-top: 0;
-        padding-top: 0;
     }
+}
+
+
+// offer
+
+@mixin intro-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 
