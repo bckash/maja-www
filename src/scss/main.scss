@@ -983,6 +983,34 @@ nav ul li.ns-active:hover {
 
 .p-main {
 
+    &__intro {
+        position: relative;
+
+        img {
+            height: 500px;
+        }
+
+        .intro-overlay {
+            @include v.intro-overlay;
+            z-index: 100;
+
+            span {
+                display: inline-block;
+                margin-top: -10rem;
+                width: 200px;
+                height: 200px;
+                color: rgb(68, 37, 1);
+                font-size: 1.5rem;
+                border: 2px solid rgb(193, 212, 18);
+                padding: 1rem;
+                padding-top: 2.8rem;
+                background-color: #774c0b15;
+                border-radius: 50%;
+
+            }
+        }
+    }
+
     &__body {
 
         &--ext, &--treat, &--style {

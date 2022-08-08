@@ -11936,6 +11936,36 @@ nav ul li.ns-active:hover {
   background-color: rgb(255, 252, 250);
 }
 
+.p-main__intro {
+  position: relative;
+}
+.p-main__intro img {
+  height: 500px;
+}
+.p-main__intro .intro-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.p-main__intro .intro-overlay span {
+  display: inline-block;
+  margin-top: -10rem;
+  width: 200px;
+  height: 200px;
+  color: rgb(68, 37, 1);
+  font-size: 1.5rem;
+  border: 2px solid rgb(193, 212, 18);
+  padding: 1rem;
+  padding-top: 2.8rem;
+  background-color: rgba(119, 76, 11, 0.0823529412);
+  border-radius: 50%;
+}
 .p-main__body--ext, .p-main__body--treat, .p-main__body--style {
   display: none;
 }
