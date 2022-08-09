@@ -11529,11 +11529,11 @@ h1, .h1 {
 
 .offer-main__intro {
   position: relative;
-  width: 90%;
-  height: 90%;
+  width: 500px;
+  height: 500px;
   margin: auto;
 }
-.offer-main__intro img {
+.offer-main__intro img:first-child {
   width: 100%;
   height: 100%;
   border-radius: 30px;
@@ -11547,17 +11547,20 @@ h1, .h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(22, 8, 3, 0.671);
+  display: flex;
   margin: 0;
+  border: 8px solid rgb(128, 54, 14);
   border-radius: 30px;
-  border: 8px solid rgb(255, 227, 215);
+  background-color: rgba(22, 8, 3, 0.671);
 }
 .offer-main__intro .intro-overlay span {
-  display: inline-block;
-  margin-top: 16rem;
-  width: 40%;
-  color: rgb(255, 227, 215);
+  display: block;
+  margin-top: 6rem;
   font-size: 1.7rem;
+  color: rgb(255, 227, 215);
+}
+.offer-main__intro .intro-overlay span:first-child {
+  margin-right: 1rem;
 }
 .offer-main .omb__head {
   position: relative;
@@ -11723,6 +11726,44 @@ h1, .h1 {
   }
   to {
     color: rgb(209, 135, 39);
+  }
+}
+.animation__move-down {
+  animation-name: move-down;
+  animation-duration: 0.8s;
+}
+
+.animation__move-up {
+  animation-name: move-up;
+  animation-duration: 0.7s;
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(0);
+    color: rgb(255, 227, 215);
+  }
+  50% {
+    transform: translateX(-50px);
+    color: rgb(110, 98, 93);
+  }
+  100% {
+    transform: translateY(0);
+    color: rgb(255, 227, 215);
+  }
+}
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+    color: rgb(255, 227, 215);
+  }
+  50% {
+    transform: translateY(-250px);
+    color: rgb(110, 98, 93);
+  }
+  100% {
+    transform: translateY(0);
+    color: rgb(255, 227, 215);
   }
 }
 .ns-active {
@@ -11955,16 +11996,16 @@ nav ul li.ns-active:hover {
 }
 .p-main__intro .intro-overlay span {
   display: inline-block;
-  margin-top: -10rem;
   width: 200px;
   height: 200px;
-  color: rgb(68, 37, 1);
-  font-size: 1.5rem;
-  border: 2px solid rgb(193, 212, 18);
+  margin-top: -10rem;
   padding: 1rem;
   padding-top: 2.8rem;
-  background-color: rgba(119, 76, 11, 0.0823529412);
+  color: rgb(68, 37, 1);
+  border: 2px solid rgb(212, 167, 18);
   border-radius: 50%;
+  font-size: 1.5rem;
+  background-color: rgba(119, 76, 11, 0.0823529412);
 }
 .p-main__body--ext, .p-main__body--treat, .p-main__body--style {
   display: none;

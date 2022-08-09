@@ -23,6 +23,9 @@ const carsuouselDescrALL = Array.from(document.getElementsByClassName("modal-foo
 const modalTriggerButton = document.getElementById("modal-trigger-button")
 const mutationTagetNode = document.getElementById("mutationTN")
 
+//test animation
+const spanDown = document.getElementById("io-offer-dn")
+const spanUp = document.getElementById("io-offer-up")
 
 
 //
@@ -32,6 +35,7 @@ const mutationTagetNode = document.getElementById("mutationTN")
 
 
 window.addEventListener("scroll", showNav);
+window.addEventListener("scroll", scrollAnimation);
 modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter);
 
 arrUpLink.addEventListener("click", (()=>{
@@ -235,6 +239,20 @@ function showNav(){
     // console.log(pos);
 
 } 
+
+
+// test - animotion y scroll
+function scrollAnimation(){
+    let pos = window.scrollY;
+
+    console.log(pos)
+
+    if (pos>2600 && pos<2800) {
+        spanDown.classList.add("animation__move-down")
+        spanUp.classList.add("animation__move-up")
+    }
+
+}
 
 
 //------------------------------------------------------------------------------

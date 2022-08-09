@@ -515,11 +515,11 @@ h1 {
 
     &__intro {
         position: relative;
-        width: 90%;
-        height: 90%;
+        width: 500px;
+        height: 500px;
         margin: auto;
 
-        img {
+        img:first-child {
             width: 100%;
             height: 100%;
             border-radius: 30px;
@@ -527,21 +527,30 @@ h1 {
 
         .intro-overlay {
             @include v.intro-overlay;
-            background-color: rgba(22, 8, 3, 0.671);
+            display: flex;
             margin: 0;
+            border: 8px solid  rgb(128, 54, 14);
             border-radius: 30px;
-            border: 8px solid  rgb(255, 227, 215);
+            background-color: rgba(22, 8, 3, 0.671);
 
             span {
-                display: inline-block;
-                margin-top: 16rem;
-                width: 40%;
-                color: rgb(255, 227, 215);
-                font-size: 1.7rem;
+                display: block;
 
+                margin-top: 6rem;
+                font-size: 1.7rem;
+                color: rgb(255, 227, 215);
             }
+
+            span:first-child {
+                margin-right: 1rem;
+            }
+
+            span:nth-child(2) {
+                // margin-top: 16rem;
+            } 
         }
 
+        // .underscore
     }
 
     .omb__head{
@@ -723,6 +732,10 @@ h1 {
 
 }
 
+
+// animations
+
+
 .side-nav--active {
     color: v.$nl-side-nav-a-light;
     animation: side-nav .2s  1 forwards;
@@ -732,21 +745,57 @@ h1 {
     }
 }
 
-
 @keyframes side-nav {
     from {
         color: v.$nl-side-nav-a-dark;
-
     }
     to {
         color: v.$nl-side-nav-a-light;
-
     }
 }
 
+.animation__move-down {
+    animation-name: move-down;
+    animation-duration: .8s;
+}
 
+.animation__move-up {
+    animation-name: move-up;
+    animation-duration: .7s;
+}
+
+@keyframes move-down {
+    0% {
+        transform: translateY(0);
+        color: rgb(255, 227, 215);
+    }
+    50% {
+        transform: translateX(-50px);
+        color: rgb(110, 98, 93);
+    }
+    100% {
+        transform: translateY(0);
+        color: rgb(255, 227, 215);
+    }
+}
+
+@keyframes move-up {
+    0% {
+        transform: translateY(0);
+        color: rgb(255, 227, 215);
+    }
+    50% {
+        transform: translateY(-250px);
+        color: rgb(110, 98, 93);
+    }
+    100% {
+        transform: translateY(0);
+        color: rgb(255, 227, 215);
+    }
+}
 
 // nav-small active state
+
 .ns-active {
     font-weight: bold;
     color: v.$nl-brown-detail;
@@ -996,17 +1045,16 @@ nav ul li.ns-active:hover {
 
             span {
                 display: inline-block;
-                margin-top: -10rem;
                 width: 200px;
                 height: 200px;
-                color: rgb(68, 37, 1);
-                font-size: 1.5rem;
-                border: 2px solid rgb(193, 212, 18);
+                margin-top: -10rem;
                 padding: 1rem;
                 padding-top: 2.8rem;
-                background-color: #774c0b15;
+                color: rgb(68, 37, 1);
+                border: 2px solid rgb(212, 167, 18);
                 border-radius: 50%;
-
+                font-size: 1.5rem;
+                background-color: #774c0b15;
             }
         }
     }
