@@ -11562,6 +11562,14 @@ h1, .h1 {
 .offer-main__intro .intro-overlay span:first-child {
   margin-right: 1rem;
 }
+.offer-main__intro #underscore {
+  position: absolute;
+  bottom: 130px;
+  right: 150px;
+  width: 180px;
+  transform: rotate(7deg);
+  opacity: 0;
+}
 .offer-main .omb__head {
   position: relative;
 }
@@ -11730,12 +11738,19 @@ h1, .h1 {
 }
 .animation__move-down {
   animation-name: move-down;
-  animation-duration: 0.8s;
+  animation-duration: 0.7s;
 }
 
 .animation__move-up {
   animation-name: move-up;
   animation-duration: 0.7s;
+}
+
+.animation__underscore {
+  animation-name: underscore;
+  animation-duration: 0.3s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes move-down {
@@ -11764,6 +11779,16 @@ h1, .h1 {
   100% {
     transform: translateY(0);
     color: rgb(255, 227, 215);
+  }
+}
+@keyframes underscore {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 180px;
+    opacity: 1;
   }
 }
 .ns-active {
@@ -12006,6 +12031,7 @@ nav ul li.ns-active:hover {
   border-radius: 50%;
   font-size: 1.5rem;
   background-color: rgba(119, 76, 11, 0.0823529412);
+  opacity: 0;
 }
 .p-main__body--ext, .p-main__body--treat, .p-main__body--style {
   display: none;
@@ -12095,6 +12121,20 @@ nav ul li.ns-active:hover {
   content: "£ ";
 }
 
+.animation__swirl {
+  animation: swirl 0.8s ease 0s 1 normal forwards;
+}
+
+@keyframes swirl {
+  0% {
+    opacity: 0;
+    transform: rotate(-540deg) scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
 .animation__line-in {
   animation-name: line-left-right;
   animation-duration: 0.2s;

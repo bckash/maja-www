@@ -26,6 +26,9 @@ const mutationTagetNode = document.getElementById("mutationTN")
 //test animation
 const spanDown = document.getElementById("io-offer-dn")
 const spanUp = document.getElementById("io-offer-up")
+const underscore = document.getElementById("underscore")
+
+const pmPleaseChoose = document.getElementById("pm-please-choose")
 
 
 //
@@ -250,6 +253,9 @@ function scrollAnimation(){
     if (pos>2600 && pos<2800) {
         spanDown.classList.add("animation__move-down")
         spanUp.classList.add("animation__move-up")
+        underscore.classList.add("animation__underscore")
+    } else if (pos>4600 && pos<4800) {
+        pmPleaseChoose.classList.add("animation__swirl")
     }
 
 }
