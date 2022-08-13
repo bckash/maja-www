@@ -11316,7 +11316,7 @@ h1, .h1 {
 }
 .about-me__main .caption-box #outline-triangle {
   position: absolute;
-  top: 5rem;
+  top: 320px;
   left: -20.7px;
   transform: rotate(45deg);
   height: 40px;
@@ -11325,15 +11325,6 @@ h1, .h1 {
   border-bottom: 1px solid;
   border-color: rgb(211, 207, 207);
   background-color: rgb(250, 248, 244);
-}
-.about-me__main .caption-box:hover {
-  outline: 3px solid rgb(209, 135, 39);
-  border-color: transparent;
-}
-.about-me__main .caption-box:hover #outline-triangle {
-  border-left: 3px solid rgb(209, 135, 39);
-  border-bottom: 3px solid rgb(209, 135, 39);
-  left: -23px;
 }
 .about-me__main #modal-trigger-button {
   margin-top: 0.5rem;
@@ -11389,6 +11380,18 @@ h1, .h1 {
   }
   to {
     transform: rotate(5deg);
+  }
+}
+.animation__move-bot {
+  animation: move-bot 0.7s 1 0.2s forwards;
+}
+
+@keyframes move-bot {
+  from {
+    transform: translateY(0px) rotate(45deg);
+  }
+  to {
+    transform: translateY(-200px) rotate(45deg);
   }
 }
 .bridge--2, .bridge--3 {
@@ -11562,19 +11565,12 @@ h1, .h1 {
 .offer-main__intro .intro-overlay span:first-child {
   margin-right: 1rem;
 }
-.offer-main__intro #underscore {
-  position: absolute;
-  bottom: 130px;
-  right: 150px;
-  width: 180px;
-  transform: rotate(7deg);
-  opacity: 0;
-}
 .offer-main .omb__head {
   position: relative;
+  display: none;
 }
 .offer-main .omb__head img {
-  border: 10px solid rgba(79, 33, 8, 0.63);
+  border: 6px solid rgba(79, 33, 8, 0.63);
   border-radius: 1500px;
 }
 .offer-main .omb__head .intro-overlay {
@@ -11594,9 +11590,6 @@ h1, .h1 {
   font-size: 2.5rem;
   background-color: rgba(41, 17, 8, 0.568);
   color: rgb(255, 227, 215);
-}
-.offer-main .omb__head {
-  display: none;
 }
 .offer-main__body #treat-info, .offer-main__body #style-info, .offer-main__body #ext-info {
   display: none;
@@ -11736,21 +11729,17 @@ h1, .h1 {
     color: rgb(209, 135, 39);
   }
 }
-.animation__move-down {
+.animation__move-up, .animation__move-left {
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
+}
+
+.animation__move-left {
   animation-name: move-down;
-  animation-duration: 0.7s;
 }
 
 .animation__move-up {
   animation-name: move-up;
-  animation-duration: 0.7s;
-}
-
-.animation__underscore {
-  animation-name: underscore;
-  animation-duration: 0.3s;
-  animation-delay: 0.7s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes move-down {
@@ -11759,7 +11748,7 @@ h1, .h1 {
     color: rgb(255, 227, 215);
   }
   50% {
-    transform: translateX(-50px);
+    transform: translateX(-40px);
     color: rgb(110, 98, 93);
   }
   100% {
@@ -11773,22 +11762,12 @@ h1, .h1 {
     color: rgb(255, 227, 215);
   }
   50% {
-    transform: translateY(-250px);
+    transform: translateY(-180px);
     color: rgb(110, 98, 93);
   }
   100% {
     transform: translateY(0);
     color: rgb(255, 227, 215);
-  }
-}
-@keyframes underscore {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-  to {
-    width: 180px;
-    opacity: 1;
   }
 }
 .ns-active {
@@ -11910,16 +11889,17 @@ nav ul li.ns-active:hover {
   color: rgb(201, 121, 17);
 }
 
-.animation__in-left-right {
-  animation-name: inLeftRight;
+.animation__out-left-right, .animation__in-left-right {
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
+.animation__in-left-right {
+  animation-name: inLeftRight;
+}
+
 .animation__out-left-right {
   animation-name: outLeftRight;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes inLeftRight {
@@ -12081,7 +12061,7 @@ nav ul li.ns-active:hover {
 .p-main__body--treat .pl--candy {
   top: 1rem;
   border-color: pink;
-  background-color: rgba(255, 192, 203, 0.1);
+  background-color: rgba(0, 0, 0, 0.021);
 }
 .p-main__body--treat .pl--candy .price-holder {
   border-color: rgb(223, 147, 160);
@@ -12092,7 +12072,7 @@ nav ul li.ns-active:hover {
 .p-main__body--treat .pl--peach {
   top: 10rem;
   border-color: orange;
-  background-color: rgba(255, 166, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.021);
 }
 .p-main__body--treat .pl--peach .price-holder {
   border-color: rgb(219, 133, 63);
@@ -12103,7 +12083,7 @@ nav ul li.ns-active:hover {
 .p-main__body--treat .pl--red {
   top: 19rem;
   border-color: red;
-  background-color: rgba(255, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.021);
 }
 .p-main__body--treat .pl--red .price-holder {
   border-color: rgb(204, 79, 79);
@@ -12122,7 +12102,7 @@ nav ul li.ns-active:hover {
 }
 
 .animation__swirl {
-  animation: swirl 0.8s ease 0s 1 normal forwards;
+  animation: swirl 0.6s ease 0.1s 1 normal forwards;
 }
 
 @keyframes swirl {
@@ -12226,7 +12206,7 @@ nav ul li.ns-active:hover {
 }
 
 .animation__border {
-  animation: pull-up 0.4s 1 linear;
+  animation: pull-up 0.4s 1 0.1s linear;
 }
 
 @keyframes pull-up {
@@ -12243,20 +12223,19 @@ nav ul li.ns-active:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   height: 140px;
   margin-bottom: 0.5rem;
   font-family: "Inter", sans-serif;
 }
-.foot-end__media, .foot-end__logo, .foot-end__contact {
-  height: 100%;
-  margin-bottom: 0;
+.foot-end__media, .foot-end__contact {
+  margin-top: 1.2rem;
 }
 .foot-end .txt-description {
-  margin-bottom: 0.5rem;
-  color: #55504b;
+  margin-bottom: 0;
+  color: #6d6c6c;
   text-transform: none;
   font-weight: normal;
+  font-size: 0.95rem;
 }
 
 .foot-end__media .media__head {
@@ -12274,7 +12253,6 @@ nav ul li.ns-active:hover {
   justify-content: center;
   height: 48px;
   align-items: center;
-  margin-top: 1rem;
   justify-content: space-around;
 }
 .foot-end__media .media__icons svg {
@@ -12286,17 +12264,14 @@ nav ul li.ns-active:hover {
 
 .foot-end__logo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 5rem;
+  margin-top: 1rem;
   color: #7a7a7a;
 }
 .foot-end__logo img {
   display: inline-block;
-  height: 90px;
-}
-.foot-end__logo p {
-  margin: 0.3rem;
+  height: 100px;
 }
 
 .foot-end__contact .contact__txt {
@@ -12312,9 +12287,6 @@ nav ul li.ns-active:hover {
 }
 .foot-end__contact address dd, .foot-end__contact address dl {
   margin-bottom: 0;
-}
-.foot-end__contact address dl {
-  margin-top: 1rem;
 }
 .foot-end__contact .contact__icons {
   display: flex;
@@ -12338,8 +12310,38 @@ nav ul li.ns-active:hover {
   margin-right: 2rem;
 }
 .foot-end__contact .contact__icons .contact-details {
+  display: flex;
+  flex-direction: column;
   margin-left: 0.7rem;
-  text-align: center;
+  text-align: left;
+}
+
+.animation__jelly {
+  animation: jelly 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes jelly {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.2, 0.85, 1);
+  }
+  40% {
+    transform: scale3d(0.9, 1.15, 1);
+  }
+  50% {
+    transform: scale3d(1.1, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,8 @@
 
 
+//
 // 1. CONST
-//------------
+//--------------------------------
 
 
 // customer opinion -  animation 
@@ -23,17 +24,17 @@ const carsuouselDescrALL = Array.from(document.getElementsByClassName("modal-foo
 const modalTriggerButton = document.getElementById("modal-trigger-button")
 const mutationTagetNode = document.getElementById("mutationTN")
 
-//test animation
+// animation
 const spanDown = document.getElementById("io-offer-dn")
 const spanUp = document.getElementById("io-offer-up")
-const underscore = document.getElementById("underscore")
-
 const pmPleaseChoose = document.getElementById("pm-please-choose")
+const logoNLSmall = document.getElementById("logo-nl4h-sm")
+const aboutTriangle = document.getElementById("outline-triangle")
 
 
 //
 // 2. EL
-//-------------
+//-----------------------------------
 
 
 
@@ -49,8 +50,9 @@ arrUpLink.addEventListener("click", (()=>{
 }))
 
 
+//
 // 3. FUNCTIONS ->
-//---------------
+//--------------------------------------
 
 
 // SLIDESHOW 
@@ -250,14 +252,20 @@ function scrollAnimation(){
 
     console.log(pos)
 
-    if (pos>2600 && pos<2800) {
-        spanDown.classList.add("animation__move-down")
+    if (pos>500 && pos<700) {
+        aboutTriangle.classList.add("animation__move-bot")
+
+    } else if (pos>2600 && pos<2800) {
+        spanDown.classList.add("animation__move-left")
         spanUp.classList.add("animation__move-up")
-        underscore.classList.add("animation__underscore")
+
     } else if (pos>4600 && pos<4800) {
         pmPleaseChoose.classList.add("animation__swirl")
-    }
 
+    } else if (pos> 5250) {
+        logoNLSmall.classList.add("animation__jelly")
+
+    } 
 }
 
 
