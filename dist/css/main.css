@@ -11205,6 +11205,7 @@ h1, .h1 {
 }
 .main-nav ul {
   display: flex;
+  padding: 0;
 }
 .main-nav li, .main-nav li:hover {
   border-top: 8px solid;
@@ -11264,13 +11265,17 @@ h1, .h1 {
   justify-content: center;
   align-items: flex-start;
 }
-.about-me__main img {
-  width: 15rem;
+.about-me__main .maja-avatar img {
+  width: 240px;
   height: auto;
   margin-right: 5rem;
   box-shadow: 1px 1px 20px rgb(78, 51, 26);
 }
-.about-me__main .caption-box {
+.about-me__main .maja-avatar .caption-box--sm {
+  display: none;
+}
+.about-me__main .caption-box--bg,
+.about-me__main .caption-box--sm {
   position: relative;
   display: inline-block;
   padding: 2rem;
@@ -11280,21 +11285,26 @@ h1, .h1 {
   background-color: rgb(250, 248, 244);
   box-shadow: 3px 3px 10px rgb(228, 222, 222);
 }
-.about-me__main .caption-box .p1--hi, .about-me__main .caption-box .p1--hairstylist {
+.about-me__main .caption-box--bg .p1--hi, .about-me__main .caption-box--bg .p1--hairstylist,
+.about-me__main .caption-box--sm .p1--hi,
+.about-me__main .caption-box--sm .p1--hairstylist {
   display: inline-block;
 }
-.about-me__main .caption-box .p1--hi {
+.about-me__main .caption-box--bg .p1--hi,
+.about-me__main .caption-box--sm .p1--hi {
   padding-left: 4rem;
   padding-bottom: 0.5rem;
   font-size: 1.2em;
   opacity: 0.8;
 }
-.about-me__main .caption-box .p1--hairstylist {
+.about-me__main .caption-box--bg .p1--hairstylist,
+.about-me__main .caption-box--sm .p1--hairstylist {
   padding-left: 2rem;
   font-size: 1.25em;
   text-align: left;
 }
-.about-me__main .caption-box #p2::first-letter {
+.about-me__main .caption-box--bg #p2::first-letter,
+.about-me__main .caption-box--sm #p2::first-letter {
   margin-top: -0.5rem;
   padding-right: 0.5rem;
   float: left;
@@ -11302,19 +11312,23 @@ h1, .h1 {
   font-weight: bold;
   color: rgb(114, 34, 10);
 }
-.about-me__main .caption-box span {
+.about-me__main .caption-box--bg span,
+.about-me__main .caption-box--sm span {
   vertical-align: middle;
 }
-.about-me__main .caption-box .txt-color {
+.about-me__main .caption-box--bg .txt-color,
+.about-me__main .caption-box--sm .txt-color {
   color: rgb(114, 34, 10);
 }
-.about-me__main .caption-box hr {
+.about-me__main .caption-box--bg hr,
+.about-me__main .caption-box--sm hr {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(146, 143, 143);
 }
-.about-me__main .caption-box #outline-triangle {
+.about-me__main .caption-box--bg #outline-triangle,
+.about-me__main .caption-box--sm #outline-triangle {
   position: absolute;
   top: 320px;
   left: -20.7px;
@@ -11370,6 +11384,77 @@ h1, .h1 {
   display: flex;
 }
 
+@media screen and (max-width: 850px) {
+  #about-me-container {
+    padding: 4rem 0 0 0;
+  }
+
+  .about-me {
+    margin-bottom: -5rem;
+  }
+  .about-me__head {
+    position: relative;
+    left: 80px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .about-me__main {
+    position: relative;
+    bottom: 100px;
+    flex-direction: column;
+  }
+  .about-me__main .maja-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 0;
+  }
+  .about-me__main .maja-avatar img {
+    width: 200px;
+    margin: 2rem;
+  }
+  .about-me__main .maja-avatar .caption-box--sm {
+    display: block;
+    width: 300px;
+    height: max-content;
+    margin: 0;
+    margin-top: 2rem;
+    margin-right: 8rem;
+    margin-left: 1rem;
+    padding: 1rem;
+  }
+  .about-me__main .maja-avatar .caption-box--sm p {
+    margin: 0;
+  }
+  .about-me__main .maja-avatar .caption-box--sm span {
+    padding-left: 1rem;
+  }
+  .about-me__main .caption-box--bg {
+    position: relative;
+    bottom: 90px;
+    left: 100px;
+    width: 430px;
+    margin: auto;
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+  .about-me__main .caption-box--bg #p1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 720px) {
+  .about-me__main {
+    bottom: 70px;
+  }
+  .about-me__main .maja-avatar img {
+    width: 150px;
+  }
+  .about-me__main .caption-box--bg {
+    bottom: 70px;
+    left: 50px;
+  }
+}
 .animation-emoji {
   animation: emoji 1.5s infinite alternate linear;
 }
@@ -11421,6 +11506,11 @@ h1, .h1 {
   width: 700px;
   margin: auto;
 }
+@media screen and (max-width: 720px) {
+  #paralax header {
+    width: 100%;
+  }
+}
 #paralax header hr {
   height: 2px;
   width: 100px;
@@ -11463,7 +11553,7 @@ h1, .h1 {
   text-align: center;
   width: 800px;
   margin: auto;
-  height: 1100px;
+  height: 1000px;
 }
 .offer__head {
   width: 320px;
@@ -11705,7 +11795,7 @@ h1, .h1 {
   font-size: 0.8rem;
 }
 .js-fill__icon-part .icon-column__descr--st {
-  margin-left: 5rem;
+  margin-left: 3rem;
   list-style-type: disc;
   text-align: left;
 }
@@ -11729,16 +11819,14 @@ h1, .h1 {
     color: rgb(209, 135, 39);
   }
 }
-.animation__move-up, .animation__move-left {
+.animations__move-up, .animations__move-left {
   animation-duration: 0.5s;
   animation-delay: 0.1s;
 }
-
-.animation__move-left {
+.animations__move-left {
   animation-name: move-down;
 }
-
-.animation__move-up {
+.animations__move-up {
   animation-name: move-up;
 }
 
@@ -11893,11 +11981,9 @@ nav ul li.ns-active:hover {
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
-
 .animation__in-left-right {
   animation-name: inLeftRight;
 }
-
 .animation__out-left-right {
   animation-name: outLeftRight;
 }
@@ -12220,6 +12306,7 @@ nav ul li.ns-active:hover {
   }
 }
 .foot-end {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -12341,6 +12428,58 @@ nav ul li.ns-active:hover {
   }
   100% {
     transform: scale3d(1, 1, 1);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .foot-end {
+    padding: 0 1rem;
+  }
+  .foot-end__logo {
+    margin: 0;
+  }
+  .foot-end__logo img {
+    width: 70%;
+    height: auto;
+    margin: auto;
+  }
+  .foot-end__media .media__icons {
+    width: 160px;
+  }
+  .foot-end__contact .contact__icons {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .foot-end {
+    margin-top: 5rem;
+  }
+  .foot-end__logo {
+    position: absolute;
+    top: -88px;
+    margin: 0;
+    margin-right: 14rem;
+  }
+  .foot-end__logo img {
+    height: 90px;
+    width: unset;
+  }
+  .foot-end__contact {
+    margin-left: 2rem;
+  }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+@media screen and (max-width: 850px) {
+  .about-me,
+.offer,
+.prices,
+.customer-opinion__main {
+    width: 100% !important;
   }
 }
 
