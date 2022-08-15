@@ -11506,11 +11506,6 @@ h1, .h1 {
   width: 700px;
   margin: auto;
 }
-@media screen and (max-width: 720px) {
-  #paralax header {
-    width: 100%;
-  }
-}
 #paralax header hr {
   height: 2px;
   width: 100px;
@@ -11527,7 +11522,7 @@ h1, .h1 {
   color: #dfc7b9;
 }
 #paralax #paralax-content {
-  height: 20rem;
+  height: 320px;
   width: 75%;
   outline: 17px solid #dfc7b9;
   margin: -3rem auto 4rem auto;
@@ -11536,6 +11531,17 @@ h1, .h1 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (max-width: 780px) {
+  #paralax header {
+    width: 100%;
+  }
+  #paralax #paralax-content {
+    width: 90%;
+    margin: 0 2.5rem;
+    outline: unset;
+    border: 17px solid #dfc7b9;
+  }
 }
 
 .bridge--3 svg {
@@ -11731,10 +11737,7 @@ h1, .h1 {
 }
 .offer-main__body .head-sm div {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11803,6 +11806,37 @@ h1, .h1 {
   width: 50%;
 }
 
+@media screen and (max-width: 900px) {
+  .offer__main {
+    position: relative;
+    margin: 0 auto;
+    width: 750px;
+  }
+  .offer__main nav {
+    position: absolute;
+    right: 70px;
+  }
+  .offer__main nav #side-nav {
+    margin-top: 1rem;
+  }
+
+  .head-sm img {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .offer__main {
+    width: 100%;
+  }
+
+  .offer-main__body .head-sm {
+    width: 60%;
+  }
+  .offer-main__body .head-sm img {
+    width: 100%;
+    height: auto;
+  }
+}
 .side-nav--active {
   color: rgb(209, 135, 39);
   animation: side-nav 0.2s 1 forwards;

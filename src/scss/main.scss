@@ -349,6 +349,8 @@ h1 {
     }  
 }
 
+// MQ
+
 @media screen and (max-width: 850px) {
 
     #about-me-container {
@@ -518,12 +520,6 @@ h1 {
         width: 700px;
         margin: auto;
 
-    @media screen and (max-width: 720px) {
-    
-        width: 100%;
-
-        }
-
         hr {
             height: 2px;
             width: 100px;
@@ -541,9 +537,9 @@ h1 {
             color: v.$nl-back-pink-dark;
         }
     }
-
+    
     #paralax-content {
-        height: 20rem;
+        height: 320px;
         width: 75%;
         outline: 17px solid v.$nl-back-pink-dark;
         margin: -3rem auto 4rem auto;
@@ -553,6 +549,22 @@ h1 {
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    @media screen and (max-width: 780px) {
+        
+        header {
+            width: 100%;
+        }
+
+        #paralax-content {
+            width: 90%;
+            margin: 0 2.5rem;
+            outline: unset;
+            border: 17px solid v.$nl-back-pink-dark;;
+        }
+
+    }
+
 }
 
 
@@ -765,10 +777,7 @@ h1 {
 
             div {
                 position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
+                inset: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -780,6 +789,7 @@ h1 {
         }
     }
 }
+
 
 .js-fill {
 
@@ -856,6 +866,66 @@ h1 {
     }
 }
 
+// MQ
+
+@media screen and (max-width:900px) {
+
+    .offer {
+
+        &__main {
+            position: relative;
+            margin: 0 auto;
+            width: 750px;
+
+            nav {
+                position: absolute;
+                right: 70px;
+
+                #side-nav {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }    
+
+    .head-sm {
+
+        img {
+            width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .offer {
+
+        &__main {
+            width: 100%;
+        }
+    }  
+    
+    .offer-main {
+
+        &__body {
+
+            .head-sm {
+                width: 60%;
+        
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+        
+            }
+
+        }
+    }
+
+
+
+
+}
 
 // animation: side nav
 
@@ -1476,7 +1546,6 @@ nav ul li.ns-active:hover {
         font-size: .95rem
     }
 }
-
 
 .foot-end__media {
 

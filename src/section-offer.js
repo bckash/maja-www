@@ -76,20 +76,10 @@ const // INFO main
     infoHolderTreat = document.getElementById("js-fill-treatment")
 
 const // "info holder" fill fields | extension
-    // infoHolderAbout = document.getElementById("ih-about"),
-    // infoHolderSuitable = document.getElementById("ih-suitable"),
-    // infoHolderAchieve = document.getElementById("ih-achieve"),
-    // infoHolderLast = document.getElementById("ih-last"),
     infoHolderAll = document.getElementsByClassName("fill-fields")
-    // infoHolderAllArray = Array.from(infoHolderAll);
 
 const // "info holder" fill fields | treatment
-    // infoHolderAboutTr = document.getElementById("ih-about-tr"),
-    // infoHolderSuitableTr = document.getElementById("ih-suitable-tr"),
-    // infoHolderAchieveTr = document.getElementById("ih-achieve-tr"),
-    // infoHolderLastTr = document.getElementById("ih-last-tr"),
     infoHolderAllTr = document.getElementsByClassName("fill-fields--tr")
-    // infoHolderAllArrayTr = Array.from(infoHolderAllTr);
 
 const // info holder for treatment
     infoTreatBotox = document.getElementById("tr-info-botox"),
@@ -98,14 +88,7 @@ const // info holder for treatment
 
 
 const // PHOTO body
-    // photoBodyExtFusion = document.getElementById("ext-photo-fusion"),
-    // photoBodyExtMicro = document.getElementById("ext-photo-micro"),
-    // photoBodyExtEasy = document.getElementById("ext-photo-easy"),
-    // photoBodyExtTape = document.getElementById("ext-photo-tape"),
-    // photoBodyExtComb = document.getElementById("ext-photo-comb"),
     photoBodyExtALL = document.getElementsByClassName("ext-photo"),
-    // photoBodyTrBotox = document.getElementById("tr-photo-botox"),    
-    // photoBodyTrTreatment = document.getElementById("tr-photo-treatment"),
     photoBodyTrALL = document.getElementsByClassName("tr-photo");
 
 
@@ -199,7 +182,6 @@ const // nav container
     snImg = document.getElementById("sn-img"),
     snALL = document.getElementsByClassName("sn-all")
    
-
 
 // 2. EL
 //-------------
