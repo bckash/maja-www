@@ -11135,6 +11135,8 @@ textarea.form-control-lg {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1, .h1 {
@@ -11303,6 +11305,10 @@ h1, .h1 {
   font-size: 1.25em;
   text-align: left;
 }
+.about-me__main .caption-box--bg #mq-fix__670--2,
+.about-me__main .caption-box--sm #mq-fix__670--2 {
+  display: none;
+}
 .about-me__main .caption-box--bg #p2::first-letter,
 .about-me__main .caption-box--sm #p2::first-letter {
   margin-top: -0.5rem;
@@ -11390,7 +11396,7 @@ h1, .h1 {
   }
 
   .about-me {
-    margin-bottom: -5rem;
+    margin-bottom: -7rem;
   }
   .about-me__head {
     position: relative;
@@ -11432,7 +11438,7 @@ h1, .h1 {
   }
   .about-me__main .caption-box--bg {
     position: relative;
-    bottom: 90px;
+    bottom: 100px;
     left: 100px;
     width: 430px;
     margin: auto;
@@ -11444,6 +11450,13 @@ h1, .h1 {
   }
 }
 @media screen and (max-width: 720px) {
+  .about-me {
+    margin-bottom: -1rem;
+  }
+  .about-me__head {
+    position: relative;
+    left: 55px;
+  }
   .about-me__main {
     bottom: 70px;
   }
@@ -11453,6 +11466,44 @@ h1, .h1 {
   .about-me__main .caption-box--bg {
     bottom: 70px;
     left: 50px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .about-me {
+    margin-bottom: 0;
+  }
+  .about-me__head {
+    position: relative;
+    left: 75px;
+  }
+  .about-me__main {
+    bottom: 30px;
+  }
+  .about-me__main .maja-avatar {
+    padding: 1.4rem;
+  }
+  .about-me__main .maja-avatar img {
+    width: 140px;
+    margin: 0;
+    margin-right: 0.7rem;
+  }
+  .about-me__main .maja-avatar .caption-box--sm {
+    width: 230px;
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .about-me__main .maja-avatar .caption-box--sm #mq-fix__670--1 {
+    display: none;
+  }
+  .about-me__main .maja-avatar .caption-box--sm #mq-fix__670--2 {
+    display: inline-block;
+    padding-left: 1rem;
+  }
+  .about-me__main .caption-box--bg {
+    bottom: 50px;
+    left: 0;
   }
 }
 .animation-emoji {
@@ -11532,18 +11583,40 @@ h1, .h1 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 @media screen and (max-width: 780px) {
+  #paralax {
+    width: 100%;
+  }
   #paralax header {
     width: 100%;
+    padding-right: 5rem;
   }
   #paralax #paralax-content {
     width: 90%;
-    margin: 0 2.5rem;
+    margin: auto;
     outline: unset;
     border: 17px solid #dfc7b9;
   }
 }
-
+@media screen and (max-width: 600px) {
+  #paralax header {
+    width: 80%;
+    padding: 0;
+    margin: auto;
+  }
+  #paralax header p {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  #paralax header {
+    width: 90%;
+  }
+  #paralax header p {
+    font-size: 1.8rem;
+  }
+}
 .bridge--3 svg {
   bottom: 0;
 }
@@ -11853,14 +11926,14 @@ h1, .h1 {
     color: rgb(209, 135, 39);
   }
 }
-.animations__move-up, .animations__move-left {
+.animation__move-up, .animation__move-left {
   animation-duration: 0.5s;
   animation-delay: 0.1s;
 }
-.animations__move-left {
+.animation__move-left {
   animation-name: move-down;
 }
-.animations__move-up {
+.animation__move-up {
   animation-name: move-up;
 }
 
@@ -12240,17 +12313,14 @@ nav ul li.ns-active:hover {
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
-
 .animation__line-in--d1, .animation__line-in--d2 {
   animation-name: line-left-right2;
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
-
 .animation__line-in--d1 {
   animation-delay: 0.05s;
 }
-
 .animation__line-in--d2 {
   animation-delay: 0.1s;
 }
@@ -12489,12 +12559,12 @@ nav ul li.ns-active:hover {
   }
   .foot-end__logo {
     position: absolute;
-    top: -88px;
+    top: -75px;
     margin: 0;
     margin-right: 14rem;
   }
   .foot-end__logo img {
-    height: 90px;
+    height: 80px;
     width: unset;
   }
   .foot-end__contact {

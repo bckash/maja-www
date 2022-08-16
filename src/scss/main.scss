@@ -23,8 +23,8 @@
 
 ul {
     list-style-type: none;
-    // margin: 0;
-    // padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 // adjust with title mixin at the end
@@ -235,6 +235,10 @@ h1 {
                     text-align: left;
                 }
             }
+            
+            #mq-fix__670--2 {
+                display: none;
+            }
 
             #p2 {
 
@@ -358,7 +362,7 @@ h1 {
     }
     
     .about-me {
-        margin-bottom: -5rem;
+        margin-bottom: -7rem;
 
         &__head {
             position: relative;
@@ -406,7 +410,7 @@ h1 {
 
             .caption-box--bg {
                 position: relative;
-                bottom: 90px;
+                bottom: 100px;
                 left: 100px;
                 width: 430px;
                 margin: auto;
@@ -426,6 +430,12 @@ h1 {
 @media screen and (max-width: 720px) {
 
     .about-me {
+        margin-bottom: -1rem;
+
+        &__head {
+            position: relative;
+            left: 55px;
+        }
         
         &__main {
             bottom: 70px;
@@ -435,10 +445,6 @@ h1 {
                 img {
                     width: 150px;
                 }
-
-                .caption-box--sm {
-
-                }
             }
 
             .caption-box--bg {
@@ -447,6 +453,56 @@ h1 {
             }
         }
     }
+}
+
+@media screen and (max-width: 670px) {
+
+    .about-me {
+        margin-bottom: 0;
+
+        &__head {
+            position: relative;
+            left: 75px;
+        }
+        
+        &__main {
+            bottom: 30px;
+
+            .maja-avatar {
+                padding: 1.4rem;
+
+                img {
+                    width: 140px;
+                    margin: 0;
+                    margin-right: .7rem;
+                }
+
+                .caption-box--sm {
+                    width: 230px;
+                    margin: 0;
+                    margin-top: 1rem;
+                    margin-left: .7rem;
+                    font-size: .9rem;
+    
+                    #mq-fix__670--1 {
+                        display: none;
+                    }
+    
+                    #mq-fix__670--2 {
+                        display: inline-block;
+                        padding-left: 1rem;
+                    }
+                }
+            }
+
+            .caption-box--bg {
+                bottom: 50px;
+                left: 0;
+            }
+
+        }
+    }
+
 
 
 }
@@ -549,24 +605,60 @@ h1 {
         background-repeat: no-repeat;
         background-size: cover;
     }
+}
 
-    @media screen and (max-width: 780px) {
-        
+// MQ
+
+@media screen and (max-width: 780px) {
+   
+    #paralax {
+        width: 100%;
+
         header {
             width: 100%;
+            padding-right: 5rem;
         }
-
+    
         #paralax-content {
             width: 90%;
-            margin: 0 2.5rem;
+            margin: auto;
             outline: unset;
             border: 17px solid v.$nl-back-pink-dark;;
         }
-
     }
-
 }
 
+@media screen and (max-width: 600px) {
+
+    #paralax {
+
+        header {
+            width: 80%;
+            padding: 0;
+            margin: auto;
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    #paralax {
+
+        header {
+            width: 90%;
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+}
 
 //
 // BRIDGE 3
@@ -868,7 +960,7 @@ h1 {
 
 // MQ
 
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
 
     .offer {
 
@@ -896,7 +988,7 @@ h1 {
     }
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
 
     .offer {
 
@@ -915,19 +1007,14 @@ h1 {
                 img {
                     width: 100%;
                     height: auto;
-                }
-        
+                }     
             }
-
         }
     }
-
-
-
-
 }
 
-// animation: side nav
+
+// side nav : animation + style + hover
 
 .side-nav--active {
     color: v.$nl-side-nav-a-light;
@@ -950,7 +1037,7 @@ h1 {
 
 // animation : intro
 
-.animations {
+.animation {
 
     &__move-up, &__move-left {
         animation-duration: .5s;
@@ -1406,25 +1493,28 @@ nav ul li.ns-active:hover {
 
 // animations : "price zones"
 
-.animation__line-in  {
-    animation-name: line-left-right;
-    animation-duration: .2s;
-    animation-fill-mode: forwards;
+.animation {
+    &__line-in  {
+        animation-name: line-left-right;
+        animation-duration: .2s;
+        animation-fill-mode: forwards;
+    }
+
+    &__line-in--d1, &__line-in--d2 {
+        animation-name: line-left-right2;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+    }
+
+    &__line-in--d1 {
+        animation-delay: .05s;
+    }
+
+    &__line-in--d2 {
+        animation-delay: .10s;
+    }
 }
 
-.animation__line-in--d1, .animation__line-in--d2 {
-    animation-name: line-left-right2;
-    animation-duration: .4s;
-    animation-fill-mode: forwards;
-}
-
-.animation__line-in--d1 {
-    animation-delay: .05s;
-}
-
-.animation__line-in--d2 {
-    animation-delay: .10s;
-}
 
 @keyframes line-left-right {
     0% {
@@ -1709,12 +1799,12 @@ nav ul li.ns-active:hover {
 
         &__logo {
             position: absolute;
-            top: -88px;
+            top: -75px;
             margin: 0;
             margin-right: 14rem;
     
             img {
-                height: 90px;
+                height: 80px;
                 width: unset;
             }
         }

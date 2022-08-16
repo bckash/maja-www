@@ -262,7 +262,7 @@ function scrollAnimation(){
     } else if (pos>4600 && pos<4800) {
         pmPleaseChoose.classList.add("animation__swirl")
 
-    } else if (pos> 5250) {
+    } else if (pos> 5100) {
         logoNLSmall.classList.add("animation__jelly")
 
     } 
