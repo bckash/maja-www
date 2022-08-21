@@ -11888,9 +11888,11 @@ h1, .h1 {
   .offer__main nav {
     position: absolute;
     right: 70px;
+    margin: 0;
+    padding: 0;
   }
   .offer__main nav #side-nav {
-    margin-top: 1rem;
+    margin-top: 1.6rem;
   }
 
   .head-sm img {
@@ -11908,6 +11910,62 @@ h1, .h1 {
   .offer-main__body .head-sm img {
     width: 100%;
     height: auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .offer__main nav {
+    right: 50px;
+  }
+  .offer__main nav #side-nav {
+    margin-top: 2rem;
+  }
+  .offer__main nav #side-nav .material-icons {
+    font-size: 2.5rem;
+  }
+
+  .offer-main__body .head-sm {
+    width: 70%;
+  }
+  .offer-main__body .js-fill__about span {
+    width: 82%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .offer__main nav {
+    right: 25px;
+  }
+  .offer__main nav #side-nav {
+    margin-top: 2rem;
+  }
+  .offer__main nav #side-nav .material-icons {
+    font-size: 2.5rem;
+  }
+
+  .offer__main .offer-main {
+    width: 95%;
+    padding: 1rem 0;
+  }
+  .offer__main .offer-main__body .head-sm {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .offer__main nav {
+    right: 15px;
+  }
+  .offer__main nav #side-nav {
+    margin-top: 2rem;
+  }
+  .offer__main nav #side-nav .material-icons {
+    font-size: 2rem;
+  }
+
+  .offer__main .offer-main {
+    width: 95%;
+    padding: 1rem 0;
+  }
+  .offer__main .offer-main__body .head-sm {
+    width: 70%;
   }
 }
 .side-nav--active {

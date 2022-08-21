@@ -972,9 +972,11 @@ h1 {
             nav {
                 position: absolute;
                 right: 70px;
+                margin: 0;
+                padding: 0;
 
                 #side-nav {
-                    margin-top: 1rem;
+                    margin-top: 1.6rem;
                 }
             }
         }
@@ -1013,6 +1015,124 @@ h1 {
     }
 }
 
+@media screen and (max-width: 700px) {
+
+    .offer {
+
+        &__main {
+
+            nav {
+                right: 50px;
+
+                #side-nav {
+                    margin-top: 2rem;
+
+                    .material-icons {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .offer-main {
+
+        &__body {
+
+            .head-sm {
+                width: 70%;
+            }
+
+            .js-fill__about {
+
+                span {
+                    width: 82%;
+                }
+              
+            }
+        
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .offer {
+
+        &__main {
+
+            nav {
+                right: 25px;
+
+                #side-nav {
+                    margin-top: 2rem;
+
+                    .material-icons {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .offer__main {
+
+        .offer-main {
+            width: 95%;
+            padding: 1rem 0;
+    
+            &__body {
+    
+                .head-sm {
+                    width: 70%;
+                }
+            
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .offer {
+
+        &__main {
+
+            nav {
+                right: 15px;
+
+                #side-nav {
+                    margin-top: 2rem;
+
+                    .material-icons {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .offer__main {
+
+        .offer-main {
+            width: 95%;
+            padding: 1rem 0;
+    
+            &__body {
+    
+                .head-sm {
+                    width: 70%;
+                }
+            
+            }
+        }
+    }
+
+
+}
 
 // side nav : animation + style + hover
 
