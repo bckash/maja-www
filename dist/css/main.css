@@ -11161,7 +11161,9 @@ h1, .h1 {
   text-align: center;
 }
 .showcase__logo img {
-  width: 23rem;
+  max-width: 370px;
+  width: 70%;
+  height: auto;
 }
 .showcase video, .showcase__overlay {
   position: absolute;
@@ -11225,6 +11227,21 @@ h1, .h1 {
   color: rgb(116, 11, 11);
 }
 
+@media screen and (max-width: 430px) {
+  .showcase__logo img {
+    width: 80%;
+  }
+
+  .main-nav {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .main-nav {
+    font-size: 1rem;
+  }
+}
 .bridge--1 {
   position: relative;
   height: 288px;
@@ -11454,7 +11471,6 @@ h1, .h1 {
     margin-bottom: -1rem;
   }
   .about-me__head {
-    position: relative;
     left: 55px;
   }
   .about-me__main {
@@ -11473,7 +11489,6 @@ h1, .h1 {
     margin-bottom: 0;
   }
   .about-me__head {
-    position: relative;
     left: 75px;
   }
   .about-me__main {
@@ -11488,7 +11503,7 @@ h1, .h1 {
     margin-right: 0.7rem;
   }
   .about-me__main .maja-avatar .caption-box--sm {
-    width: 230px;
+    max-width: 230px;
     margin: 0;
     margin-top: 1rem;
     margin-left: 0.7rem;
@@ -11504,6 +11519,46 @@ h1, .h1 {
   .about-me__main .caption-box--bg {
     bottom: 50px;
     left: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  .about-me__head {
+    left: unset;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-me__main .maja-avatar .caption-box--sm {
+    font-size: 0.8rem;
+  }
+  .about-me__main .caption-box--bg {
+    width: 95%;
+    font-size: 0.95rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .about-me__main .maja-avatar {
+    padding: 2rem 0.8rem;
+  }
+  .about-me__main .maja-avatar img {
+    width: 115px;
+  }
+  .about-me__main .maja-avatar .caption-box--sm {
+    max-width: 200px;
+    padding: 0.5rem 1.4rem;
+  }
+  .about-me__main .maja-avatar .caption-box--sm span {
+    padding-left: 0 !important;
+  }
+  .about-me__main .caption-box--bg {
+    padding: 1rem 1.4rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .about-me__head {
+    left: unset;
+  }
+  .about-me__main .maja-avatar .caption-box--sm {
+    max-width: 150px;
   }
 }
 .animation-emoji {
@@ -11923,6 +11978,10 @@ h1, .h1 {
     font-size: 2.5rem;
   }
 
+  .offer-main__intro {
+    width: 90%;
+    height: auto;
+  }
   .offer-main__body .head-sm {
     width: 70%;
   }
@@ -11949,7 +12008,7 @@ h1, .h1 {
     width: 70%;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .offer__main nav {
     right: 15px;
   }
@@ -11958,14 +12017,6 @@ h1, .h1 {
   }
   .offer__main nav #side-nav .material-icons {
     font-size: 2rem;
-  }
-
-  .offer__main .offer-main {
-    width: 95%;
-    padding: 1rem 0;
-  }
-  .offer__main .offer-main__body .head-sm {
-    width: 70%;
   }
 }
 .side-nav--active {
@@ -12642,6 +12693,22 @@ nav ul li.ns-active:hover {
 .prices,
 .customer-opinion__main {
     width: 100% !important;
+  }
+
+  h1, .h1 {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 670px) {
+  h1, .h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .about-me__head,
+.offer__head,
+.prices__header {
+    width: 90%;
   }
 }
 
