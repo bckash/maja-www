@@ -677,15 +677,16 @@ h1 {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        width: 700px;
+        max-width: 700px;
         margin: auto;
 
-        hr {
-            height: 2px;
+        div {
+            height: 1px;
             width: 100px;
             margin-right: 3rem; 
             box-shadow: 2px 2px 20px rgb(82, 79, 79);
             background-color: v.$nl-back-pink-dark;
+            opacity: .3;
         }
 
         p {
@@ -701,6 +702,7 @@ h1 {
     #paralax-content {
         height: 320px;
         width: 75%;
+        max-width: 1000px;
         outline: 17px solid v.$nl-back-pink-dark;
         margin: -3rem auto 4rem auto;
         background-image: url("/src/img/paralax-1.jpg");
@@ -713,10 +715,25 @@ h1 {
 
 // MQ
 
+@media screen and (max-width: 1200px) {
+   
+    #paralax {
+        padding-bottom: 10rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+   
+    #paralax {
+        padding-bottom: 8rem;
+    }
+}
+
 @media screen and (max-width: 780px) {
    
     #paralax {
         width: 100%;
+        padding-bottom: 6rem;
 
         header {
             width: 100%;
@@ -725,9 +742,10 @@ h1 {
     
         #paralax-content {
             width: 90%;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
             outline: unset;
-            border: 17px solid v.$nl-back-pink-dark;;
+            border: 17px solid v.$nl-back-pink-dark;
         }
     }
 }
@@ -735,6 +753,7 @@ h1 {
 @media screen and (max-width: 600px) {
 
     #paralax {
+        padding-bottom: 4rem;
 
         header {
             width: 80%;
@@ -744,6 +763,10 @@ h1 {
             p {
                 font-size: 1.8rem;
             }
+        }
+
+        #paralax-content {
+            border-width: 15px;
         }
 
     }
@@ -761,6 +784,52 @@ h1 {
             }
         }
 
+        #paralax-content {
+            border-width: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    #paralax {
+        padding-bottom: 3rem;
+
+        header {
+            width: 100%;
+
+            div {
+                margin: auto;
+            }
+
+            p {
+                width: 90%;
+                margin: 2rem auto;
+                text-align: center;
+                font-size: 1.6rem;
+            }
+        }
+
+        #paralax-content {
+            border-width: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+    #paralax {
+
+        header {
+
+            p {
+                font-size: 1.4rem;
+            }
+        }
+
+        #paralax-content {
+            border-width: 8px;
+        }
     }
 }
 

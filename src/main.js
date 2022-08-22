@@ -31,6 +31,8 @@ const pmPleaseChoose = document.getElementById("pm-please-choose")
 const logoNLSmall = document.getElementById("logo-nl4h-sm")
 const aboutTriangle = document.getElementById("outline-triangle")
 
+// paralax
+const paralax = document.getElementById("paralax-content")
 
 //
 // 2. EL
@@ -49,6 +51,7 @@ arrUpLink.addEventListener("click", (()=>{
     }, 1500);
 }))
 
+window.addEventListener("resize", changeHeightWithWidth);
 
 //
 // 3. FUNCTIONS ->
@@ -268,6 +271,18 @@ function scrollAnimation(){
     } 
 }
 
+
+// paralax resize
+function changeHeightWithWidth(){
+
+    let paralaxWidth = paralax.offsetWidth
+
+    if (window.innerWidth < 780) {
+
+        paralax.style.height = `${paralaxWidth/2 +20}px`
+    }
+
+}
 
 //------------------------------------------------------------------------------
 // setting up "mutation watch for carousel" inside modal - to catch change that i can built "display toggle function" upon ( to show "descriptions for carousel imgs" in modal footer)
