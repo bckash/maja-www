@@ -51,6 +51,10 @@ summAllArray.push(navBigStyle)
 
 //.................................................
 
+const // small, arrow buttons
+    navSmallButtonLeft = document.getElementById("of-nv-sm-arr--left"),
+    navSmallButtonRight = document.getElementById("of-nv-sm-arr--right"),
+    navSmallMain = document.getElementById("of-nv-sm-main");
 
 // -> CONTENT : ELEMENTS 
 
@@ -200,12 +204,16 @@ extShrink.addEventListener("click", showContentExt)
 extTape.addEventListener("click", showContentExt)
 trBotox.addEventListener("click", showContentTreat)
 trKreatyna.addEventListener("click", showContentTreat)
+navSmallButtonLeft.addEventListener("click", scrollContentLeft)
+navSmallButtonRight.addEventListener("click", scrollContentRight)
+window.addEventListener("resize", navSmallArrowsDisplay)
 
 // side nav
 if (sideNav) {
     snInfo.addEventListener("click", showContentSideNav)
     snImg.addEventListener("click", showContentSideNav)
 }
+
 
 
 // 3. FUNCTIONS 
@@ -304,20 +312,35 @@ function showContentBigNav (e) {
 
     if (e.target.id === "nav-big-ext") {
         setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
+
+
+        // over here !!! 1/3
+        if (window.innerWidth < 678) {
+            navSmallButtonLeft.style.display === "block"
+            navSmallButtonRight.style.display === "block"
+        }
+        // over here !!!
+
+
+
+
     } else if (e.target.id === "nav-big-treat") {
         setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
+        // over here !!! 2/3
+        navSmallButtonLeft.style.display === "none"
+        navSmallButtonRight.style.display === "none"
+        // over here !!!
     } else if (e.target.id === "nav-big-style") {
         setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
-
-        setTimeout(() => {
-            
+        navSmallButtonLeft.style.display === "none"
+        navSmallButtonRight.style.display === "none"
+        setTimeout(() => { 
             snImg.classList.remove("side-nav--active");
             snInfo.classList.add("side-nav--active");
             introStyle.style.display = "none"
             snBodyInfoSt.style.display = "block"
             spinnerSt.style.display = "none"
             sideNav.style.display = "block"
-
         }, 1000);
     }
 }
@@ -456,6 +479,29 @@ function showContentSideNav (e) {
     mapActiveElement(summAllArray, "ns-active", activeBodyAbstract)
 }
 
+// E) SMALL NAV : SCROLL
+function scrollContentLeft (){
+    navSmallMain.scrollLeft += -100
+}
+
+function scrollContentRight (){
+    navSmallMain.scrollLeft += 100
+}
 
 
 
+
+// over here !!! 3/3
+
+// F) SMALL NAV : BUTTONS DISPLAY CONTROL 
+function navSmallArrowsDisplay() {
+
+    if (window.innerWidth < 678 && navBigExt.classList.contains("ns-active")) {
+        navSmallButtonLeft.style.display === "block"
+        navSmallButtonRight.style.display === "block"
+    } else {
+        navSmallButtonLeft.style.display === "none"
+        navSmallButtonRight.style.display === "none"
+    }
+
+}

@@ -34,6 +34,7 @@ const aboutTriangle = document.getElementById("outline-triangle")
 // paralax
 const paralax = document.getElementById("paralax-content")
 
+
 //
 // 2. EL
 //-----------------------------------
@@ -253,7 +254,7 @@ function showNav(){
 function scrollAnimation(){
     let pos = window.scrollY;
 
-    console.log(pos)
+    // console.log(pos)
 
     if (pos>500 && pos<700) {
         aboutTriangle.classList.add("animation__move-bot")

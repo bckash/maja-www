@@ -8,9 +8,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
 
-
 *, *::before, *::after {
-    box-sizing: border-box
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *:hover, * a {
@@ -867,17 +867,50 @@ h1 {
         padding: 1rem 0;
     }
 
-    &__nav--big ul, &__nav--small ul {
+    &__nav--big ul, .offer-nav-small__main ul {
         @include v.nav;
     }
 
     &__nav--small {
-        @include v.nav-small;
+        display: flex;
+        align-items: center;
 
-        .spinner-border {
-            color: rgb(223, 213, 213);
+        .offer-nav-small {
+
+            &__arrows {
+                display: none;
+                margin: 0 1rem;
+                margin-bottom: .5rem;
+                opacity: .4;
+            }
+
+            &__arrows:hover {
+                cursor: pointer;
+                opacity: 1
+            }
+
+            &__main {
+                @include v.nav-small;
+                max-width: 600px;
+                overflow-x: scroll;
+                margin: auto;
+        
+                ul {
+                    min-width: 550px;
+                    margin: auto;       
+                }
+        
+                .spinner-border {
+                    color: rgb(223, 213, 213);
+                }
+            }
+
+            &__main::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
+
 
     &__nav--big ul {
         @include v.nav-big-txt;
@@ -1230,6 +1263,22 @@ h1 {
         }
     }
 
+}
+
+@media screen and (max-width: 677px) {
+
+    .offer {
+
+        &__nav--small {
+    
+            .offer-nav-small {
+    
+                &__arrows {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
