@@ -553,7 +553,6 @@ h1 {
 
             .caption-box--bg {
                 width: 95%;
-                font-size: .95rem;
             }
 
         }
@@ -880,8 +879,12 @@ h1 {
             &__arrows {
                 display: none;
                 margin: 0 1rem;
-                margin-bottom: .5rem;
+                margin-bottom: .6rem;
                 opacity: .4;
+
+                span {
+                    font-size: 1rem;
+                }
             }
 
             &__arrows:hover {
@@ -915,7 +918,6 @@ h1 {
             }
         }
     }
-
 
     &__nav--big ul {
         @include v.nav-big-txt;
@@ -980,7 +982,6 @@ h1 {
 
             span {
                 display: block;
-
                 margin-top: 6rem;
                 font-size: 1.7rem;
                 color: rgb(255, 227, 215);
@@ -990,9 +991,6 @@ h1 {
                 margin-right: 1rem;
             }
 
-            span:nth-child(2) {
-                // margin-top: 16rem;
-            } 
         }
     }
 
@@ -1001,7 +999,7 @@ h1 {
         display: none;
 
         img {
-            border: 6px solid v.$nl-brown-detail-light;
+            border: 6px solid v.$nl-offer-omb-out;
             border-radius: 1500px;
         }
 
@@ -1010,11 +1008,14 @@ h1 {
 
             span {
                 display: inline-block;
-                width: 64.2%;
-                padding: 1rem 0;
-                font-size: 2.5rem;
-                background-color: rgba(41, 17, 8, 0.568);
-                color: rgb(255, 227, 215);
+                width: 380px;
+                padding: .2rem;
+                margin-top: 22rem;
+                font-size: 1.8rem;
+                background-color: v.$nl-offer-omb-out;
+                color: rgb(248, 235, 229);
+                text-transform: capitalize;
+
             }
         }
     }
@@ -1102,7 +1103,7 @@ h1 {
         height: 192px;
         font-style: italic;
 
-        .fill-fields, .fill-fields--tr, .fill-fields--st {
+        span {
             width: 70%;
             margin: 0rem auto 1rem auto;
             padding-left: 2rem;
@@ -1153,6 +1154,7 @@ h1 {
                 height: 100%;
                 margin: auto;
                 font-size: .8rem;
+                text-align: justify;
             }
 
             &__descr--st {
@@ -1246,6 +1248,7 @@ h1 {
     }
 
     .offer-main {
+
         &__intro {
             width: 90%;
             height: auto;
@@ -1264,10 +1267,36 @@ h1 {
                 }
               
             }
+
+            #ext-photo, #treat-photo, #style-photo {
+                width: 75%;
+            }
         
         }
     }
 
+    .js-fill {
+
+        &__icon-part {
+
+            .icon-column {
+                // width: 28%;
+                // margin: 1rem 0;
+    
+                &__icon {
+    
+                    span {
+                        font-size: 2.1rem;
+                    }
+                }
+    
+                &__title {
+                    font-size: 1.2rem;
+                    // margin: 1rem;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1329,8 +1358,264 @@ h1 {
         }
     }
 
+    .offer-main {
+
+        &__intro {
+    
+            .intro-overlay {
+    
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    
+        &__body {
+
+            .omb__head {
+                padding: 0 1rem;
+        
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .intro-overlay {
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        bottom: 60px;
+                        width: 93%;
+                        height: auto;
+                        font-size: 5.5vw;
+                    }
+                }
+            }
+   
+            .head-sm {
+
+                div {
+                    font-size: 1.5rem;
+                }
+            }
+
+            #ext-photo, #treat-photo, #style-photo {
+    
+                .carousel {
+                               
+                    .carousel-header {
+
+                        font-size: 1.5rem;
+
+                    }
+                }               
+            }
+        }
+    }
+
+    .js-fill {
+
+        &__about {
+            height: 210px;
+        }
+
+        &__icon-part {
+
+            .icon-column {
+                width: 30%;
+    
+                &__icon {
+    
+                    span {
+                        font-size: 2.1rem;
+                    }
+                }
+    
+                &__title {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
 }
 
+@media screen and (max-width: 420px) {
+
+    .offer {
+
+        &__main {
+
+            nav {
+
+                #side-nav {
+
+                    .material-icons {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .offer-main {
+
+        &__intro {
+    
+            .intro-overlay {
+    
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        &__body {
+
+            .omb__head {
+
+                .intro-overlay {
+
+                    span {
+                        width: 96%;
+                        font-size: 6vw;
+                    }
+                }
+            }
+          
+            .head-sm {
+                outline: 4px solid v.$nl-side-nav-a-light;
+            }         
+        }
+    }
+
+    .js-fill {
+
+        &__about {
+            height: 230px;
+        }
+
+        &__icon-part {
+
+            .icon-column {
+    
+                &__icon {
+    
+                    span {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+
+    .offer-main__body {
+
+        .js-fill {
+
+            &__about {
+                height: 250px;
+    
+                span {
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .offer {
+
+        &__main {
+
+            nav {
+                right: 10px;
+
+                #side-nav {
+                    margin-top: 1.9rem;
+
+                    .material-icons {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .offer-main {
+    
+        &__body {
+
+            .omb__head {
+
+                .intro-overlay {
+
+                    span {
+                        width: 100%;
+                        font-size: 6.5vw;
+                    }
+                }
+            }
+          
+   
+            .head-sm {
+
+                div {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .js-fill {
+
+                &__about {
+        
+                    span {
+                        width: 88%;
+                    }
+                }
+            }
+
+            #ext-photo, #treat-photo, #style-photo {
+                width: 80%;
+
+                .carousel {
+                               
+                    .carousel-header {
+
+                        font-size: 1.3rem;
+
+                    }
+                } 
+            }
+        }
+    }
+
+    .js-fill {
+
+        &__icon-part {
+
+            .icon-column {
+    
+                &__icon {
+    
+                    span {
+                        // font-size: 2.1rem;
+                    }
+                }
+    
+                &__title {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
 
 // side nav : animation + style + hover
 
@@ -2137,7 +2422,7 @@ nav ul li.ns-active:hover {
 
 
 //-------------------------------------------
-// MQ - Global (Local inside elements)
+// MQ - Global (*Local are under elements)
 //-------------------------------------------
 
 
@@ -2173,12 +2458,44 @@ nav ul li.ns-active:hover {
     }
 }
 
+@media screen and (max-width: 480px) {
+
+    .about-me {
+        
+        &__main {
+
+            .caption-box--bg {
+                font-size: .95rem;
+            }
+
+        }
+    }
+
+    .js-fill {
+
+        &__about {
+            font-size: .95rem;
+        }
+    }
+
+}
+
 @media screen and (max-width: 380px) {
 
     .about-me__head,
     .offer__head,
     .prices__header {
         width: 90%;
+    }
+
+    .offer__nav--big ul,
+    .prices__nav--big ul {
+        font-size: 1.1rem;
+    }
+
+    .offer__nav--big ul li,
+    .prices__nav--big ul li {
+        padding: .5rem .8rem;
     }
 }
   

@@ -11274,7 +11274,7 @@ h1, .h1 {
   border-color: rgb(206, 203, 197);
   font-size: 2.8rem;
   font-weight: 300;
-  color: rgba(79, 33, 8, 0.63);
+  color: rgb(155, 114, 92);
   margin-left: 26rem;
   margin-bottom: 2rem;
   border-color: rgb(206, 203, 197);
@@ -11533,7 +11533,6 @@ h1, .h1 {
   }
   .about-me__main .caption-box--bg {
     width: 95%;
-    font-size: 0.95rem;
   }
 }
 @media screen and (max-width: 440px) {
@@ -11749,7 +11748,7 @@ h1, .h1 {
   border-color: rgb(206, 203, 197);
   font-size: 2.8rem;
   font-weight: 300;
-  color: rgba(79, 33, 8, 0.63);
+  color: rgb(155, 114, 92);
   padding: 1rem 0;
 }
 .offer__nav--big ul, .offer .offer-nav-small__main ul {
@@ -11772,8 +11771,11 @@ h1, .h1 {
 .offer__nav--small .offer-nav-small__arrows {
   display: none;
   margin: 0 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   opacity: 0.4;
+}
+.offer__nav--small .offer-nav-small__arrows span {
+  font-size: 1rem;
 }
 .offer__nav--small .offer-nav-small__arrows:hover {
   cursor: pointer;
@@ -11825,7 +11827,7 @@ h1, .h1 {
 .offer__main nav #side-nav {
   display: none;
   margin-top: 1.6rem;
-  color: rgba(79, 33, 8, 0.63);
+  color: rgb(155, 114, 92);
 }
 .offer__main nav span {
   font-size: 3rem;
@@ -11874,7 +11876,7 @@ h1, .h1 {
   display: none;
 }
 .offer-main .omb__head img {
-  border: 6px solid rgba(79, 33, 8, 0.63);
+  border: 6px solid rgb(212, 179, 156);
   border-radius: 1500px;
 }
 .offer-main .omb__head .intro-overlay {
@@ -11889,11 +11891,13 @@ h1, .h1 {
 }
 .offer-main .omb__head .intro-overlay span {
   display: inline-block;
-  width: 64.2%;
-  padding: 1rem 0;
-  font-size: 2.5rem;
-  background-color: rgba(41, 17, 8, 0.568);
-  color: rgb(255, 227, 215);
+  width: 380px;
+  padding: 0.2rem;
+  margin-top: 22rem;
+  font-size: 1.8rem;
+  background-color: rgb(212, 179, 156);
+  color: rgb(248, 235, 229);
+  text-transform: capitalize;
 }
 .offer-main__body #treat-info, .offer-main__body #style-info, .offer-main__body #ext-info {
   display: none;
@@ -11962,11 +11966,11 @@ h1, .h1 {
   height: 192px;
   font-style: italic;
 }
-.js-fill__about .fill-fields, .js-fill__about .fill-fields--tr, .js-fill__about .fill-fields--st {
+.js-fill__about span {
   width: 70%;
   margin: 0rem auto 1rem auto;
   padding-left: 2rem;
-  border-left: 6px solid rgba(79, 33, 8, 0.63);
+  border-left: 6px solid rgb(155, 114, 92);
   text-align: left;
 }
 .js-fill__icon-part {
@@ -11980,7 +11984,7 @@ h1, .h1 {
   margin: 1rem 0;
 }
 .js-fill__icon-part .icon-column__icon span {
-  color: rgba(79, 33, 8, 0.63);
+  color: rgb(155, 114, 92);
   font-size: 2.4rem;
 }
 .js-fill__icon-part .icon-column__icon span:hover {
@@ -12004,6 +12008,7 @@ h1, .h1 {
   height: 100%;
   margin: auto;
   font-size: 0.8rem;
+  text-align: justify;
 }
 .js-fill__icon-part .icon-column__descr--st {
   margin-left: 3rem;
@@ -12068,6 +12073,16 @@ h1, .h1 {
   .offer-main__body .js-fill__about span {
     width: 82%;
   }
+  .offer-main__body #ext-photo, .offer-main__body #treat-photo, .offer-main__body #style-photo {
+    width: 75%;
+  }
+
+  .js-fill__icon-part .icon-column__icon span {
+    font-size: 2.1rem;
+  }
+  .js-fill__icon-part .icon-column__title {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 600px) {
   .offer__main nav {
@@ -12097,6 +12112,109 @@ h1, .h1 {
   }
   .offer__main nav #side-nav .material-icons {
     font-size: 2rem;
+  }
+
+  .offer-main__intro .intro-overlay span {
+    font-size: 1.4rem;
+  }
+  .offer-main__body .omb__head {
+    padding: 0 1rem;
+  }
+  .offer-main__body .omb__head img {
+    width: 100%;
+    height: auto;
+  }
+  .offer-main__body .omb__head .intro-overlay {
+    position: relative;
+  }
+  .offer-main__body .omb__head .intro-overlay span {
+    position: absolute;
+    bottom: 60px;
+    width: 93%;
+    height: auto;
+    font-size: 5.5vw;
+  }
+  .offer-main__body .head-sm div {
+    font-size: 1.5rem;
+  }
+  .offer-main__body #ext-photo .carousel .carousel-header, .offer-main__body #treat-photo .carousel .carousel-header, .offer-main__body #style-photo .carousel .carousel-header {
+    font-size: 1.5rem;
+  }
+
+  .js-fill__about {
+    height: 210px;
+  }
+  .js-fill__icon-part .icon-column {
+    width: 30%;
+  }
+  .js-fill__icon-part .icon-column__icon span {
+    font-size: 2.1rem;
+  }
+  .js-fill__icon-part .icon-column__title {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .offer__main nav #side-nav .material-icons {
+    font-size: 1.7rem;
+  }
+
+  .offer-main__intro .intro-overlay span {
+    font-size: 1.2rem;
+  }
+  .offer-main__body .omb__head .intro-overlay span {
+    width: 96%;
+    font-size: 6vw;
+  }
+  .offer-main__body .head-sm {
+    outline: 4px solid rgb(209, 135, 39);
+  }
+
+  .js-fill__about {
+    height: 230px;
+  }
+  .js-fill__icon-part .icon-column__icon span {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .offer-main__body .js-fill__about {
+    height: 250px;
+  }
+  .offer-main__body .js-fill__about span {
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .offer__main nav {
+    right: 10px;
+  }
+  .offer__main nav #side-nav {
+    margin-top: 1.9rem;
+  }
+  .offer__main nav #side-nav .material-icons {
+    font-size: 1.5rem;
+  }
+
+  .offer-main__body .omb__head .intro-overlay span {
+    width: 100%;
+    font-size: 6.5vw;
+  }
+  .offer-main__body .head-sm div {
+    font-size: 1.3rem;
+  }
+  .offer-main__body .js-fill__about span {
+    width: 88%;
+  }
+  .offer-main__body #ext-photo, .offer-main__body #treat-photo, .offer-main__body #style-photo {
+    width: 80%;
+  }
+  .offer-main__body #ext-photo .carousel .carousel-header, .offer-main__body #treat-photo .carousel .carousel-header, .offer-main__body #style-photo .carousel .carousel-header {
+    font-size: 1.3rem;
+  }
+
+  .js-fill__icon-part .icon-column__title {
+    font-size: 1.1rem;
   }
 }
 .side-nav--active {
@@ -12191,7 +12309,7 @@ nav ul li.ns-active:hover {
   border-color: rgb(206, 203, 197);
   font-size: 2.8rem;
   font-weight: 300;
-  color: rgba(79, 33, 8, 0.63);
+  color: rgb(155, 114, 92);
   width: 560px;
   margin-bottom: 2rem;
   padding-top: 6rem;
@@ -12329,7 +12447,7 @@ nav ul li.ns-active:hover {
   border-color: rgb(206, 203, 197);
   font-size: 2.8rem;
   font-weight: 300;
-  color: rgba(79, 33, 8, 0.63);
+  color: rgb(155, 114, 92);
   text-align: center;
 }
 .prices__nav--big ul, .prices__nav--small ul {
@@ -12784,11 +12902,30 @@ nav ul li.ns-active:hover {
     font-size: 2.5rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .about-me__main .caption-box--bg {
+    font-size: 0.95rem;
+  }
+
+  .js-fill__about {
+    font-size: 0.95rem;
+  }
+}
 @media screen and (max-width: 380px) {
   .about-me__head,
 .offer__head,
 .prices__header {
     width: 90%;
+  }
+
+  .offer__nav--big ul,
+.prices__nav--big ul {
+    font-size: 1.1rem;
+  }
+
+  .offer__nav--big ul li,
+.prices__nav--big ul li {
+    padding: 0.5rem 0.8rem;
   }
 }
 
