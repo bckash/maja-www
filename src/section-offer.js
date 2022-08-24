@@ -312,28 +312,21 @@ function showContentBigNav (e) {
 
     if (e.target.id === "nav-big-ext") {
         setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
-
-
-        // over here !!! 1/3
         if (window.innerWidth < 678) {
-            navSmallButtonLeft.style.display === "block"
-            navSmallButtonRight.style.display === "block"
+            navSmallButtonLeft.style.display = "block"
+            navSmallButtonRight.style.display = "block"
         }
-        // over here !!!
-
-
-
 
     } else if (e.target.id === "nav-big-treat") {
         setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
-        // over here !!! 2/3
-        navSmallButtonLeft.style.display === "none"
-        navSmallButtonRight.style.display === "none"
-        // over here !!!
+        navSmallButtonLeft.style.display = "none"
+        navSmallButtonRight.style.display = "none"
+
     } else if (e.target.id === "nav-big-style") {
         setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
-        navSmallButtonLeft.style.display === "none"
-        navSmallButtonRight.style.display === "none"
+        navSmallButtonLeft.style.display = "none"
+        navSmallButtonRight.style.display = "none"
+
         setTimeout(() => { 
             snImg.classList.remove("side-nav--active");
             snInfo.classList.add("side-nav--active");
@@ -488,20 +481,13 @@ function scrollContentRight (){
     navSmallMain.scrollLeft += 100
 }
 
-
-
-
-// over here !!! 3/3
-
-// F) SMALL NAV : BUTTONS DISPLAY CONTROL 
+// F) SMALL NAV : "ARROWS DISPLAY" CONTROL 
 function navSmallArrowsDisplay() {
-
     if (window.innerWidth < 678 && navBigExt.classList.contains("ns-active")) {
-        navSmallButtonLeft.style.display === "block"
-        navSmallButtonRight.style.display === "block"
+        navSmallButtonLeft.style.display = "block"
+        navSmallButtonRight.style.display = "block"
     } else {
-        navSmallButtonLeft.style.display === "none"
-        navSmallButtonRight.style.display === "none"
+        navSmallButtonLeft.style.display = "none"
+        navSmallButtonRight.style.display = "none"
     }
-
 }

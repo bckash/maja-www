@@ -11793,6 +11793,10 @@ h1, .h1 {
   min-width: 550px;
   margin: auto;
 }
+.offer__nav--small .offer-nav-small__main #nav-small-treat,
+.offer__nav--small .offer-nav-small__main #nav-small-style {
+  min-width: 200px;
+}
 .offer__nav--small .offer-nav-small__main .spinner-border {
   color: rgb(223, 213, 213);
 }
@@ -12063,11 +12067,6 @@ h1, .h1 {
   }
   .offer-main__body .js-fill__about span {
     width: 82%;
-  }
-}
-@media screen and (max-width: 677px) {
-  .offer__nav--small .offer-nav-small__arrows {
-    display: block;
   }
 }
 @media screen and (max-width: 600px) {

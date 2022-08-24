@@ -899,6 +899,11 @@ h1 {
                     min-width: 550px;
                     margin: auto;       
                 }
+
+                #nav-small-treat,
+                #nav-small-style {
+                    min-width: 200px;
+                }
         
                 .spinner-border {
                     color: rgb(223, 213, 213);
@@ -1263,22 +1268,6 @@ h1 {
         }
     }
 
-}
-
-@media screen and (max-width: 677px) {
-
-    .offer {
-
-        &__nav--small {
-    
-            .offer-nav-small {
-    
-                &__arrows {
-                    display: block;
-                }
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 600px) {
