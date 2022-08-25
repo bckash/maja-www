@@ -12011,12 +12011,14 @@ h1, .h1 {
   text-align: justify;
 }
 .js-fill__icon-part .icon-column__descr--st {
-  margin-left: 3rem;
+  width: 50%;
+  margin: auto;
+  padding-left: 4rem;
   list-style-type: disc;
   text-align: left;
 }
 .js-fill__icon-part .width-fix {
-  width: 50%;
+  width: 100%;
 }
 
 @media screen and (max-width: 900px) {
@@ -12153,6 +12155,12 @@ h1, .h1 {
   .js-fill__icon-part .icon-column__title {
     font-size: 1.2rem;
   }
+  .js-fill__icon-part .icon-column__descr--st {
+    width: 70%;
+  }
+  .js-fill__icon-part .width-fix {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 420px) {
   .offer__main nav #side-nav .material-icons {
@@ -12175,6 +12183,9 @@ h1, .h1 {
   }
   .js-fill__icon-part .icon-column__icon span {
     font-size: 2rem;
+  }
+  .js-fill__icon-part .icon-column__descr--st {
+    width: 90%;
   }
 }
 @media screen and (max-width: 390px) {
@@ -12215,6 +12226,10 @@ h1, .h1 {
 
   .js-fill__icon-part .icon-column__title {
     font-size: 1.1rem;
+  }
+  .js-fill__icon-part .icon-column__descr--st {
+    margin-left: 0;
+    padding-left: 3rem;
   }
 }
 .side-nav--active {

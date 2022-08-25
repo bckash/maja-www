@@ -1158,14 +1158,16 @@ h1 {
             }
 
             &__descr--st {
-                margin-left: 3rem;
+                width: 50%;
+                margin: auto;
+                padding-left: 4rem;
                 list-style-type: disc;
                 text-align: left;
             }
         }
 
         .width-fix {
-            width: 50%;
+            width: 100%;
         }
     }
 }
@@ -1435,6 +1437,14 @@ h1 {
                 &__title {
                     font-size: 1.2rem;
                 }
+
+                &__descr--st {
+                    width: 70%;
+                }
+            }
+
+            .width-fix {
+                width: 100%;
             }
         }
     }
@@ -1505,6 +1515,10 @@ h1 {
                     span {
                         font-size: 2rem;
                     }
+                }
+
+                &__descr--st {
+                    width: 90%;
                 }
             }
         }
@@ -1602,15 +1616,13 @@ h1 {
 
             .icon-column {
     
-                &__icon {
-    
-                    span {
-                        // font-size: 2.1rem;
-                    }
-                }
-    
                 &__title {
                     font-size: 1.1rem;
+                }
+
+                &__descr--st {
+                    margin-left: 0;
+                    padding-left: 3rem;
                 }
             }
         }
