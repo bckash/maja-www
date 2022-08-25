@@ -137,6 +137,12 @@ $nl-offer-omb-out: rgb(212, 179, 156);
     background-color: $nl-content-body;
 }
 
+@mixin figcap-txt {
+    color: #a8a8a8;
+    font-style: italic;
+    font-size: .9rem;
+}
+
 // footer
 
 @mixin flex-row-center {

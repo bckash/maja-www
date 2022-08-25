@@ -12453,6 +12453,7 @@ nav ul li.ns-active:hover {
 .prices {
   width: 800px;
   margin: auto;
+  padding: 0 2rem;
 }
 .prices__header {
   width: 320px;
@@ -12531,7 +12532,14 @@ nav ul li.ns-active:hover {
 .p-main__body--ext, .p-main__body--treat, .p-main__body--style {
   display: none;
 }
-.p-main__body--ext {
+.p-main__body--ext #price-list--extensions-1A,
+.p-main__body--ext #price-list--extensions-1B {
+  display: none;
+}
+.p-main__body--ext #price-list--extensions-1,
+.p-main__body--ext #price-list--extensions-1A,
+.p-main__body--ext #price-list--extensions-1B {
+  position: relative;
   padding: 1rem 2rem;
   border-radius: 30px;
   background-color: rgb(250, 248, 244);
@@ -12540,11 +12548,40 @@ nav ul li.ns-active:hover {
 .p-main__body--ext table td, .p-main__body--ext table th {
   cursor: default;
 }
-.p-main__body--ext td::before {
+.p-main__body--ext table thead {
+  color: #69360b;
+}
+.p-main__body--ext table thead tr {
+  vertical-align: middle;
+}
+.p-main__body--ext table td::before {
   content: "£ ";
+}
+.p-main__body--ext table td:last-child, .p-main__body--ext table th:last-child {
+  width: 80px;
+}
+.p-main__body--ext table th:last-child {
+  font-size: 0.9rem;
+}
+.p-main__body--ext figcaption {
+  position: absolute;
+  right: 50px;
+  bottom: -50px;
+  height: 40px;
+  color: #a8a8a8;
+  font-style: italic;
+  font-size: 0.9rem;
 }
 .p-main__body--treat {
   position: relative;
+}
+.p-main__body--treat figcaption {
+  width: 200px;
+  margin: auto;
+  margin-top: 1rem;
+  color: #a8a8a8;
+  font-style: italic;
+  font-size: 0.9rem;
 }
 .p-main__body--treat .price-line {
   position: absolute;
@@ -12606,14 +12643,39 @@ nav ul li.ns-active:hover {
 .p-main__body--treat .pl--red span {
   color: rgb(160, 14, 14);
 }
-.p-main__body--style {
+.p-main__body--style #price-list--styling {
+  position: relative;
   padding: 1rem 2rem;
   border-radius: 30px;
   background-color: rgb(250, 248, 244);
   box-shadow: 3px 3px 10px rgb(228, 222, 222);
+  max-width: 600px;
+  margin: auto;
 }
 .p-main__body--style table td::before {
   content: "£ ";
+}
+.p-main__body--style table th {
+  max-width: 200px;
+  width: 60%;
+  padding-right: 1rem;
+  text-align: right;
+}
+.p-main__body--style table td {
+  width: 40%;
+  text-align: left;
+  padding-left: 1rem;
+}
+.p-main__body--style table th, .p-main__body--style table td {
+  vertical-align: middle;
+}
+.p-main__body--style figcaption {
+  position: absolute;
+  right: 50px;
+  bottom: -30px;
+  color: #a8a8a8;
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 .animation__swirl {
@@ -12672,6 +12734,90 @@ nav ul li.ns-active:hover {
   100% {
     width: 15rem;
     height: 9rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .prices {
+    padding-bottom: 4rem;
+  }
+
+  .p-main__body--ext #price-list--extensions-1A,
+.p-main__body--ext #price-list--extensions-1B {
+    display: block;
+  }
+  .p-main__body--ext #price-list--extensions-1B {
+    margin-top: 5rem;
+  }
+  .p-main__body--ext #price-list--extensions-1A table th:last-child {
+    font-size: 1rem;
+  }
+  .p-main__body--ext #price-list--extensions-1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .prices {
+    padding: 0 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .p-main__body--ext #price-list--extensions-1A,
+.p-main__body--ext #price-list--extensions-1B {
+    padding: 0.5rem 1rem;
+  }
+  .p-main__body--ext figcaption {
+    left: 10px;
+    right: 10px;
+    margin-left: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 420px) {
+  .prices {
+    padding: 0 0.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .p-main__body--ext #price-list--extensions-1A,
+.p-main__body--ext #price-list--extensions-1B {
+    font-size: 0.9rem;
+  }
+  .p-main__body--ext #price-list--extensions-1A table th:last-child {
+    font-size: 0.9rem;
+  }
+  .p-main__body--style #price-list--styling {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .prices {
+    padding-bottom: 10rem;
+  }
+
+  .p-main__body--ext #price-list--extensions-1A,
+.p-main__body--ext #price-list--extensions-1B {
+    font-size: 0.9rem;
+  }
+  .p-main__body--ext table th {
+    width: 60px;
+  }
+  .p-main__body--ext table th, .p-main__body--ext table td {
+    vertical-align: middle;
+  }
+  .p-main__body--style #price-list--styling {
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .p-main__body--ext #price-list--extensions-1A,
+.p-main__body--ext #price-list--extensions-1B {
+    font-size: 0.8rem;
+  }
+  .p-main__body--ext table th {
+    width: 50px;
+  }
+  .p-main__body--style #price-list--styling {
+    font-size: 0.8rem;
   }
 }
 #pull-back-container {
