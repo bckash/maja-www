@@ -1747,7 +1747,7 @@ nav ul li.ns-active:hover {
 
     &__title {
         @include v.title;
-        width: 560px;
+        width: 100%;
         margin-bottom: 2rem;
         padding-top: 6rem;
         border: 0;
@@ -1757,6 +1757,7 @@ nav ul li.ns-active:hover {
             font-size: 4rem;
             text-align: center;
             color: rgb(175, 92, 15);
+            width: 100%;
         }
     }
 
@@ -1769,8 +1770,10 @@ nav ul li.ns-active:hover {
         overflow: hidden;
 
         .opinions {
-            @include v.slideshow;
-            width: 40rem;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            width: 640px;
             margin: auto;
             padding-bottom: 10rem;
 
@@ -1778,12 +1781,19 @@ nav ul li.ns-active:hover {
                 display: flex;
                 justify-content: left;
                 align-items: center;
-                // margin-right: 6rem;
                 margin-top: 1rem;
                 margin-left: 3.5rem;
 
                 > * {
                     margin: 1rem;
+                }
+
+                .user__name {
+                    margin-right: .5rem;
+                }
+
+                .user__icon {
+                    margin: 0;      
                 }
             }   
             
@@ -1815,8 +1825,12 @@ nav ul li.ns-active:hover {
                 }
             }
 
-            &__content:hover {
-                outline: rgb(228, 127, 34) 4px solid;
+            // &__content:hover {
+            //     outline: rgb(228, 127, 34) 4px solid;
+            // }
+
+            &__triangle {
+                display: none;
             }
         }
     }
@@ -1825,10 +1839,7 @@ nav ul li.ns-active:hover {
 .user {
 
     &__photo img {
-        position: relative;
-        // z-index: 5;
         width: 150px;
-        // border: 2px white solid;
         @include v.photo-shad;
     }
 
@@ -1837,11 +1848,13 @@ nav ul li.ns-active:hover {
         color: rgb(236, 186, 92);
     }
         
-    &__icon span {
+    &__icon {
         padding-top: .8rem;
-        margin-left: -1.2rem;
-        font-size: 1.1rem;
         color: rgb(201, 121, 17);
+
+        span {
+            font-size: 1.1rem;
+        }
     }
 }
 
@@ -1889,6 +1902,143 @@ nav ul li.ns-active:hover {
 }
 
 
+// MQ
+
+@media screen and (max-width: 850px) {
+
+    .customer-opinion {
+
+        &__main {
+
+            .opinions {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    .customer-opinion {
+
+        &__main {
+
+            .opinions {
+                width: 100%;
+                margin-top: 2rem;
+
+                &__user {
+                    justify-content: center;
+                    margin: 0;
+                    margin-top: 6.5rem;
+                }   
+                
+                &__content {
+                    top: 190px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    padding: 1rem 2rem;
+                    border-radius: 15px;
+                    font-size: 1.1rem;
+                    text-align: center;
+                }
+
+                &__triangle {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    display: block;
+                    width: 0px;
+                    height: 0px;
+                    margin: auto;
+                    margin-top: -.5rem;
+                    border-left: transparent solid 14px;
+                    border-right: transparent solid 14px;
+                    border-bottom: rgb(63, 33, 18) solid 14px;
+                }
+            }
+        }
+    }
+
+    .user {
+        position: relative;
+
+        &__photo {
+            position: absolute;
+            top: -23px;
+
+            img {
+                width: 120px;
+            }
+        }   
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .customer-opinion {
+
+        &__title {
+
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    .user {
+    
+        &__name {
+            height: 3rem;
+            padding-top: .3rem;
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .customer-opinion {
+
+        &__title {
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        &__main {
+
+            .opinions {  
+                
+                &__content {
+                    width: 90%;
+                    margin: auto;
+                    padding: .8rem 1.2rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .user {
+
+        &__photo {
+            top: -10px;
+
+            img {
+                width: 110px;
+            }
+        } 
+    
+        &__name {
+            padding-top: .5rem;
+            font-size: 1.5rem;
+        }
+    }
+}
 
 //
 // BRIDGE 5

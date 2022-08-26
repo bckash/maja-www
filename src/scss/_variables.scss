@@ -120,15 +120,6 @@ $nl-offer-omb-out: rgb(212, 179, 156);
     justify-content: center; 
 }
 
-
-// customer opinion
-
-@mixin slideshow {
-    position: absolute;
-    top: 0;
-    opacity: 0;
-}
-
 // prices
 
 @mixin table-body {

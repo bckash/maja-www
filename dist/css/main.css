@@ -12325,7 +12325,7 @@ nav ul li.ns-active:hover {
   font-size: 2.8rem;
   font-weight: 300;
   color: rgb(155, 114, 92);
-  width: 560px;
+  width: 100%;
   margin-bottom: 2rem;
   padding-top: 6rem;
   border: 0;
@@ -12335,6 +12335,7 @@ nav ul li.ns-active:hover {
   font-size: 4rem;
   text-align: center;
   color: rgb(175, 92, 15);
+  width: 100%;
 }
 .customer-opinion__main {
   position: relative;
@@ -12348,7 +12349,7 @@ nav ul li.ns-active:hover {
   position: absolute;
   top: 0;
   opacity: 0;
-  width: 40rem;
+  width: 640px;
   margin: auto;
   padding-bottom: 10rem;
 }
@@ -12361,6 +12362,12 @@ nav ul li.ns-active:hover {
 }
 .customer-opinion__main .opinions__user > * {
   margin: 1rem;
+}
+.customer-opinion__main .opinions__user .user__name {
+  margin-right: 0.5rem;
+}
+.customer-opinion__main .opinions__user .user__icon {
+  margin: 0;
 }
 .customer-opinion__main .opinions__content {
   box-shadow: 1px 1px 20px rgb(78, 51, 26);
@@ -12386,12 +12393,11 @@ nav ul li.ns-active:hover {
 .customer-opinion__main .opinions__content q::after {
   margin-left: 0.2rem;
 }
-.customer-opinion__main .opinions__content:hover {
-  outline: rgb(228, 127, 34) 4px solid;
+.customer-opinion__main .opinions__triangle {
+  display: none;
 }
 
 .user__photo img {
-  position: relative;
   width: 150px;
   box-shadow: 1px 1px 20px rgb(78, 51, 26);
 }
@@ -12399,11 +12405,12 @@ nav ul li.ns-active:hover {
   font-size: 2rem;
   color: rgb(236, 186, 92);
 }
-.user__icon span {
+.user__icon {
   padding-top: 0.8rem;
-  margin-left: -1.2rem;
-  font-size: 1.1rem;
   color: rgb(201, 121, 17);
+}
+.user__icon span {
+  font-size: 1.1rem;
 }
 
 .animation__out-left-right, .animation__in-left-right {
@@ -12437,6 +12444,90 @@ nav ul li.ns-active:hover {
     z-index: 10;
     opacity: 0;
     transform: translateX(15rem);
+  }
+}
+@media screen and (max-width: 850px) {
+  .customer-opinion__main .opinions {
+    left: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 670px) {
+  .customer-opinion__main .opinions {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .customer-opinion__main .opinions__user {
+    justify-content: center;
+    margin: 0;
+    margin-top: 6.5rem;
+  }
+  .customer-opinion__main .opinions__content {
+    top: 190px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .customer-opinion__main .opinions__triangle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 0px;
+    height: 0px;
+    margin: auto;
+    margin-top: -0.5rem;
+    border-left: transparent solid 14px;
+    border-right: transparent solid 14px;
+    border-bottom: rgb(63, 33, 18) solid 14px;
+  }
+
+  .user {
+    position: relative;
+  }
+  .user__photo {
+    position: absolute;
+    top: -23px;
+  }
+  .user__photo img {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .customer-opinion__title h1, .customer-opinion__title .h1 {
+    font-size: 3.5rem;
+  }
+
+  .user__name {
+    height: 3rem;
+    padding-top: 0.3rem;
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .customer-opinion__title h1, .customer-opinion__title .h1 {
+    font-size: 3rem;
+  }
+  .customer-opinion__main .opinions__content {
+    width: 90%;
+    margin: auto;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .user__photo {
+    top: -10px;
+  }
+  .user__photo img {
+    width: 110px;
+  }
+  .user__name {
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
   }
 }
 .bridge--5 svg {
