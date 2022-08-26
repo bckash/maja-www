@@ -2064,11 +2064,14 @@ nav ul li.ns-active:hover {
     
                     & span {
                         display: block;
-    
                     }
     
                     &__value {
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
+                    }
+
+                    &__name {
+                        font-size: .95rem;
                     }
     
                 }              
@@ -2098,7 +2101,7 @@ nav ul li.ns-active:hover {
                 }
     
                 & span {
-                    color: rgb(187, 96, 22);
+                    color: rgb(206, 96, 7);
                 }
             }
     
@@ -2112,7 +2115,7 @@ nav ul li.ns-active:hover {
                 }
     
                 & span {
-                    color: rgb(160, 14, 14);
+                    color: rgb(209, 29, 6);
                 }
             }
         }
@@ -2274,6 +2277,31 @@ nav ul li.ns-active:hover {
     
                 #price-list--extensions-1 {
                     display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .p-main {
+  
+        &__body {
+           
+            &--treat {
+       
+                & .price-line {
+                    left: unset;
+                    right: 10px;
+                    width: 0;
+                    padding-right: 1rem;
+        
+                    & .price-holder {
+                        background-color: #f3f2efd3;
+                        padding: .2rem;
+                        width: 7rem; 
+                    }              
                 }
             }
         }
