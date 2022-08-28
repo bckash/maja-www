@@ -6,8 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Gruppo&display=swap');
 *, *::before, *::after {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -2667,6 +2666,94 @@ nav ul li.ns-active:hover {
 }
 
 
+
+//
+// CONTACT
+//------------------------------------
+
+
+.contact {
+    @include v.article;
+    max-width: 500px;
+    margin-bottom: 2rem;
+
+    &__head {
+        @include v.title;
+        text-align: center;
+        color: rgb(149, 149, 155);
+    }
+
+    &__form {
+        position: relative;
+        padding: 2rem;
+
+        input:focus + label, textarea:focus + label  {
+            color: rgb(12, 71, 160);
+          }
+
+        .form-control {
+            padding-left: 7rem;
+            color: #3a3731
+        }
+
+        input.form-control {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        textarea.form-control {
+            font-size: 1.25rem;
+            padding-right: 1rem;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 1px rgba(33, 123, 207, 0.25);
+            border-color: rgb(30, 107, 207);
+        }
+
+
+        #floatingInput3 {
+            height: 250px;
+        }
+
+        button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-right: 2rem;
+        }
+    }
+}
+
+
+// MQ 
+
+@media screen and (max-width: 400px) {
+
+    .contact {
+       
+        &__form {
+    
+            .form-control {
+                padding-left: 1rem;
+            }
+    
+            input.form-control {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+    
+            textarea.form-control {
+                font-size: 1.25rem;
+                padding-right: 1rem;
+    
+            }
+        }
+    }
+
+}
+
+
 //-------------------------------------------
 // FOOTER
 //-------------------------------------------
@@ -2892,7 +2979,8 @@ nav ul li.ns-active:hover {
     .about-me,
     .offer,
     .prices,
-    .customer-opinion__main
+    .customer-opinion__main,
+    .contact
      {
         width: 100% !important;
     }
@@ -2910,33 +2998,12 @@ nav ul li.ns-active:hover {
     }
 }
 
-@media screen and (max-width: 480px) {
-
-    .about-me {
-        
-        &__main {
-
-            .caption-box--bg {
-                font-size: .95rem;
-            }
-
-        }
-    }
-
-    .js-fill {
-
-        &__about {
-            font-size: .95rem;
-        }
-    }
-
-}
-
 @media screen and (max-width: 380px) {
 
     .about-me__head,
     .offer__head,
-    .prices__header {
+    .prices__header,
+    .contact__head {
         width: 90%;
     }
 

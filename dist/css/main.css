@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Gruppo&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -12984,6 +12985,70 @@ nav ul li.ns-active:hover {
     outline: 14px rgb(65, 5, 40) solid;
   }
 }
+.contact {
+  width: 800px;
+  margin: auto;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+.contact__head {
+  width: 320px;
+  margin: auto;
+  padding: 1rem;
+  border-bottom: 1px solid;
+  border-color: rgb(206, 203, 197);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: rgb(155, 114, 92);
+  text-align: center;
+  color: rgb(149, 149, 155);
+}
+.contact__form {
+  position: relative;
+  padding: 2rem;
+}
+.contact__form input:focus + label, .contact__form textarea:focus + label {
+  color: rgb(12, 71, 160);
+}
+.contact__form .form-control {
+  padding-left: 7rem;
+  color: #3a3731;
+}
+.contact__form input.form-control {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.contact__form textarea.form-control {
+  font-size: 1.25rem;
+  padding-right: 1rem;
+}
+.contact__form .form-control:focus {
+  box-shadow: 0 0 0 1px rgba(33, 123, 207, 0.25);
+  border-color: rgb(30, 107, 207);
+}
+.contact__form #floatingInput3 {
+  height: 250px;
+}
+.contact__form button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .contact__form .form-control {
+    padding-left: 1rem;
+  }
+  .contact__form input.form-control {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .contact__form textarea.form-control {
+    font-size: 1.25rem;
+    padding-right: 1rem;
+  }
+}
 .foot-end {
   position: relative;
   display: flex;
@@ -13157,7 +13222,8 @@ nav ul li.ns-active:hover {
   .about-me,
 .offer,
 .prices,
-.customer-opinion__main {
+.customer-opinion__main,
+.contact {
     width: 100% !important;
   }
 
@@ -13170,19 +13236,11 @@ nav ul li.ns-active:hover {
     font-size: 2.5rem;
   }
 }
-@media screen and (max-width: 480px) {
-  .about-me__main .caption-box--bg {
-    font-size: 0.95rem;
-  }
-
-  .js-fill__about {
-    font-size: 0.95rem;
-  }
-}
 @media screen and (max-width: 380px) {
   .about-me__head,
 .offer__head,
-.prices__header {
+.prices__header,
+.contact__head {
     width: 90%;
   }
 
