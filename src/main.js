@@ -30,6 +30,7 @@ const spanUp = document.getElementById("io-offer-up")
 const pmPleaseChoose = document.getElementById("pm-please-choose")
 const logoNLSmall = document.getElementById("logo-nl4h-sm")
 const aboutTriangle = document.getElementById("outline-triangle")
+const aboutTriangle2 = document.getElementById("outline-triangle--2")
 
 // paralax
 const paralax = document.getElementById("paralax-content")
@@ -232,21 +233,6 @@ function showNav(){
         addRemove("opa-0", "opa-1")
 
     }
-
-    // if (pos>0 && pos<1392) {
-    //     arrUp.style.color = "var(--border-pastel-dark)";
-    // } else if (pos>=1392 && pos<2019) {
-    //     arrUp.style.color = "var(--marin-blue-dark)";
-    // } else if (pos>=1825 && pos<3147) {
-    //     arrUp.style.color = "var(--team-grey)";
-    // } else if (pos>=3147 && pos<3776) {
-    //     arrUp.style.color = "var(--green-nav)";
-    // } else {
-    //     arrUp.style.color = "var(--or-nav)";
-    // }
-
-    // console.log(pos);
-
 } 
 
 
@@ -258,6 +244,7 @@ function scrollAnimation(){
 
     if (pos>500 && pos<700) {
         aboutTriangle.classList.add("animation__move-bot")
+        aboutTriangle2.classList.add("animation__move-bot")
 
     } else if (pos>2600 && pos<2800) {
         spanDown.classList.add("animation__move-left")
