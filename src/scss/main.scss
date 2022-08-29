@@ -2537,6 +2537,20 @@ nav ul li.ns-active:hover {
 
     .p-main {
 
+        &__intro {
+
+            img {
+                width: 97%;
+                height: auto;
+            }
+
+            #pm-please-choose {
+                font-size: 1.3rem;
+                width: 180px;
+                height: 180px;
+            }
+        }
+
         &__body {
     
             &--ext {
@@ -2572,6 +2586,15 @@ nav ul li.ns-active:hover {
 @media screen and (max-width: 330px) {
 
     .p-main {
+
+        &__intro {
+
+            #pm-please-choose {
+                font-size: 1.2rem;
+                width: 160px;
+                height: 160px;
+            }
+        }
 
         &__body {
     
@@ -2675,7 +2698,7 @@ nav ul li.ns-active:hover {
 .contact {
     @include v.article;
     max-width: 500px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     &__head {
         @include v.title;
@@ -2686,31 +2709,30 @@ nav ul li.ns-active:hover {
     &__form {
         position: relative;
         padding: 2rem;
-
-        input:focus + label, textarea:focus + label  {
-            color: rgb(12, 71, 160);
-          }
-
+   
         .form-control {
             padding-left: 7rem;
             color: #3a3731
         }
-
+        
         input.form-control {
             font-size: 1rem;
             font-weight: bold;
         }
-
+        
         textarea.form-control {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             padding-right: 1rem;
         }
-
+        
         .form-control:focus {
             box-shadow: 0 0 0 1px rgba(33, 123, 207, 0.25);
             border-color: rgb(30, 107, 207);
         }
-
+        
+        input:focus + label, textarea:focus + label  {
+            color: rgb(12, 71, 160);
+          }
 
         #floatingInput3 {
             height: 250px;
@@ -2907,9 +2929,9 @@ nav ul li.ns-active:hover {
             margin: 0;
             
             img {
-            width: 70%;
-            height: auto;
-            margin: auto;
+                width: 70%;
+                height: auto;
+                margin: auto;
             }
         }
 
@@ -2923,30 +2945,25 @@ nav ul li.ns-active:hover {
         &__contact {
 
             .contact__icons {
-                width: 420px;
+                width: 440px;
             }
         }
-
     }
-
-
-    
-
 }
 
 @media screen and (max-width: 850px) {
 
     .foot-end {
-        margin-top: 5rem;
+        margin-top: 7rem;
 
         &__logo {
             position: absolute;
-            top: -75px;
+            top: -80px;
             margin: 0;
             margin-right: 14rem;
     
             img {
-                height: 80px;
+                height: 87px;
                 width: unset;
             }
         }
@@ -2958,6 +2975,99 @@ nav ul li.ns-active:hover {
     }
 }
 
+@media screen and (max-width: 700px) {
+
+    .foot-end {
+        margin-top: 9rem;
+
+        &__media {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            .media__head {
+                display: none;
+            }
+
+            .txt-description {
+                display: none;
+            }
+
+            .media__icons {
+                width: 150px;
+                margin: auto;                
+            }
+        }
+
+        &__logo {
+            position: absolute;
+            top: -80px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        &__contact {
+            width: 95%;
+            margin: 0;
+            margin-top: 7rem;
+
+            .contact__txt {
+                text-align: center; 
+            }
+
+            .txt-description {
+                margin: 0;
+                text-align: center;
+            }
+
+            .contact__icons {
+                width: 100%;
+                text-align: center;
+
+                &--tel, &--meil {
+        
+                    .material-icons {
+                        font-size: 1.8rem;
+                        margin-top: .5rem;
+                        color: v.$nl-red-logo;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .foot-end {
+
+        &__contact {
+            width: 300px;
+
+            .contact__icons {
+                flex-direction: column;
+                // align-items: flex-start;
+                height: 70px;
+                margin-top: 1rem;
+                // margin-left: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .foot-end {
+
+        &__contact {
+            width: 95%;
+        }
+
+    }
+}
 
 
 //-------------------------------------------
@@ -2971,8 +3081,7 @@ nav ul li.ns-active:hover {
       animation-iteration-count: 1 !important;
       transition-duration: 0.001ms !important;
     }
-  }
-
+}
 
 @media screen and (max-width: 850px) {
 

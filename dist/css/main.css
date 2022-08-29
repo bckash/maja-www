@@ -12902,6 +12902,15 @@ nav ul li.ns-active:hover {
     padding-bottom: 10rem;
   }
 
+  .p-main__intro img {
+    width: 97%;
+    height: auto;
+  }
+  .p-main__intro #pm-please-choose {
+    font-size: 1.3rem;
+    width: 180px;
+    height: 180px;
+  }
   .p-main__body--ext #price-list--extensions-1A,
 .p-main__body--ext #price-list--extensions-1B {
     font-size: 0.9rem;
@@ -12917,6 +12926,11 @@ nav ul li.ns-active:hover {
   }
 }
 @media screen and (max-width: 330px) {
+  .p-main__intro #pm-please-choose {
+    font-size: 1.2rem;
+    width: 160px;
+    height: 160px;
+  }
   .p-main__body--ext #price-list--extensions-1A,
 .p-main__body--ext #price-list--extensions-1B {
     font-size: 0.8rem;
@@ -12989,7 +13003,7 @@ nav ul li.ns-active:hover {
   width: 800px;
   margin: auto;
   max-width: 500px;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .contact__head {
   width: 320px;
@@ -13007,9 +13021,6 @@ nav ul li.ns-active:hover {
   position: relative;
   padding: 2rem;
 }
-.contact__form input:focus + label, .contact__form textarea:focus + label {
-  color: rgb(12, 71, 160);
-}
 .contact__form .form-control {
   padding-left: 7rem;
   color: #3a3731;
@@ -13019,12 +13030,15 @@ nav ul li.ns-active:hover {
   font-weight: bold;
 }
 .contact__form textarea.form-control {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   padding-right: 1rem;
 }
 .contact__form .form-control:focus {
   box-shadow: 0 0 0 1px rgba(33, 123, 207, 0.25);
   border-color: rgb(30, 107, 207);
+}
+.contact__form input:focus + label, .contact__form textarea:focus + label {
+  color: rgb(12, 71, 160);
 }
 .contact__form #floatingInput3 {
   height: 250px;
@@ -13190,25 +13204,90 @@ nav ul li.ns-active:hover {
     width: 160px;
   }
   .foot-end__contact .contact__icons {
-    width: 420px;
+    width: 440px;
   }
 }
 @media screen and (max-width: 850px) {
   .foot-end {
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
   .foot-end__logo {
     position: absolute;
-    top: -75px;
+    top: -80px;
     margin: 0;
     margin-right: 14rem;
   }
   .foot-end__logo img {
-    height: 80px;
+    height: 87px;
     width: unset;
   }
   .foot-end__contact {
     margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .foot-end {
+    margin-top: 9rem;
+  }
+  .foot-end__media {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .foot-end__media .media__head {
+    display: none;
+  }
+  .foot-end__media .txt-description {
+    display: none;
+  }
+  .foot-end__media .media__icons {
+    width: 150px;
+    margin: auto;
+  }
+  .foot-end__logo {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .foot-end__contact {
+    width: 95%;
+    margin: 0;
+    margin-top: 7rem;
+  }
+  .foot-end__contact .contact__txt {
+    text-align: center;
+  }
+  .foot-end__contact .txt-description {
+    margin: 0;
+    text-align: center;
+  }
+  .foot-end__contact .contact__icons {
+    width: 100%;
+    text-align: center;
+  }
+  .foot-end__contact .contact__icons--tel .material-icons, .foot-end__contact .contact__icons--meil .material-icons {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    color: #954444;
+  }
+}
+@media screen and (max-width: 500px) {
+  .foot-end__contact {
+    width: 300px;
+  }
+  .foot-end__contact .contact__icons {
+    flex-direction: column;
+    height: 70px;
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .foot-end__contact {
+    width: 95%;
   }
 }
 @media screen and (prefers-reduced-motion: reduce) {
