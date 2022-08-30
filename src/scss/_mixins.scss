@@ -1,0 +1,112 @@
+
+@use "./variables" as v;
+
+//---------------------------------------------------------------
+// MIXINS
+//---------------------------------------------------------------
+
+
+// shared
+
+@mixin article {
+    width: 800px;
+    margin: auto;
+}
+
+@mixin title {
+    width: 320px;
+    margin: auto;
+    padding: 1rem;
+    border-bottom: 1px solid;
+    border-color: v.$nl-border;
+    color: v.$nl-brown-detail-light;
+}
+
+@mixin photo-shad {
+    box-shadow: 1px 1px 20px rgb(78, 51, 26);
+}
+
+@mixin box-shad {
+    box-shadow: 3px 3px 10px rgb(228, 222, 222);
+}
+
+// navigation
+
+@mixin nav {
+    display: flex;
+    justify-content: center;  
+    margin: 1rem .5rem;
+
+ 
+    li {
+        padding: .5rem 1rem;
+    }
+
+    li:hover {
+        cursor: pointer;
+        color: rgb(121, 70, 3);
+        transition: border 1s;
+    }
+}
+
+@mixin nav-big-txt {
+    font-size: 1.2rem;
+}
+
+@mixin nav-small {
+    height: 56px;
+    margin-bottom: 1rem;
+
+    ul {
+        display: none;
+    }
+}
+
+
+// offer
+
+@mixin intro-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+// prices
+
+@mixin table-body {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background-color: v.$nl-content-body;
+}
+
+@mixin figcap-txt {
+    color: #a8a8a8;
+    font-style: italic;
+    font-size: .9rem;
+}
+
+// footer
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin footer-txt-title {
+    margin-bottom: .5rem;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: v.$nl-red-logo;
+}
+
+@mixin footer-icons {
+    height: 48px;
+}

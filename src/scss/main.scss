@@ -1,12 +1,22 @@
 
+//-------------------------------------------
+// IMPORT
+//-------------------------------------------
 
 @use "./variables" as v;
+@use "./mixins" as m;
 
+// bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Gruppo&display=swap');
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap');
+
+
+//-------------------------------------------
+// GLOBAL SETTINGS
+//-------------------------------------------
+
 *, *::before, *::after {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -26,7 +36,6 @@ ul {
     padding: 0;
 }
 
-// adjust with title mixin at the end
 h1 {
     font-weight: normal;
     font-weight: 300;
@@ -229,10 +238,10 @@ h1 {
 }
 
 .about-me {
-    @include v.article;
+    @include m.article;
 
     &__head {
-        @include v.title;
+        @include m.title;
         margin-left: 26rem;
         margin-bottom: 2rem;
         border-color: v.$nl-border;
@@ -250,7 +259,7 @@ h1 {
                 width: 240px;
                 height: auto;
                 margin-right: 5rem;
-                @include v.photo-shad;
+                @include m.photo-shad;
             }
 
             .caption-box--sm {
@@ -267,7 +276,7 @@ h1 {
             border: 1px solid v.$nl-border;
             border-radius: 20px;
             background-color: v.$nl-content-body;
-            @include v.box-shad;
+            @include m.box-shad;
 
             .p1 {
 
@@ -994,16 +1003,16 @@ h1 {
 
 .offer {
     text-align: center;
-    @include v.article;
+    @include m.article;
     height: 1000px;
 
     &__head {
-        @include v.title;
+        @include m.title;
         padding: 1rem 0;
     }
 
     &__nav--big ul, .offer-nav-small__main ul {
-        @include v.nav;
+        @include m.nav;
     }
 
     &__nav--small {
@@ -1029,7 +1038,7 @@ h1 {
             }
 
             &__main {
-                @include v.nav-small;
+                @include m.nav-small;
                 max-width: 600px;
                 overflow-x: scroll;
                 margin: auto;
@@ -1056,7 +1065,7 @@ h1 {
     }
 
     &__nav--big ul {
-        @include v.nav-big-txt;
+        @include m.nav-big-txt;
     }
 
     &__main {
@@ -1109,7 +1118,7 @@ h1 {
         }
 
         .intro-overlay {
-            @include v.intro-overlay;
+            @include m.intro-overlay;
             display: flex;
             margin: 0;
             border: 8px solid  rgb(128, 54, 14);
@@ -1140,7 +1149,7 @@ h1 {
         }
 
         .intro-overlay {
-            @include v.intro-overlay;
+            @include m.intro-overlay;
 
             span {
                 display: inline-block;
@@ -1882,7 +1891,7 @@ nav ul li.ns-active:hover {
 .customer-opinion {
 
     &__title {
-        @include v.title;
+        @include m.title;
         width: 100%;
         margin-bottom: 2rem;
         padding-top: 6rem;
@@ -1934,7 +1943,7 @@ nav ul li.ns-active:hover {
             }   
             
             &__content {
-                @include v.photo-shad;
+                @include m.photo-shad;
                 position: absolute;
                 top: 140px;
                 left: 200px;
@@ -1976,7 +1985,7 @@ nav ul li.ns-active:hover {
 
     &__photo img {
         width: 150px;
-        @include v.photo-shad;
+        @include m.photo-shad;
     }
 
     &__name {
@@ -2199,24 +2208,24 @@ nav ul li.ns-active:hover {
 }
 
 .prices {
-    @include v.article;
+    @include m.article;
     padding: 0 2rem;
 
     &__header {
-        @include v.title;
+        @include m.title;
         text-align: center
     }
 
     &__nav--big ul, &__nav--small ul {
-        @include v.nav;
+        @include m.nav;
     }
 
     &__nav--small {
-        @include v.nav-small;
+        @include m.nav-small;
     }
 
     &__nav--big ul {
-        @include v.nav-big-txt;
+        @include m.nav-big-txt;
     }    
 
     &__main {
@@ -2240,7 +2249,7 @@ nav ul li.ns-active:hover {
         }
 
         .intro-overlay {
-            @include v.intro-overlay;
+            @include m.intro-overlay;
             z-index: 100;
 
             span {
@@ -2277,8 +2286,8 @@ nav ul li.ns-active:hover {
             #price-list--extensions-1A,
             #price-list--extensions-1B {
                 position: relative;    
-                @include v.table-body;
-                @include v.box-shad;
+                @include m.table-body;
+                @include m.box-shad;
             }
 
             table {
@@ -2313,7 +2322,7 @@ nav ul li.ns-active:hover {
                 right: 50px;
                 bottom: -50px;
                 height: 40px;
-                @include v.figcap-txt; 
+                @include m.figcap-txt; 
             }
         }
     
@@ -2324,7 +2333,7 @@ nav ul li.ns-active:hover {
                 width: 200px;
                 margin: auto;
                 margin-top: 1rem;
-                @include v.figcap-txt;
+                @include m.figcap-txt;
             }
     
             & .price-line {
@@ -2410,8 +2419,8 @@ nav ul li.ns-active:hover {
 
             #price-list--styling {
                 position: relative;    
-                @include v.table-body;
-                @include v.box-shad;
+                @include m.table-body;
+                @include m.box-shad;
                 max-width: 600px;
                 margin: auto; 
             }
@@ -2444,7 +2453,7 @@ nav ul li.ns-active:hover {
                 position: absolute;
                 right: 50px;
                 bottom: -30px;
-                @include v.figcap-txt;
+                @include m.figcap-txt;
             }
         }
     }
@@ -2833,12 +2842,12 @@ nav ul li.ns-active:hover {
 
 
 .contact {
-    @include v.article;
+    @include m.article;
     max-width: 500px;
     margin-bottom: 4rem;
 
     &__head {
-        @include v.title;
+        @include m.title;
         text-align: center;
         color: rgb(149, 149, 155);
     }
@@ -2920,7 +2929,7 @@ nav ul li.ns-active:hover {
 
 .foot-end {
     position: relative;
-    @include v.flex-row-center;
+    @include m.flex-row-center;
     height: 140px;
     margin-bottom: .5rem;
     font-family: 'Inter', sans-serif;
@@ -2941,13 +2950,13 @@ nav ul li.ns-active:hover {
 .foot-end__media {
 
     .media__head {
-        @include v.footer-txt-title;
+        @include m.footer-txt-title;
         text-align: right;
     }
 
     .media__icons {
-        @include v.flex-row-center;
-        @include v.footer-icons;
+        @include m.flex-row-center;
+        @include m.footer-icons;
         align-items: center;
         justify-content: space-around;
 
@@ -2977,7 +2986,7 @@ nav ul li.ns-active:hover {
 .foot-end__contact {
     
     .contact__txt {
-        @include v.footer-txt-title;
+        @include m.footer-txt-title;
     }
 
     address {
@@ -2989,11 +2998,11 @@ nav ul li.ns-active:hover {
     }
 
     .contact__icons {
-        @include v.flex-row-center;
-        @include v.footer-icons;
+        @include m.flex-row-center;
+        @include m.footer-icons;
 
         &--tel, &--meil {
-            @include v.flex-row-center;
+            @include m.flex-row-center;
             align-items: center;
             font-weight: bold;
 

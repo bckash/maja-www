@@ -5,10 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caramel&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Gruppo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Oleo+Script+Swash+Caps&family=Roboto+Condensed&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11293,8 +11290,6 @@ h1, .h1 {
   padding: 1rem;
   border-bottom: 1px solid;
   border-color: rgb(206, 203, 197);
-  font-size: 2.8rem;
-  font-weight: 300;
   color: rgb(155, 114, 92);
   margin-left: 26rem;
   margin-bottom: 2rem;
@@ -11869,8 +11864,6 @@ h1, .h1 {
   padding: 1rem;
   border-bottom: 1px solid;
   border-color: rgb(206, 203, 197);
-  font-size: 2.8rem;
-  font-weight: 300;
   color: rgb(155, 114, 92);
   padding: 1rem 0;
 }
@@ -12445,8 +12438,6 @@ nav ul li.ns-active:hover {
   padding: 1rem;
   border-bottom: 1px solid;
   border-color: rgb(206, 203, 197);
-  font-size: 2.8rem;
-  font-weight: 300;
   color: rgb(155, 114, 92);
   width: 100%;
   margin-bottom: 2rem;
@@ -12675,8 +12666,6 @@ nav ul li.ns-active:hover {
   padding: 1rem;
   border-bottom: 1px solid;
   border-color: rgb(206, 203, 197);
-  font-size: 2.8rem;
-  font-weight: 300;
   color: rgb(155, 114, 92);
   text-align: center;
 }
@@ -13133,8 +13122,6 @@ nav ul li.ns-active:hover {
   padding: 1rem;
   border-bottom: 1px solid;
   border-color: rgb(206, 203, 197);
-  font-size: 2.8rem;
-  font-weight: 300;
   color: rgb(155, 114, 92);
   text-align: center;
   color: rgb(149, 149, 155);

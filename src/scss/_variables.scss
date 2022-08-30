@@ -2,156 +2,31 @@
 
 // colors
 
-$nl-dark-fill: #B4917D; // main bridge 
-
-$nl-red: #745b4d; // about me (text, border); info holder (border, icons); customer opinion icon
-$nl-back-pink: #f3eee8; // about me back; bridge back
-$nl-back-pink-dark: #dfc7b9; // about me (big border); paralax (border); customer opinion (big txt)
-$nl-back-pink-light: #f8f5ef; // offer (back); bridge (back)
-$nl-back-pink-ultra-light: #F8EEEE; //prices (back); bridge (back)
-
-$nl-back-pastel: #418bad; // customers opinion back
+$nl-red: #745b4d; 
+$nl-back-pink: #f3eee8;
+$nl-back-pink-dark: #dfc7b9;
+$nl-back-pink-light: #f8f5ef; 
 $nl-red-logo :#954444;
-
 $nl-border : rgb(206, 203, 197);
-
-
-
 $nl-side-nav-a-light: rgb(209, 135, 39);
 $nl-side-nav-a-dark: rgb(117, 100, 78);
-
-
-$nl-content-body: rgb(250, 248, 244); // background for main secions in "about me", "offer" "tables
+$nl-content-body: rgb(250, 248, 244); 
 $nl-red-detail: rgb(114, 34, 10);
 $nl-brown-detail: rgb(79,33,8);
 $nl-brown-detail-light: rgb(155, 114, 92);
-$nl-brown-detail-light-xtra: rgba(131, 54, 12, 0.63);
-
 $nl-price-line-bg: rgba(0, 0, 0, 0.021);
+$nl-offer-omb-out: rgb(212, 179, 156);
+
 
 // carousel variables:
 
 $padding-info: 1.8rem;
 $border-info: 20px;
 
-// offer omb outline
-
-$nl-offer-omb-out: rgb(212, 179, 156);
 
 
-//---------------------------------------------------------------
-// MIXINS
-//---------------------------------------------------------------
 
 
-// shared
-
-@mixin article {
-    width: 800px;
-    margin: auto;
-}
-
-@mixin title {
-    width: 320px;
-    margin: auto;
-    padding: 1rem;
-    border-bottom: 1px solid;
-    border-color: $nl-border;
-    font-size: 2.8rem;    
-    font-weight: 300;
-    color: $nl-brown-detail-light;
-}
-
-@mixin photo-shad {
-    box-shadow: 1px 1px 20px rgb(78, 51, 26);
-}
-
-@mixin box-shad {
-    box-shadow: 3px 3px 10px rgb(228, 222, 222);
-}
-
-// navigation
-
-@mixin nav {
-    display: flex;
-    justify-content: center;  
-    margin: 1rem .5rem;
-
- 
-    li {
-        padding: .5rem 1rem;
-        // border-bottom: transparent solid 2px;
-        // margin-bottom: -2px;
-    }
-
-    li:hover {
-        cursor: pointer;
-        // border-bottom: $nl-side-nav-a-light solid 2px;
-        // margin-bottom: -2px;
-        color: rgb(121, 70, 3);
-        transition: border 1s;
-    }
-}
-
-@mixin nav-big-txt {
-    font-size: 1.2rem;
-}
-
-@mixin nav-small {
-    height: 56px;
-    margin-bottom: 1rem;
-
-    ul {
-        display: none;
-    }
-}
 
 
-// offer
-
-@mixin intro-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-
-// prices
-
-@mixin table-body {
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    background-color: $nl-content-body;
-}
-
-@mixin figcap-txt {
-    color: #a8a8a8;
-    font-style: italic;
-    font-size: .9rem;
-}
-
-// footer
-
-@mixin flex-row-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-@mixin footer-txt-title {
-    margin-bottom: .5rem;
-    border-bottom: 1px solid rgb(192, 192, 192);
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: $nl-red-logo;
-}
-
-@mixin footer-icons {
-    height: 48px;
-}
 
