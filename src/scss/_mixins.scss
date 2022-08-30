@@ -18,8 +18,8 @@
     margin: auto;
     padding: 1rem;
     border-bottom: 1px solid;
-    border-color: v.$nl-border;
-    color: v.$nl-brown-detail-light;
+    border-color: v.$br;
+    color: v.$detail__offer--main;
 }
 
 @mixin photo-shad {
@@ -81,7 +81,7 @@
 @mixin table-body {
     padding: 1rem 2rem;
     border-radius: 30px;
-    background-color: v.$nl-content-body;
+    background-color: v.$bg__content-front;
 }
 
 @mixin figcap-txt {
@@ -104,7 +104,7 @@
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: v.$nl-red-logo;
+    color: v.$detail__footer--logo;
 }
 
 @mixin footer-icons {
