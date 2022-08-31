@@ -1,20 +1,78 @@
 
 
-// colors
+//----------------------------------
+// COLORS
+//----------------------------------
+
+// background
 
 $bg__about-me: #f3eee8;
 $bg__content-front: rgb(250, 248, 244); 
 $bg__offer: #f8f5ef; 
 $bg__price--linebg: rgba(0, 0, 0, 0.021);
-$br : rgb(206, 203, 197);
+$bg__price: #f8f6f1; 
+
+
+// border
+
+$br : rgb(218, 214, 208);
+
+
+// detail
+
+$detail__main-nav--hover: rgb(116, 11, 11);
 $detail__about-me--txt: rgb(114, 34, 10);
 $detail__paralax: #dfc7b9;
 $detail__offer--main: rgb(155, 114, 92);
 $detail__offer--smhead: rgb(212, 179, 156);
 $detail__offer--active: rgb(209, 135, 39);
+$detail__offer--animation-peak: rgb(110, 98, 93);
 $detail__nav-active: rgb(79,33,8);
+$detail__customer-say--txt: rgb(175, 92, 15);
+$detail__customer-say--txt2: rgb(241, 226, 204);
+$detail__customer-say--txt3: rgb(236, 186, 92);
+$detail__customer-say--icon: rgb(201, 121, 17);
+$detail__customer-say--triangle: rgb(63, 33, 18);
+$detail__prices--hover: rgb(255, 252, 250);
+$detail__prices--intro-txt: rgb(68, 37, 1);
+$detail__prices--pl-candy-br: rgb(223, 147, 160); 
+$detail__prices--pl-candy-txt: rgb(194, 71, 153);
+$detail__prices--pl-peach-br: rgb(219, 133, 63);
+$detail__prices--pl-peach-txt: rgb(209, 104, 17);
+$detail__prices--pl-sorbet-br: rgb(204, 79, 79);
+$detail__prices--pl-sorbet-txt: rgb(173, 29, 10);
+$detail__contact--head: rgb(149, 149, 155);
+$detail__contact--input-txt: #3a3731;
+$detail__contact--input-shad: rgba(33, 123, 207, 0.25);
+$detail__contact--input-br: rgb(30, 107, 207);
+$detail__contact--input-label: rgb(12, 71, 160);
 $detail__footer--logo :#954444;
+$detail__footer--desc: #6d6c6c;
 
+
+// overlay
+
+$ov__header: rgb(148, 34, 14);
+$ov__main-nav: rgba(240, 152, 152, 0.116);
+$ov__offer--intro: rgba(22, 8, 3, 0.671);
+$ov__offer--smhead: rgba(36, 21, 1, 0.616);
+$ov__customer-say: rgba(0, 0, 0, 0.521);
+$ov__prices--intro: #774c0b15;
+$ov__prices--treat: #f3f2efd3;
+$ov__contact: rgba(248, 246, 246, 0.274);
+
+
+// gradient
+
+$grad__bg-main--1: rgb(201,122,54);
+$grad__bg-main--2: rgb(166, 61, 0);
+$grad__bg-main--3: rgb(175,77,15);
+$grad__bg-main--4: rgb(65,27,7);
+
+
+//----------------------------------
+// OTHER
+//----------------------------------
 
 // carousel variables:
 
