@@ -207,7 +207,7 @@ h1 {
 // MQ 
 
 @media screen and (min-width: 2140px){
-    
+
     .bridge--1 {
         height: 410px;
     }
@@ -393,7 +393,7 @@ h1 {
             }
         
             .modal-footer {
-                height: 5rem;
+                height: 80px;
                 justify-content: center;
                 background-color: white;
 
@@ -670,6 +670,21 @@ h1 {
                 }
             }
 
+            #modal--about-me {
+            
+                .modal-footer {
+                    height: 100px;
+                    
+                    h5 {
+                        font-size: 1rem
+                    }
+
+                    p {
+                        font-size: .9rem;
+                    }
+                
+                }
+            }
         }
     }
 
