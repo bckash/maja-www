@@ -11262,6 +11262,11 @@ h1, .h1 {
   fill: #f3eee8;
 }
 
+@media screen and (min-width: 2140px) {
+  .bridge--1 {
+    height: 410px;
+  }
+}
 @media screen and (max-width: 1000px) {
   .bridge--1 {
     height: 250px;
@@ -11712,7 +11717,6 @@ h1, .h1 {
 }
 
 #paralax {
-  position: relative;
   padding: 12rem 0;
   background: rgb(175, 77, 15);
   background: linear-gradient(180deg, rgb(175, 77, 15) 0%, rgb(65, 27, 7) 100%);
@@ -11755,6 +11759,28 @@ h1, .h1 {
   background-size: cover;
 }
 
+@media screen and (min-width: 2600px) {
+  #paralax {
+    padding-top: 20rem;
+    padding-bottom: 16rem;
+  }
+}
+@media screen and (max-width: 2600px) {
+  #paralax {
+    padding-top: 18rem;
+    padding-bottom: 14rem;
+  }
+}
+@media screen and (max-width: 2200px) {
+  #paralax {
+    padding-top: 16rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #paralax {
+    padding-top: 14rem;
+  }
+}
 @media screen and (max-width: 1200px) {
   #paralax {
     padding-bottom: 10rem;
