@@ -1,65 +1,80 @@
 
+/* 
+
+LIST OF CONTENT:
+
+_.1 : VSA (vertical scroll animations)
+_.2 : Modal Footer
+_.3 : Paralax Resize
+_.4 : Customer Opinion Slideshow
+_.5 : Pull Back Navi
+
+ */
+
+//
+// 0. IMPORT
+//--------------------------------
+
+import {oneIDOnRestOff, changeHeightWithWidth, addRemoveClass} from "./myModules.js";
 
 //
 // 1. CONST
 //--------------------------------
 
-
-// customer opinion -  animation 
-const custOpinion1 = document.getElementById("opinion-1")
-const custOpinion2 = document.getElementById("opinion-2")
-const custOpinion3 = document.getElementById("opinion-3")
-
-// pull back nav
-const pullBack = document.getElementById("pull-back-container");
-const arrUpLink = document.getElementById("pull-back__arrow-link");
-const animatedBorder = document.getElementById("pull-back__animation-border")
-
-// MODAL
-const descrModalFooter4Carousel1 = document.getElementById("modal-footer__d1")
-const descrModalFooter4Carousel2 = document.getElementById("modal-footer__d2")
-const descrModalFooter4Carousel3 = document.getElementById("modal-footer__d3")
-const carsuouselDescrALL = Array.from(document.getElementsByClassName("modal-footer__description"))
-
-const modalTriggerButton = document.getElementById("modal-trigger-button")
-const mutationTagetNode = document.getElementById("mutationTN")
-
-// animation
+// 1.1 VSA
+const aboutTriangle = document.getElementById("outline-triangle")
+const aboutTriangle2 = document.getElementById("outline-triangle--2")
 const spanDown = document.getElementById("io-offer-dn")
 const spanUp = document.getElementById("io-offer-up")
 const pmPleaseChoose = document.getElementById("pm-please-choose")
 const logoNLSmall = document.getElementById("logo-nl4h-sm")
-const aboutTriangle = document.getElementById("outline-triangle")
-const aboutTriangle2 = document.getElementById("outline-triangle--2")
 
-// paralax
+// 1.2 Modal
+const carsuouselDescrALL = Array.from(document.getElementsByClassName("modal-footer__description"))
+const modalTriggerButton = document.getElementById("modal-trigger-button")
+const mutationTagetNode = document.getElementById("mutationTN")
+
+// 1.3 Paralax
+const param1 = 1/2
+const param2 = 20
 const paralax = document.getElementById("paralax-content")
+
+// 1.4 COS
+const custOpinion1 = document.getElementById("opinion-1")
+const custOpinion2 = document.getElementById("opinion-2")
+const custOpinion3 = document.getElementById("opinion-3")
+
+// 1.5 PBN
+const pullBack = document.getElementById("pull-back-container");
+const arrUpLink = document.getElementById("pull-back__arrow-link");
+const animatedBorder = document.getElementById("pull-back__animation-border")
+
 
 
 //
 // 2. EL
 //-----------------------------------
 
-
-
-window.addEventListener("scroll", showNav);
-window.addEventListener("scroll", scrollAnimation);
-modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter);
-
+window.addEventListener("scroll", scrollAnimation); // 2.1
+modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter); // 2.2
+window.addEventListener("resize", responsiveHeight); // 2.3
+window.addEventListener("scroll", showNav); // 2.4
 arrUpLink.addEventListener("click", (()=>{
     animatedBorder.classList.add("animation__border")
     setTimeout(() => {
         animatedBorder.classList.remove("animation__border")
     }, 1500);
-}))
+})) // 2.4
 
-window.addEventListener("resize", changeHeightWithWidth);
+
 
 //
 // 3. FUNCTIONS ->
 //--------------------------------------
 
 
+//---> import as modal !!!! import as modal !!! 
+//*********************************************
 // SLIDESHOW 
 
 // el1,2,3 - "element" to apply animation
@@ -67,7 +82,6 @@ window.addEventListener("resize", changeHeightWithWidth);
 // animOUT - "animation class name" for element to exit
 // time    - "time in [ms]" between enter and exit
 // space   - "time in [ms]" between present and next animations (between out & in)
-
 
 function slideShow (el1, el2, el3, animIN, animOut, time, space) {
     // iteration 0
@@ -213,107 +227,87 @@ function slideShow (el1, el2, el3, animIN, animOut, time, space) {
     }, (time*3)+(space*5))
 }
 
-slideShow (custOpinion1, custOpinion2, custOpinion3, "animation__in-left-right", "animation__out-left-right", 8000, 800)
+//*********************************************
+//---> import as modal !!!! import as modal !!! 
 
 
-// "PULL BACK NAV"
-// show & hide 
-function showNav(){
-    
-    let pos = window.scrollY;
-
-    function addRemove (add, remove) {
-        pullBack.classList.add(add);
-        pullBack.classList.remove(remove);
-    }
-
-    if (pos > 600) {
-        addRemove("opa-1", "opa-0")
-    } else {
-        addRemove("opa-0", "opa-1")
-
-    }
-} 
-
-
-// test - animotion y scroll
+// 3.1 VSA
 function scrollAnimation(){
-    let pos = window.scrollY;
-
-    // console.log(pos)
-
-    if (pos>500 && pos<700) {
+    let scrollPosition = window.scrollY;
+    // About Me
+    if (scrollPosition>500 && scrollPosition<700) {
         aboutTriangle.classList.add("animation__move-bot")
         aboutTriangle2.classList.add("animation__move-bot")
-
-    } else if (pos>2600 && pos<2800) {
+    // Offer
+    } else if (scrollPosition>2600 && scrollPosition<2800) {
         spanDown.classList.add("animation__move-left")
         spanUp.classList.add("animation__move-up")
-
-    } else if (pos>4600 && pos<4800) {
+    // Prices
+    } else if (scrollPosition>4600 && scrollPosition<4800) {
         pmPleaseChoose.classList.add("animation__swirl")
-
-    } else if (pos> 5100) {
-        logoNLSmall.classList.add("animation__jelly")
-
+    // Footer
+    } else if (scrollPosition> 5100) {
+        logoNLSmall.classList.add("animation__jelly")      
     } 
 }
 
+// 3.2 Modal
 
-// paralax resize
-function changeHeightWithWidth(){
-
-    let paralaxWidth = paralax.offsetWidth
-
-    if (window.innerWidth < 780) {
-
-        paralax.style.height = `${paralaxWidth/2 +20}px`
-    }
-
-}
-
-//------------------------------------------------------------------------------
-// setting up "mutation watch for carousel" inside modal - to catch change that i can built "display toggle function" upon ( to show "descriptions for carousel imgs" in modal footer)
-// ----------------------------------------------------------------------------
-
-
-// config for mutation observer
+// a) config for "mutation observer for carousel" inside bootstrap modal - to catch a DOM Tree change to attach "display toggle function" upon -> to show "descriptions for carousel imgs" in modal footer)
 const config = { attributes: true, childList: true, subtree: true };
-// callback for MO
+
+// b) callback for MO
 function mutationCallback(mutations) {
     for (let m of mutations) {
         if (m.type === 'attributes' && !m.target.classList.contains("active") && !m.target.classList.contains("carousel-item-start")) {
-            // console.log(m.target.id)
-
-            function toggleVisibility(ID){
-                carsuouselDescrALL.map( div => {
-                    div.id === ID ? div.style.display = "flex" : div.style.display = "none"
-                })
-            }
-
+            
+            const arr = carsuouselDescrALL;
+            const id1 = "modal-footer__d1"
+            const id2 = "modal-footer__d2"
+            const id3 = "modal-footer__d3"
+            const dsp  = "flex"
+            
             switch(m.target.id) {
                 case "c1":
-                    console.log("2")
-                    toggleVisibility("modal-footer__d2")
+                    // console.log("2")
+                    oneIDOnRestOff(arr,id2,dsp)
                     break;
                 case "c2":
-                    console.log("3")
-                    toggleVisibility("modal-footer__d3")
+                    // console.log("3")
+                    oneIDOnRestOff(arr,id3,dsp)
                     break;
                 case "c3":
-                    console.log("1")
-                    toggleVisibility("modal-footer__d1")
+                    // console.log("1")
+                    oneIDOnRestOff(arr,id1,dsp)    
                     break;
-              }
+                }
         }
     }
 }
-// new MO
+// c) MO
 let classObserver = new MutationObserver(mutationCallback);
 
-
-// CAROUSLE DESCRIPTIONS INSIDE MODAL
+// d)
 function showCarouselDescriptionInModalFooter () {
-    console.clear()
     classObserver.observe(mutationTagetNode, config)
 }
+
+// 3.3 Paralax
+function responsiveHeight(){
+    if (window.innerWidth < 780) {
+        changeHeightWithWidth(paralax,param1,param2)
+    }
+}
+
+// 3.4 POS
+slideShow (custOpinion1, custOpinion2, custOpinion3, "animation__in-left-right", "animation__out-left-right", 8000, 800)
+
+// 3.5 PBN
+function showNav(){ 
+    let c0 = "opa-0"
+    let c1 = "opa-1"
+    let scrollPosition = window.scrollY;
+    scrollPosition > 600 
+        ? addRemoveClass(pullBack, c1, c0)
+        : addRemoveClass(pullBack, c0, c1)
+} 

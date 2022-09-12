@@ -92,16 +92,12 @@ function slideShowAbstract (pagsImgs, animationsObj, time) {
 
 // sets the "height" for slideshow to be responsive. sets CSS variables when "slideshow" changes width, for animation to work properly
 function responsiveWidth() {
-
     const slideshowWidth = slideshow.offsetWidth;
-
     document.documentElement.style
     .setProperty('--img-distance-X', `${slideshowWidth}px`);
     document.documentElement.style
     .setProperty('--img-distance-X-minus', `-${slideshowWidth}px`);
-
     slideshow.style.height = `${slideshowWidth/4}px`
-
   }
 
 
