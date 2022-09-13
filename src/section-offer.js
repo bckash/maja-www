@@ -1,23 +1,42 @@
 
+/* 
 
+NewLife4Hair.com 
+JS [2/3]
+Concerns: "Offer"
+
+LIST OF CONTENT:
+
+
+
+ */
+
+//
+// 0. IMPORT
+//------------
+
+import {objectValuesToArr, oneOnRestOff, oneActiveRestNon} from "./myModules.js";
+
+//
 // 1. CONST
 //------------
 
-
 // -> (BIG & SMALL) NAV 
 
-
-const  // big, <li>
+const  // big  | <li>
     navBigExt = document.getElementById("nav-big-ext"),
     navBigTreat = document.getElementById("nav-big-treat"),
-    navBigStyle = document.getElementById("nav-big-style");
+    navBigStyle = document.getElementById("nav-big-style"),
+    navBigAll = Array.from(navBigStyle.parentElement.children)
 
-const // small, <ul>
+const // small | <ul>
     navSmallTreat = document.getElementById("nav-small-treat"),
     navSmallExt = document.getElementById("nav-small-ext"),
-    navSmallStyle = document.getElementById("nav-small-style");
+    navSmallStyle = document.getElementById("nav-small-style"),
+    navSmallAll = Array.from(navSmallStyle.parentElement.children)
 
-const // small, <li>
+const // small | <li>
+    spinnerSt = document.getElementById("spinner-style"),  
     extFusion = document.getElementById("ext-fusion"),
     extMicro = document.getElementById("ext-micro"),
     extShrink = document.getElementById("ext-shrinks"),
@@ -25,82 +44,58 @@ const // small, <li>
     extComb = document.getElementById("ext-comb"),
     trBotox = document.getElementById("tr-botox"),
     trKreatyna = document.getElementById("tr-kreatyna"),
-    spinnerSt = document.getElementById("spinner-style")
 
-const // small, <li> groups
-    extAll = document.querySelectorAll(".ext-all"),
-    trAll = document.querySelectorAll(".tr-all");
+    extAll = document.querySelectorAll(".ext-all"), // del
+    trAll = document.querySelectorAll(".tr-all"), // del
 
-// array from:  small, <li> groups
-//................................................
-    const extAllArr = Array.from(extAll)
-    const trAllArr = Array.from(trAll)
-//................................................
-let summAllArray = [];
+    navSmallExtAll = Array.from(document.querySelectorAll(".ext-all")),
+    navSmallTreatAll = Array.from(document.querySelectorAll(".tr-all")),
+    summAllArray = navSmallExtAll.concat(navSmallTreatAll, navBigStyle)
 
-function addArraysToArray (arr) {
-    for (let i=0; i<arr.length; i++) {
-        summAllArray.push(arr[i])
-    }
-}
-
-addArraysToArray(extAllArr);
-addArraysToArray(trAllArr);
-summAllArray.push(navBigStyle)
-
-
-//.................................................
-
-const // small, arrow buttons
+const // small, arrow buttons (<678px)
     navSmallButtonLeft = document.getElementById("of-nv-sm-arr--left"),
     navSmallButtonRight = document.getElementById("of-nv-sm-arr--right"),
     navSmallMain = document.getElementById("of-nv-sm-main");
 
-// -> CONTENT : ELEMENTS 
 
+// -> MAIN : ELEMENTS 
 
-const // HEADERS 
+const // INTRO
     introMain = document.getElementById("om-intro"), 
     introExt = document.getElementById("ext-intro"),
     introTreat = document.getElementById("treat-intro"),
     introStyle = document.getElementById("style-intro"),
-    extBodyAll = document.querySelectorAll(".head-sm--ext"),
-    trBodyAll = document.querySelectorAll(".head-sm--treat");
+    navIntros = Array.from(document.getElementsByClassName("omb__head"))
 
-const // INFO big containers
-    snBodyInfo = document.getElementById("ext-info"),
-    snBodyImg = document.getElementById("ext-photo"),
-    snBodyInfoTr = document.getElementById("treat-info"),
-    snBodyImgTr = document.getElementById("treat-photo"),
-    snBodyInfoSt = document.getElementById("style-info"),    
-    snBodyImgSt = document.getElementById("style-photo")
+const // MAIN SECTIONS
+    mainInfoExt = document.getElementById("ext-info"),
+    mainPhotoExt = document.getElementById("ext-photo"),
+    mainInfoTr = document.getElementById("treat-info"),
+    mainPhotoTr = document.getElementById("treat-photo"),
+    mainInfoSt = document.getElementById("style-info"),    
+    mainPhotoSt = document.getElementById("style-photo"),
+    mainAll = [].concat(mainInfoExt, mainPhotoExt, mainInfoTr, mainPhotoTr, mainInfoSt, mainPhotoSt)
 
-const // INFO main 
-    infoHolderExt = document.getElementById("js-fill-extension"),
-    infoHolderTreat = document.getElementById("js-fill-treatment")
+const // HEADERS
+    headMainExtAll = document.querySelectorAll(".head-sm--ext"),
+    headMainTreatAll = document.querySelectorAll(".head-sm--treat"),
+    headMainAll = [].concat(Array.from(headMainExtAll), Array.from(headMainTreatAll))
 
-const // "info holder" fill fields | extension
-    infoHolderAll = document.getElementsByClassName("fill-fields")
-
-const // "info holder" fill fields | treatment
-    infoHolderAllTr = document.getElementsByClassName("fill-fields--tr")
-
-const // info holder for treatment
-    infoTreatBotox = document.getElementById("tr-info-botox"),
-    infoTreatKreatyna = document.getElementById("tr-info-kreatyna"),
-    infoTreatALL = document.getElementsByClassName("tr-info");
-
+const // FILL FIELDS CONTAINERS
+    fillFieldsContExt = document.getElementById("js-fill-extension"),
+    fillFieldsContTreat = document.getElementById("js-fill-treatment"),
+    fillFieldsExt = document.getElementsByClassName("fill-fields"),
+    fillFieldsTr = document.getElementsByClassName("fill-fields--tr")
 
 const // PHOTO body
     photoBodyExtALL = document.getElementsByClassName("ext-photo"),
     photoBodyTrALL = document.getElementsByClassName("tr-photo");
 
 
-// -> CONTENT : DATA |
+// -> MAIN: DATA 
 
-
-// fill fields data
-const mediaSN = [
+// fill fields (extensions)
+const fillDataExt = [
     {
         id: "fusion bonds",
         about: "<dfn title='Fusion Bonds'>Hot fusion extensions</dfn> attach strands of hair to the client's head with a keratin-based tip. The process uses a heating element to attach or fuse the keratin bond and extension to the client's hair. Since human hair is 95% keratin, the fusion method is safe, comfortable and long-lasting.",
@@ -138,7 +133,8 @@ const mediaSN = [
     }
 ]
 
-const mediaSNTreat = [
+// fill fields (treatment)
+const fillDataTreat = [
     {
         id: "botox",
         about: "<dfn title='Botox'>Botox</dfn> is the ultimate way to revive your hair. An all in one treatment, restores and improves dry damged hair in various ways. It’s full of nourishing proteins, antioxidants, vitamins, conditioning oils and other hair-healthy ingredients that fill in the gaps in the hair fibres and restore it to its natural beauty.",
@@ -155,27 +151,14 @@ const mediaSNTreat = [
     }    
 ]
 
-// fill fields array (for functions)
-function objectToAraay (arr) {
-
-    let fillArray = []
-
-    for (const key in arr) {
-        fillArray.push(arr[key])
-    }
-
-    return fillArray;
-
-}
-
-const arrayFusionBonds = objectToAraay(mediaSN[0])
-const arrayMicroRings = objectToAraay(mediaSN[1])
-const arrayEasyShrinks = objectToAraay(mediaSN[2])
-const arrayTapeOn = objectToAraay(mediaSN[3])
-const arrayCombline = objectToAraay(mediaSN[4])
-
-const arrayBotox = objectToAraay(mediaSNTreat[0])
-const arrayKreatyna = objectToAraay(mediaSNTreat[1])
+// fill fields array [for functions]
+const arrayFusionBonds = objectValuesToArr(fillDataExt[0])
+const arrayMicroRings = objectValuesToArr(fillDataExt[1])
+const arrayEasyShrinks = objectValuesToArr(fillDataExt[2])
+const arrayTapeOn = objectValuesToArr(fillDataExt[3])
+const arrayCombline = objectValuesToArr(fillDataExt[4])
+const arrayBotox = objectValuesToArr(fillDataTreat[0])
+const arrayKreatyna = objectValuesToArr(fillDataTreat[1])
 
 
 // -> SIDE NAV |
@@ -183,27 +166,16 @@ const arrayKreatyna = objectToAraay(mediaSNTreat[1])
 const // nav container 
     sideNav = document.getElementById("side-nav"),
     snInfo = document.getElementById("sn-info"),
-    snImg = document.getElementById("sn-img"),
+    snPhoto = document.getElementById("sn-img"),
     snALL = document.getElementsByClassName("sn-all")
    
 
 // 2. EL
 //-------------
 
-
-// big nav
-navBigExt.addEventListener("click", showContentBigNav)
-navBigTreat.addEventListener("click", showContentBigNav)
-navBigStyle.addEventListener("click", showContentBigNav)
-
-// small nav
-extComb.addEventListener("click", showContentExt)
-extFusion.addEventListener("click", showContentExt)
-extMicro.addEventListener("click", showContentExt)
-extShrink.addEventListener("click", showContentExt)
-extTape.addEventListener("click", showContentExt)
-trBotox.addEventListener("click", showContentTreat)
-trKreatyna.addEventListener("click", showContentTreat)
+navBigAll.map(el => el.addEventListener("click", handleBigNav))
+navSmallExtAll.map(el => el.addEventListener("click", showContentExt))
+navSmallTreatAll.map(el => el.addEventListener("click", showContentTreat))
 navSmallButtonLeft.addEventListener("click", scrollContentLeft)
 navSmallButtonRight.addEventListener("click", scrollContentRight)
 window.addEventListener("resize", navSmallArrowsDisplay)
@@ -211,7 +183,7 @@ window.addEventListener("resize", navSmallArrowsDisplay)
 // side nav
 if (sideNav) {
     snInfo.addEventListener("click", showContentSideNav)
-    snImg.addEventListener("click", showContentSideNav)
+    snPhoto.addEventListener("click", showContentSideNav)
 }
 
 
@@ -222,54 +194,29 @@ if (sideNav) {
 
 // -> FOR EL FUNCTIONS |
 
-
-// --> style reset for BIG NAV
 function resetForBigNav () {
-
-    sideNav.style.display = "none"
-    snBodyImg.style.display = "none"
-    snBodyImgTr.style.display = "none"
-    snBodyInfo.style.display = "none"
-    snBodyInfoTr.style.display = "none"
-    snBodyInfoSt.style.display = "none"
-    snBodyImgSt.style.display = "none"
+    const resetBigNavAll = [].concat(introMain, mainAll, headMainAll, sideNav)
+    const removeActiveNavSmall = navSmallExtAll.concat(navSmallTreatAll)
+    resetBigNavAll.map(el => el.style.display="none")
+    removeActiveNavSmall.map(el => el.classList.remove("ns-active"))
     spinnerSt.style.display = "block"
-
-    // reset "small nav" and "body" styles
-    introMain.style.display = "none";
-    for (let i=0; i<trBodyAll.length; i++) {
-        trBodyAll[i].style.display = "none";
-    }
-    for (let i=0; i<extBodyAll.length; i++) {
-        extBodyAll[i].style.display = "none";
-    }
-    for (let i=0; i<trAll.length; i++) {
-        trAll[i].classList.remove("ns-active");
-    }
-    for (let i=0; i<extAll.length; i++) {
-        extAll[i].classList.remove("ns-active");
-    }
 }
 
-// --> style reset for SMALL NAV
 function resetForSmallNav() {
     sideNav.style.display = "block"
-    snImg.classList.remove("side-nav--active");
+    snPhoto.classList.remove("side-nav--active");
     snInfo.classList.add("side-nav--active");
 }
 
-// --> active and inactive tabs for BIG NAV
-function setNav (activSM, activBG, activIntro, nonAct1SM, nonAct1BG, nonAct1Intro, nonAct2SM, nonAct2BG, nonAct2Intro) {
-    activSM.style.display = "flex";
-    activBG.classList.add("ns-active");
-    activIntro.style.display = "block"
-    nonAct1SM.style.display = "none";
-    nonAct1BG.classList.remove("ns-active");
-    nonAct1Intro.style.display = "none"
-    nonAct2SM.style.display = "none";
-    nonAct2BG.classList.remove("ns-active");
-    nonAct2Intro.style.display = "none";
+function setNaviAndIntro (navBigID, navSmallID, introID) {
+    const bigNavActive = "ns-active"
+    const smallNavAvtive = "flex";
+    const introActive = "block";
+    oneActiveRestNon(navBigAll, navBigID, bigNavActive)
+    oneOnRestOff(navSmallAll, navSmallID, smallNavAvtive)
+    oneOnRestOff(navIntros, introID, introActive)
 }
+
 
 // --> takes array of all nav tabs,  adds active class to choosen tab, and innactive to rest
 function activeTabs (all, tgt, cl) {
@@ -306,32 +253,33 @@ function fillFields(arrElements, arrTxt) {
 
 
 // A) BIG NAV
-function showContentBigNav (e) {
+function handleBigNav (e) {
 
     resetForBigNav()
+    let tgt = e.target;
 
-    if (e.target.id === "nav-big-ext") {
-        setNav(navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat)
+    if (tgt === navBigExt){
+        setNaviAndIntro(navBigExt.id, navSmallExt.id, introExt.id)
         if (window.innerWidth < 678) {
             navSmallButtonLeft.style.display = "block"
             navSmallButtonRight.style.display = "block"
-        }
+        }   
 
-    } else if (e.target.id === "nav-big-treat") {
-        setNav(navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt, navSmallStyle, navBigStyle, introStyle)
+    } else if (tgt === navBigTreat) {
+        setNaviAndIntro(navBigTreat.id, navSmallTreat.id, introTreat.id)
         navSmallButtonLeft.style.display = "none"
         navSmallButtonRight.style.display = "none"
 
     } else if (e.target.id === "nav-big-style") {
-        setNav(navSmallStyle, navBigStyle, introStyle, navSmallTreat, navBigTreat, introTreat, navSmallExt, navBigExt, introExt)
+        setNaviAndIntro(navBigStyle.id, navSmallStyle.id, introStyle.id)
         navSmallButtonLeft.style.display = "none"
         navSmallButtonRight.style.display = "none"
 
         setTimeout(() => { 
-            snImg.classList.remove("side-nav--active");
+            snPhoto.classList.remove("side-nav--active");
             snInfo.classList.add("side-nav--active");
             introStyle.style.display = "none"
-            snBodyInfoSt.style.display = "block"
+            mainInfoSt.style.display = "block"
             spinnerSt.style.display = "none"
             sideNav.style.display = "block"
         }, 1000);
@@ -341,14 +289,14 @@ function showContentBigNav (e) {
 // B) SMALL NAV : "EXTENSION"
 function showContentExt (e) {
 
-    snBodyInfoTr.style.display = "none";
-    snBodyInfo.style.display = "block";
-    snBodyImg.style.display = "none"
-    snBodyInfoSt.style.display = "none"
+    mainInfoTr.style.display = "none";
+    mainInfoExt.style.display = "block";
+    mainPhotoExt.style.display = "none"
+    mainInfoSt.style.display = "none"
 
     introExt.style.display = "none";
-    infoHolderExt.style.display = "block";
-    infoHolderTreat.style.display = "none"
+    fillFieldsContExt.style.display = "block";
+    fillFieldsContTreat.style.display = "none"
 
     activeTabs(extAll, e.target, "ns-active");
     resetForSmallNav()
@@ -356,32 +304,32 @@ function showContentExt (e) {
     switch(e.target.id) {
 
         case "ext-fusion":
-            fillFields(infoHolderAll, arrayFusionBonds)
-            bodyToggle("ext-b-fusion", extBodyAll)
+            fillFields(fillFieldsExt, arrayFusionBonds)
+            bodyToggle("ext-b-fusion", headMainExtAll)
             bodyToggle("ext-photo-fusion", photoBodyExtALL)
             break;
 
         case "ext-micro":
-            fillFields(infoHolderAll, arrayMicroRings)
-            bodyToggle("ext-b-micro", extBodyAll)
+            fillFields(fillFieldsExt, arrayMicroRings)
+            bodyToggle("ext-b-micro", headMainExtAll)
             bodyToggle("ext-photo-micro", photoBodyExtALL)
             break;
 
         case "ext-shrinks":
-            fillFields(infoHolderAll, arrayEasyShrinks)
-            bodyToggle("ext-b-shrinks", extBodyAll)
+            fillFields(fillFieldsExt, arrayEasyShrinks)
+            bodyToggle("ext-b-shrinks", headMainExtAll)
             bodyToggle("ext-photo-easy", photoBodyExtALL)            
             break;
 
         case "ext-tape":
-            fillFields(infoHolderAll, arrayTapeOn)
-            bodyToggle("ext-b-tape", extBodyAll)
+            fillFields(fillFieldsExt, arrayTapeOn)
+            bodyToggle("ext-b-tape", headMainExtAll)
             bodyToggle("ext-photo-tape", photoBodyExtALL)
             break;
             
         case "ext-comb":
-            fillFields(infoHolderAll, arrayCombline)
-            bodyToggle("ext-b-comb", extBodyAll)
+            fillFields(fillFieldsExt, arrayCombline)
+            bodyToggle("ext-b-comb", headMainExtAll)
             bodyToggle("ext-photo-comb", photoBodyExtALL)
             break;
     }
@@ -390,14 +338,14 @@ function showContentExt (e) {
 // C) SMALL NAV :  "TREATMENT"
 function showContentTreat(e) {
 
-    snBodyInfoTr.style.display = "block";
-    snBodyInfo.style.display = "none";
-    snBodyImgTr.style.display = "none"
-    snBodyInfoSt.style.display = "none"
+    mainInfoTr.style.display = "block";
+    mainInfoExt.style.display = "none";
+    mainPhotoTr.style.display = "none"
+    mainInfoSt.style.display = "none"
 
     introTreat.style.display = "none";
-    infoHolderTreat.style.display = "block"
-    infoHolderExt.style.display = "none"
+    fillFieldsContTreat.style.display = "block"
+    fillFieldsContExt.style.display = "none"
 
     activeTabs(trAll, e.target, "ns-active");
     resetForSmallNav()
@@ -406,15 +354,15 @@ function showContentTreat(e) {
     switch(e.target.id) {
 
         case "tr-botox":
-            fillFields(infoHolderAllTr,arrayBotox)
-            bodyToggle("tr-b-botox", trBodyAll)
+            fillFields(fillFieldsTr,arrayBotox)
+            bodyToggle("tr-b-botox", headMainTreatAll)
             bodyToggle("tr-photo-botox", photoBodyTrALL)
 
             break;
 
         case "tr-kreatyna":
-            fillFields(infoHolderAllTr, arrayKreatyna)
-            bodyToggle("tr-b-kreatyna", trBodyAll)
+            fillFields(fillFieldsTr, arrayKreatyna)
+            bodyToggle("tr-b-kreatyna", headMainTreatAll)
             bodyToggle("tr-photo-kreatyna", photoBodyTrALL)
 
             break;
@@ -426,30 +374,36 @@ function showContentSideNav (e) {
 
     function activeBodyAbstract (tab) {
         
+        let offTr; 
+        let offExt; 
+        let offSt;
+        let onTr;
+        let onExt; 
+        let onSt;
+
         // info icon
         if (e.target === snInfo) {
-            offTr = snBodyImgTr;
-            offExt = snBodyImg;
-            offSt = snBodyImgSt;
-            onTr = snBodyInfoTr;
-            onExt = snBodyInfo;
-            onSt = snBodyInfoSt;
+            offTr = mainPhotoTr;
+            offExt = mainPhotoExt;
+            offSt = mainPhotoSt;
+            onTr = mainInfoTr;
+            onExt = mainInfoExt;
+            onSt = mainInfoSt;
 
         // img icon
-        } else if (e.target === snImg) {
-            offTr = snBodyInfoTr;
-            offExt = snBodyInfo;
-            offSt =snBodyInfoSt;
-            onTr = snBodyImgTr;
-            onExt = snBodyImg;
-            onSt = snBodyImgSt;
+        } else if (e.target === snPhoto) {
+            offTr = mainInfoTr;
+            offExt = mainInfoExt;
+            offSt = mainInfoSt;
+            onTr = mainPhotoTr;
+            onExt = mainPhotoExt;
+            onSt = mainPhotoSt;
         }
-        
+
         offExt.style.display = "none"
         offTr.style.display = "none"
         offSt.style.display = "none"
         activeTabs(snALL, e.target,"side-nav--active")
-
 
         if (tab.id === "tr-botox" || tab.id === "tr-kreatyna") {
             onTr.style.display = "block"

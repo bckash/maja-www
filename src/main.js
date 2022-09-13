@@ -1,25 +1,36 @@
 
 /* 
 
-LIST OF CONTENT:
+NewLife4Hair.com 
+JS [1/3]
+Concerns: Different Parts of Website
 
-_.1 : VSA (vertical scroll animations)
-_.2 : Modal Footer
-_.3 : Paralax Resize
-_.4 : Customer Opinion Slideshow
-_.5 : Pull Back Navi
+LIST OF CONTENT:
+________________
+
+0. IMPORT
+1. CONST
+2. EVENT LISTENERS
+3. FUNCTIONS
+
+_.1 : VSA - vertical scroll animations (About Me, Offer, Prices, Footer)
+_.2 : Modal Footer (About ME)
+_.3 : Paralax Resize (Paralax)
+_.4 : Customer Opinion Slideshow (Customer Opinion)
+_.5 : Pull Back Navi (Pull back)
+________________________________
 
  */
 
 //
 // 0. IMPORT
-//--------------------------------
+//------------
 
-import {oneIDOnRestOff, changeHeightWithWidth, addRemoveClass} from "./myModules.js";
+import {oneOnRestOff, changeHeightWithWidth, addRemoveClass} from "./myModules.js";
 
 //
 // 1. CONST
-//--------------------------------
+//------------
 
 // 1.1 VSA
 const aboutTriangle = document.getElementById("outline-triangle")
@@ -53,7 +64,7 @@ const animatedBorder = document.getElementById("pull-back__animation-border")
 
 //
 // 2. EL
-//-----------------------------------
+//--------
 
 window.addEventListener("scroll", scrollAnimation); // 2.1
 modalTriggerButton.addEventListener("click", showCarouselDescriptionInModalFooter); // 2.2
@@ -70,7 +81,7 @@ arrUpLink.addEventListener("click", (()=>{
 
 //
 // 3. FUNCTIONS ->
-//--------------------------------------
+//------------------
 
 
 //---> import as modal !!!! import as modal !!! 
@@ -270,15 +281,15 @@ function mutationCallback(mutations) {
             switch(m.target.id) {
                 case "c1":
                     // console.log("2")
-                    oneIDOnRestOff(arr,id2,dsp)
+                    oneOnRestOff(arr,id2,dsp)
                     break;
                 case "c2":
                     // console.log("3")
-                    oneIDOnRestOff(arr,id3,dsp)
+                    oneOnRestOff(arr,id3,dsp)
                     break;
                 case "c3":
                     // console.log("1")
-                    oneIDOnRestOff(arr,id1,dsp)    
+                    oneOnRestOff(arr,id1,dsp)    
                     break;
                 }
         }
