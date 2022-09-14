@@ -1,4 +1,12 @@
 
+/* 
+
+NewLife4Hair.com 
+Modals for Import
+Concerns: JS files
+
+ */
+
 // ARRAYS
 
 export function oneOnRestOff(arr, ID, display){

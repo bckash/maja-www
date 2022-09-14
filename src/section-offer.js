@@ -3,11 +3,16 @@
 
 NewLife4Hair.com 
 JS [2/3]
-Concerns: "Offer"
+Concerns: "Offer" Article
 
 LIST OF CONTENT:
+________________
 
-
+0. IMPORT
+1. CONST
+2. EVENT LISTENERS
+3. FUNCTIONS
+_________________
 
  */
 
@@ -37,17 +42,6 @@ const // small | <ul>
 
 const // small | <li>
     spinnerSt = document.getElementById("spinner-style"),  
-    extFusion = document.getElementById("ext-fusion"),
-    extMicro = document.getElementById("ext-micro"),
-    extShrink = document.getElementById("ext-shrinks"),
-    extTape = document.getElementById("ext-tape"),
-    extComb = document.getElementById("ext-comb"),
-    trBotox = document.getElementById("tr-botox"),
-    trKreatyna = document.getElementById("tr-kreatyna"),
-
-    extAll = document.querySelectorAll(".ext-all"), // del
-    trAll = document.querySelectorAll(".tr-all"), // del
-
     navSmallExtAll = Array.from(document.querySelectorAll(".ext-all")),
     navSmallTreatAll = Array.from(document.querySelectorAll(".tr-all")),
     summAllArray = navSmallExtAll.concat(navSmallTreatAll, navBigStyle)
@@ -55,6 +49,7 @@ const // small | <li>
 const // small, arrow buttons (<678px)
     navSmallButtonLeft = document.getElementById("of-nv-sm-arr--left"),
     navSmallButtonRight = document.getElementById("of-nv-sm-arr--right"),
+    // navSmallButtAll = Array.from(document.getElementsByClassName("offer-nav-small__arrows")),
     navSmallMain = document.getElementById("of-nv-sm-main");
 
 
@@ -84,13 +79,13 @@ const // HEADERS
 const // FILL FIELDS CONTAINERS
     fillFieldsContExt = document.getElementById("js-fill-extension"),
     fillFieldsContTreat = document.getElementById("js-fill-treatment"),
+    fillFieldsContAll = Array.from(document.getElementsByClassName("js-fill")),
     fillFieldsExt = document.getElementsByClassName("fill-fields"),
     fillFieldsTr = document.getElementsByClassName("fill-fields--tr")
 
 const // PHOTO body
     photoBodyExtALL = document.getElementsByClassName("ext-photo"),
     photoBodyTrALL = document.getElementsByClassName("tr-photo");
-
 
 // -> MAIN: DATA 
 
@@ -167,8 +162,8 @@ const // nav container
     sideNav = document.getElementById("side-nav"),
     snInfo = document.getElementById("sn-info"),
     snPhoto = document.getElementById("sn-img"),
-    snALL = document.getElementsByClassName("sn-all")
-   
+    snALL = Array.from(document.getElementsByClassName("sn-all")),
+    snALLCollection = document.getElementsByClassName("sn-all") // del
 
 // 2. EL
 //-------------
@@ -202,10 +197,10 @@ function resetForBigNav () {
     spinnerSt.style.display = "block"
 }
 
-function resetForSmallNav() {
+function resetSideNav() {
+    const clActive = "side-nav--active"
+    oneActiveRestNon(snALL, snInfo.id, clActive)
     sideNav.style.display = "block"
-    snPhoto.classList.remove("side-nav--active");
-    snInfo.classList.add("side-nav--active");
 }
 
 function setNaviAndIntro (navBigID, navSmallID, introID) {
@@ -215,6 +210,21 @@ function setNaviAndIntro (navBigID, navSmallID, introID) {
     oneActiveRestNon(navBigAll, navBigID, bigNavActive)
     oneOnRestOff(navSmallAll, navSmallID, smallNavAvtive)
     oneOnRestOff(navIntros, introID, introActive)
+}
+
+function setNavAndFillFields (
+    introPage, liSmNavArray, tgtID, mainPageID, fillFieldID
+    ) {
+    resetSideNav()
+    const dispActive = "block";
+    const clActive = "ns-active"
+    // set nav active tab
+    oneActiveRestNon(liSmNavArray, tgtID, clActive)
+    // show main page
+    introPage.style.display = "none";
+    oneOnRestOff(mainAll, mainPageID, dispActive)
+    // show fill field container
+    oneOnRestOff(fillFieldsContAll, fillFieldID, dispActive)
 }
 
 
@@ -246,7 +256,6 @@ function fillFields(arrElements, arrTxt) {
         arrElements[i].innerHTML = arrTxt[i+1]
     }
 }
-
 
 
 // -> EL FUNCTIONS |
@@ -289,21 +298,15 @@ function handleBigNav (e) {
 // B) SMALL NAV : "EXTENSION"
 function showContentExt (e) {
 
-    mainInfoTr.style.display = "none";
-    mainInfoExt.style.display = "block";
-    mainPhotoExt.style.display = "none"
-    mainInfoSt.style.display = "none"
+    const tgt = e.target;
 
-    introExt.style.display = "none";
-    fillFieldsContExt.style.display = "block";
-    fillFieldsContTreat.style.display = "none"
+    setNavAndFillFields(introExt, navSmallExtAll, tgt.id, mainInfoExt.id, fillFieldsContExt.id)
 
-    activeTabs(extAll, e.target, "ns-active");
-    resetForSmallNav()
-
-    switch(e.target.id) {
+    switch(tgt.id) {
 
         case "ext-fusion":
+
+
             fillFields(fillFieldsExt, arrayFusionBonds)
             bodyToggle("ext-b-fusion", headMainExtAll)
             bodyToggle("ext-photo-fusion", photoBodyExtALL)
@@ -338,20 +341,11 @@ function showContentExt (e) {
 // C) SMALL NAV :  "TREATMENT"
 function showContentTreat(e) {
 
-    mainInfoTr.style.display = "block";
-    mainInfoExt.style.display = "none";
-    mainPhotoTr.style.display = "none"
-    mainInfoSt.style.display = "none"
+    const tgt = e.target;
 
-    introTreat.style.display = "none";
-    fillFieldsContTreat.style.display = "block"
-    fillFieldsContExt.style.display = "none"
+    setNavAndFillFields(introTreat, navSmallTreatAll, tgt.id, mainInfoTr.id, fillFieldsContTreat.id)
 
-    activeTabs(trAll, e.target, "ns-active");
-    resetForSmallNav()
-
-    // prepare indyvidual cases - for main body toggle (in "showContent4")
-    switch(e.target.id) {
+    switch(tgt.id) {
 
         case "tr-botox":
             fillFields(fillFieldsTr,arrayBotox)
@@ -403,7 +397,7 @@ function showContentSideNav (e) {
         offExt.style.display = "none"
         offTr.style.display = "none"
         offSt.style.display = "none"
-        activeTabs(snALL, e.target,"side-nav--active")
+        activeTabs(snALLCollection, e.target,"side-nav--active")
 
         if (tab.id === "tr-botox" || tab.id === "tr-kreatyna") {
             onTr.style.display = "block"

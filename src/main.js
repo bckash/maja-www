@@ -3,7 +3,7 @@
 
 NewLife4Hair.com 
 JS [1/3]
-Concerns: Different Parts of Website
+Concerns: "Different Parts of Website"
 
 LIST OF CONTENT:
 ________________
@@ -276,7 +276,7 @@ function mutationCallback(mutations) {
             const id1 = "modal-footer__d1"
             const id2 = "modal-footer__d2"
             const id3 = "modal-footer__d3"
-            const dsp  = "flex"
+            const dsp = "flex"
             
             switch(m.target.id) {
                 case "c1":
