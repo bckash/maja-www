@@ -173,9 +173,11 @@ const
 //-------------
 
 // 2.1 Big Nav
+
 navBigAll.map(el => el.addEventListener("click", handleBigNav))
 
 // 2.2 Small Nav
+
 navSmallExtAll.map(el => el.addEventListener("click", showContentExt))
 navSmallTreatAll.map(el => el.addEventListener("click", showContentTreat))
 navSmallButtonLeft.addEventListener("click", scrollContentLeft)
@@ -183,6 +185,7 @@ navSmallButtonRight.addEventListener("click", scrollContentRight)
 window.addEventListener("resize", navSmallArrowsDisplay)
 
 // 3.3 Side Nav
+
 if (sideNav) {
     snInfo.addEventListener("click", showContentSideNav)
     snPhoto.addEventListener("click", showContentSideNav)
@@ -267,43 +270,58 @@ function setNavAndFillFields (
     oneOnRestOff(fillFieldsContAll, fillFieldID, dispActive)
 }
 
+function handleMainFields(offer, headClass, fillField, photoBodyClass){
+
+    const dispActive = "flex";
+    let headArr;
+    let fillFieldsArr;
+    let photoBodyArr
+
+    if (offer === "extensions") {
+
+        headArr = headMainExtAll;
+        fillFieldsArr = fillFieldsExt;
+        photoBodyArr = photoBodyExtALL;
+
+    } else if (offer === "treatment"){
+
+        headArr = headMainTreatAll;
+        fillFieldsArr = fillFieldsTr;
+        photoBodyArr = photoBodyTrALL;
+    }
+
+    oneOnRestOff(headArr, headClass, dispActive)
+    fillFillFields(fillFieldsArr, fillField)
+    oneOnRestOff(photoBodyArr, photoBodyClass, dispActive)
+}
+
 function showContentExt (e) {
 
     const tgt = e.target;
-    const dispActive = "flex";
+    const offer = "extensions"
 
     setNavAndFillFields(introExt, navSmallExtAll, tgt.id, mainInfoExt.id, fillFieldsContExt.id)
 
     switch(tgt.id) {
 
         case "ext-fusion":
-            oneOnRestOff(headMainExtAll, "ext-b-fusion", dispActive)
-            fillFillFields(fillFieldsExt, arrayFusionBonds)
-            oneOnRestOff(photoBodyExtALL, "ext-photo-fusion", dispActive)
+            handleMainFields(offer, "ext-b-fusion", arrayFusionBonds, "ext-photo-fusion")
             break;
 
         case "ext-micro":
-            oneOnRestOff(headMainExtAll, "ext-b-micro", dispActive)
-            fillFillFields(fillFieldsExt, arrayMicroRings)
-            oneOnRestOff(photoBodyExtALL, "ext-photo-micro", dispActive)
+            handleMainFields(offer, "ext-b-micro", arrayMicroRings, "ext-photo-micro")
             break;
 
         case "ext-shrinks":
-            oneOnRestOff(headMainExtAll, "ext-b-shrinks", dispActive)
-            fillFillFields(fillFieldsExt, arrayEasyShrinks)
-            oneOnRestOff(photoBodyExtALL, "ext-photo-easy", dispActive)           
+            handleMainFields(offer, "ext-b-shrinks", arrayEasyShrinks, "ext-photo-easy")          
             break;
 
         case "ext-tape":
-            oneOnRestOff(headMainExtAll, "ext-b-tape", dispActive)
-            fillFillFields(fillFieldsExt, arrayTapeOn)
-            oneOnRestOff(photoBodyExtALL, "ext-photo-tape", dispActive)
+            handleMainFields(offer, "ext-b-tape", arrayTapeOn, "ext-photo-tape")
             break;
             
         case "ext-comb":
-            oneOnRestOff(headMainExtAll, "ext-b-comb", dispActive)
-            fillFillFields(fillFieldsExt, arrayCombline)
-            oneOnRestOff(photoBodyExtALL, "ext-photo-comb", dispActive)
+            handleMainFields(offer, "ext-b-comb", arrayCombline, "ext-photo-comb")
             break;
     }
 }
@@ -311,22 +329,18 @@ function showContentExt (e) {
 function showContentTreat(e) {
 
     const tgt = e.target;
-    const dispActive = "flex";
+    const offer = "treatment"
 
     setNavAndFillFields(introTreat, navSmallTreatAll, tgt.id, mainInfoTr.id, fillFieldsContTreat.id)
 
     switch(tgt.id) {
 
         case "tr-botox":
-            oneOnRestOff(headMainTreatAll, "tr-b-botox", dispActive)
-            fillFillFields(fillFieldsTr,arrayBotox)
-            oneOnRestOff(photoBodyTrALL, "tr-photo-botox", dispActive)
+            handleMainFields(offer, "tr-b-botox", arrayBotox, "tr-photo-botox")
             break;
 
         case "tr-kreatyna":
-            oneOnRestOff(headMainTreatAll, "tr-b-kreatyna", dispActive)
-            fillFillFields(fillFieldsTr, arrayKreatyna)
-            oneOnRestOff(photoBodyTrALL, "tr-photo-kreatyna", dispActive)
+            handleMainFields(offer, "tr-b-kreatyna", arrayBotox, "tr-photo-kreatyna")
             break;
     }    
 }
