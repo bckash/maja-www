@@ -6,13 +6,17 @@ JS [2/3]
 Concerns: "Offer" Article
 
 LIST OF CONTENT:
-________________
+_________________________
 
 0. IMPORT
 1. CONST
 2. EVENT LISTENERS
 3. FUNCTIONS
-_________________
+
+_.1 : Big Nav
+_.2 : Small Nav
+_.3 : Side Nav
+__________________________
 
  */
 
@@ -20,74 +24,74 @@ _________________
 // 0. IMPORT
 //------------
 
-import {objectValuesToArr, oneOnRestOff, oneActiveRestNon} from "./myModules.js";
+import {objectValuesToArr, oneOnRestOff, oneActiveRestNon, displayAll, removeClassForAll} from "./myModules.js";
 
 //
 // 1. CONST
 //------------
 
-// -> (BIG & SMALL) NAV 
+// 1.1 Big Nav
 
-const  // big  | <li>
+const  // <li>
     navBigExt = document.getElementById("nav-big-ext"),
     navBigTreat = document.getElementById("nav-big-treat"),
     navBigStyle = document.getElementById("nav-big-style"),
     navBigAll = Array.from(navBigStyle.parentElement.children)
 
-const // small | <ul>
+// 1.2 Small Nav
+
+const // <ul>
     navSmallTreat = document.getElementById("nav-small-treat"),
     navSmallExt = document.getElementById("nav-small-ext"),
     navSmallStyle = document.getElementById("nav-small-style"),
     navSmallAll = Array.from(navSmallStyle.parentElement.children)
 
-const // small | <li>
+const // <li>
     spinnerSt = document.getElementById("spinner-style"),  
     navSmallExtAll = Array.from(document.querySelectorAll(".ext-all")),
     navSmallTreatAll = Array.from(document.querySelectorAll(".tr-all")),
-    summAllArray = navSmallExtAll.concat(navSmallTreatAll, navBigStyle)
+    navSmallLiAll = navSmallExtAll.concat(navSmallTreatAll),
+    sum4SideNavEL = Array.from(navSmallExtAll.concat(navSmallTreatAll, navBigStyle))
 
-const // small, arrow buttons (<678px)
+const // arrow buttons (<678px)
     navSmallButtonLeft = document.getElementById("of-nv-sm-arr--left"),
     navSmallButtonRight = document.getElementById("of-nv-sm-arr--right"),
-    // navSmallButtAll = Array.from(document.getElementsByClassName("offer-nav-small__arrows")),
+    navSmallButtons = Array.from(document.getElementsByClassName("offer-nav-small__arrows")),
     navSmallMain = document.getElementById("of-nv-sm-main");
 
+// --> main containers for content
 
-// -> MAIN : ELEMENTS 
-
-const // INTRO
+const // Intros
     introMain = document.getElementById("om-intro"), 
     introExt = document.getElementById("ext-intro"),
     introTreat = document.getElementById("treat-intro"),
     introStyle = document.getElementById("style-intro"),
     navIntros = Array.from(document.getElementsByClassName("omb__head"))
 
-const // MAIN SECTIONS
+const // Main Sections
     mainInfoExt = document.getElementById("ext-info"),
     mainPhotoExt = document.getElementById("ext-photo"),
     mainInfoTr = document.getElementById("treat-info"),
     mainPhotoTr = document.getElementById("treat-photo"),
     mainInfoSt = document.getElementById("style-info"),    
     mainPhotoSt = document.getElementById("style-photo"),
-    mainAll = [].concat(mainInfoExt, mainPhotoExt, mainInfoTr, mainPhotoTr, mainInfoSt, mainPhotoSt)
-
-const // HEADERS
-    headMainExtAll = document.querySelectorAll(".head-sm--ext"),
-    headMainTreatAll = document.querySelectorAll(".head-sm--treat"),
+    mainAll = [].concat(mainInfoExt, mainPhotoExt, mainInfoTr, mainPhotoTr, mainInfoSt, mainPhotoSt),
+    photoBodyExtALL = Array.from(mainPhotoExt.children),
+    photoBodyTrALL = Array.from(mainPhotoTr.children)
+    
+const // Main Section Headers
+    headMainExtAll = Array.from(document.querySelectorAll(".head-sm--ext")), 
+    headMainTreatAll = Array.from(document.querySelectorAll(".head-sm--treat")),
     headMainAll = [].concat(Array.from(headMainExtAll), Array.from(headMainTreatAll))
 
-const // FILL FIELDS CONTAINERS
+const // Main Sections fill fields
     fillFieldsContExt = document.getElementById("js-fill-extension"),
     fillFieldsContTreat = document.getElementById("js-fill-treatment"),
     fillFieldsContAll = Array.from(document.getElementsByClassName("js-fill")),
-    fillFieldsExt = document.getElementsByClassName("fill-fields"),
-    fillFieldsTr = document.getElementsByClassName("fill-fields--tr")
+    fillFieldsExt = Array.from(document.getElementsByClassName("fill-fields")),
+    fillFieldsTr = Array.from(document.getElementsByClassName("fill-fields--tr"))
 
-const // PHOTO body
-    photoBodyExtALL = document.getElementsByClassName("ext-photo"),
-    photoBodyTrALL = document.getElementsByClassName("tr-photo");
-
-// -> MAIN: DATA 
+// -> content
 
 // fill fields (extensions)
 const fillDataExt = [
@@ -156,51 +160,46 @@ const arrayBotox = objectValuesToArr(fillDataTreat[0])
 const arrayKreatyna = objectValuesToArr(fillDataTreat[1])
 
 
-// -> SIDE NAV |
+// 1.3 Side Nav
 
-const // nav container 
+const 
     sideNav = document.getElementById("side-nav"),
     snInfo = document.getElementById("sn-info"),
     snPhoto = document.getElementById("sn-img"),
-    snALL = Array.from(document.getElementsByClassName("sn-all")),
-    snALLCollection = document.getElementsByClassName("sn-all") // del
+    snALL = Array.from(document.getElementsByClassName("sn-all"))
+
 
 // 2. EL
 //-------------
 
+// 2.1 Big Nav
 navBigAll.map(el => el.addEventListener("click", handleBigNav))
+
+// 2.2 Small Nav
 navSmallExtAll.map(el => el.addEventListener("click", showContentExt))
 navSmallTreatAll.map(el => el.addEventListener("click", showContentTreat))
 navSmallButtonLeft.addEventListener("click", scrollContentLeft)
 navSmallButtonRight.addEventListener("click", scrollContentRight)
 window.addEventListener("resize", navSmallArrowsDisplay)
 
-// side nav
+// 3.3 Side Nav
 if (sideNav) {
     snInfo.addEventListener("click", showContentSideNav)
     snPhoto.addEventListener("click", showContentSideNav)
 }
 
 
-
 // 3. FUNCTIONS 
 //---------------
 
 
-// -> FOR EL FUNCTIONS |
+// 3.1 Big Nav
 
 function resetForBigNav () {
     const resetBigNavAll = [].concat(introMain, mainAll, headMainAll, sideNav)
-    const removeActiveNavSmall = navSmallExtAll.concat(navSmallTreatAll)
-    resetBigNavAll.map(el => el.style.display="none")
-    removeActiveNavSmall.map(el => el.classList.remove("ns-active"))
+    displayAll(resetBigNavAll, "none")
+    removeClassForAll(navSmallLiAll, "ns-active")
     spinnerSt.style.display = "block"
-}
-
-function resetSideNav() {
-    const clActive = "side-nav--active"
-    oneActiveRestNon(snALL, snInfo.id, clActive)
-    sideNav.style.display = "block"
 }
 
 function setNaviAndIntro (navBigID, navSmallID, introID) {
@@ -210,6 +209,47 @@ function setNaviAndIntro (navBigID, navSmallID, introID) {
     oneActiveRestNon(navBigAll, navBigID, bigNavActive)
     oneOnRestOff(navSmallAll, navSmallID, smallNavAvtive)
     oneOnRestOff(navIntros, introID, introActive)
+}
+
+function handleBigNav (e) {
+
+    resetForBigNav()
+    let tgt = e.target;
+
+    if (tgt === navBigExt){
+        setNaviAndIntro(navBigExt.id, navSmallExt.id, introExt.id)
+        if (window.innerWidth < 678) {
+            displayAll(navSmallButtons, "block")
+        }   
+
+    } else if (tgt === navBigTreat) {
+        setNaviAndIntro(navBigTreat.id, navSmallTreat.id, introTreat.id)
+        displayAll(navSmallButtons, "none")
+
+    } else if (e.target.id === "nav-big-style") {
+        setNaviAndIntro(navBigStyle.id, navSmallStyle.id, introStyle.id)
+        displayAll(navSmallButtons, "none")
+        setTimeout(() => { 
+            oneActiveRestNon(snALL, snInfo.id, "side-nav--active")
+            mainInfoSt.style.display = "block"
+            sideNav.style.display = "block"
+            introStyle.style.display = "none"
+            spinnerSt.style.display = "none"
+        }, 1000);
+    }
+}
+
+
+// 3.2 Small Nav
+
+function fillFillFields (fieldContainer, obj){ 
+    fieldContainer.map((field, index) => field.innerHTML = obj[index+1])
+}
+
+function resetSideNav() {
+    const clActive = "side-nav--active"
+    oneActiveRestNon(snALL, snInfo.id, clActive)
+    sideNav.style.display = "block"
 }
 
 function setNavAndFillFields (
@@ -227,200 +267,103 @@ function setNavAndFillFields (
     oneOnRestOff(fillFieldsContAll, fillFieldID, dispActive)
 }
 
-
-// --> takes array of all nav tabs,  adds active class to choosen tab, and innactive to rest
-function activeTabs (all, tgt, cl) {
-    for (let i=0; i<all.length; i++) {
-        if (tgt.id === all[i].id) {
-            all[i].classList.add(cl)
-        } else {
-            all[i].classList.remove(cl)
-        }
-    }
-}
-
-// --> takes collection of all content, toglles visibility when clicking on nav tab
-function bodyToggle(cl, all) {
-    for (let i=0; i<all.length; i++) {
-        if (all[i].id === cl) {
-            all[i].style.display = "flex"
-        } else {
-            all[i].style.display = "none"
-        }
-    }
-}    
-
-// --> fill the fields in "info holder" (beneath carousel comnponent), when clicking on "small nav" tabs. 
-function fillFields(arrElements, arrTxt) {
-    for (let i=0; i<arrElements.length; i++){
-        arrElements[i].innerHTML = arrTxt[i+1]
-    }
-}
-
-
-// -> EL FUNCTIONS |
-
-
-// A) BIG NAV
-function handleBigNav (e) {
-
-    resetForBigNav()
-    let tgt = e.target;
-
-    if (tgt === navBigExt){
-        setNaviAndIntro(navBigExt.id, navSmallExt.id, introExt.id)
-        if (window.innerWidth < 678) {
-            navSmallButtonLeft.style.display = "block"
-            navSmallButtonRight.style.display = "block"
-        }   
-
-    } else if (tgt === navBigTreat) {
-        setNaviAndIntro(navBigTreat.id, navSmallTreat.id, introTreat.id)
-        navSmallButtonLeft.style.display = "none"
-        navSmallButtonRight.style.display = "none"
-
-    } else if (e.target.id === "nav-big-style") {
-        setNaviAndIntro(navBigStyle.id, navSmallStyle.id, introStyle.id)
-        navSmallButtonLeft.style.display = "none"
-        navSmallButtonRight.style.display = "none"
-
-        setTimeout(() => { 
-            snPhoto.classList.remove("side-nav--active");
-            snInfo.classList.add("side-nav--active");
-            introStyle.style.display = "none"
-            mainInfoSt.style.display = "block"
-            spinnerSt.style.display = "none"
-            sideNav.style.display = "block"
-        }, 1000);
-    }
-}
-
-// B) SMALL NAV : "EXTENSION"
 function showContentExt (e) {
 
     const tgt = e.target;
+    const dispActive = "flex";
 
     setNavAndFillFields(introExt, navSmallExtAll, tgt.id, mainInfoExt.id, fillFieldsContExt.id)
 
     switch(tgt.id) {
 
         case "ext-fusion":
-
-
-            fillFields(fillFieldsExt, arrayFusionBonds)
-            bodyToggle("ext-b-fusion", headMainExtAll)
-            bodyToggle("ext-photo-fusion", photoBodyExtALL)
+            oneOnRestOff(headMainExtAll, "ext-b-fusion", dispActive)
+            fillFillFields(fillFieldsExt, arrayFusionBonds)
+            oneOnRestOff(photoBodyExtALL, "ext-photo-fusion", dispActive)
             break;
 
         case "ext-micro":
-            fillFields(fillFieldsExt, arrayMicroRings)
-            bodyToggle("ext-b-micro", headMainExtAll)
-            bodyToggle("ext-photo-micro", photoBodyExtALL)
+            oneOnRestOff(headMainExtAll, "ext-b-micro", dispActive)
+            fillFillFields(fillFieldsExt, arrayMicroRings)
+            oneOnRestOff(photoBodyExtALL, "ext-photo-micro", dispActive)
             break;
 
         case "ext-shrinks":
-            fillFields(fillFieldsExt, arrayEasyShrinks)
-            bodyToggle("ext-b-shrinks", headMainExtAll)
-            bodyToggle("ext-photo-easy", photoBodyExtALL)            
+            oneOnRestOff(headMainExtAll, "ext-b-shrinks", dispActive)
+            fillFillFields(fillFieldsExt, arrayEasyShrinks)
+            oneOnRestOff(photoBodyExtALL, "ext-photo-easy", dispActive)           
             break;
 
         case "ext-tape":
-            fillFields(fillFieldsExt, arrayTapeOn)
-            bodyToggle("ext-b-tape", headMainExtAll)
-            bodyToggle("ext-photo-tape", photoBodyExtALL)
+            oneOnRestOff(headMainExtAll, "ext-b-tape", dispActive)
+            fillFillFields(fillFieldsExt, arrayTapeOn)
+            oneOnRestOff(photoBodyExtALL, "ext-photo-tape", dispActive)
             break;
             
         case "ext-comb":
-            fillFields(fillFieldsExt, arrayCombline)
-            bodyToggle("ext-b-comb", headMainExtAll)
-            bodyToggle("ext-photo-comb", photoBodyExtALL)
+            oneOnRestOff(headMainExtAll, "ext-b-comb", dispActive)
+            fillFillFields(fillFieldsExt, arrayCombline)
+            oneOnRestOff(photoBodyExtALL, "ext-photo-comb", dispActive)
             break;
     }
 }
 
-// C) SMALL NAV :  "TREATMENT"
 function showContentTreat(e) {
 
     const tgt = e.target;
+    const dispActive = "flex";
 
     setNavAndFillFields(introTreat, navSmallTreatAll, tgt.id, mainInfoTr.id, fillFieldsContTreat.id)
 
     switch(tgt.id) {
 
         case "tr-botox":
-            fillFields(fillFieldsTr,arrayBotox)
-            bodyToggle("tr-b-botox", headMainTreatAll)
-            bodyToggle("tr-photo-botox", photoBodyTrALL)
-
+            oneOnRestOff(headMainTreatAll, "tr-b-botox", dispActive)
+            fillFillFields(fillFieldsTr,arrayBotox)
+            oneOnRestOff(photoBodyTrALL, "tr-photo-botox", dispActive)
             break;
 
         case "tr-kreatyna":
-            fillFields(fillFieldsTr, arrayKreatyna)
-            bodyToggle("tr-b-kreatyna", headMainTreatAll)
-            bodyToggle("tr-photo-kreatyna", photoBodyTrALL)
-
+            oneOnRestOff(headMainTreatAll, "tr-b-kreatyna", dispActive)
+            fillFillFields(fillFieldsTr, arrayKreatyna)
+            oneOnRestOff(photoBodyTrALL, "tr-photo-kreatyna", dispActive)
             break;
     }    
 }
 
-// D) SIDE NAV 
+
+// 3.3 Side Nav
+
 function showContentSideNav (e) {
 
-    function activeBodyAbstract (tab) {
-        
-        let offTr; 
-        let offExt; 
-        let offSt;
-        let onTr;
-        let onExt; 
-        let onSt;
+    const flex = "flex"
+    const block = "block"
+    let activeSmallNav = sum4SideNavEL.filter( li => li.classList.contains("ns-active"))
 
-        // info icon
-        if (e.target === snInfo) {
-            offTr = mainPhotoTr;
-            offExt = mainPhotoExt;
-            offSt = mainPhotoSt;
-            onTr = mainInfoTr;
-            onExt = mainInfoExt;
-            onSt = mainInfoSt;
+    oneActiveRestNon(snALL, e.target.id, "side-nav--active")
 
-        // img icon
-        } else if (e.target === snPhoto) {
-            offTr = mainInfoTr;
-            offExt = mainInfoExt;
-            offSt = mainInfoSt;
-            onTr = mainPhotoTr;
-            onExt = mainPhotoExt;
-            onSt = mainPhotoSt;
-        }
+    switch (activeSmallNav[0].parentElement.id) {
 
-        offExt.style.display = "none"
-        offTr.style.display = "none"
-        offSt.style.display = "none"
-        activeTabs(snALLCollection, e.target,"side-nav--active")
+        case "nav-small-ext" :
+            e.target === snInfo 
+                ? oneOnRestOff(mainAll, mainInfoExt.id, block) 
+                : oneOnRestOff(mainAll, mainPhotoExt.id, flex)
+            break;
 
-        if (tab.id === "tr-botox" || tab.id === "tr-kreatyna") {
-            onTr.style.display = "block"
-        } else if (tab.id !== "tr-botox" && tab.id !== "tr-kreatyna" && tab.id !==navBigStyle.id) {
-            onExt.style.display = "block"
-        } else if (tab.id === navBigStyle.id) {
-            onSt.style.display = "block"
-        }
+        case "nav-small-treat" :
+            e.target === snInfo 
+                ? oneOnRestOff(mainAll, mainInfoTr.id, block) 
+                : oneOnRestOff(mainAll, mainPhotoTr.id, flex)
+            break;
+
+        default:
+            e.target === snInfo 
+                ? oneOnRestOff(mainAll, mainInfoSt.id, block) 
+                : oneOnRestOff(mainAll, mainPhotoSt.id, flex)
+            break;
     }
-
-    // "extensions" and "treatment"
-    function mapActiveElement (arr, activeClass, fun) {
-        arr.map(el => {
-            if (el.classList.contains(activeClass)) {
-                fun(el) 
-            } 
-        })
-    }
-
-    mapActiveElement(summAllArray, "ns-active", activeBodyAbstract)
 }
 
-// E) SMALL NAV : SCROLL
 function scrollContentLeft (){
     navSmallMain.scrollLeft += -100
 }
@@ -429,13 +372,8 @@ function scrollContentRight (){
     navSmallMain.scrollLeft += 100
 }
 
-// F) SMALL NAV : "ARROWS DISPLAY" CONTROL 
 function navSmallArrowsDisplay() {
-    if (window.innerWidth < 678 && navBigExt.classList.contains("ns-active")) {
-        navSmallButtonLeft.style.display = "block"
-        navSmallButtonRight.style.display = "block"
-    } else {
-        navSmallButtonLeft.style.display = "none"
-        navSmallButtonRight.style.display = "none"
-    }
+    window.innerWidth < 678 && navBigExt.classList.contains("ns-active")
+        ? displayAll(navSmallButtons, "block")
+        : displayAll(navSmallButtons, "none")
 }

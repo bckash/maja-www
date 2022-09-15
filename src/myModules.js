@@ -9,6 +9,14 @@ Concerns: JS files
 
 // ARRAYS
 
+export function displayAll(arr, disp){
+    arr.map(el => el.style.display = disp)
+}
+
+export function removeClassForAll(arr, cl){
+    arr.map(el => el.classList.remove(cl))
+}
+
 export function oneOnRestOff(arr, ID, display){
     arr.map( item => {
         item.id === ID 
