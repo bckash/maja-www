@@ -3,7 +3,7 @@
 
 NewLife4Hair.com 
 JS [2/3]
-Concerns: "Offer" Article
+Concerns: "Offer"
 
 LIST OF CONTENT:
 _________________________
@@ -13,24 +13,24 @@ _________________________
 2. EVENT LISTENERS
 3. FUNCTIONS
 
-_.1 : Big Nav
-_.2 : Small Nav
-_.3 : Side Nav
+_.1 : Nav Big
+_.2 : Nav Small
+_.3 : Nav Side
 __________________________
+*/
 
- */
 
 //
 // 0. IMPORT
 //------------
 
-import {objectValuesToArr, oneOnRestOff, oneActiveRestNon, displayAll, removeClassForAll} from "./myModules.js";
+import {objectValuesToArr, oneOnRestOff, oneActiveRestNon, displayAll, removeClassForAll, addEventListenerToAll} from "./myModules.js";
 
 //
 // 1. CONST
 //------------
 
-// 1.1 Big Nav
+// 1.1 Nav Big
 
 const  // <li>
     navBigExt = document.getElementById("nav-big-ext"),
@@ -38,7 +38,7 @@ const  // <li>
     navBigStyle = document.getElementById("nav-big-style"),
     navBigAll = Array.from(navBigStyle.parentElement.children)
 
-// 1.2 Small Nav
+// 1.2 Nav Small
 
 const // <ul>
     navSmallTreat = document.getElementById("nav-small-treat"),
@@ -160,7 +160,7 @@ const arrayBotox = objectValuesToArr(fillDataTreat[0])
 const arrayKreatyna = objectValuesToArr(fillDataTreat[1])
 
 
-// 1.3 Side Nav
+// 1.3 Nav Side
 
 const 
     sideNav = document.getElementById("side-nav"),
@@ -172,19 +172,19 @@ const
 // 2. EL
 //-------------
 
-// 2.1 Big Nav
+// 2.1 Nav Big
 
-navBigAll.map(el => el.addEventListener("click", handleBigNav))
+addEventListenerToAll(navBigAll, "click", handleBigNav)
 
-// 2.2 Small Nav
+// 2.2 Nav Small
 
-navSmallExtAll.map(el => el.addEventListener("click", showContentExt))
-navSmallTreatAll.map(el => el.addEventListener("click", showContentTreat))
+addEventListenerToAll(navSmallExtAll, "click", showContentExt)
+addEventListenerToAll(navSmallTreatAll, "click", showContentTreat)
 navSmallButtonLeft.addEventListener("click", scrollContentLeft)
 navSmallButtonRight.addEventListener("click", scrollContentRight)
 window.addEventListener("resize", navSmallArrowsDisplay)
 
-// 3.3 Side Nav
+// 3.3 Nav Side
 
 if (sideNav) {
     snInfo.addEventListener("click", showContentSideNav)
@@ -196,7 +196,7 @@ if (sideNav) {
 //---------------
 
 
-// 3.1 Big Nav
+// 3.1 Nav Big
 
 function resetForBigNav () {
     const resetBigNavAll = [].concat(introMain, mainAll, headMainAll, sideNav)
@@ -243,7 +243,7 @@ function handleBigNav (e) {
 }
 
 
-// 3.2 Small Nav
+// 3.2 Nav Small
 
 function fillFillFields (fieldContainer, obj){ 
     fieldContainer.map((field, index) => field.innerHTML = obj[index+1])
@@ -340,13 +340,13 @@ function showContentTreat(e) {
             break;
 
         case "tr-kreatyna":
-            handleMainFields(offer, "tr-b-kreatyna", arrayBotox, "tr-photo-kreatyna")
+            handleMainFields(offer, "tr-b-kreatyna", arrayKreatyna, "tr-photo-kreatyna")
             break;
     }    
 }
 
 
-// 3.3 Side Nav
+// 3.3 Nav Side
 
 function showContentSideNav (e) {
 

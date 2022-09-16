@@ -1,37 +1,59 @@
 
+/* 
+
+NewLife4Hair.com 
+JS [3/3]
+Concerns: "Prices" 
+
+LIST OF CONTENT:
+_________________________
+
+0. IMPORT
+1. CONST
+2. EVENT LISTENERS
+3. FUNCTIONS
+
+_.1 : Nav Big
+_.2 : Nav Small
+__________________________
+*/
+
+
+//
+// 0. IMPORT
+//------------
+
+import {addEventListenerToAll, displayAll, oneActiveRestNon, oneOnRestOff, removeClassForAll} from "./myModules.js";
+
+
+//
 // 1. CONST
 //------------
 
-// big nav
-const pricesNavExt = document.getElementById("p-nav-bg-ext")
-const pricesNavTreat = document.getElementById("p-nav-bg-treat")
-const pricesNavStyle = document.getElementById("p-nav-bg-style")
+// -> main content containers
 
-// small nav
-const priceNavSm = document.getElementById("p-nav-sm")
-const priceNavSmBotox = document.getElementById("p-nav-sm--botox")
-const priceNavSmKreatyna = document.getElementById("p-nav-sm--kreatyna")
-const priceNavSmALL = document.getElementsByClassName("p-nav-sm--all")
-
-
-// main
-const pricesBodyIntro = document.getElementById("p-m-intro")
 const pricesBodyExt = document.getElementById("p-m-b--ext")
 const pricesBodyTreat = document.getElementById("p-m-b--treat")
 const pricesBodyStyle = document.getElementById("p-m-b--style")
+const pricesBodyAll = Array.from(pricesBodyStyle.parentElement.children)
 
-// price line
-const priceLine = document.getElementsByClassName("price-line")
+// 1.1 Nav Big
 
-// price holder 
-const priceHolder1 = document.getElementById("ph-1")
-const priceHolder2 = document.getElementById("ph-2")
-const priceHolder3 = document.getElementById("ph-3")
-const priceHolderALL = document.getElementsByClassName("price-holder")
-const priceHolderALLArray = Array.from(priceHolderALL)
-let x;
+const pricesNavExt = document.getElementById("p-nav-bg-ext")
+const pricesNavTreat = document.getElementById("p-nav-bg-treat")
+const pricesNavStyle = document.getElementById("p-nav-bg-style")
+const pricesNavAll = Array.from(pricesNavStyle.parentElement.children)
 
-// prices treatment 
+// 1.2 Nav Small
+
+const priceNavSm = document.getElementById("p-nav-sm")
+const priceNavSmBotox = document.getElementById("p-nav-sm--botox")
+const priceNavSmallArray = Array.from(document.getElementsByClassName("p-nav-sm--all"))
+
+// -> treatment | animation
+
+const priceHolderALLArray = Array.from(document.getElementsByClassName("price-holder"))
+const priceLineAll = Array.from(document.getElementsByClassName("price-line"))
 const pricesTreatment = [
     {
         id: "botox",
@@ -47,110 +69,80 @@ const pricesTreatment = [
 // 2. EL
 //-------------
 
-pricesNavExt.addEventListener("click", pricesBigNav)
-pricesNavTreat.addEventListener("click", pricesBigNav)
-pricesNavStyle.addEventListener("click", pricesBigNav)
+// 2.1 Nav Big
 
-priceNavSmBotox.addEventListener("click", pricesSmallNav)
-priceNavSmKreatyna.addEventListener("click", pricesSmallNav)
+addEventListenerToAll(pricesNavAll, "click", handleBigNav)
+
+// 2.2 Nav Small
+
+addEventListenerToAll(priceNavSmallArray, "click", handleSmallNav)
+
+
 
 // 3. FUNCTIONS ->
 //---------------
 
-// big nav
-function pricesBigNav (e) {
+// 3.1 Nav Big
 
-    pricesBodyIntro.style.display = "none";
-    priceNavSmBotox.classList.remove("ns-active")
-    priceNavSmKreatyna.classList.remove("ns-active")
+function handleContentContainers (tgt){
 
-    for (item of priceLine) {
-        item.style.display = "none"
+    let priceBodyID;
+    let navSmDisp;
+
+    switch (tgt.id) {
+        case pricesNavExt.id :
+            priceBodyID = pricesBodyExt.id;
+            navSmDisp = "none"        
+            break;
+        case pricesNavTreat.id:
+            priceBodyID = pricesBodyTreat.id
+            navSmDisp = "flex"  
+            break;
+        case pricesNavStyle.id:
+            priceBodyID = pricesBodyStyle.id
+            navSmDisp = "none"           
+            break;
     }
 
-    // set "active" and "non-active" tabs, show "body".
-    function setNav (activBG, activIntro, nonAct1BG, nonAct1Intro, nonAct2BG, nonAct2Intro) {
-        activBG.classList.add("ns-active");
-        activIntro.style.display = "block"
-        nonAct1BG.classList.remove("ns-active");
-        nonAct1Intro.style.display = "none"
-        nonAct2BG.classList.remove("ns-active");
-        nonAct2Intro.style.display = "none";
-    }
-
-
-// "extension" clicked
-if (e.target.id === pricesNavExt.id) {
-
-    priceNavSm.style.display = "none";
-
-    priceHolder1.style.display = "none";
-    priceHolder2.style.display = "none";
-    priceHolder3.style.display = "none";
-
-    setNav(pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle);
-
-// "treatment clicked"
-} else if (e.target.id === pricesNavTreat.id) {
-
-    setNav(pricesNavTreat, pricesBodyTreat, pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt);
-
-    priceNavSm.style.display = "flex";
-
-// "style" clicked
-} else if (e.target.id === pricesNavStyle.id) {
-
-    priceNavSm.style.display = "none";
-
-    priceHolder1.style.display = "none";
-    priceHolder2.style.display = "none";
-    priceHolder3.style.display = "none";
-
-    setNav(pricesNavStyle, pricesBodyStyle, pricesNavExt, pricesBodyExt, pricesNavTreat, pricesBodyTreat);
-
-}
+    oneOnRestOff(pricesBodyAll, priceBodyID, "block")
+    priceNavSm.style.display = navSmDisp
+    displayAll(priceHolderALLArray, "none")
 }
 
-// small nav
-function pricesSmallNav (e) {
+function handleBigNav (e) {
+
+    const activeCl = "ns-active";
+
+    // reset 
+    removeClassForAll(priceNavSmallArray, activeCl) 
+    displayAll(priceLineAll, "none")
+
+    // set nav active class
+    oneActiveRestNon(pricesNavAll, e.target.id, activeCl)
+
+    // handle main content containers toggle
+    handleContentContainers(e.target)
+}
+
+// 3.2 Nav Small
+
+function handleSmallNav (e) {
     
-    // show price holders in different time, for animation effect
-    function showSpanAbstract(collection, time, x) {
+    // set nav active class
+    oneActiveRestNon(priceNavSmallArray, e.target.id, "ns-active")
+    // set price lines
+    displayAll(priceLineAll, "flex")
 
-        const data = pricesTreatment[x].price
+    let obj;
+    // handle main content containers
+    e.target === priceNavSmBotox 
+        ? obj = 0 
+        : obj = 1
 
-        for(let i=0; i<collection.length; i++) {
-            setTimeout(()=> {
-                collection[i].style.display = "flex";
-                collection[i].firstElementChild.textContent = "£ "+data[i];
-            }, time+i*100)
-        }
-    }
-
-    switch(e.target.id) {
-        case "p-nav-sm--botox":
-            activeTabs(priceNavSmALL, e.target, "ns-active");
-            
-            for (item of priceLine) {
-                item.style.display = "flex"
-            }
-
-            x = 0;
-            showSpanAbstract(priceHolderALL,200, x)
-
-            break;
-        
-        case "p-nav-sm--kreatyna":
-            activeTabs(priceNavSmALL, e.target, "ns-active");
-
-            for (item of priceLine) {
-                item.style.display = "flex"
-            }
-
-            x = 1;
-            showSpanAbstract(priceHolderALL,200, x)
-            break;
-    }
-
-
+    priceHolderALLArray.map((el,index) => {
+        setTimeout( () => {
+            el.style.display = "flex"
+            el.firstElementChild.textContent = "£ " + pricesTreatment[obj].price[index]
+        }, 200 + 100*index)
+    })
 }

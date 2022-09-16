@@ -19,8 +19,8 @@ _.3 : Paralax Resize (Paralax)
 _.4 : Customer Opinion Slideshow (Customer Opinion)
 _.5 : Pull Back Navi (Pull back)
 ________________________________
+*/
 
- */
 
 //
 // 0. IMPORT

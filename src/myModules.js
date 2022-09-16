@@ -9,6 +9,10 @@ Concerns: JS files
 
 // ARRAYS
 
+export function addEventListenerToAll(arr, event, f){
+    arr.map(el => el.addEventListener(event, f))
+}
+
 export function displayAll(arr, disp){
     arr.map(el => el.style.display = disp)
 }
