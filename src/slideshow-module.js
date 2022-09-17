@@ -99,35 +99,40 @@ export function slideshow43(obj){
 
         setTimeout(() => {
             a1.classList.add(animationOUT)
-            a2.classList.add(animationIN)
             a3.classList.remove(animationIN)
         }, 0);
         
-        // setTimeout(() => () => {}, space);
+        setTimeout(() => {
+            a2.classList.add(animationIN)           
+        }, 0 + space);
 
         setTimeout(() => {
             a1.classList.remove(animationIN)
-            a3.classList.remove(animationOUT)
             a2.classList.add(animationOUT)
-            a3.classList.add(animationIN)
-        
+            
             if (a1.classList.contains(active)) {
                 a1.classList.remove(active)
                 a1.classList.add(nonActive)
             }
-        }, slideTime);
+        }, slideTime + space);
 
-        // setTimeout(() => () => {}, space);
+        setTimeout(() => {          
+            a3.classList.add(animationIN)
+            a3.classList.remove(animationOUT)
+        }, slideTime + 2*space);
     
         setTimeout(() => {
-            a1.classList.add(animationIN)
             a3.classList.add(animationOUT)
-            a1.classList.remove(animationOUT)
             a2.classList.remove(animationIN)
             a2.classList.remove(animationOUT)
-        }, 2*slideTime);
+        }, 2*slideTime + 2*space);
+        
+        setTimeout(() => {
+            a1.classList.add(animationIN)
+            a1.classList.remove(animationOUT)            
+        }, 2*slideTime + 3*space);
     }
 
     setTimeout (() => runSlideshow(timeSlide), 0);
-    setInterval(() => runSlideshow(timeSlide), timeInterval);
+    setInterval(() => runSlideshow(timeSlide), timeInterval + 3*space);
 }

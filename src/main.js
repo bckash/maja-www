@@ -34,6 +34,7 @@ import {slideshow43} from "./slideshow-module.js";
 //------------
 
 // 1.1 VSA
+
 const aboutTriangle = document.getElementById("outline-triangle")
 const aboutTriangle2 = document.getElementById("outline-triangle--2")
 const spanDown = document.getElementById("io-offer-dn")
@@ -42,26 +43,26 @@ const pmPleaseChoose = document.getElementById("pm-please-choose")
 const logoNLSmall = document.getElementById("logo-nl4h-sm")
 
 // 1.2 Modal
+
 const carsuouselDescrALL = Array.from(document.getElementsByClassName("modal-footer__description"))
 const modalTriggerButton = document.getElementById("modal-trigger-button")
 const mutationTagetNode = document.getElementById("mutationTN")
 
 // 1.3 Paralax
+
 const param1 = 1/2
 const param2 = 20
 const paralax = document.getElementById("paralax-content")
 
 // 1.4 COS
-const custOpinion1 = document.getElementById("opinion-1")
-const custOpinion2 = document.getElementById("opinion-2")
-const custOpinion3 = document.getElementById("opinion-3")
+
 const custOpinionAll = Array.from(document.getElementsByClassName("opinions"))
 
 const slideShowObject = {
     arr3: custOpinionAll,
-    time: 22000,
+    time: 12900,
     animDuration: 200,
-    space: 500,
+    space: 300,
     animationIN: "animation__slideIN",
     animationOUT: "animation__slideOUT",
     active: "slide-active",
@@ -69,6 +70,7 @@ const slideShowObject = {
 }
 
 // 1.5 PBN
+
 const pullBack = document.getElementById("pull-back-container");
 const arrUpLink = document.getElementById("pull-back__arrow-link");
 const animatedBorder = document.getElementById("pull-back__animation-border")
@@ -98,6 +100,7 @@ arrUpLink.addEventListener("click", (()=>{
 
 
 // 3.1 VSA
+
 function scrollAnimation(){
     let scrollPosition = window.scrollY;
     // About Me
@@ -159,6 +162,7 @@ function showCarouselDescriptionInModalFooter () {
 }
 
 // 3.3 Paralax
+
 function responsiveHeight(){
     if (window.innerWidth < 780) {
         changeHeightWithWidth(paralax,param1,param2)
@@ -167,165 +171,10 @@ function responsiveHeight(){
 
 // 3.4 POS
 
-// SLIDESHOW 
-
-// el1,2,3 - "element" to apply animation
-// animIN  - "animation class name" for element to enter
-// animOUT - "animation class name" for element to exit
-// time    - "time in [ms]" between enter and exit
-// space   - "time in [ms]" between present and next animations (between out & in)
-
-// function slideShow (el1, el2, el3, animIN, animOut, time, space) {
-    
-//     // iteration 0
-//     setTimeout(() => {
-
-//         // A
-
-//         setTimeout(()=> {
-//             // console.log("A1 - in")
-//             el1.classList.add(animIN)
-//         }, 0)
-
-//         setTimeout(()=> {
-//             // console.log("A2 - in")
-//             el3.classList.remove(animOut)
-//         }, space)
-
-//         setTimeout(()=> {
-//             // console.log("A1 - out")
-//             el1.classList.add(animOut)
-//         }, time)
-
-//         setTimeout(()=> {
-//             // console.log("A2 - out")
-//             el1.classList.remove(animIN)
-//         }, time+space)
-
-//         // segment B
-
-//         setTimeout(()=> {
-//             // console.log("B1 - in")
-//             el2.classList.add(animIN)
-//         }, time+(space*2))
-
-//         setTimeout(()=> {
-//             // console.log("B2 - in")
-//             el1.classList.remove(animOut)
-//         }, time+(space*3))
-
-//         setTimeout(()=> {
-//             // console.log("B1 - out")
-//             el2.classList.add(animOut)
-//         }, (time*2)+(space*2))
-
-//         setTimeout(()=> {
-//             // console.log("B2 - out")
-//             el2.classList.remove(animIN)
-//         }, (time*2)+(space*3))
-
-//         // segment C
-
-//         setTimeout(()=> {
-//             // console.log("C1 - in")
-//             el3.classList.add(animIN)
-//         }, (time*2)+(space*4))
-
-//         setTimeout(()=> {
-//             // console.log("C2 - in")
-//             el2.classList.remove(animOut)
-//         }, (time*2)+(space*5))
-
-//         setTimeout(()=> {
-//             // console.log("C1 - out")
-//             el3.classList.add(animOut)
-//         }, (time*3)+(space*4))
-
-//         setTimeout(()=> {
-//             // console.log("C2 - out")
-//             el3.classList.remove(animIN)
-//         }, (time*3)+(space*5))
-
-//     }, 0)
-
-//     // iteration 1++
-//     setInterval(() => {
-
-//         // A
-
-//         setTimeout(()=> {
-//             // console.log("A1 - in")
-//             el1.classList.add(animIN)
-//         }, 0)
-
-//         setTimeout(()=> {
-//             // console.log("A2 - in")
-//             el3.classList.remove(animOut)
-//         }, space)
-
-//         setTimeout(()=> {
-//             // console.log("A1 - out")
-//             el1.classList.add(animOut)
-//         }, time)
-
-//         setTimeout(()=> {
-//             // console.log("A2 - out")
-//             el1.classList.remove(animIN)
-//         }, time+space)
-
-//         // B
-
-//         setTimeout(()=> {
-//             // console.log("B1 - in")
-//             el2.classList.add(animIN)
-//         }, time+(space*2))
-
-//         setTimeout(()=> {
-//             // console.log("B2 - in")
-//             el1.classList.remove(animOut)
-//         }, time+(space*3))
-
-//         setTimeout(()=> {
-//             // console.log("B1 - out")
-//             el2.classList.add(animOut)
-//         }, (time*2)+(space*2))
-
-//         setTimeout(()=> {
-//             // console.log("B2 - out")
-//             el2.classList.remove(animIN)
-//         }, (time*2)+(space*3))
-
-//         // C
-
-//         setTimeout(()=> {
-//             // console.log("C1 - in")
-//             el3.classList.add(animIN)
-//         }, (time*2)+(space*4))
-
-//         setTimeout(()=> {
-//             // console.log("C2 - in")
-//             el2.classList.remove(animOut)
-//         }, (time*2)+(space*5))
-
-//         setTimeout(()=> {
-//             // console.log("C1 - out")
-//             el3.classList.add(animOut)
-//         }, (time*3)+(space*4))
-
-//         setTimeout(()=> {
-//             // console.log("C2 - out")
-//             el3.classList.remove(animIN)
-//         }, (time*3)+(space*5))
-
-//     }, (time*3)+(space*5))
-// }
-
-// slideShow (custOpinion1, custOpinion2, custOpinion3, "animation__in-left-right", "animation__out-left-right", 6000, 300)
-
 slideshow43(slideShowObject)
 
-
 // 3.5 PBN
+
 function showNav(){ 
     let c0 = "opa-0"
     let c1 = "opa-1"
