@@ -12494,10 +12494,10 @@ nav ul li.ns-active:hover {
 .customer-opinion__main .opinions {
   position: absolute;
   top: 0;
-  opacity: 0;
   width: 640px;
   margin: auto;
   padding-bottom: 10rem;
+  z-index: 1000;
 }
 .customer-opinion__main .opinions__user {
   display: flex;
@@ -12542,6 +12542,12 @@ nav ul li.ns-active:hover {
 .customer-opinion__main .opinions__triangle {
   display: none;
 }
+.customer-opinion__main .slide-active {
+  opacity: 1;
+}
+.customer-opinion__main .slide-non-active {
+  opacity: 0;
+}
 
 .user__photo img {
   width: 150px;
@@ -12560,18 +12566,18 @@ nav ul li.ns-active:hover {
   font-size: 1.1rem;
 }
 
-.animation__out-left-right, .animation__in-left-right {
+.animation__slideIN, .animation__slideOUT {
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
-.animation__in-left-right {
-  animation-name: inLeftRight;
+.animation__slideIN {
+  animation-name: left-center;
 }
-.animation__out-left-right {
-  animation-name: outLeftRight;
+.animation__slideOUT {
+  animation-name: center-right;
 }
 
-@keyframes inLeftRight {
+@keyframes left-center {
   from {
     opacity: 0;
     transform: translateX(-15rem);
@@ -12581,7 +12587,7 @@ nav ul li.ns-active:hover {
     transform: translateX(0);
   }
 }
-@keyframes outLeftRight {
+@keyframes center-right {
   from {
     z-index: 10;
     opacity: 1;

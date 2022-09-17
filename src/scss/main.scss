@@ -6,6 +6,7 @@
 @use "./variables" as v;
 @use "./mixins" as m;
 
+
 // bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -1969,10 +1970,11 @@ nav ul li.ns-active:hover {
         .opinions {
             position: absolute;
             top: 0;
-            opacity: 0;
+            // opacity: 0;
             width: 640px;
             margin: auto;
             padding-bottom: 10rem;
+            z-index: 1000;
 
             &__user {
                 display: flex;
@@ -2030,6 +2032,10 @@ nav ul li.ns-active:hover {
                 display: none;
             }
         }
+
+        .slide-active {opacity:1}
+
+        .slide-non-active {opacity:0}
     }
 }
 
@@ -2060,22 +2066,22 @@ nav ul li.ns-active:hover {
 
 .animation {
 
-    &__out-left-right, &__in-left-right {
+    &__slideIN, &__slideOUT {
         animation-duration: .2s;
         animation-fill-mode: forwards;
     }
     
-    &__in-left-right {
-        animation-name: inLeftRight;
+    &__slideIN {
+        animation-name: left-center;
     }
     
-    &__out-left-right {
-        animation-name: outLeftRight;
+    &__slideOUT {
+        animation-name: center-right;
     }
 
 }
 
-@keyframes inLeftRight {
+@keyframes left-center {
      from {
         opacity: 0;
         transform: translateX(-15rem);
@@ -2086,7 +2092,7 @@ nav ul li.ns-active:hover {
      } 
     }
 
-@keyframes outLeftRight {
+@keyframes center-right {
     from {
         z-index: 10;
         opacity: 1;

@@ -1,9 +1,20 @@
 
 
-// for best performance : [1] |--img-distance-X| && |--img-distance-X-minus| === --slideshow-max-width . also [2] "--animation-out-delay" should have the same value as "time" in "slideshowAbstract()" in .js
+/* 
 
+for best performance : 
+
+[1] 
+|--img-distance-X|       === --slideshow-max-width
+|--img-distance-X-minus| === --slideshow-max-width
+
+[2] 
+"--animation-out-delay" should have the same value as "time" in "slideshowAbstract()" in .js
+
+*/
 
 // VARIABLES
+
 :root {
     --slideshow-max-width: 80rem;
     --slideshow-height: 20rem;
@@ -13,8 +24,13 @@
     --pag-active: rgb(223, 223, 223);
     --pag-non-active: rgb(241, 241, 241);
 }
-
+//----------------------------------------------------
 // SLIDESHOW
+//-----------------------------------------------------
+
+
+// --> Main Part
+
 .ksh-slideshow {
     max-width: var(--slideshow-max-width);
     height: var(--slideshow-height);
@@ -48,7 +64,8 @@
     to {transform: translateX(0rem)}
 }
 
-// PAGINATION
+// --> Pagination
+
 .ksh-pagination {
     text-align: center;
 
