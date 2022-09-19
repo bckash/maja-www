@@ -12494,6 +12494,7 @@ nav ul li.ns-active:hover {
 .customer-opinion__main .opinions {
   position: absolute;
   top: 0;
+  opacity: 0;
   width: 640px;
   margin: auto;
   padding-bottom: 10rem;
@@ -12541,12 +12542,6 @@ nav ul li.ns-active:hover {
 }
 .customer-opinion__main .opinions__triangle {
   display: none;
-}
-.customer-opinion__main .slide-active {
-  opacity: 1;
-}
-.customer-opinion__main .slide-non-active {
-  opacity: 0;
 }
 
 .user__photo img {

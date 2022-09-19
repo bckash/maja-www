@@ -65,8 +65,6 @@ const slideShowObject = {
     space: 300,
     animationIN: "animation__slideIN",
     animationOUT: "animation__slideOUT",
-    active: "slide-active",
-    nonActive: "slide-non-active"
 }
 
 // 1.5 PBN
@@ -183,3 +181,4 @@ function showNav(){
         ? addRemoveClass(pullBack, c1, c0)
         : addRemoveClass(pullBack, c0, c1)
 } 
+

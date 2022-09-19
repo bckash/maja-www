@@ -1970,7 +1970,7 @@ nav ul li.ns-active:hover {
         .opinions {
             position: absolute;
             top: 0;
-            // opacity: 0;
+            opacity: 0;
             width: 640px;
             margin: auto;
             padding-bottom: 10rem;
@@ -2032,10 +2032,6 @@ nav ul li.ns-active:hover {
                 display: none;
             }
         }
-
-        .slide-active {opacity:1}
-
-        .slide-non-active {opacity:0}
     }
 }
 
