@@ -1195,6 +1195,8 @@ h1 {
     .omb__head{
         position: relative;
         display: none;
+        height: 700px;
+        padding-top: 70px;
 
         img {
             border: 6px solid v.$detail__offer--smhead;
@@ -1455,6 +1457,28 @@ h1 {
 
         &__body {
 
+            .omb__head {
+                padding: 0 1rem;
+                padding-top: 100px;
+        
+                img {
+                    width: 70%;
+                    height: auto;
+                }
+
+                .intro-overlay {
+                    position: relative;
+
+                    span {
+                        position: absolute;
+                        bottom: 60px;
+                        width: 67%;
+                        height: auto;
+                        font-size: 4vw;
+                    }
+                }
+            }
+
             .head-sm {
                 width: 70%;
             }
@@ -1525,6 +1549,17 @@ h1 {
             padding: 1rem 0;
     
             &__body {
+
+                .omb__head {
+ 
+                    .intro-overlay {
+                        
+                        span {
+                            font-size: 4.5vw;
+                            width: 68%;
+                        }
+                    }
+                }
     
                 .head-sm {
                     width: 70%;
@@ -1557,94 +1592,89 @@ h1 {
         }
     }
 
-    .offer-main {
+    .offer__main {
 
-        &__intro {
+        .offer-main {
     
-            .intro-overlay {
-    
-                span {
-                    font-size: 1.4rem;
-                }
-            }
-        }
-    
-        &__body {
-
-            .omb__head {
-                padding: 0 1rem;
+            &__intro {
         
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-
                 .intro-overlay {
-                    position: relative;
-
+        
                     span {
-                        position: absolute;
-                        bottom: 60px;
-                        width: 93%;
-                        height: auto;
-                        font-size: 5.5vw;
+                        font-size: 1.4rem;
                     }
                 }
             }
-   
-            .head-sm {
-
-                div {
-                    font-size: 1.5rem;
-                }
-            }
-
-            #ext-photo, #treat-photo, #style-photo {
+        
+            &__body {
     
-                .carousel {
-                               
-                    .carousel-header {
-
+                .omb__head {
+    
+                    .intro-overlay {
+    
+                        span {
+                            width: 67%;
+                            font-size: 4.5vw;
+                            bottom: 40px;
+                        }
+                    }
+                }
+       
+                .head-sm {
+    
+                    div {
                         font-size: 1.5rem;
-
                     }
-                }               
+                }
+    
+                #ext-photo, #treat-photo, #style-photo {
+        
+                    .carousel {
+                                   
+                        .carousel-header {
+    
+                            font-size: 1.5rem;
+    
+                        }
+                    }               
+                }
+            }
+        }
+    
+        .js-fill {
+    
+            &__about {
+                height: 210px;
+            }
+    
+            &__icon-part {
+    
+                .icon-column {
+                    width: 30%;
+        
+                    &__icon {
+        
+                        span {
+                            font-size: 2.1rem;
+                        }
+                    }
+        
+                    &__title {
+                        font-size: 1.2rem;
+                    }
+    
+                    &__descr--st {
+                        width: 70%;
+                    }
+                }
+    
+                .width-fix {
+                    width: 100%;
+                }
             }
         }
     }
 
-    .js-fill {
-
-        &__about {
-            height: 210px;
-        }
-
-        &__icon-part {
-
-            .icon-column {
-                width: 30%;
-    
-                &__icon {
-    
-                    span {
-                        font-size: 2.1rem;
-                    }
-                }
-    
-                &__title {
-                    font-size: 1.2rem;
-                }
-
-                &__descr--st {
-                    width: 70%;
-                }
-            }
-
-            .width-fix {
-                width: 100%;
-            }
-        }
-    }
 
 }
 
@@ -1666,60 +1696,65 @@ h1 {
         }
     }
 
-    .offer-main {
+    .offer__main{
 
-        &__intro {
+        .offer-main {
     
-            .intro-overlay {
-    
-                span {
-                    font-size: 1.2rem;
-                }
-            }
-        }
-
-        &__body {
-
-            .omb__head {
-
+            &__intro {
+        
                 .intro-overlay {
-
+        
                     span {
-                        width: 96%;
-                        font-size: 6vw;
+                        font-size: 1.2rem;
                     }
                 }
             }
-          
-            .head-sm {
-                outline: 4px solid v.$detail__offer--active;
-            }         
-        }
-    }
-
-    .js-fill {
-
-        &__about {
-            height: 230px;
-        }
-
-        &__icon-part {
-
-            .icon-column {
     
-                &__icon {
+            &__body {
     
-                    span {
-                        font-size: 2rem;
+                .omb__head {
+    
+                    .intro-overlay {
+    
+                        span {
+                            width: 65%;
+                            font-size: 4.9vw;
+                            bottom: 30px;
+                        }
                     }
                 }
-
-                &__descr--st {
-                    width: 90%;
+              
+                .head-sm {
+                    outline: 4px solid v.$detail__offer--active;
+                }         
+            }
+        }
+    
+        .js-fill {
+    
+            &__about {
+                height: 230px;
+            }
+    
+            &__icon-part {
+    
+                .icon-column {
+        
+                    &__icon {
+        
+                        span {
+                            font-size: 2rem;
+                        }
+                    }
+    
+                    &__descr--st {
+                        width: 90%;
+                    }
                 }
             }
         }
     }
+    
 }
 
 @media screen and (max-width: 390px) {

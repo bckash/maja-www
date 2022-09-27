@@ -12021,6 +12021,8 @@ h1, .h1 {
 .offer-main .omb__head {
   position: relative;
   display: none;
+  height: 700px;
+  padding-top: 70px;
 }
 .offer-main .omb__head img {
   border: 6px solid rgb(212, 179, 156);
@@ -12216,6 +12218,24 @@ h1, .h1 {
     width: 90%;
     height: auto;
   }
+  .offer-main__body .omb__head {
+    padding: 0 1rem;
+    padding-top: 100px;
+  }
+  .offer-main__body .omb__head img {
+    width: 70%;
+    height: auto;
+  }
+  .offer-main__body .omb__head .intro-overlay {
+    position: relative;
+  }
+  .offer-main__body .omb__head .intro-overlay span {
+    position: absolute;
+    bottom: 60px;
+    width: 67%;
+    height: auto;
+    font-size: 4vw;
+  }
   .offer-main__body .head-sm {
     width: 70%;
   }
@@ -12248,6 +12268,10 @@ h1, .h1 {
     width: 95%;
     padding: 1rem 0;
   }
+  .offer__main .offer-main__body .omb__head .intro-overlay span {
+    font-size: 4.5vw;
+    width: 68%;
+  }
   .offer__main .offer-main__body .head-sm {
     width: 70%;
   }
@@ -12263,49 +12287,36 @@ h1, .h1 {
     font-size: 2rem;
   }
 
-  .offer-main__intro .intro-overlay span {
+  .offer__main .offer-main__intro .intro-overlay span {
     font-size: 1.4rem;
   }
-  .offer-main__body .omb__head {
-    padding: 0 1rem;
+  .offer__main .offer-main__body .omb__head .intro-overlay span {
+    width: 67%;
+    font-size: 4.5vw;
+    bottom: 40px;
   }
-  .offer-main__body .omb__head img {
-    width: 100%;
-    height: auto;
-  }
-  .offer-main__body .omb__head .intro-overlay {
-    position: relative;
-  }
-  .offer-main__body .omb__head .intro-overlay span {
-    position: absolute;
-    bottom: 60px;
-    width: 93%;
-    height: auto;
-    font-size: 5.5vw;
-  }
-  .offer-main__body .head-sm div {
+  .offer__main .offer-main__body .head-sm div {
     font-size: 1.5rem;
   }
-  .offer-main__body #ext-photo .carousel .carousel-header, .offer-main__body #treat-photo .carousel .carousel-header, .offer-main__body #style-photo .carousel .carousel-header {
+  .offer__main .offer-main__body #ext-photo .carousel .carousel-header, .offer__main .offer-main__body #treat-photo .carousel .carousel-header, .offer__main .offer-main__body #style-photo .carousel .carousel-header {
     font-size: 1.5rem;
   }
-
-  .js-fill__about {
+  .offer__main .js-fill__about {
     height: 210px;
   }
-  .js-fill__icon-part .icon-column {
+  .offer__main .js-fill__icon-part .icon-column {
     width: 30%;
   }
-  .js-fill__icon-part .icon-column__icon span {
+  .offer__main .js-fill__icon-part .icon-column__icon span {
     font-size: 2.1rem;
   }
-  .js-fill__icon-part .icon-column__title {
+  .offer__main .js-fill__icon-part .icon-column__title {
     font-size: 1.2rem;
   }
-  .js-fill__icon-part .icon-column__descr--st {
+  .offer__main .js-fill__icon-part .icon-column__descr--st {
     width: 70%;
   }
-  .js-fill__icon-part .width-fix {
+  .offer__main .js-fill__icon-part .width-fix {
     width: 100%;
   }
 }
@@ -12314,24 +12325,24 @@ h1, .h1 {
     font-size: 1.7rem;
   }
 
-  .offer-main__intro .intro-overlay span {
+  .offer__main .offer-main__intro .intro-overlay span {
     font-size: 1.2rem;
   }
-  .offer-main__body .omb__head .intro-overlay span {
-    width: 96%;
-    font-size: 6vw;
+  .offer__main .offer-main__body .omb__head .intro-overlay span {
+    width: 65%;
+    font-size: 4.9vw;
+    bottom: 30px;
   }
-  .offer-main__body .head-sm {
+  .offer__main .offer-main__body .head-sm {
     outline: 4px solid rgb(209, 135, 39);
   }
-
-  .js-fill__about {
+  .offer__main .js-fill__about {
     height: 230px;
   }
-  .js-fill__icon-part .icon-column__icon span {
+  .offer__main .js-fill__icon-part .icon-column__icon span {
     font-size: 2rem;
   }
-  .js-fill__icon-part .icon-column__descr--st {
+  .offer__main .js-fill__icon-part .icon-column__descr--st {
     width: 90%;
   }
 }
