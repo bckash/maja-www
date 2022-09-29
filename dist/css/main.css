@@ -11887,7 +11887,7 @@ h1, .h1 {
   text-align: center;
   width: 800px;
   margin: auto;
-  height: 1000px;
+  height: max-content;
 }
 .offer__head {
   width: 320px;
@@ -11983,6 +11983,9 @@ h1, .h1 {
   cursor: pointer;
 }
 
+.offer-main {
+  margin-bottom: 50px;
+}
 .offer-main__intro {
   position: relative;
   width: 500px;
@@ -12018,34 +12021,63 @@ h1, .h1 {
 .offer-main__intro .intro-overlay span:first-child {
   margin-right: 1rem;
 }
-.offer-main .omb__head {
+.offer-main__body .second-intro-head {
   position: relative;
   display: none;
-  height: 700px;
-  padding-top: 70px;
+  padding: 50px;
 }
-.offer-main .omb__head img {
-  border: 6px solid rgb(212, 179, 156);
+.offer-main__body .second-intro-head img {
+  position: relative;
+  z-index: 2;
+  border: 6px solid;
+  border-color: rgb(212, 179, 156);
   border-radius: 1500px;
 }
-.offer-main .omb__head .intro-overlay {
+.offer-main__body .second-intro-head__label {
   position: absolute;
-  top: 0;
-  right: 0;
   left: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.offer-main .omb__head .intro-overlay span {
+  right: 0;
+  bottom: 110px;
+  width: 390px;
+  margin-left: auto;
+  margin-right: auto;
   display: inline-block;
-  width: 380px;
-  padding: 0.2rem;
-  margin-top: 22rem;
-  font-size: 1.8rem;
+}
+.offer-main__body .second-intro-head__label .triangle-container {
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+.offer-main__body .second-intro-head__label .triangle-container .triangle-left,
+.offer-main__body .second-intro-head__label .triangle-container .triangle-right {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid rgb(122, 66, 33);
+}
+.offer-main__body .second-intro-head__label .triangle-container .triangle-left {
+  left: 0;
+}
+.offer-main__body .second-intro-head__label .triangle-container .triangle-right {
+  right: 0;
+}
+.offer-main__body .second-intro-head__label .label-txt {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  padding: 3px;
   background-color: rgb(212, 179, 156);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.offer-main__body .second-intro-head__label .label-txt span {
+  padding: 0.2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
   color: white;
+  text-shadow: 1px 1px 2px rgb(122, 66, 33);
   text-transform: capitalize;
 }
 .offer-main__body #treat-info, .offer-main__body #style-info, .offer-main__body #ext-info {
@@ -12218,23 +12250,13 @@ h1, .h1 {
     width: 90%;
     height: auto;
   }
-  .offer-main__body .omb__head {
-    padding: 0 1rem;
-    padding-top: 100px;
-  }
-  .offer-main__body .omb__head img {
-    width: 70%;
+  .offer-main__body .second-intro-head img {
+    width: 80%;
     height: auto;
   }
-  .offer-main__body .omb__head .intro-overlay {
-    position: relative;
-  }
-  .offer-main__body .omb__head .intro-overlay span {
-    position: absolute;
-    bottom: 60px;
-    width: 67%;
-    height: auto;
-    font-size: 4vw;
+  .offer-main__body .second-intro-head__label {
+    bottom: 20%;
+    width: 66%;
   }
   .offer-main__body .head-sm {
     width: 70%;
@@ -12268,9 +12290,8 @@ h1, .h1 {
     width: 95%;
     padding: 1rem 0;
   }
-  .offer__main .offer-main__body .omb__head .intro-overlay span {
+  .offer__main .offer-main__body .second-intro-head__label .label-txt span {
     font-size: 4.5vw;
-    width: 68%;
   }
   .offer__main .offer-main__body .head-sm {
     width: 70%;
@@ -12290,10 +12311,8 @@ h1, .h1 {
   .offer__main .offer-main__intro .intro-overlay span {
     font-size: 1.4rem;
   }
-  .offer__main .offer-main__body .omb__head .intro-overlay span {
-    width: 67%;
-    font-size: 4.5vw;
-    bottom: 40px;
+  .offer__main .offer-main__body .second-intro-head img {
+    width: 85%;
   }
   .offer__main .offer-main__body .head-sm div {
     font-size: 1.5rem;
@@ -12328,10 +12347,14 @@ h1, .h1 {
   .offer__main .offer-main__intro .intro-overlay span {
     font-size: 1.2rem;
   }
-  .offer__main .offer-main__body .omb__head .intro-overlay span {
-    width: 65%;
-    font-size: 4.9vw;
-    bottom: 30px;
+  .offer__main .offer-main__body .second-intro-head img {
+    width: 100%;
+  }
+  .offer__main .offer-main__body .second-intro-head__label {
+    width: 70%;
+  }
+  .offer__main .offer-main__body .second-intro-head__label .label-txt span {
+    font-size: 5.5vw;
   }
   .offer__main .offer-main__body .head-sm {
     outline: 4px solid rgb(209, 135, 39);
@@ -12365,7 +12388,7 @@ h1, .h1 {
     font-size: 1.5rem;
   }
 
-  .offer-main__body .omb__head .intro-overlay span {
+  .offer-main__body .second-intro-head .intro-overlay span {
     width: 100%;
     font-size: 6.5vw;
   }

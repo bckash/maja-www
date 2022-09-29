@@ -66,7 +66,7 @@ const // Intros
     introExt = document.getElementById("ext-intro"),
     introTreat = document.getElementById("treat-intro"),
     introStyle = document.getElementById("style-intro"),
-    navIntros = Array.from(document.getElementsByClassName("omb__head"))
+    navIntros = Array.from(document.getElementsByClassName("second-intro-head"))
 
 const // Main Sections
     mainInfoExt = document.getElementById("ext-info"),

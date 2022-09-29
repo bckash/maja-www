@@ -1057,7 +1057,7 @@ h1 {
 .offer {
     text-align: center;
     @include m.article;
-    height: 1000px;
+    height: max-content;
 
     &__head {
         @include m.title;
@@ -1157,6 +1157,7 @@ h1 {
 }
 
 .offer-main {
+    margin-bottom: 50px;
 
     &__intro {
         position: relative;
@@ -1191,35 +1192,77 @@ h1 {
 
         }
     }
-
-    .omb__head{
-        position: relative;
-        display: none;
-        height: 700px;
-        padding-top: 70px;
-
-        img {
-            border: 6px solid v.$detail__offer--smhead;
-            border-radius: 1500px;
-        }
-
-        .intro-overlay {
-            @include m.intro-overlay;
-
-            span {
-                display: inline-block;
-                width: 380px;
-                padding: .2rem;
-                margin-top: 22rem;
-                font-size: 1.8rem;
-                background-color: v.$detail__offer--smhead;
-                color: white;
-                text-transform: capitalize;
-            }
-        }
-    }
-
+  
     &__body {
+        
+        .second-intro-head {
+            position: relative;
+            display: none;
+            padding: 50px;
+    
+            img {
+                position: relative;
+                z-index: 2;
+                border: 6px solid; 
+                border-color: v.$detail__offer--smhead;
+                border-radius: 1500px;
+            }
+
+            &__label {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 110px;
+                width: 390px;
+                margin-left: auto;
+                margin-right: auto;
+                display: inline-block;
+
+                .triangle-container {
+                    position: relative;
+                    margin-bottom: 20px;
+                    z-index: 1;
+
+                    .triangle-left,
+                    .triangle-right {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-bottom: 20px solid v.$detail__offer--triangle;
+                    }
+
+                    .triangle-left {
+                        left: 0;
+                    }
+
+                    .triangle-right {
+                        right: 0;
+                    }
+        
+                }
+
+                .label-txt {
+                    position: relative;
+                    z-index: 2;
+                    margin: auto;
+                    padding: 3px;
+                    background-color: v.$detail__offer--smhead;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    
+                    span {
+                        padding: .2rem;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        color: white;
+                        text-shadow: 1px 1px 2px v.$detail__offer--triangle;
+                        text-transform: capitalize;
+                    }
+                }
+            }  
+        }
 
         #treat-info, #style-info, #ext-info {
             display: none;
@@ -1457,26 +1500,18 @@ h1 {
 
         &__body {
 
-            .omb__head {
-                padding: 0 1rem;
-                padding-top: 100px;
+            .second-intro-head {
         
                 img {
-                    width: 70%;
+                    width: 80%;
                     height: auto;
                 }
 
-                .intro-overlay {
-                    position: relative;
+                &__label {
+                    bottom: 20%;
+                    width: 66%;
+                } 
 
-                    span {
-                        position: absolute;
-                        bottom: 60px;
-                        width: 67%;
-                        height: auto;
-                        font-size: 4vw;
-                    }
-                }
             }
 
             .head-sm {
@@ -1550,15 +1585,17 @@ h1 {
     
             &__body {
 
-                .omb__head {
+                .second-intro-head {
  
-                    .intro-overlay {
-                        
-                        span {
-                            font-size: 4.5vw;
-                            width: 68%;
+                    &__label {
+
+                        .label-txt {
+                            
+                            span {
+                                font-size: 4.5vw;
+                            }
                         }
-                    }
+                    } 
                 }
     
                 .head-sm {
@@ -1608,16 +1645,12 @@ h1 {
         
             &__body {
     
-                .omb__head {
-    
-                    .intro-overlay {
-    
-                        span {
-                            width: 67%;
-                            font-size: 4.5vw;
-                            bottom: 40px;
-                        }
+                .second-intro-head {
+
+                    img {
+                        width: 85%;
                     }
+    
                 }
        
                 .head-sm {
@@ -1712,16 +1745,22 @@ h1 {
     
             &__body {
     
-                .omb__head {
-    
-                    .intro-overlay {
-    
-                        span {
-                            width: 65%;
-                            font-size: 4.9vw;
-                            bottom: 30px;
-                        }
+                .second-intro-head {
+                    
+                    img {
+                        width: 100%;
                     }
+    
+                    &__label {
+                        width: 70%;
+
+                        .label-txt {
+                            
+                            span {
+                                font-size: 5.5vw;
+                            }
+                        }
+                    } 
                 }
               
                 .head-sm {
@@ -1798,7 +1837,7 @@ h1 {
     
         &__body {
 
-            .omb__head {
+            .second-intro-head {
 
                 .intro-overlay {
 
