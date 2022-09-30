@@ -1213,10 +1213,10 @@ h1 {
                 left: 0;
                 right: 0;
                 bottom: 110px;
+                display: inline-block;
                 width: 390px;
                 margin-left: auto;
                 margin-right: auto;
-                display: inline-block;
 
                 .triangle-container {
                     position: relative;
@@ -1248,7 +1248,7 @@ h1 {
                     z-index: 2;
                     margin: auto;
                     padding: 3px;
-                    background-color: v.$detail__offer--smhead;
+                    background-color: v.$detail__offer--smhead-opa;
                     border-bottom-left-radius: 10px;
                     border-bottom-right-radius: 10px;
                     
@@ -1363,6 +1363,7 @@ h1 {
             flex-direction: column;
             width: 28%;
             margin: 1rem 0;
+            // border: 1px black solid;
 
             &__icon {
 
@@ -1385,6 +1386,9 @@ h1 {
                     justify-content: center;
                     align-items: flex-start;
                     height: 4rem;
+                    // text-transform: uppercase;
+                    font-weight: 500;
+                    color: v.$detail__offer--main;
                 }
             }
 
@@ -1392,11 +1396,10 @@ h1 {
                 display: flex;
                 justify-content: center;
                 align-self: flex-start;
-                width: 80%;
+                width: 75%;
                 height: 100%;
                 margin: auto;
-                font-size: .8rem;
-                text-align: justify;
+                font-size: .9rem;
             }
 
             &__descr--st {
@@ -1606,7 +1609,6 @@ h1 {
         }
     }
 
-
 }
 
 @media screen and (max-width: 500px) {
@@ -1674,40 +1676,78 @@ h1 {
             }
         }
     
-        .js-fill {
+    }
     
-            &__about {
-                height: 210px;
-            }
+    .js-fill {
+
+        &__about {
+            height: 210px;
+        }
+
+        &__icon-part {
+            flex-direction: column;
+
+            .icon-column {
+                align-items: center;
+                width: 80%;
+                margin: auto;
+                margin-bottom: 2rem;
+
+                // border: 1px solid black;
     
-            &__icon-part {
-    
-                .icon-column {
-                    width: 30%;
-        
-                    &__icon {
-        
-                        span {
-                            font-size: 2.1rem;
-                        }
-                    }
-        
-                    &__title {
-                        font-size: 1.2rem;
-                    }
-    
-                    &__descr--st {
-                        width: 70%;
-                    }
-                }
-    
-                .width-fix {
+                #icon-title-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    // border: 1px solid black;
                     width: 100%;
                 }
+
+                &__icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    width: 10%;
+                    // border: 1px solid black;
+                    text-align: right;
+    
+                    span {
+                        font-size: 2.1rem;
+                    }
+                }
+
+                &__title {
+                    width: 200px;
+                    padding-left: 1rem;
+                    // border: 1px solid black;
+                    border-left: 1px solid rgb(211, 208, 208);
+
+                    span {
+                        justify-content:left;
+                        align-items: center;
+                        height: 3rem;
+                    }
+                }
+
+                &__descr {
+                    // border: 1px solid black;
+                    justify-content: left;
+                    padding-left: 1.8rem;
+                    text-align: left;
+                    width: 200px
+                }
+
+                &__descr--st {
+                    width: 70%;
+                }
+            }
+
+            .width-fix {
+                width: 100%;
             }
         }
     }
-
 
 }
 

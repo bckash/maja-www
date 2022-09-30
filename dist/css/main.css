@@ -12038,10 +12038,10 @@ h1, .h1 {
   left: 0;
   right: 0;
   bottom: 110px;
+  display: inline-block;
   width: 390px;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
 }
 .offer-main__body .second-intro-head__label .triangle-container {
   position: relative;
@@ -12068,7 +12068,7 @@ h1, .h1 {
   z-index: 2;
   margin: auto;
   padding: 3px;
-  background-color: rgb(212, 179, 156);
+  background-color: rgba(212, 179, 156, 0.842);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -12180,16 +12180,17 @@ h1, .h1 {
   justify-content: center;
   align-items: flex-start;
   height: 4rem;
+  font-weight: 500;
+  color: rgb(155, 114, 92);
 }
 .js-fill__icon-part .icon-column__descr {
   display: flex;
   justify-content: center;
   align-self: flex-start;
-  width: 80%;
+  width: 75%;
   height: 100%;
   margin: auto;
-  font-size: 0.8rem;
-  text-align: justify;
+  font-size: 0.9rem;
 }
 .js-fill__icon-part .icon-column__descr--st {
   width: 50%;
@@ -12320,22 +12321,55 @@ h1, .h1 {
   .offer__main .offer-main__body #ext-photo .carousel .carousel-header, .offer__main .offer-main__body #treat-photo .carousel .carousel-header, .offer__main .offer-main__body #style-photo .carousel .carousel-header {
     font-size: 1.5rem;
   }
-  .offer__main .js-fill__about {
+
+  .js-fill__about {
     height: 210px;
   }
-  .offer__main .js-fill__icon-part .icon-column {
-    width: 30%;
+  .js-fill__icon-part {
+    flex-direction: column;
   }
-  .offer__main .js-fill__icon-part .icon-column__icon span {
+  .js-fill__icon-part .icon-column {
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .js-fill__icon-part .icon-column #icon-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .js-fill__icon-part .icon-column__icon {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 10%;
+    text-align: right;
+  }
+  .js-fill__icon-part .icon-column__icon span {
     font-size: 2.1rem;
   }
-  .offer__main .js-fill__icon-part .icon-column__title {
-    font-size: 1.2rem;
+  .js-fill__icon-part .icon-column__title {
+    width: 200px;
+    padding-left: 1rem;
+    border-left: 1px solid rgb(211, 208, 208);
   }
-  .offer__main .js-fill__icon-part .icon-column__descr--st {
+  .js-fill__icon-part .icon-column__title span {
+    justify-content: left;
+    align-items: center;
+    height: 3rem;
+  }
+  .js-fill__icon-part .icon-column__descr {
+    justify-content: left;
+    padding-left: 1.8rem;
+    text-align: left;
+    width: 200px;
+  }
+  .js-fill__icon-part .icon-column__descr--st {
     width: 70%;
   }
-  .offer__main .js-fill__icon-part .width-fix {
+  .js-fill__icon-part .width-fix {
     width: 100%;
   }
 }

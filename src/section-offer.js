@@ -98,37 +98,37 @@ const fillDataExt = [
     {
         id: "fusion bonds",
         about: "<dfn title='Fusion Bonds'>Hot fusion extensions</dfn> attach strands of hair to the client's head with a keratin-based tip. The process uses a heating element to attach or fuse the keratin bond and extension to the client's hair. Since human hair is 95% keratin, the fusion method is safe, comfortable and long-lasting.",
-        suitable: "All hair types, great for fine/weak hair ",
-        achieve: "This method is classic and reliable, creates a free-fall natural effects ",
-        last: "3-4 months"
+        suitable: "All hair types, great for fine/weak hair.",
+        achieve: "This method is classic and reliable, creates a free-fall natural effects.",
+        last: "3-4 months."
     },
     {
         id: "mico rings",
         about: "<dfn title='Micro Rings'>Micro/nano rings</dfn> are made of metal, offer hair extension application with absolutely no glue, no heat and no braid. The hair extensions strands are placed into the hairline with colour coded rings to suit your root colour. ",
-        suitable: "All hair types",
+        suitable: "All hair types.",
         achieve: "No glue/heat or adhesives, silicine-lined protect the hair and provide more grip.",
-        last: "3-4 months"
+        last: "3-4 months."
     },
     {
         id: "easy shrinks",
         about: "<dfn title='Easy Schrinks'>Shrink tube hair extensions</dfn> get their name from little plastic tubes known as “shrink tubes” or “shrinkies.” These tubes shrink when they are heated and are sometimes composed of an inner coating of keratin. Keratin is used in several hair extension methods and can naturally be found in human skin, hair, and nails.",
-        suitable: "perfect for thin or short hair",
-        achieve: "These are virtually undetectable, lightweight and secure. The aim of this technique is to heat shrinkies into position and blend in with the hair.",
-        last: "2-3 months"
+        suitable: "Perfect for thin or short hair.",
+        achieve: "Virtually undetectable, lightweight and secure. The aim of this technique is to heat shrinkies into position and blend in with the hair.",
+        last: "2-3 months."
     },
     {
         id: "tape on",
         about: "<dfn title='Tape On'>Tape-in extensions</dfn> are one to one and a half inches of sections of hair that are pre-taped with medical-grade glue to your hair, making it highly secure and natural looking. The hair can be reused making this method one of the most cost effective. ",
-        suitable: "all types of hair , including those with fine hair or those who have previously suffered from hair lost ",
-        achieve: "lightweight and relatively invisible, lays flat against the head.",
-        last: "6-8 weeks"
+        suitable: "All types of hair, including those with fine hair or those who previously suffered from hair loss.",
+        achieve: "Lightweight and relatively invisible, lays flat against the head.",
+        last: "6-8 weeks."
     },
     {
         id: "combline",
         about: "<dfn title='Combline'>CombLine hair extension</dfn> application is creating invisible, light weight and super comfortable bonds. It can be applied to the fringe, sides and crown areas - a real all over application. With the ability to straighten, blow dry, color and perm over the bonds CombLine is the best choice for any hair extension application.",
-        suitable: "all hair types, perfect fot thin hair",
-        achieve: "Gives both thickening and lengthening, bond are invisible. Easy to pull up and hide in ponytail.",
-        last: "up to 8 weeks"
+        suitable: "All hair types, perfect fot thin hair.",
+        achieve: "Gives both thickening and lengthening, bonds are invisible. Easy to pull up and hide in ponytail.",
+        last: "Up to 8 weeks."
     }
 ]
 
@@ -136,17 +136,17 @@ const fillDataExt = [
 const fillDataTreat = [
     {
         id: "botox",
-        about: "<dfn title='Botox'>Botox</dfn> is the ultimate way to revive your hair. An all in one treatment, restores and improves dry damged hair in various ways. It’s full of nourishing proteins, antioxidants, vitamins, conditioning oils and other hair-healthy ingredients that fill in the gaps in the hair fibres and restore it to its natural beauty.",
-        suitable: "Anyone who’s hair is very damaged, over-processed, thin in structure and in need of deep restoration",
+        about: "<dfn title='Botox'>Botox</dfn> is the ultimate way to revive your hair. An all in one treatment, restores and improves dry damged hair in various ways. It's full of nourishing proteins, antioxidants, vitamins, conditioning oils and other hair-healthy ingredients that fill in the gaps in the hair fibres and restore it to its natural beauty.",
+        suitable: "Anyone who's hair is very damaged, over-processed, thin in structure and in need of deep restoration.",
         achieve: "Restores dry damaged hair, improves texture and shine, hydrates and deeply conditions, treats split ends, tames frizz, and gives UV protection.",
-        last: "3-5 months "
+        last: "3-5 months."
     },
     {
         id: "kreatyna",
         about: "<dfn title='Keratin'>A keratin treatment</dfn> is a process that smooths and often straightens hair. You might also hear it called a Brazilian keratin treatment or a Brazilian blowout. It involves applying products to the hair, blow-drying it, and sealing it with a flat iron. Keratin is a natural type of protein in your skin, hair, and nails.",
-        suitable: "People who like very straight hair with a significant reduction of volume",
-        achieve: "It regenerates hair in depth and straightens it without changing its structure. Rectifying dry and damaged hair",
-        last: "3-4 months"
+        suitable: "People who like very straight hair with a significant reduction of volume.",
+        achieve: "Regenerates hair in depth and straightens it without changing it's structure. Rectifying dry and damaged hair.",
+        last: "3-4 months."
     }    
 ]
 

@@ -37,6 +37,7 @@ import {slideshow43} from "./slideshow-module.js";
 
 const aboutTriangle = document.getElementById("outline-triangle")
 const aboutTriangle2 = document.getElementById("outline-triangle--2")
+const offerAvatar = document.querySelector(".maja-avatar__img")
 const spanDown = document.getElementById("io-offer-dn")
 const spanUp = document.getElementById("io-offer-up")
 const pmPleaseChoose = document.getElementById("pm-please-choose")
@@ -100,20 +101,32 @@ arrUpLink.addEventListener("click", (()=>{
 // 3.1 VSA
 
 function scrollAnimation(){
-    let scrollPosition = window.scrollY;
+
+    let win23Height = 2*window.innerHeight/3
+    let scrollEnd = document.body.scrollHeight - window.innerHeight
+    let offerAvatarHeight = offerAvatar.getBoundingClientRect().top
+    let spanDownHeight = spanDown.getBoundingClientRect().top
+    let pmHeight = pmPleaseChoose.getBoundingClientRect().top
+
     // About Me
-    if (scrollPosition>500 && scrollPosition<700) {
+    if (offerAvatarHeight < win23Height) {
         aboutTriangle.classList.add("animation__move-bot")
         aboutTriangle2.classList.add("animation__move-bot")
+    } 
+    
     // Offer
-    } else if (scrollPosition>2600 && scrollPosition<2800) {
+    if (spanDownHeight < win23Height) {
         spanDown.classList.add("animation__move-left")
         spanUp.classList.add("animation__move-up")
+    } 
+    
     // Prices
-    } else if (scrollPosition>4600 && scrollPosition<4800) {
+    if (pmHeight < win23Height) {
         pmPleaseChoose.classList.add("animation__swirl")
+    } 
+    
     // Footer
-    } else if (scrollPosition> 5100) {
+    if (window.scrollY >= scrollEnd-20) {
         logoNLSmall.classList.add("animation__jelly")      
     } 
 }
